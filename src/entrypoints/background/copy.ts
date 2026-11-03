@@ -5,15 +5,23 @@ import { truncate } from "@/utils/text";
 let recentTarget = "";
 let recentSource = "";
 
-export async function rememberTooltip(sourceText: string, targetText: string) {
-  recentTarget = targetText;
-  recentSource = sourceText;
+let menuUpdate = Promise.resolve();
+
+async function showCopyMenu() {
   await browser.contextMenus.removeAll();
   browser.contextMenus.create({
     id: "copy",
-    title: `Copy : ${truncate(targetText, 20)}`,
+    title: `Copy : ${truncate(recentTarget, 20)}`,
     contexts: ["all"],
   });
+}
+
+// serialized: two tooltips in a row would both clear the menu, then both create "copy"
+export function rememberTooltip(sourceText: string, targetText: string) {
+  recentTarget = targetText;
+  recentSource = sourceText;
+  menuUpdate = menuUpdate.then(showCopyMenu).catch((error) => console.log(error));
+  return menuUpdate;
 }
 
 async function copyOnActiveTab(text: string) {
