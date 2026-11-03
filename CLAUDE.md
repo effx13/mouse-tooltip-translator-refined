@@ -1,8 +1,8 @@
 # CLAUDE.md — MouseTooltipTranslator 개발 가이드
 
-브라우저 확장(Manifest V3, Chrome/Edge/Firefox). 마우스오버/드래그 번역 툴팁, 이중 자막, PDF/EPUB 뷰어, OCR, TTS, 음성 인식 번역을 제공한다. 팝업/설정 UI는 **Vue 3 + Vuetify 3**(Svelte 5로 전환 예정), 확장 프레임워크는 **WXT**(Vite 8/rolldown 기반), 패키지 매니저는 **pnpm**.
+브라우저 확장(Chrome/Edge MV3, Firefox MV2). 마우스오버/드래그 번역 툴팁, 입력창 번역, 페이지 번역, 내장 PDF/EPUB 뷰어를 제공한다. [ttop32/MouseTooltipTranslator](https://github.com/ttop32/MouseTooltipTranslator)의 포크를 **WXT + Svelte 5 + TypeScript**로 다시 작성한 것이다. 패키지 매니저는 **pnpm**이다.
 
-이 문서는 "이 저장소에서 코드를 어떻게 작성해야 하는가"를 정리한다. 아래 관례는 대부분 코드로 강제되지 않으니(런타임/빌드에 드러나지 않고 조용히 깨질 수 있음) 반드시 지킬 것. 기존 기능/동작 명세는 `docs/`(재작성 기준 문서)에 있다.
+`docs/`는 재작성 전 원본 확장의 동작 명세다. 이 재작성에서 뺀 기능(TTS/음성, 음성 인식, OCR, 이중 자막, 기록·단어장·플래시카드)도 그 문서에는 남아 있다.
 
 ## 빌드 · 실행
 
@@ -13,82 +13,76 @@ pnpm build            # → .output/chrome-mv3/   (console 제거)
 pnpm build:firefox    # → .output/firefox-mv2/
 pnpm zip | pnpm zip:firefox   # → .output/*-chrome.zip, *-firefox.zip, *-sources.zip
 pnpm test             # vitest
-pnpm lint             # oxlint (no-undef 포함)
+pnpm lint             # oxlint
 pnpm format           # oxfmt
-pnpm typecheck
+pnpm typecheck        # svelte-check (TS 포함)
 ```
 
-- 확장 로드는 **항상 빌드 결과 폴더**(`.output/chrome-mv3`, Firefox는 `.output/firefox-mv2`)를 "Load unpacked"로. `src/`를 직접 로드하면 안 됨(#25).
-- **코드 변경 후 `pnpm build`가 통과하는지 반드시 확인**한다.
-- **매니페스트는 `wxt.config.ts`의 `manifest`에서 생성**된다(`public/manifest*.json` 없음). 브라우저별 차이(권한, MV2/MV3)는 거기서 분기한다. 버전은 `package.json`에서 온다.
-- 진입점은 `src/entrypoints/`(파일명 = 출력명). `background.ts`, `content.ts`(→`content-scripts/content.js|css`), `popup.html`, unlisted 페이지(`ocr.html`, `offscreen.html`), sandbox(`opencvHandler.sandbox.html`→`opencvHandler.html`), unlisted 스크립트(`subtitle.ts`, `googleDocInject.ts`, `pdfInject.ts`, `ebookEventInject.ts` → 루트 `<name>.js`). 이 출력명은 `getURL()`/`executeScript()`/pdfjs·foliate HTML이 하드코딩하므로 바꾸지 말 것.
-- **선택 기능은 지연 로딩**한다: 무겁고 옵션에 따라 안 쓰는 기능은 `src/entrypoints/<name>Feature.ts`(unlisted script)로 분리하고 `src/util/feature.js`의 `FEATURE_FILES`에 등록, content script에서 `loadFeature(name)`으로 필요한 순간에만 주입한다(OCR, 자막). content script에 무거운 모듈을 직접 import하지 말 것 — 모든 페이지·모든 프레임에 실린다.
-- WXT는 빌드 중 엔트리포인트 파일을 Node에서 import해 옵션을 읽는다 → **엔트리포인트 최상위에서 런타임 코드를 실행하지 말고** `main()` 안에 둘 것(부작용 import는 옵션 로드 시 제거되므로 허용).
-- content script/background/unlisted 스크립트는 IIFE 단일 파일(코드 스플리팅 없음). 확장 페이지(popup 등)는 ESM 청크.
-- `public/`은 그대로 복사된다(`.md`/`.map`/PDF.js 데모 PDF는 `build:publicAssets` 훅에서 제외). `public/_locales`는 위치 고정(insertLocale.py/crowdin).
-- 테스트는 `__tests__/`(vitest + `WxtVitest`). `translator.test.js`의 네트워크 엔진 테스트는 CI에서 skip되고, 오프라인 테스트(lang, fallbackEngine, async)가 CI 게이트다. 대부분의 기능은 단위 테스트가 없으므로, 로직 변경은 빌드 통과 + 필요 시 합성 데이터/실제 브라우저로 검증한다.
-- 버전은 **배포 시점에 갱신**되며(release 워크플로가 `package.json`에 태그 버전 기록) repo 값은 stale하다(#209). 버전을 직접 올리지 말 것.
-- page world 스크립트(subtitle/googleDoc)가 import하는 모듈은 확장 API가 없는 환경에서도 로드돼야 한다 → 모듈 최상위에서 `browser.*`를 호출하지 말 것. 현재 `require("webextension-polyfill")` try/catch가 page world/확장 컨텍스트 판별 역할을 겸한다(docs/subtitles.md) — 폴리필 제거 시 같은 판별을 유지할 것.
+- 확장 로드는 **빌드 결과 폴더**(`.output/chrome-mv3`, `.output/firefox-mv2`)를 "Load unpacked"로 한다.
+- 코드 변경 후 `pnpm build`, `pnpm lint`, `pnpm typecheck`, `pnpm test`가 통과하는지 확인한다.
+- 버전은 배포 시점에 release 워크플로가 `package.json`에 태그 버전을 기록한다. repo 값은 stale하니 직접 올리지 말 것(#209).
 
 ## 저장소 구조
 
-- `wxt.config.ts` — 매니페스트/빌드 설정. `src/entrypoints/*` — WXT 진입점(기존 모듈을 import하는 얇은 래퍼).
-- `src/contentScript.js` — 페이지 주입 메인. 마우스오버/선택 감지, 툴팁 표시, 주입 CSS, 이벤트 처리.
-- `src/background.js` — 서비스워커. 번역/TTS/저장 등 메시지 핸들러(`translate`/`tts`/`stopTTS`/…). 콘텐츠·팝업 양쪽에서 옴.
-- `src/translator/*` — 번역 엔진(google/bing/deepl/localLlm 등). `baseTranslator.js` 상속.
-- `src/tts/*` — TTS 엔진(browser/bing/google/mdn).
-- `src/subtitle/*` — 이중 자막(youtube/netflix/svt/youtube-nocookie). `baseVideo.js` 상속, `subtitle.js`가 페이지에 주입되는 엔트리.
-- `src/ocr/*` — 이미지 OCR(tesseract) + 오버레이.
-- `src/pdf/pdfInject.js` — 번들 PDF.js 뷰어 커스터마이즈(콘텐츠 스크립트 주입).
-- `src/pages/*.vue` — 팝업/설정 페이지. **파일=라우트**(auto-routing, `unplugin-vue-router`). `index.vue`가 설정 화면.
-- `src/components/*.vue` — 공용 컴포넌트(`popupWindow`, `backHeader`, `chipOption` …). 자동 등록(`unplugin-vue-components`)되지만 새 파일에선 명시적 import를 권장.
-- `src/util/*` — 설정(`setting*.js`), i18n(`i18n.js`), 언어(`lang.js`), 텍스트(`text_util.js`), 공용(`index.js`).
-- `public/_locales/<locale>/messages.json` — 로케일. **직접 편집 금지**(아래 참고).
-- `doc/` — `description.md`(스토어 설명 + Change Log), `issue-requirements.md`(이슈별 상태 추적), `insertLocale.py`(로케일 생성 스크립트).
+- `wxt.config.ts`: 매니페스트(브라우저별 분기), 빌드 설정. `public/manifest*.json`은 없다.
+- `src/entrypoints/`: WXT 진입점. 파일명이 출력명이다.
+  - `background.ts` → `src/background/`
+  - `content/index.ts` → `src/content/` (`content-scripts/content.js`)
+  - `popup/`: Svelte 설정 화면. 툴바 팝업 겸 options 페이지(`popup.html`, `#/about`)
+  - unlisted 스크립트(출력 루트 `<name>.js`):
+    - `pdfInject.ts`: `public/pdfjs/web/viewer.html`이 로드
+    - `ebookEventInject.ts`: `public/foliate-js/reader.html`이 로드
+    - `googleDocInject.ts`: content script가 `injectScript`로 page world에 주입
+  - 이 출력명은 뷰어 HTML과 `getURL()`이 하드코딩하므로 바꾸지 말 것.
+- `src/background/`: 번역 요청 처리, 복사(컨텍스트 메뉴/단축키), 옴니박스, 설치 처리, PDF 리다이렉트.
+- `src/content/`: 툴팁(Shadow DOM), 텍스트 감지(`detect/`), 키 처리, 입력창/페이지 번역, 사이트 필터, Google Docs, 웹 PDF 가로채기.
+- `src/translators/`: 번역 엔진(`engine.ts`의 `defineEngine`), `registry.ts`, `index.ts`의 `translate()`(캐시, 역번역, 사전, 폴백 엔진과 언어쌍별 쿨다운 #363). background에서만 실행된다(DOM 없음).
+- `src/viewers/`: PDF.js 뷰어 개선, 이북 iframe 이벤트 브리지.
+- `src/components/`: 공용 Svelte 컴포넌트.
+- `src/utils/`: `settings/`(스키마 + 저장소), `messaging.ts`, `i18n.ts`, `lang.ts`, `text.ts`, `async.ts`.
+- `public/`: 그대로 복사된다(`_locales`, `icons`, `pdfjs`, `foliate-js`, `doq`, `injectRightPan.js`).
+- `doc/`: `intro.md`(설치 시 열리는 사용법), `privacy_policy.md`, `insertLocale.py`(로케일 생성).
 
 ## 관례
 
-### 1. 설정 추가
-- `src/util/setting_default.js`의 `defaultData`에 항목 추가. `optionType`이 UI 렌더링을 결정한다(없으면 select). 지원: `multipleSelect`, `comboBox`, `fontSelect`, `colorPicker`, `textField`, `llmModelSelect`, `button`. `settingTab`로 탭 지정(main/keyboard/graphic/voice/exclude/advanced/speech…).
-- 설정 화면(`index.vue`)은 이 스키마를 **자동 렌더**한다 — 대개 UI 코드를 따로 짤 필요 없음.
-- `i18nKey`는 라벨 키. **반드시 아래 로케일 절차로 등록**할 것(라벨이 빈 칸이 되지 않도록).
-- 런타임에서 `setting`은 `Setting` 인스턴스(`src/util/setting.js`)로, **평범한 객체**다. `setting["key"]`로 읽고, `setting.save()`는 전체를 `storage.local`에 저장한다(그리고 `syncSetting`이면 작은 키만 `storage.sync` 미러).
-- **페이지 한정 런타임 오버라이드**가 필요하면(예: 사이트별 번역 대상 #262) `setting.setLocalOverride(key, value, globalValue)`를 쓴다 — 읽기는 override 값, `save()`는 globalValue를 저장(오버라이드가 전역 설정에 새지 않음).
+### 코드 스타일
+- 파일 상단이나 import 위에 주석을 쓰지 않는다. 주석은 꼭 필요한 곳에만, 해당 코드 바로 위에 짧은 `//`로 쓴다. 한 줄짜리 `/** */`와 `// ----` 같은 구분선은 쓰지 않는다.
+- 최신 문법만 쓴다. Svelte 5 rune(`$state`, `$derived`, `$effect`, `$props`), snippet과 `{@render}`, `onclick=` 속성, 콜백 prop을 쓰고, 최신 TS/ES를 쓴다. `var`, jQuery, lodash, 폴리필은 쓰지 않는다.
+- `browser`는 `wxt/browser`에서, 스토리지는 `wxt/utils/storage`에서 가져온다. import는 `@/` 별칭(= `src/`)을 쓴다. WXT auto-import는 꺼져 있으니(`imports: false`) 명시적으로 import한다.
+- lint 경고는 규칙을 끄지 말고 코드를 고친다.
+- WXT는 빌드 중 진입점 파일을 Node에서 import해 옵션을 읽는다. 진입점 최상위에서 런타임 코드를 실행하지 말고 `main()` 안에 둔다.
 
-### 2. UI 텍스트 / 로케일 키 (중요 — 직접 편집 금지)
-`public/_locales/*/messages.json`을 **손으로 고치지 말 것.** 정식 절차:
+### 설정
+- `src/utils/settings/schema.ts`의 `settingSchema`에 항목을 추가하면 설정 화면이 자동으로 렌더한다.
+  - `optionType`: `select`(기본), `toggle`, `multipleSelect`, `comboBox`, `fontSelect`, `colorPicker`, `textField`, `llmModelSelect`, `button`, `hidden`
+  - `settingTab`, `visibleWhen`, 선언 순서가 화면 배치를 정한다.
+- 값은 타입이 있다. 토글은 boolean, 크기·시간은 number, 키와 언어는 문자열(`"null"` = 없음)이다.
+- 저장은 `local:settings` 하나에 바뀐 값만 넣고, 읽을 때 기본값과 합친다. 쓰는 API는 `getSettings`, `updateSettings`, `watchSettings`, `resetSettings`, `importSettings`, `exportSettings`다.
+- `syncSetting`이 켜지면 `sync:settings`로 미러한다. LLM 키는 동기화하지 않는다.
+- content script는 설정을 읽기만 한다. 사이트별 대상 언어(#262)는 그 자리에서 유효 설정으로 계산한다.
 
-1. `doc/insertLocale.py`의 `i18List`에 **영문 문자열**을 추가한다(적절한 섹션 위치에). 키는 이 문자열의 공백을 `_`로 바꾼 것 = `getI18Id`. 예: `"Website Target Language"` → 키 `Website_Target_Language`.
-2. `python ./doc/insertLocale.py` 실행. 그러면:
-   - 모든 로케일(≈55개)에 누락 키를 **영문 placeholder로** 채우고,
-   - `i18List` 순서로 재정렬하며,
-   - **`i18List`에 없는 키는 제거(prune)한다** ← 그래서 직접 넣은 키는 다음 실행 때 사라진다.
-   - 기존에 값이 있는 키는 덮어쓰지 않음(영어의 커스텀 문구는 en에서 직접 다듬어도 됨).
-   - `translate()`(googletrans) 경로는 주석 처리 상태라 **네트워크 없이 오프라인**으로 돈다.
-3. 실제 번역은 **Crowdin**이 채운다("New Crowdin updates" 커밋). 우리는 en 원문만 관리.
+### 메시징
+- `src/utils/messaging.ts`의 ProtocolMap(`@webext-core/messaging`)만 쓴다. 메시지는 `translate`, `tooltipShown`, `copyText` 세 가지다. 새 메시지가 필요하면 여기에 타입을 추가한다.
+- 설정 리셋/가져오기/내보내기는 popup이 스토리지에 직접 하므로 메시지가 필요 없다.
 
-코드에서 읽을 때: `i18n.getMessage(key)`. 단, 설정 화면 라벨(`value.description`)은 **키 폴백이 없어** 로케일에 키가 없으면 빈 칸이 된다 → 그래서 위 절차로 전 로케일에 넣는 게 필수. 폴백이 필요한 곳은 `i18n.getMessage(key) || "English"` 형태로 방어한다.
+### content script
+- 툴팁은 `createShadowRootUi`로 만든 Shadow Root 안에 있다. host는 `<html>`에 붙인다.
+  - CSS는 `src/content/tooltip.css?inline`을 `css` 옵션으로 넘긴다(`cssInjectionMode: "manual"`). 그래야 뷰어 페이지에서도 같은 방식으로 동작한다.
+  - 페이지에 전역 CSS를 넣지 않는다. 마우스오버 하이라이트는 `CSS.highlights`를 쓴다.
+- 리스너와 타이머는 `ctx`(ContentScriptContext)에 묶어서, 확장이 갱신되면 정리되게 한다.
+- 뷰어 페이지(PDF/이북)는 확장 페이지라 content script가 안 붙는다. 그래서 진입 스크립트가 `startContentScript(new ContentScriptContext("viewer"))`를 직접 호출한다.
+- 무거운 모듈을 content script에 import하지 않는다. 모든 페이지의 모든 프레임에 실린다.
 
-### 3. 새 페이지 추가
-- `src/pages/foo.vue` 생성 → 라우트 `/foo` 자동 생성. `<popupWindow>` + `<BackHeader :title>` 스캐폴드 사용(`about.vue`/`history.vue` 참고).
-- 팝업에서 번역/TTS 호출 가능: `util.requestTranslate(text, source, target, reverse)`(→ `{targetText, sourceLang, targetLang}`), `util.requestTTSSingle(text, lang)`, `util.requestStopTTS(ts, force)`. 이들은 `browser.runtime.sendMessage`로 background에 요청하며 팝업 컨텍스트에서 동작한다.
-- 진입점은 `index.vue`의 `toolbarIcons`(툴바) 또는 `about.vue`의 `aboutPageList`(메뉴 허브)에 추가.
-
-### 4. 콘텐츠 스크립트 주입 CSS 스코프
-`contentScript.js`가 페이지에 넣는 `<style>`은 **반드시 확장 전용 셀렉터로 스코프**한다. 우리 툴팁은 tippy `data-theme~="custom"|"ocr"|"transparent"`를 쓴다. `[data-tippy-root]`, `.tippy-content *` 같은 **맨 전역 셀렉터 금지** — Tippy.js를 쓰는 사이트(zulip 등)의 자체 메뉴를 깨뜨린다(#345). 예: `[data-tippy-root]:has(> .tippy-box[data-theme~="custom"])`처럼 한정.
-
-### 5. 이중 자막(자막 인터셉트)
-- `baseVideo.js`가 `BatchInterceptor`(XHR + fetch 둘 다)로 자막 요청을 가로챈다. 최신 YouTube는 `fetch`를 쓰므로 XHR 전용이면 못 잡는다.
-- **인터셉트 핸들러 안에서 같은 패턴 URL을 다시 요청할 때는 `this.rawFetch`(=인터셉트 적용 전 캡처한 native fetch)를 써라.** 일반 `fetch`를 쓰면 자기 요청이 재인터셉트되어 무한 재귀한다.
-- 원문/번역 줄 짝짓기는 공용 `BaseVideo.findMostOverlappingLine(start,end,candidates,getStart,getEnd)` — 실제 시간 겹침 최대(겹침 없으면 최근접) 기준. youtube/netflix 공용.
-- 병합 시 대상 자막 seg를 **in-place 변형/참조 공유하지 말 것**(매 매칭마다 새 객체 생성). 안 그러면 번역이 `\n`으로 뭉치고 중복된다.
-- 주의: YouTube timedtext는 **브라우저 세션(pot 토큰) 밖 요청을 anti-bot으로 차단**(빈 200/429). 서버·curl로는 재현 불가하고, 반복 요청은 IP rate-limit을 유발한다.
-
-### 6. 문서 갱신
-- 이슈를 처리하면 `doc/issue-requirements.md`의 해당 행 상태/근거를 갱신하고, `doc/description.md`의 `# Change Log` 맨 위에 사용자용 항목을 추가한다(다음 패치 버전으로).
+### UI 텍스트 / 로케일 키 (직접 편집 금지)
+`public/_locales/*/messages.json`을 손으로 고치지 말 것.
+1. `doc/insertLocale.py`의 `i18List`에 영문 문자열을 추가한다. 키는 공백을 `_`로 바꾼 것이다(`"Website Target Language"` → `Website_Target_Language`).
+2. `python ./doc/insertLocale.py`를 실행한다.
+   - 모든 로케일에 누락 키를 영문 placeholder로 채우고, `i18List` 순서로 재정렬한다.
+   - `i18List`에 없는 키는 제거한다.
+코드에서는 `getMessage(key)`(폴백 없음) 또는 `t(key)`(키 폴백)를 쓴다(`@/utils/i18n`). 사용자가 고른 UI 언어(`uiLanguage`, #76)를 따른다.
 
 ## Gotchas
-- **자동 커밋 금지**: 사용자가 명시적으로 요청할 때만 커밋/푸시.
-- 크래시/회귀 위험이 큰 핵심 경로(설정 저장 `setting.js`, 자막 인터셉트, 마우스/클릭 이벤트, 툴팁 lifecycle)는 변경 시 특히 신중히. 가능한 한 additive하게.
-- 시각 검증이 필요한 UI/브라우저 동작(툴팁, 이중 자막, PDF 뷰어 버튼 등)은 헤드리스로 확인 불가 → 실제 브라우저 확인을 권한다.
-- Windows 셸: 임시 파일은 스크래치패드 사용. heredoc이 백슬래시를 뭉갤 수 있으니 정규식 등은 파일로 작성 후 실행.
+- 사용자가 명시적으로 요청할 때만 커밋/푸시한다.
+- 툴팁, 키 처리, 뷰어, Google Docs 같은 브라우저 동작은 헤드리스로 확인할 수 없다. 실제 브라우저 확인을 요청한다.
+- 번역 엔진 대부분은 소비자용 엔드포인트를 스크래핑하므로, 데이터센터 IP에서는 쉽게 막힌다. 네트워크 테스트는 CI에서 skip한다.
+- Windows 셸에서는 heredoc이 백슬래시를 뭉갤 수 있으니, 정규식 등은 파일로 작성한 뒤 실행한다.
