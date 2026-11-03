@@ -24,73 +24,73 @@
 		"message": "逆翻訳の言語"
 	},
 	"ENGINE": {
-		"message": "ENGINE"
+		"message": "エンジン"
 	},
 	"Engines_are_tried_from_top_to_bottom_and_the_first_answer_is_used": {
-		"message": "Engines are tried from top to bottom and the first answer is used"
+		"message": "上から順に試し、最初に得られた翻訳を使います。"
 	},
 	"Ready": {
-		"message": "Ready"
+		"message": "使用可能"
 	},
 	"Uses_API_key": {
-		"message": "Uses API key"
+		"message": "APIキー使用"
 	},
 	"Needs_API_key": {
-		"message": "Needs API key"
+		"message": "APIキーが必要"
 	},
 	"Needs_setup": {
-		"message": "Needs setup"
+		"message": "設定が必要"
 	},
 	"Experimental": {
-		"message": "Experimental"
+		"message": "試験的"
 	},
 	"Enable": {
-		"message": "Enable"
+		"message": "有効"
 	},
 	"Move_up": {
-		"message": "Move up"
+		"message": "上へ"
 	},
 	"Move_down": {
-		"message": "Move down"
+		"message": "下へ"
 	},
 	"Press_Alt_and_arrow_keys_to_reorder": {
-		"message": "Press Alt and arrow keys to reorder"
+		"message": "Alt + 矢印キーで並べ替えできます"
 	},
 	"Test": {
-		"message": "Test"
+		"message": "テスト"
 	},
 	"Testing": {
-		"message": "Testing"
+		"message": "テスト中"
 	},
 	"Test_succeeded": {
-		"message": "Test succeeded"
+		"message": "テスト成功"
 	},
 	"Test_failed": {
-		"message": "Test failed"
+		"message": "テスト失敗"
 	},
 	"Get_a_key": {
-		"message": "Get a key"
+		"message": "キーを取得"
 	},
 	"API_Key": {
-		"message": "API Key"
+		"message": "APIキー"
 	},
 	"Region": {
-		"message": "Region"
+		"message": "リージョン"
 	},
 	"Client_ID": {
-		"message": "Client ID"
+		"message": "クライアントID"
 	},
 	"Client_Secret": {
-		"message": "Client Secret"
+		"message": "クライアントシークレット"
 	},
 	"Server_URL": {
-		"message": "Server URL"
+		"message": "サーバーURL"
 	},
 	"Browser_built_in_translator": {
-		"message": "Browser built in translator"
+		"message": "ブラウザ内蔵の翻訳機能"
 	},
 	"OpenAI_compatible_LLM": {
-		"message": "OpenAI compatible LLM"
+		"message": "OpenAI互換LLM"
 	},
 	"LLM_Provider": {
 		"message": "LLM プロバイダ"
@@ -105,13 +105,13 @@
 		"message": "LLM モデル"
 	},
 	"Translation_Cache": {
-		"message": "Translation Cache"
+		"message": "翻訳キャッシュ"
 	},
 	"Clear_translation_cache": {
-		"message": "Clear translation cache"
+		"message": "翻訳キャッシュを消去"
 	},
 	"Translation_cache_cleared": {
-		"message": "Translation cache cleared"
+		"message": "翻訳キャッシュを消去しました"
 	},
 	"KEYBOARD": {
 		"message": "キーボード"

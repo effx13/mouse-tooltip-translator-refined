@@ -24,73 +24,73 @@
 		"message": "Rückübersetzungssprache"
 	},
 	"ENGINE": {
-		"message": "ENGINE"
+		"message": "DIENSTE"
 	},
 	"Engines_are_tried_from_top_to_bottom_and_the_first_answer_is_used": {
-		"message": "Engines are tried from top to bottom and the first answer is used"
+		"message": "Die Dienste werden von oben nach unten versucht; die erste Antwort wird verwendet."
 	},
 	"Ready": {
-		"message": "Ready"
+		"message": "Bereit"
 	},
 	"Uses_API_key": {
-		"message": "Uses API key"
+		"message": "Nutzt API-Schlüssel"
 	},
 	"Needs_API_key": {
-		"message": "Needs API key"
+		"message": "API-Schlüssel nötig"
 	},
 	"Needs_setup": {
-		"message": "Needs setup"
+		"message": "Einrichtung nötig"
 	},
 	"Experimental": {
-		"message": "Experimental"
+		"message": "Experimentell"
 	},
 	"Enable": {
-		"message": "Enable"
+		"message": "Aktivieren"
 	},
 	"Move_up": {
-		"message": "Move up"
+		"message": "Nach oben"
 	},
 	"Move_down": {
-		"message": "Move down"
+		"message": "Nach unten"
 	},
 	"Press_Alt_and_arrow_keys_to_reorder": {
-		"message": "Press Alt and arrow keys to reorder"
+		"message": "Mit Alt + Pfeiltasten umsortieren"
 	},
 	"Test": {
-		"message": "Test"
+		"message": "Testen"
 	},
 	"Testing": {
-		"message": "Testing"
+		"message": "Wird getestet"
 	},
 	"Test_succeeded": {
-		"message": "Test succeeded"
+		"message": "Test erfolgreich"
 	},
 	"Test_failed": {
-		"message": "Test failed"
+		"message": "Test fehlgeschlagen"
 	},
 	"Get_a_key": {
-		"message": "Get a key"
+		"message": "Schlüssel anfordern"
 	},
 	"API_Key": {
-		"message": "API Key"
+		"message": "API-Schlüssel"
 	},
 	"Region": {
 		"message": "Region"
 	},
 	"Client_ID": {
-		"message": "Client ID"
+		"message": "Client-ID"
 	},
 	"Client_Secret": {
-		"message": "Client Secret"
+		"message": "Client-Secret"
 	},
 	"Server_URL": {
-		"message": "Server URL"
+		"message": "Server-URL"
 	},
 	"Browser_built_in_translator": {
-		"message": "Browser built in translator"
+		"message": "Integrierter Browser-Übersetzer"
 	},
 	"OpenAI_compatible_LLM": {
-		"message": "OpenAI compatible LLM"
+		"message": "OpenAI-kompatibles LLM"
 	},
 	"LLM_Provider": {
 		"message": "LLM-Anbieter"
@@ -105,13 +105,13 @@
 		"message": "LLM-Modell"
 	},
 	"Translation_Cache": {
-		"message": "Translation Cache"
+		"message": "Übersetzungs-Cache"
 	},
 	"Clear_translation_cache": {
-		"message": "Clear translation cache"
+		"message": "Übersetzungs-Cache leeren"
 	},
 	"Translation_cache_cleared": {
-		"message": "Translation cache cleared"
+		"message": "Übersetzungs-Cache geleert"
 	},
 	"KEYBOARD": {
 		"message": "TASTATUR"

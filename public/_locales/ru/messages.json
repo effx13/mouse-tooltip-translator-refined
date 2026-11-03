@@ -24,73 +24,73 @@
 		"message": "Язык обратного перевода"
 	},
 	"ENGINE": {
-		"message": "ENGINE"
+		"message": "СЕРВИСЫ"
 	},
 	"Engines_are_tried_from_top_to_bottom_and_the_first_answer_is_used": {
-		"message": "Engines are tried from top to bottom and the first answer is used"
+		"message": "Сервисы перебираются сверху вниз; используется первый полученный перевод."
 	},
 	"Ready": {
-		"message": "Ready"
+		"message": "Готов"
 	},
 	"Uses_API_key": {
-		"message": "Uses API key"
+		"message": "Используется API-ключ"
 	},
 	"Needs_API_key": {
-		"message": "Needs API key"
+		"message": "Нужен API-ключ"
 	},
 	"Needs_setup": {
-		"message": "Needs setup"
+		"message": "Нужна настройка"
 	},
 	"Experimental": {
-		"message": "Experimental"
+		"message": "Экспериментальный"
 	},
 	"Enable": {
-		"message": "Enable"
+		"message": "Включить"
 	},
 	"Move_up": {
-		"message": "Move up"
+		"message": "Вверх"
 	},
 	"Move_down": {
-		"message": "Move down"
+		"message": "Вниз"
 	},
 	"Press_Alt_and_arrow_keys_to_reorder": {
-		"message": "Press Alt and arrow keys to reorder"
+		"message": "Alt + стрелки — изменить порядок"
 	},
 	"Test": {
-		"message": "Test"
+		"message": "Проверить"
 	},
 	"Testing": {
-		"message": "Testing"
+		"message": "Проверка"
 	},
 	"Test_succeeded": {
-		"message": "Test succeeded"
+		"message": "Проверка пройдена"
 	},
 	"Test_failed": {
-		"message": "Test failed"
+		"message": "Проверка не пройдена"
 	},
 	"Get_a_key": {
-		"message": "Get a key"
+		"message": "Получить ключ"
 	},
 	"API_Key": {
-		"message": "API Key"
+		"message": "API-ключ"
 	},
 	"Region": {
-		"message": "Region"
+		"message": "Регион"
 	},
 	"Client_ID": {
-		"message": "Client ID"
+		"message": "ID клиента"
 	},
 	"Client_Secret": {
-		"message": "Client Secret"
+		"message": "Секрет клиента"
 	},
 	"Server_URL": {
-		"message": "Server URL"
+		"message": "URL сервера"
 	},
 	"Browser_built_in_translator": {
-		"message": "Browser built in translator"
+		"message": "Встроенный переводчик браузера"
 	},
 	"OpenAI_compatible_LLM": {
-		"message": "OpenAI compatible LLM"
+		"message": "LLM, совместимая с OpenAI"
 	},
 	"LLM_Provider": {
 		"message": "Провайдер LLM"
@@ -105,13 +105,13 @@
 		"message": "Модель LLM"
 	},
 	"Translation_Cache": {
-		"message": "Translation Cache"
+		"message": "Кэш переводов"
 	},
 	"Clear_translation_cache": {
-		"message": "Clear translation cache"
+		"message": "Очистить кэш переводов"
 	},
 	"Translation_cache_cleared": {
-		"message": "Translation cache cleared"
+		"message": "Кэш переводов очищен"
 	},
 	"KEYBOARD": {
 		"message": "КЛАВИШИ"

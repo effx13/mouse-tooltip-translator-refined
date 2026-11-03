@@ -41,7 +41,7 @@ pnpm typecheck        # svelte-check (TS 포함)
 - `src/components/`: 공용 Svelte 컴포넌트. `ui/`는 shadcn-svelte가 생성한 파일이다.
 - `src/utils/`: `settings/`(스키마 + 저장소), `messaging.ts`, `i18n.ts`, `lang.ts`, `text.ts`, `async.ts`, `page.ts`(확장 페이지 공통 부팅 `bootPage`), `colorScheme.svelte.ts`, `pdfViewer.ts`(`pdf.html?file=` URL), `download.ts`, `cn.ts`(shadcn 별칭).
 - `src/assets/app.css`: Tailwind 진입점. `@source`가 `components/`와 `entrypoints/**/*.svelte`만 스캔하니, Tailwind 클래스를 다른 곳(TS 파일 등)에 쓰면 `@source`를 추가해야 한다.
-- `public/`: `_locales`만 있다. 서드파티 코드는 저장소에 복사하지 않고 npm 패키지로 쓴다.
+- `public/`: `_locales`만 있다(en, ko, ja, zh_CN, zh_TW, es, fr, de, pt_BR, ru 10개). 서드파티 코드는 저장소에 복사하지 않고 npm 패키지로 쓴다.
 - `src/assets/icon.svg`: 확장 아이콘 원본. `@wxt-dev/auto-icons`가 빌드 때 `icons/<size>.png`를 만든다.
 - `docs/`: `intro.md`(설치 시 열리는 사용법), `privacy.md`, `screenshots/`(`pnpm screenshots`로 생성).
 - `scripts/`: `insertLocale.py`(로케일 키 관리, 확장 이름/설명 `appName`/`appDesc` 포함), `screenshots.ts`.
@@ -89,7 +89,8 @@ pnpm typecheck        # svelte-check (TS 포함)
 `public/_locales/*/messages.json`을 손으로 고치지 말 것.
 1. `scripts/insertLocale.py`의 `i18List`에 영문 문자열을 추가한다. 키는 공백을 `_`로 바꾼 것이다(`"Website Target Language"` → `Website_Target_Language`).
 2. `python ./scripts/insertLocale.py`를 실행한다.
-   - 모든 로케일에 누락 키를 영문 placeholder로 채우고, `i18List` 순서로 재정렬한다.
+   - 지원 로케일(`localeList`)에 누락 키를 영문 placeholder로 채우고, `i18List` 순서로 재정렬한다.
+   - 새 키는 placeholder로 들어가므로 9개 언어의 번역을 직접 채운다. 언어를 늘릴 때는 `localeList`와 `uiLanguageList`(schema.ts)를 함께 고친다.
    - `i18List`에 없는 키는 제거한다.
 코드에서는 `getMessage(key)`(폴백 없음) 또는 `t(key)`(키 폴백)를 쓴다(`@/utils/i18n`). 사용자가 고른 UI 언어(`uiLanguage`, #76)를 따른다.
 
