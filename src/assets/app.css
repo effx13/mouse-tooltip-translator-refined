@@ -6,6 +6,15 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* the shadcn-svelte registry styles with data-checked/data-open/...; bits-ui 2 sets data-state and data-orientation */
+@custom-variant data-checked (&:is([data-checked], [data-state="checked"]));
+@custom-variant data-unchecked (&:is([data-unchecked], [data-state="unchecked"]));
+@custom-variant data-open (&:is([data-open], [data-state="open"]));
+@custom-variant data-closed (&:is([data-closed], [data-state="closed"]));
+@custom-variant data-active (&:is([data-active], [data-state="active"]));
+@custom-variant data-horizontal (&:is([data-horizontal], [data-orientation="horizontal"]));
+@custom-variant data-vertical (&:is([data-vertical], [data-orientation="vertical"]));
+
 :root {
   color-scheme: light;
   --radius: 0.625rem;
