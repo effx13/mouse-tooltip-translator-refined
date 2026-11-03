@@ -31,7 +31,7 @@
       sub: "Check_how_to_use_this_extension",
       icon: InfoIcon,
       tint: "bg-green-500/15 text-green-600 dark:text-green-400",
-      url: `${REPO}/blob/main/doc/intro.md#how-to-use`,
+      url: `${REPO}/blob/main/docs/intro.md`,
     },
     {
       name: "PDF_Viewer",
@@ -59,7 +59,7 @@
       sub: "User_privacy_policy",
       icon: ShieldCheckIcon,
       tint: "bg-blue-500/15 text-blue-600 dark:text-blue-400",
-      url: `${REPO}/blob/main/doc/privacy_policy.md`,
+      url: `${REPO}/blob/main/docs/privacy.md`,
     },
   ];
 

@@ -43,7 +43,8 @@ pnpm typecheck        # svelte-check (TS 포함)
 - `src/assets/app.css`: Tailwind 진입점. `@source`가 `components/`와 `entrypoints/**/*.svelte`만 스캔하니, Tailwind 클래스를 다른 곳(TS 파일 등)에 쓰면 `@source`를 추가해야 한다.
 - `public/`: `_locales`만 있다. 서드파티 코드는 저장소에 복사하지 않고 npm 패키지로 쓴다.
 - `src/assets/icon.svg`: 확장 아이콘 원본. `@wxt-dev/auto-icons`가 빌드 때 `icons/<size>.png`를 만든다.
-- `doc/`: `intro.md`(설치 시 열리는 사용법), `privacy_policy.md`, `insertLocale.py`(로케일 생성, 확장 이름/설명 `appName`/`appDesc` 포함).
+- `docs/`: `intro.md`(설치 시 열리는 사용법), `privacy.md`, `screenshots/`(`pnpm screenshots`로 생성).
+- `scripts/`: `insertLocale.py`(로케일 키 관리, 확장 이름/설명 `appName`/`appDesc` 포함), `screenshots.ts`.
 
 ## 테스트
 - 단위 테스트는 대상 파일 옆에 `src/**/*.test.ts`로 둔다(vitest `include`가 이 패턴만 읽는다). 확장 API는 `wxt/testing/fake-browser`의 `fakeBrowser`로 대신하고, 번역 엔진은 `vi.mock("@/translators/registry")`로 막는다.
@@ -85,8 +86,8 @@ pnpm typecheck        # svelte-check (TS 포함)
 
 ### UI 텍스트 / 로케일 키 (직접 편집 금지)
 `public/_locales/*/messages.json`을 손으로 고치지 말 것.
-1. `doc/insertLocale.py`의 `i18List`에 영문 문자열을 추가한다. 키는 공백을 `_`로 바꾼 것이다(`"Website Target Language"` → `Website_Target_Language`).
-2. `python ./doc/insertLocale.py`를 실행한다.
+1. `scripts/insertLocale.py`의 `i18List`에 영문 문자열을 추가한다. 키는 공백을 `_`로 바꾼 것이다(`"Website Target Language"` → `Website_Target_Language`).
+2. `python ./scripts/insertLocale.py`를 실행한다.
    - 모든 로케일에 누락 키를 영문 placeholder로 채우고, `i18List` 순서로 재정렬한다.
    - `i18List`에 없는 키는 제거한다.
 코드에서는 `getMessage(key)`(폴백 없음) 또는 `t(key)`(키 폴백)를 쓴다(`@/utils/i18n`). 사용자가 고른 UI 언어(`uiLanguage`, #76)를 따른다.

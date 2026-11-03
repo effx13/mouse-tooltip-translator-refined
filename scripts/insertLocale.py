@@ -1,7 +1,7 @@
 # python -m pip install --pre googletrans
 #  pip install "httpx>=0.27.2,<1.0"
 # pip install tqdm
-# python ./doc/insertLocale.py
+# python ./scripts/insertLocale.py
 
 import os
 import json

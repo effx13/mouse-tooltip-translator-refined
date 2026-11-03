@@ -3,7 +3,7 @@ import { defineConfig } from "wxt";
 
 export default defineConfig({
   srcDir: "src",
-  // doc/insertLocale.py writes public/_locales
+  // scripts/insertLocale.py writes public/_locales
   publicDir: "public",
   imports: false,
   modules: ["@wxt-dev/module-svelte", "@wxt-dev/auto-icons"],
