@@ -36,7 +36,7 @@ pnpm typecheck        # svelte-check (TS 포함)
   - 출력명(`pdf.html`, `reader.html`, `googleDocInject.js`)은 content script가 경로로 판별하거나 `getURL()`로 참조하니 바꾸지 말 것.
   - 진입점 폴더의 하위 모듈 이름을 `index.ts`로 짓지 않는다. WXT가 `entrypoints/*/index.*`를 진입점으로 읽는다. `entrypoints/` 바로 아래에 새 `.ts`를 두어도 unlisted 스크립트가 된다.
 - `src/content/`: 툴팁(Shadow DOM), 텍스트 감지(`detect/`), 키 처리, 입력창/페이지 번역, 사이트 필터, Google Docs, 웹 PDF 가로채기. 뷰어 페이지도 `startContentScript`/`watchSelection`을 가져다 쓴다.
-- `src/translators/`: 번역 엔진(`engine.ts`의 `defineEngine`), `registry.ts`, `parse.ts`(`matchOrThrow`/`required`: 응답 형식이 바뀌면 throw해서 실패로 처리), `index.ts`의 `translate()`(캐시, 역번역, 사전, 폴백 엔진과 언어쌍별 쿨다운 #363). background에서만 실행된다(DOM 없음).
+- `src/translators/`: 엔진마다 폴더 하나(`<id>/meta.ts` + `<id>/index.ts`). `meta.ts`는 가벼운 메타데이터(`defineEngineMeta`: 기본 순서, 설정 필드, 필수 여부, 키 발급 링크, 아바타 색/글자)라 설정 UI와 background가 함께 읽는다. 요청 코드(ky)는 넣지 않는다. `index.ts`는 요청 구현(background 전용, `engine.ts`의 `defineEngine`)이고, 공식 API 키가 선택인 엔진은 `web.ts`/`api.ts`를 `preferApi`로 묶는다. `catalog.ts`(`./*/meta.ts`)와 `registry.ts`(`./*/index.ts`)가 `import.meta.glob`으로 모으니, 엔진 추가는 폴더 추가로 끝난다(`catalog.test.ts`가 짝과 i18n 키를 검사). `parse.ts`(`matchOrThrow`/`required`: 응답 형식이 바뀌면 throw해서 실패로 처리), `cache.ts`(메모리 LRU + IndexedDB 번역 캐시, 30일), `index.ts`의 `translate()`(켜진 엔진을 위에서부터 시도, 역번역, 사전, 언어쌍별 쿨다운 #363). background에서만 실행된다(DOM 없음).
 - `modules/pdfjs-assets.ts`: 로컬 WXT 모듈. pdf.js worker·cmaps·폰트·wasm을 빌드 결과 `pdfjs/`로 복사한다.
 - `src/components/`: 공용 Svelte 컴포넌트. `ui/`는 shadcn-svelte가 생성한 파일이다.
 - `src/utils/`: `settings/`(스키마 + 저장소), `messaging.ts`, `i18n.ts`, `lang.ts`, `text.ts`, `async.ts`, `page.ts`(확장 페이지 공통 부팅 `bootPage`), `colorScheme.svelte.ts`, `pdfViewer.ts`(`pdf.html?file=` URL), `download.ts`, `cn.ts`(shadcn 별칭).
@@ -65,15 +65,16 @@ pnpm typecheck        # svelte-check (TS 포함)
 
 ### 설정
 - `src/utils/settings/schema.ts`의 `settingSchema`에 항목을 추가하면 설정 화면이 자동으로 렌더한다.
-  - `optionType`: `select`(기본), `toggle`, `multipleSelect`, `comboBox`, `fontSelect`, `colorPicker`, `textField`, `llmModelSelect`, `button`, `hidden`
+  - `optionType`: `select`(기본), `toggle`, `multipleSelect`, `comboBox`, `fontSelect`, `colorPicker`, `textField`, `engineList`(ENGINES 탭의 엔진 목록), `button`, `hidden`
   - `settingTab`, `visibleWhen`, 선언 순서가 화면 배치를 정한다.
 - 값은 타입이 있다. 토글은 boolean, 크기·시간은 number, 키와 언어는 문자열(`"null"` = 없음)이다.
 - 저장은 `local:settings` 하나에 바뀐 값만 넣고, 읽을 때 기본값과 합친다. 쓰는 API는 `getSettings`, `updateSettings`, `watchSettings`, `resetSettings`, `importSettings`, `exportSettings`다.
-- `syncSetting`이 켜지면 `sync:settings`로 미러한다. LLM 키는 동기화하지 않는다.
+- `syncSetting`이 켜지면 `sync:settings`로 미러한다. `engineConfig`(API 키, LLM 설정)는 통째로 동기화하지 않는다.
+- `local:settings`는 `version: 2`다. 스키마 키를 바꾸면 `migrate.ts`에 마이그레이션을 추가하고 버전을 올린다.
 - content script는 설정을 읽기만 한다. 사이트별 대상 언어(#262)는 그 자리에서 유효 설정으로 계산한다.
 
 ### 메시징
-- `src/utils/messaging.ts`의 ProtocolMap(`@webext-core/messaging`)만 쓴다. 메시지는 `translate`, `tooltipShown`, `copyText` 세 가지다. 새 메시지가 필요하면 여기에 타입을 추가한다.
+- `src/utils/messaging.ts`의 ProtocolMap(`@webext-core/messaging`)만 쓴다. 메시지는 `translate`, `tooltipShown`, `translationCache`, `copyText` 네 가지다. 새 메시지가 필요하면 여기에 타입을 추가한다.
 - 설정 리셋/가져오기/내보내기는 popup이 스토리지에 직접 하므로 메시지가 필요 없다.
 
 ### content script

@@ -10,12 +10,13 @@ Hover or select text on any page to see its translation in a tooltip.
 - Translate what you type in a text field (Right Alt)
 - Translate the whole page with a shortcut
 - Built-in PDF viewer and ebook reader (EPUB, MOBI, FB2, CBZ) with the same tooltips
-- Google, Bing, DeepL, Yandex, Baidu, Papago, the browser's built-in translator, or any OpenAI-compatible LLM
+- An ordered list of engines with automatic fallback: Google, Bing, DeepL, Papago, Yandex, Baidu, the browser's built-in translator, Kakao i, LibreTranslate, or any OpenAI-compatible LLM. Add your own DeepL, Papago (Naver Cloud), Google Cloud or Microsoft Translator API key to use the official API
+- Translations are cached for 30 days, so the same text isn't sent again
 - Per-site target language, site and language exclusions, settings sync
 
-| Settings | PDF viewer |
-| --- | --- |
-| ![Settings](docs/screenshots/settings-light.png) | ![PDF viewer](docs/screenshots/pdf-viewer.png) |
+| Settings | Engines | PDF viewer |
+| --- | --- | --- |
+| ![Settings](docs/screenshots/settings-light.png) | ![Engines](docs/screenshots/engines.png) | ![PDF viewer](docs/screenshots/pdf-viewer.png) |
 
 ## Usage
 
