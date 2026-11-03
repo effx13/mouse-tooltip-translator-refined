@@ -1,4 +1,4 @@
-import ky from "ky";
+import { http } from "../http";
 import { defineEngine } from "../engine";
 import { required } from "../parse";
 
@@ -74,7 +74,7 @@ export function buildRequestBody(
 
 export default defineEngine(async (text, sourceLang, targetLang) => {
   const id = (Math.floor(Math.random() * 99999) + 100000) * 1000;
-  const res = await ky
+  const res = await http
     .post(deeplBaseUrl, {
       headers: { "Content-Type": "application/json" },
       body: buildRequestBody(text, sourceLang, targetLang, id),

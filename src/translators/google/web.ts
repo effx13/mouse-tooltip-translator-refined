@@ -1,4 +1,4 @@
-import ky from "ky";
+import { http } from "../http";
 import { defineEngine } from "../engine";
 
 const apiUrl = "https://translate.googleapis.com/translate_a/single";
@@ -11,7 +11,7 @@ interface GoogleResponse {
 
 export default defineEngine(async (text, sourceLang, targetLang) => {
   const params = `${new URLSearchParams({ client: "gtx", q: text, sl: sourceLang, tl: targetLang, dj: "1", hl: targetLang })}&dt=rm&dt=bd&dt=t`;
-  const res = await ky(`${apiUrl}?${params}`).json<GoogleResponse>();
+  const res = await http(`${apiUrl}?${params}`).json<GoogleResponse>();
 
   // each sentence already carries its trailing space / "\n", so join with ""
   const targetText = res.sentences

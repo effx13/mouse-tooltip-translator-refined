@@ -557,6 +557,33 @@
 	"Invalid_password_try_again": {
 		"message": "Mot de passe invalide, réessayez"
 	},
+	"Too_many_requests": {
+		"message": "Trop de requêtes"
+	},
+	"API_key_rejected": {
+		"message": "Clé API refusée"
+	},
+	"Quota_exceeded": {
+		"message": "Quota dépassé"
+	},
+	"Server_error": {
+		"message": "Erreur du serveur"
+	},
+	"Request_timed_out": {
+		"message": "Délai d'attente dépassé"
+	},
+	"Network_error": {
+		"message": "Erreur réseau"
+	},
+	"No_translation_returned": {
+		"message": "Aucune traduction renvoyée"
+	},
+	"Translation_failed": {
+		"message": "Échec de la traduction"
+	},
+	"No_translation_engine_is_enabled": {
+		"message": "Aucun moteur de traduction activé. Activez-en un dans l'onglet Moteurs."
+	},
 	"appName": {
 		"message": "Mouse Tooltip Translator Refined"
 	},

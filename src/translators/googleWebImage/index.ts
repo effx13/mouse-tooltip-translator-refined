@@ -1,4 +1,4 @@
-import ky from "ky";
+import { http } from "../http";
 import { defineEngine, detectLangBrowser } from "../engine";
 import { matchOrThrow, required } from "../parse";
 
@@ -22,7 +22,7 @@ async function getBase64(url: string): Promise<string> {
 
 // https://stackoverflow.com/questions/70638466/how-do-i-scrape-all-the-images-from-a-google-image-search
 export default defineEngine(async (text) => {
-  const res = await ky(googleSearchUrl, { searchParams: { q: text, tbm: "isch" } }).text();
+  const res = await http(googleSearchUrl, { searchParams: { q: text, tbm: "isch" } }).text();
   const urlJSON: Record<string, string> = JSON.parse(matchOrThrow(res, /google.ldi=(\{[^{]+\});/));
   const imageUrl = required(Object.values(urlJSON)[0], "image url");
   return {

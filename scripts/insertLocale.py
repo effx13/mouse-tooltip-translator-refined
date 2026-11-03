@@ -204,6 +204,15 @@ i18List = [
     "Drop a PDF file here",
     "Enter the password to open this PDF file",
     "Invalid password try again",
+    "Too many requests",
+    "API key rejected",
+    "Quota exceeded",
+    "Server error",
+    "Request timed out",
+    "Network error",
+    "No translation returned",
+    "Translation failed",
+    "No translation engine is enabled",
 ]
 
 

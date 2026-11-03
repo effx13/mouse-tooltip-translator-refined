@@ -1,4 +1,4 @@
-import ky from "ky";
+import { http } from "./http";
 
 const apiUrl = "https://en.wiktionary.org/api/rest_v1/page/definition/";
 const maxDefsPerPos = 3;
@@ -34,7 +34,7 @@ export async function getWiktionaryDict(word: string, sourceLang = "en"): Promis
 
   let res: Record<string, unknown> | undefined;
   try {
-    res = await ky(apiUrl + encodeURIComponent(word), {
+    res = await http(apiUrl + encodeURIComponent(word), {
       headers: { accept: "application/json" },
     }).json();
   } catch (error) {

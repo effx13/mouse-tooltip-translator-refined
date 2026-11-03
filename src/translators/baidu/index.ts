@@ -1,4 +1,4 @@
-import ky from "ky";
+import { http } from "../http";
 import { defineEngine } from "../engine";
 import { required } from "../parse";
 
@@ -38,7 +38,7 @@ interface BaiduResponse {
 }
 
 export default defineEngine(async (text, sourceLang, targetLang) => {
-  const res = await ky
+  const res = await http
     .post(baseUrl, {
       searchParams: { from: sourceLang, to: targetLang },
       body: new URLSearchParams({

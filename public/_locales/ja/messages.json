@@ -557,6 +557,33 @@
 	"Invalid_password_try_again": {
 		"message": "パスワードが正しくありません。もう一度お試しください"
 	},
+	"Too_many_requests": {
+		"message": "リクエストが多すぎます"
+	},
+	"API_key_rejected": {
+		"message": "APIキーが拒否されました"
+	},
+	"Quota_exceeded": {
+		"message": "利用上限を超えました"
+	},
+	"Server_error": {
+		"message": "サーバーエラー"
+	},
+	"Request_timed_out": {
+		"message": "タイムアウトしました"
+	},
+	"Network_error": {
+		"message": "ネットワークエラー"
+	},
+	"No_translation_returned": {
+		"message": "翻訳結果がありません"
+	},
+	"Translation_failed": {
+		"message": "翻訳に失敗しました"
+	},
+	"No_translation_engine_is_enabled": {
+		"message": "有効な翻訳エンジンがありません。エンジンタブで有効にしてください。"
+	},
 	"appName": {
 		"message": "Mouse Tooltip Translator Refined"
 	},

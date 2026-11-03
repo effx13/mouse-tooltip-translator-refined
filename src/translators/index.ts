@@ -1,9 +1,11 @@
 import { isRedundantTranslation, isSameLanguage } from "@/utils/lang";
-import type { TranslateRequest, TranslateResult } from "@/utils/messaging";
+import type { EngineFailure, TranslateRequest, TranslateResult } from "@/utils/messaging";
 import type { Settings } from "@/utils/settings";
 import type { EngineResult } from "./engine";
 import { translationCache } from "./cache";
 import { isEngineReady } from "./catalog";
+import { classifyFailure } from "./failure";
+import { describeFailures } from "./failureMessage";
 import { getEngine } from "./registry";
 import { getWiktionaryDict } from "./wiktionary";
 
@@ -21,11 +23,7 @@ const pairCrashTime = new Map<string, number>();
 const pairCrashCount = new Map<string, number>();
 const engineFailedPairs = new Map<string, Set<string>>();
 
-type Attempt = { result: EngineResult } | { error: string };
-
-// ky puts the request URL in its messages; Google Cloud carries the key in the query
-const scrubSecrets = (message: string) =>
-  message.replace(/([?&](?:key|api_key)=)[^&\s]+/gi, "$1***");
+type Attempt = { result: EngineResult } | { failure: EngineFailure };
 
 async function runEngine(
   text: string,
@@ -36,11 +34,11 @@ async function runEngine(
 ): Promise<Attempt> {
   try {
     const result = await getEngine(engine)?.translate(text, sourceLang, targetLang, settings);
-    if (!result) return { error: `${engine} returned no translation` };
+    if (!result) return { failure: { engine, kind: "empty" } };
     return { result };
   } catch (error) {
     console.log(error);
-    return { error: scrubSecrets(error instanceof Error ? error.message : String(error)) };
+    return { failure: classifyFailure(engine, error) };
   }
 }
 
@@ -92,6 +90,7 @@ async function translateWithEngines(
   targetLang: string,
   order: readonly string[],
   settings: Settings,
+  failures: EngineFailure[] = [],
 ): Promise<EngineResult | null> {
   const now = Date.now();
   const cooling = order.filter((engine) => isCoolingDown(engine, sourceLang, targetLang, now));
@@ -102,6 +101,7 @@ async function translateWithEngines(
       recordSuccess(engine, sourceLang, targetLang);
       return attempt.result;
     }
+    failures.push(attempt.failure);
     recordFailure(engine, sourceLang, targetLang);
   }
   return null;
@@ -146,18 +146,21 @@ async function applyWiktionaryDict(
 }
 
 const brokenResult = (
-  engine: string,
+  failures: EngineFailure[],
   sourceLang: string,
   targetLang: string,
-  error?: string,
-): TranslateResult => ({
-  targetText: `${engine} is broken`,
-  transliteration: "",
-  sourceLang,
-  targetLang,
-  isBroken: true,
-  ...(error && { error }),
-});
+): TranslateResult => {
+  const message = describeFailures(failures);
+  return {
+    targetText: message,
+    transliteration: "",
+    sourceLang,
+    targetLang,
+    isBroken: true,
+    failures,
+    error: message,
+  };
+};
 
 // exactly one engine, no cache, no fallback, no cooldown bookkeeping (the settings "Test" button)
 async function translateOnce(request: TranslateRequest, engine: string, settings: Settings) {
@@ -165,7 +168,7 @@ async function translateOnce(request: TranslateRequest, engine: string, settings
   const attempt = await runEngine(text, sourceLang, targetLang, engine, settings);
   return "result" in attempt
     ? attempt.result
-    : brokenResult(engine, sourceLang, targetLang, attempt.error);
+    : brokenResult([attempt.failure], sourceLang, targetLang);
 }
 
 export async function translate(
@@ -191,7 +194,15 @@ export async function translate(
   const cached = cacheKey ? await translationCache.get(cacheKey) : undefined;
   if (cached) return cached;
 
-  let response = await translateWithEngines(text, sourceLang, targetLang, order, settings);
+  const failures: EngineFailure[] = [];
+  let response = await translateWithEngines(
+    text,
+    sourceLang,
+    targetLang,
+    order,
+    settings,
+    failures,
+  );
   response = await translateSameLangInReverse(
     response,
     text,
@@ -204,7 +215,5 @@ export async function translate(
   // stored in the background; the tooltip does not wait for IndexedDB
   if (response && cacheKey) void translationCache.put(cacheKey, response);
 
-  // names the first engine in line, not the last one that also failed
-  const firstEnabled = settings.translatorEngines?.find((entry) => entry.enabled)?.id;
-  return response ?? brokenResult(order[0] ?? firstEnabled ?? "translator", sourceLang, targetLang);
+  return response ?? brokenResult(failures, sourceLang, targetLang);
 }

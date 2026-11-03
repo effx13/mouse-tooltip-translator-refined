@@ -557,6 +557,33 @@
 	"Invalid_password_try_again": {
 		"message": "비밀번호가 틀렸습니다. 다시 입력하세요"
 	},
+	"Too_many_requests": {
+		"message": "요청이 너무 많습니다"
+	},
+	"API_key_rejected": {
+		"message": "API 키가 거부되었습니다"
+	},
+	"Quota_exceeded": {
+		"message": "사용 한도를 초과했습니다"
+	},
+	"Server_error": {
+		"message": "서버 오류"
+	},
+	"Request_timed_out": {
+		"message": "응답 시간이 초과되었습니다"
+	},
+	"Network_error": {
+		"message": "네트워크 오류"
+	},
+	"No_translation_returned": {
+		"message": "번역 결과가 없습니다"
+	},
+	"Translation_failed": {
+		"message": "번역에 실패했습니다"
+	},
+	"No_translation_engine_is_enabled": {
+		"message": "사용 중인 번역 엔진이 없습니다. 엔진 탭에서 켜 주세요."
+	},
 	"appName": {
 		"message": "Mouse Tooltip Translator Refined"
 	},

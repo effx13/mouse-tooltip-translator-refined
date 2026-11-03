@@ -1,5 +1,5 @@
 import { decodeHTML } from "entities";
-import ky from "ky";
+import { http } from "../http";
 import { defineEngine } from "../engine";
 
 const googleTranslateTKK = "448487.932609646";
@@ -64,7 +64,7 @@ export function getToken(query: string, windowTkk: string): string {
 }
 
 export default defineEngine(async (text, sourceLang, targetLang) => {
-  const res = await ky(apiPath, {
+  const res = await http(apiPath, {
     searchParams: {
       client: "te_lib",
       sl: sourceLang,

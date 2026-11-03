@@ -557,6 +557,33 @@
 	"Invalid_password_try_again": {
 		"message": "密碼錯誤，請再試一次"
 	},
+	"Too_many_requests": {
+		"message": "請求過多"
+	},
+	"API_key_rejected": {
+		"message": "API 金鑰遭拒"
+	},
+	"Quota_exceeded": {
+		"message": "已超出配額"
+	},
+	"Server_error": {
+		"message": "伺服器錯誤"
+	},
+	"Request_timed_out": {
+		"message": "請求逾時"
+	},
+	"Network_error": {
+		"message": "網路錯誤"
+	},
+	"No_translation_returned": {
+		"message": "未傳回翻譯"
+	},
+	"Translation_failed": {
+		"message": "翻譯失敗"
+	},
+	"No_translation_engine_is_enabled": {
+		"message": "沒有啟用的翻譯引擎。請在「引擎」分頁中啟用。"
+	},
 	"appName": {
 		"message": "Mouse Tooltip Translator Refined"
 	},

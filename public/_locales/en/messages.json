@@ -557,6 +557,33 @@
 	"Invalid_password_try_again": {
 		"message": "Invalid password try again"
 	},
+	"Too_many_requests": {
+		"message": "Too many requests"
+	},
+	"API_key_rejected": {
+		"message": "API key rejected"
+	},
+	"Quota_exceeded": {
+		"message": "Quota exceeded"
+	},
+	"Server_error": {
+		"message": "Server error"
+	},
+	"Request_timed_out": {
+		"message": "Request timed out"
+	},
+	"Network_error": {
+		"message": "Network error"
+	},
+	"No_translation_returned": {
+		"message": "No translation returned"
+	},
+	"Translation_failed": {
+		"message": "Translation failed"
+	},
+	"No_translation_engine_is_enabled": {
+		"message": "No translation engine is enabled. Turn one on in the Engines tab."
+	},
 	"appName": {
 		"message": "Mouse Tooltip Translator Refined"
 	},

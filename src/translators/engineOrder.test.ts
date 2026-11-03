@@ -13,6 +13,11 @@ const { calls, record } = vi.hoisted(() => {
       // deepl knows PT but not the regional variants; bing is down
       if (name === "deepl" && targetLang.includes("-")) return undefined;
       if (name === "bing") throw new Error("bing is down");
+      if (name === "google" && text === "busy") {
+        const { HTTPError } = await import("ky");
+        const request = new Request("https://translate.googleapis.com/");
+        throw new HTTPError(new Response(null, { status: 429 }), request, {} as never);
+      }
       return { targetText: `${name}(${text})`, transliteration: "", sourceLang: "en", targetLang };
     };
   return { calls: log, record: fakeEngine };
@@ -54,6 +59,24 @@ beforeEach(() => {
 });
 
 describe("engine order", () => {
+  // its own language pair, so the cooldown it leaves behind doesn't reorder the other tests
+  test("a rate-limited engine falls through to the next one, and the reason is kept", async () => {
+    const result = await translate(
+      request({ text: "busy", targetLang: "it" }),
+      withEngines(["google", "baidu"]),
+    );
+    expect(engineOf(result)).toBe("baidu");
+
+    const alone = await translate(
+      request({ text: "busy", targetLang: "it" }),
+      withEngines(["google"]),
+    );
+    expect(alone).toMatchObject({
+      isBroken: true,
+      failures: [{ engine: "google", kind: "rateLimited", status: 429 }],
+    });
+  });
+
   test("enabled engines are tried top to bottom and the first answer wins", async () => {
     const result = await translate(
       request({ text: "a" }),
@@ -80,9 +103,9 @@ describe("engine order", () => {
     expect(engineOf(await translate(request({ text: "c" }), configured))).toBe("kakao");
   });
 
-  test("nothing usable reports the first enabled engine as broken without a request", async () => {
+  test("nothing usable is reported as broken without a request", async () => {
     const result = await translate(request({ text: "d" }), withEngines(["kakao"]));
-    expect(result).toMatchObject({ isBroken: true, targetText: "kakao is broken" });
+    expect(result).toMatchObject({ isBroken: true, failures: [] });
     expect(calls).toEqual([]);
   });
 
@@ -102,7 +125,10 @@ describe("engine order", () => {
       withEngines(["google"]),
     );
     expect(calls).toEqual(["bing:auto->es"]);
-    expect(result).toMatchObject({ isBroken: true, error: "bing is down" });
+    expect(result).toMatchObject({
+      isBroken: true,
+      failures: [{ engine: "bing", kind: "other", detail: "bing is down" }],
+    });
   });
 });
 

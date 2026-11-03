@@ -23,10 +23,20 @@ export interface TranslateResult {
   imageUrl?: string;
   // dictionary entries for a single word, one per line ("noun: a, b")
   dict?: string;
-  // engine (and fallbacks) failed; targetText holds "<engine> is broken"
+  // every engine failed; `failures` says why, in the order they were tried
   isBroken?: boolean;
-  // why a noFallback request failed
+  failures?: EngineFailure[];
+  // English summary of the failures (for logs and callers without i18n)
   error?: string;
+}
+
+export interface EngineFailure {
+  engine: string;
+  kind: "rateLimited" | "auth" | "quota" | "server" | "timeout" | "network" | "empty" | "other";
+  // HTTP status when there was one
+  status?: number;
+  // the raw message for "other"
+  detail?: string;
 }
 
 interface ProtocolMap {

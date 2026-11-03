@@ -1,4 +1,4 @@
-import ky from "ky";
+import { http } from "../http";
 import { defineEngine } from "../engine";
 import { matchOrThrow, required } from "../parse";
 
@@ -161,7 +161,7 @@ const userAgent = () =>
 
 // https://github.com/plainheart/bing-translate-api/blob/dd0319e1046d925fa4cd4850e2323c5932de837a/src/index.js#L42
 async function fetchBingToken(tokenUrl: string): Promise<BingToken> {
-  const response = await ky(tokenUrl, { headers: { "User-Agent": userAgent() } });
+  const response = await http(tokenUrl, { headers: { "User-Agent": userAgent() } });
   const data = await response.text();
   const setCookie = response.headers.get("set-cookie");
   const setCookies = response.headers.getSetCookie?.() ?? (setCookie ? [setCookie] : []);
@@ -205,7 +205,7 @@ export default defineEngine(async (text, sourceLang, targetLang) => {
   if (!auth) throw new Error("bing token unavailable");
   const host = useChina ? urls.china : urls.global;
 
-  const res = await ky
+  const res = await http
     .post(host.translate, {
       headers: {
         "User-Agent": userAgent(),

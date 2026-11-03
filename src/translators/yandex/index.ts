@@ -1,4 +1,4 @@
-import ky from "ky";
+import { http } from "../http";
 import { defineEngine } from "../engine";
 
 // https://github.com/vtosters/lite/blob/cf17ed64c759d366ae7121dc61c4328205963ed4/app/src/main/java/ru/vtosters/lite/translators/YandexTranslator.java#L35
@@ -104,7 +104,7 @@ interface YandexResponse {
 export default defineEngine(async (text, sourceLang, targetLang) => {
   const uuid = crypto.randomUUID().replaceAll("-", "");
   const lang = sourceLang === "auto" ? targetLang : `${sourceLang}-${targetLang}`;
-  const res = await ky
+  const res = await http
     .post(mainUrl, {
       searchParams: { id: `${uuid}-0-0`, srv: "android" },
       body: new URLSearchParams({ lang, text }),

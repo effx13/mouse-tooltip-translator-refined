@@ -1,4 +1,4 @@
-import ky from "ky";
+import { http } from "../http";
 import { parse } from "node-html-parser";
 import { defineEngine, detectLangBrowser } from "../engine";
 
@@ -19,7 +19,7 @@ export function extractDefinition(html: string): string {
 
 export default defineEngine(async (text) => {
   const lang = "en";
-  const res = await ky(googleSearchUrl, {
+  const res = await http(googleSearchUrl, {
     searchParams: { q: `meaning:${text}`, hl: lang, lr: `lang_${lang}` },
   }).text();
   return {

@@ -1,4 +1,4 @@
-import ky from "ky";
+import { http } from "../http";
 import { defineEngine } from "../engine";
 import { matchOrThrow } from "../parse";
 
@@ -12,7 +12,7 @@ async function getTokenV2() {
   if (token && token.time + tokenTTL > Date.now()) {
     return token;
   }
-  const res = await ky(tokenUrl).text();
+  const res = await http(tokenUrl).text();
   const sid = matchOrThrow(res, /"FdrFJe":"(.*?)"/);
   const bl = matchOrThrow(res, /"cfb2h":"(.*?)"/);
   const at = res.match(/"SNlM0e":"(.*?)"/)?.[1] ?? "";
@@ -25,7 +25,7 @@ export default defineEngine(async (text, sourceLang, targetLang) => {
   const req = JSON.stringify([
     [["MkEWBc", JSON.stringify([[text, sourceLang, targetLang, true], [null]]), null, "generic"]],
   ]);
-  const res = await ky
+  const res = await http
     .post(batchUrl, {
       headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
       searchParams: {

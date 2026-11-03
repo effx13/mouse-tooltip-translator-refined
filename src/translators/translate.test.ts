@@ -82,12 +82,11 @@ describe("translate", () => {
   test("a failed engine without fallback reports itself as broken", async () => {
     engineTranslate.mockResolvedValue(undefined);
     const result = await translate(request({ text: "fails", engine: "google" }), settings);
-    expect(result).toEqual({
-      targetText: "google is broken",
-      transliteration: "",
+    expect(result).toMatchObject({
       sourceLang: "auto",
       targetLang: "ko",
       isBroken: true,
+      failures: [{ engine: "google", kind: "empty" }],
     });
   });
 

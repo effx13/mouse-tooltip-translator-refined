@@ -1,4 +1,4 @@
-import ky from "ky";
+import { http } from "./http";
 
 export interface ApiRequest {
   method: "get" | "post";
@@ -9,4 +9,4 @@ export interface ApiRequest {
 }
 
 export const sendApiRequest = <T>({ method, url, headers, searchParams, json }: ApiRequest) =>
-  ky(url, { method, headers, searchParams, json, timeout: 20000, retry: 0 }).json<T>();
+  http(url, { method, headers, searchParams, json, timeout: 20000 }).json<T>();

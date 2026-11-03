@@ -1,4 +1,4 @@
-import ky from "ky";
+import { http } from "../http";
 import { langListOpposite } from "@/utils/lang";
 import { getFieldValue } from "../catalog";
 import { llmProviderEndpoints } from "./meta";
@@ -53,7 +53,7 @@ export default defineEngine(async (text, sourceLang, targetLang, { engineConfig 
       ? `Translate from ${langName(sourceLang)} to ${target}.`
       : `Translate to ${target}.`;
 
-  const res = await ky
+  const res = await http
     .post(`${trimSlash(endpoint)}/chat/completions`, {
       headers: { "Content-Type": "application/json", ...authHeaders(apiKey) },
       timeout: 60000,
@@ -84,7 +84,7 @@ export async function fetchLlmModels(opts: {
 }): Promise<string[]> {
   const endpoint = opts.endpoint || llmProviderEndpoints[opts.provider] || "";
   if (!endpoint) throw new Error("LLM API endpoint is not set");
-  const res = await ky
+  const res = await http
     .get(`${trimSlash(endpoint)}/models`, {
       headers: authHeaders(opts.apiKey),
       timeout: 15000,

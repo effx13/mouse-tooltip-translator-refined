@@ -1,6 +1,6 @@
 import { hmac } from "@noble/hashes/hmac.js";
 import { md5 } from "@noble/hashes/legacy.js";
-import ky from "ky";
+import { http } from "../http";
 import { defineEngine } from "../engine";
 import { matchOrThrow } from "../parse";
 
@@ -32,8 +32,8 @@ const mainUrl = "https://papago.naver.com/";
 let version = "";
 
 async function getVersion(): Promise<string> {
-  const page = await ky(mainUrl).text();
-  const script = await ky(`${mainUrl}main.${matchOrThrow(page, /"\/main.([^"]+)"/)}`).text();
+  const page = await http(mainUrl).text();
+  const script = await http(`${mainUrl}main.${matchOrThrow(page, /"\/main.([^"]+)"/)}`).text();
   return `v1.${matchOrThrow(script, /"v1.([^"]+)"/)}`;
 }
 
@@ -61,13 +61,13 @@ async function getOptionsAndUuid(url: string) {
 export default defineEngine(async (text, sourceLang, targetLang) => {
   if (sourceLang === "auto") {
     const { headers } = await getOptionsAndUuid(urlDect);
-    const { langCode } = await ky
+    const { langCode } = await http
       .post(urlDect, { searchParams: { query: text }, headers })
       .json<{ langCode: string }>();
     sourceLang = langCode;
   }
   const { headers, uuid } = await getOptionsAndUuid(urlTranslate);
-  const res = await ky
+  const res = await http
     .post(urlTranslate, {
       searchParams: {
         deviceId: uuid,
