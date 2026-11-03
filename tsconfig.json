@@ -7,5 +7,6 @@
     "noImplicitAny": false,
     "types": ["vitest/globals"]
   },
-  "include": [".wxt/wxt.d.ts", "src", "__tests__", "*.config.ts"]
+  "include": [".wxt/wxt.d.ts", "src", "__tests__", "*.config.ts"],
+  "exclude": ["legacy", ".output", "node_modules"]
 }

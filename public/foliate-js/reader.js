@@ -101,8 +101,9 @@ const getView = async file => {
 const getEbookTheme = async () => {
     try {
         const api = globalThis.browser || globalThis.chrome
-        const res = await api.storage.local.get('ebookTheme')
-        return res?.ebookTheme || 'auto'
+        // the extension keeps every setting in one `settings` object (wxt storage "local:settings")
+        const res = await api.storage.local.get('settings')
+        return res?.settings?.ebookTheme || 'auto'
     } catch (e) {
         return 'auto'
     }

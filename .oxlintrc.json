@@ -1,13 +1,6 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": [
-    "typescript",
-    "unicorn",
-    "oxc",
-    "import",
-    "promise",
-    "vitest"
-  ],
+  "plugins": ["typescript", "unicorn", "oxc", "import", "promise", "vitest"],
   "categories": {
     "correctness": "error",
     "suspicious": "warn"
@@ -15,70 +8,24 @@
   "env": {
     "browser": true,
     "webextensions": true,
-    "es2024": true
+    "builtin": true
   },
-  "ignorePatterns": [
-    "build/**",
-    "public/**"
-  ],
-  "overrides": [
-    {
-      "files": [
-        "scripts/**",
-        "*.config.ts"
-      ],
-      "env": {
-        "node": true
-      }
-    },
-    {
-      "files": [
-        "__tests__/**"
-      ],
-      "rules": {
-        "vitest/no-standalone-expect": "off",
-        "vitest/require-to-throw-message": "off"
-      },
-      "globals": {
-        "describe": "readonly",
-        "test": "readonly",
-        "it": "readonly",
-        "expect": "readonly",
-        "beforeEach": "readonly",
-        "afterEach": "readonly",
-        "beforeAll": "readonly",
-        "afterAll": "readonly",
-        "vi": "readonly"
-      }
-    }
-  ],
   "rules": {
-    "no-unused-vars": [
-      "warn",
-      {
-        "caughtErrors": "none",
-        "argsIgnorePattern": "^_",
-        "varsIgnorePattern": "^_"
-      }
-    ],
-    "no-underscore-dangle": "off",
-    "block-scoped-var": "off",
-    "typescript/no-extraneous-class": "off",
-    "import/no-unassigned-import": "off",
-    "unicorn/prefer-add-event-listener": "off",
-    "unicorn/consistent-function-scoping": "off",
-    "no-async-promise-executor": "warn",
-    "no-unused-expressions": "warn",
-    "no-unassigned-vars": "warn",
-    "no-dupe-else-if": "warn",
-    "no-unused-private-class-members": "warn",
-    "promise/no-callback-in-promise": "warn",
     "no-undef": "error"
   },
-  "globals": {
-    "require": "readonly",
-    "process": "readonly",
-    "cv": "readonly",
-    "PDFViewerApplication": "readonly"
-  }
+  "ignorePatterns": [".output/**", ".wxt/**", "build/**", "legacy/**", "public/**"],
+  "overrides": [
+    {
+      "files": ["*.config.ts", "scripts/**"],
+      "env": { "node": true }
+    },
+    {
+      "files": ["__tests__/**"],
+      "env": { "vitest": true, "node": true }
+    },
+    {
+      "files": ["**/*.svelte", "**/*.svelte.ts"],
+      "env": { "svelte": true }
+    }
+  ]
 }

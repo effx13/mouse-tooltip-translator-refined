@@ -1,5 +1,18 @@
 {
   "$schema": "./node_modules/oxfmt/configuration_schema.json",
-  "printWidth": 80,
-  "ignorePatterns": ["build/**", "public/**", "pnpm-lock.yaml", "doc/**", "*.md"]
+  "printWidth": 100,
+  "ignorePatterns": [
+    "*.md",
+    "*.yml",
+    ".claude/**",
+    ".github/**",
+    ".output/**",
+    ".wxt/**",
+    "build/**",
+    "doc/**",
+    "legacy/**",
+    "pnpm-lock.yaml",
+    "public/**"
+  ],
+  "svelte": true
 }

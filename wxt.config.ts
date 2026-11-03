@@ -1,23 +1,17 @@
-import AutoImport from "unplugin-auto-import/vite";
-import Components from "unplugin-vue-components/vite";
-import VueRouter from "unplugin-vue-router/vite";
 import { defineConfig } from "wxt";
 
-const SRC = new URL("./src/", import.meta.url).pathname.replace(/^\/(\w:)/, "$1");
-
-// public/ files that must not ship
 const PUBLIC_EXCLUDE = [".md", ".map", "compressed.tracemonkey-pldi-09.pdf"];
 
 export default defineConfig({
   srcDir: "src",
-  // stays at the repo root: doc/insertLocale.py and crowdin.yml write public/_locales
+  // doc/insertLocale.py and crowdin.yml write public/_locales
   publicDir: "public",
-  // explicit imports only
   imports: false,
-  modules: ["@wxt-dev/module-vue"],
+  modules: ["@wxt-dev/module-svelte"],
 
   manifest: ({ browser, manifestVersion }) => {
     const firefox = browser === "firefox";
+    const csp = "script-src 'self' 'wasm-unsafe-eval'; object-src 'none'";
     return {
       name: "__MSG_appName__",
       description: "__MSG_appDesc__",
@@ -28,24 +22,22 @@ export default defineConfig({
         48: "icons/icon_48.png",
         128: "icons/icon_128.png",
       },
-      content_security_policy:
-        manifestVersion === 3
-          ? { extension_pages: "script-src 'self' 'wasm-unsafe-eval'; object-src 'none'" }
-          : ("script-src 'self' 'wasm-unsafe-eval'; object-src 'none'" as never),
+      content_security_policy: manifestVersion === 3 ? { extension_pages: csp } : (csp as never),
       permissions: firefox
-        ? ["storage", "tabs", "scripting", "contextMenus", "search", "webRequest", "webRequestBlocking"]
-        : ["storage", "tts", "tabs", "scripting", "contextMenus", "offscreen", "search", "fontSettings"],
+        ? [
+            "storage",
+            "tabs",
+            "scripting",
+            "contextMenus",
+            "search",
+            "webRequest",
+            "webRequestBlocking",
+          ]
+        : ["storage", "tabs", "scripting", "contextMenus", "search", "fontSettings"],
       host_permissions: ["<all_urls>"],
       web_accessible_resources: [
         {
-          resources: [
-            "pdfjs/web/viewer.html",
-            "ocr.html",
-            "opencvHandler.html",
-            "googleDocInject.js",
-            "subtitle.js",
-            "popup.html",
-          ],
+          resources: ["pdfjs/web/viewer.html", "googleDocInject.js"],
           matches: ["<all_urls>"],
         },
       ],
@@ -60,18 +52,14 @@ export default defineConfig({
         },
       },
       omnibox: { keyword: "/" },
-      action: { default_title: "Mouse Tooltip Translator" },
-      options_ui: firefox
-        ? { page: "popup.html" }
-        : { page: "popup.html", open_in_tab: true },
+      options_ui: firefox ? { page: "popup.html" } : { page: "popup.html", open_in_tab: true },
       ...(firefox && {
-        browser_specific_settings: { gecko: { id: "mouse.tooltip.translator@gmail.com" } },
+        browser_specific_settings: { gecko: { id: "mouse-tooltip-translator@effx13" } },
       }),
     };
   },
 
   zip: {
-    // Firefox AMO review needs the sources zip; keep stale local artifacts out
     excludeSources: ["build/**", "web-ext-artifacts/**", "*.zip"],
   },
 
@@ -83,25 +71,9 @@ export default defineConfig({
   },
 
   vite: ({ mode }) => ({
-    resolve: {
-      // legacy root-absolute specifiers ("/src/util/lang.js")
-      alias: [{ find: /^\/src\//, replacement: SRC }],
-    },
-    define: {
-      __VUE_OPTIONS_API__: "true",
-      __VUE_PROD_DEVTOOLS__: "false",
-      __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: "false",
-    },
-    plugins: [
-      // must run before the vue plugin added by @wxt-dev/module-vue
-      VueRouter({ routesFolder: `${SRC}pages`, dts: false }),
-      Components({ dirs: [`${SRC}components`], dts: false }),
-      AutoImport({ include: [/\.vue$/, /\.vue\?vue/], imports: ["vue", "vue-router"], dts: false }),
-    ],
     build: {
       chunkSizeWarningLimit: 10_000,
       rolldownOptions: {
-        // production builds strip console.* like the old webpack build did
         output: mode === "production" ? { minify: { compress: { dropConsole: true } } } : {},
       },
     },

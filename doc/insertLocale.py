@@ -307,6 +307,20 @@ i18List = [
     "Wiktionary",
     "Translated",
     "Custom",
+    "Back",
+    "Cancel",
+    "Remove",
+    "Alpha",
+    "Fetch models from endpoint",
+    "No models returned by endpoint",
+    "API endpoint is empty",
+    "Failed to fetch LLM models",
+    "Open this popup on a website to use this button",
+    "Import failed",
+    "Copy PDF URL",
+    "Copied",
+    "Copy failed",
+    "Allow access to file URLs to open local PDF files",
 ]
 
 

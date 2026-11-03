@@ -698,6 +698,48 @@
 	"Custom": {
 		"message": "কাস্টম"
 	},
+	"Back": {
+		"message": "Back"
+	},
+	"Cancel": {
+		"message": "Cancel"
+	},
+	"Remove": {
+		"message": "Remove"
+	},
+	"Alpha": {
+		"message": "Alpha"
+	},
+	"Fetch_models_from_endpoint": {
+		"message": "Fetch models from endpoint"
+	},
+	"No_models_returned_by_endpoint": {
+		"message": "No models returned by endpoint"
+	},
+	"API_endpoint_is_empty": {
+		"message": "API endpoint is empty"
+	},
+	"Failed_to_fetch_LLM_models": {
+		"message": "Failed to fetch LLM models"
+	},
+	"Open_this_popup_on_a_website_to_use_this_button": {
+		"message": "Open this popup on a website to use this button"
+	},
+	"Import_failed": {
+		"message": "Import failed"
+	},
+	"Copy_PDF_URL": {
+		"message": "Copy PDF URL"
+	},
+	"Copied": {
+		"message": "Copied"
+	},
+	"Copy_failed": {
+		"message": "Copy failed"
+	},
+	"Allow_access_to_file_URLs_to_open_local_PDF_files": {
+		"message": "Allow access to file URLs to open local PDF files"
+	},
 	"appName": {
 		"message": "মাউস টুলটিপ ট্রান্সলেটর - দ্বিভাষী সাবটাইটেল (PDF, Netflix, YouTube)"
 	},

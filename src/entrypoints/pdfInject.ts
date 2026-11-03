@@ -1,4 +1,10 @@
+import { ContentScriptContext } from "wxt/utils/content-script-context";
 import { defineUnlistedScript } from "wxt/utils/define-unlisted-script";
-import "@/pdf/pdfInject.js";
+import { startContentScript } from "@/content";
+import { enhancePdfViewer } from "@/viewers/pdf";
 
-export default defineUnlistedScript(() => {});
+// loaded by public/pdfjs/web/viewer.html; extension pages get no content script
+export default defineUnlistedScript(() => {
+  void enhancePdfViewer();
+  void startContentScript(new ContentScriptContext("viewer"));
+});
