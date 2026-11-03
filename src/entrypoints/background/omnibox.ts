@@ -12,6 +12,7 @@ export function registerOmnibox() {
         sourceLang: "auto",
         targetLang: settings.writingLanguage,
         reverseLang: settings.translateTarget,
+        cache: false,
       },
       settings,
     );

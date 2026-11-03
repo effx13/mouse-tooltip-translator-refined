@@ -30,6 +30,42 @@ beforeEach(() => {
 });
 
 describe("translate", () => {
+  test("cache: false answers are not stored", async () => {
+    engineTranslate.mockResolvedValue({ targetText: "x", sourceLang: "en", targetLang: "ko" });
+    await translate(request({ text: "typed", cache: false }), settings);
+    await translate(request({ text: "typed", cache: false }), settings);
+    expect(engineTranslate).toHaveBeenCalledTimes(2);
+  });
+
+  test("an answer without text counts as a failure", async () => {
+    engineTranslate.mockResolvedValue({ targetText: "", sourceLang: "en", targetLang: "ko" });
+    const result = await translate(request({ text: "blank" }), settings);
+    expect(result).toMatchObject({
+      isBroken: true,
+      failures: [{ engine: "google", kind: "empty" }],
+    });
+  });
+
+  test("a fallback engine's answer is not cached under the chain head", async () => {
+    const twoEngines: Settings = {
+      ...settings,
+      translatorEngines: [
+        { id: "google", enabled: true },
+        { id: "bing", enabled: true },
+      ],
+    };
+    engineTranslate.mockRejectedValueOnce(new Error("google down"));
+    engineTranslate.mockResolvedValue({
+      targetText: "from bing",
+      sourceLang: "en",
+      targetLang: "ja",
+    });
+    const first = await translate(request({ text: "fallback", targetLang: "ja" }), twoEngines);
+    expect(first?.targetText).toBe("from bing");
+    await translate(request({ text: "fallback", targetLang: "ja" }), twoEngines);
+    expect(engineTranslate).toHaveBeenCalledTimes(3);
+  });
+
   test("a repeated request is answered from the cache", async () => {
     engineTranslate.mockResolvedValue({
       targetText: "캐시",

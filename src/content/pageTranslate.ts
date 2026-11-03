@@ -134,6 +134,7 @@ export function createPageTranslator() {
       sourceLang: "auto",
       targetLang,
       reverseLang: "null",
+      cache: false,
     });
     const ok = Boolean(res && !res.isBroken && res.targetText);
     requestCount++;

@@ -74,6 +74,7 @@ export function createWritingTranslator(getSettings: () => Settings) {
         sourceLang: "auto",
         targetLang: settings.writingLanguage,
         reverseLang: settings.translateTarget,
+        cache: false,
       });
       if (!result || result.isBroken) return;
       await insertText(result.targetText);

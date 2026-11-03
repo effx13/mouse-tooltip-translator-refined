@@ -7,6 +7,8 @@ export interface TranslateRequest {
   targetLang: string;
   // when the detected source already is the target, translate into this ("null" = off)
   reverseLang?: string;
+  // false keeps the answer out of the persistent cache (typed text, whole pages, address bar)
+  cache?: boolean;
   // try this engine first, before the configured order
   engine?: string;
   // only `engine`: no fallback, no cache (the settings "Test" button)
@@ -26,7 +28,7 @@ export interface TranslateResult {
   // every engine failed; `failures` says why, in the order they were tried
   isBroken?: boolean;
   failures?: EngineFailure[];
-  // English summary of the failures (for logs and callers without i18n)
+  // the failures as text, in the user's UI language
   error?: string;
 }
 

@@ -25,6 +25,17 @@ const engineFailedPairs = new Map<string, Set<string>>();
 
 type Attempt = { result: EngineResult } | { failure: EngineFailure };
 
+// what one translate() call went through: why engines failed and which one answered
+interface Run {
+  failures: EngineFailure[];
+  answeredBy?: string;
+}
+
+// a timeout or a Wi-Fi blip doesn't demote an engine; an empty answer does, since that is how
+// engines turn down a language pair they don't support
+const isDurable = (failure: EngineFailure) =>
+  failure.kind !== "timeout" && failure.kind !== "network";
+
 async function runEngine(
   text: string,
   sourceLang: string,
@@ -34,7 +45,9 @@ async function runEngine(
 ): Promise<Attempt> {
   try {
     const result = await getEngine(engine)?.translate(text, sourceLang, targetLang, settings);
-    if (!result) return { failure: { engine, kind: "empty" } };
+    if (!result || (!result.targetText && !result.imageUrl)) {
+      return { failure: { engine, kind: "empty" } };
+    }
     return { result };
   } catch (error) {
     console.log(error);
@@ -90,7 +103,7 @@ async function translateWithEngines(
   targetLang: string,
   order: readonly string[],
   settings: Settings,
-  failures: EngineFailure[] = [],
+  run: Run = { failures: [] },
 ): Promise<EngineResult | null> {
   const now = Date.now();
   const cooling = order.filter((engine) => isCoolingDown(engine, sourceLang, targetLang, now));
@@ -99,10 +112,11 @@ async function translateWithEngines(
     const attempt = await runEngine(text, sourceLang, targetLang, engine, settings);
     if ("result" in attempt) {
       recordSuccess(engine, sourceLang, targetLang);
+      run.answeredBy = engine;
       return attempt.result;
     }
-    failures.push(attempt.failure);
-    recordFailure(engine, sourceLang, targetLang);
+    run.failures.push(attempt.failure);
+    if (isDurable(attempt.failure)) recordFailure(engine, sourceLang, targetLang);
   }
   return null;
 }
@@ -115,6 +129,7 @@ async function translateSameLangInReverse(
   reverseLang: string,
   order: readonly string[],
   settings: Settings,
+  run: Run,
 ): Promise<EngineResult | null> {
   if (
     response &&
@@ -123,7 +138,7 @@ async function translateSameLangInReverse(
     !isSameLanguage(reverseLang, targetLang) &&
     reverseLang !== targetLang
   ) {
-    return translateWithEngines(text, response.sourceLang, reverseLang, order, settings);
+    return translateWithEngines(text, response.sourceLang, reverseLang, order, settings, run);
   }
   return response;
 }
@@ -171,6 +186,16 @@ async function translateOnce(request: TranslateRequest, engine: string, settings
     : brokenResult([attempt.failure], sourceLang, targetLang);
 }
 
+// stable, non-reversible tag of an engine's setup for the cache key (keeps keys out of IndexedDB)
+function fingerprint(config: Readonly<Record<string, string>> | undefined): string {
+  const text = JSON.stringify(
+    Object.entries(config ?? {}).toSorted(([a], [b]) => a.localeCompare(b)),
+  );
+  let hash = 5381;
+  for (let i = 0; i < text.length; i++) hash = ((hash << 5) + hash + text.charCodeAt(i)) | 0;
+  return (hash >>> 0).toString(36);
+}
+
 export async function translate(
   request: TranslateRequest,
   settings: Settings,
@@ -179,30 +204,27 @@ export async function translate(
   if (engine && request.noFallback) return translateOnce(request, engine, settings);
 
   const order = getEngineOrder(settings, engine);
-  // the chain head and dictionary mode are part of the key so another setup never gets a stale answer
-  const cacheKey = settings.translationCache
-    ? JSON.stringify([
-        text,
-        sourceLang,
-        targetLang,
-        reverseLang,
-        settings.tooltipWordDictionary,
-        settings.tooltipWordDictionarySource,
-        order[0] ?? "",
-      ])
-    : undefined;
+  const head = order[0] ?? "";
+  // the chain head, its setup (API key or not, LLM model) and the dictionary mode are part of the
+  // key, so another setup never gets a stale answer; writing/page translation is never stored
+  const cacheKey =
+    settings.translationCache && request.cache !== false
+      ? JSON.stringify([
+          text,
+          sourceLang,
+          targetLang,
+          reverseLang,
+          settings.tooltipWordDictionary,
+          settings.tooltipWordDictionarySource,
+          head,
+          fingerprint(settings.engineConfig[head]),
+        ])
+      : undefined;
   const cached = cacheKey ? await translationCache.get(cacheKey) : undefined;
   if (cached) return cached;
 
-  const failures: EngineFailure[] = [];
-  let response = await translateWithEngines(
-    text,
-    sourceLang,
-    targetLang,
-    order,
-    settings,
-    failures,
-  );
+  const run: Run = { failures: [] };
+  let response = await translateWithEngines(text, sourceLang, targetLang, order, settings, run);
   response = await translateSameLangInReverse(
     response,
     text,
@@ -210,10 +232,13 @@ export async function translate(
     reverseLang,
     order,
     settings,
+    run,
   );
   response = await applyWiktionaryDict(response, text, settings);
-  // stored in the background; the tooltip does not wait for IndexedDB
-  if (response && cacheKey) void translationCache.put(cacheKey, response);
+  // only the chain head's own answers are kept: a fallback answer would outlive the head's outage;
+  // stored in the background, the tooltip does not wait for IndexedDB
+  if (response && cacheKey && run.answeredBy === head)
+    void translationCache.put(cacheKey, response);
 
-  return response ?? brokenResult(failures, sourceLang, targetLang);
+  return response ?? brokenResult(run.failures, sourceLang, targetLang);
 }
