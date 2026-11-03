@@ -249,7 +249,7 @@
 		"message": "Mouseover"
 	},
 	"Mouseover_n_Select": {
-		"message": "Mouseover n Select"
+		"message": "Mouseover & Select"
 	},
 	"Follow": {
 		"message": "Follow"
@@ -351,10 +351,10 @@
 		"message": "Click Right"
 	},
 	"google": {
-		"message": "google"
+		"message": "Google"
 	},
 	"bing": {
-		"message": "bing"
+		"message": "Bing"
 	},
 	"About": {
 		"message": "About"
