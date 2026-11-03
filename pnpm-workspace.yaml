@@ -1,0 +1,8 @@
+# none of these install scripts are needed: es5-ext/tesseract.js only print
+# funding notices, spawn-sync is a legacy web-ext dependency, and vue-demi
+# already defaults to Vue 3
+allowBuilds:
+  es5-ext: false
+  spawn-sync: false
+  tesseract.js: false
+  vue-demi: false

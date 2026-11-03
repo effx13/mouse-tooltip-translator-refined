@@ -1,8 +1,10 @@
 // no network - the translator registry is mocked so only the fallback
 // bookkeeping in translateCaller is exercised (#363 follow-up)
-const calls = [];
+import { vi } from "vitest";
 
-jest.mock("/src/translator/index.js", () => {
+const calls = vi.hoisted(() => []);
+
+vi.mock("/src/translator/index.js", () => {
   const record = (name) => async (text, sourceLang, targetLang) => {
     calls.push(`${name}:${sourceLang}->${targetLang}`);
     // deepl knows PT but not the regional variants
@@ -15,7 +17,6 @@ jest.mock("/src/translator/index.js", () => {
     };
   };
   return {
-    __esModule: true,
     default: {
       deepl: { translate: record("deepl") },
       google: { translate: record("google") },
@@ -25,7 +26,7 @@ jest.mock("/src/translator/index.js", () => {
   };
 });
 
-const { translate } = require("../src/translator/translateCaller.js");
+import { translate } from "../src/translator/translateCaller.js";
 
 const setting = {
   fallbackTranslatorEngine: "true",

@@ -29,10 +29,7 @@ import _ from "lodash";
 import * as speech from "/src/speech";
 import SettingUtil from "/src/util/setting_util.js";
 import { getRtlDir } from "/src/util/lang.js";
-var browser;
-try {
-  browser = require("webextension-polyfill");
-} catch (error) {}
+import browser from "webextension-polyfill";
 
 export default {
   name: "SpeechView",
