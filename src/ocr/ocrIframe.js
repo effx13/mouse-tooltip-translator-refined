@@ -125,7 +125,7 @@ async function getScheduler(lang, mode) {
 
   var scheduler = Tesseract.createScheduler();
   var workerIndexList = mode.includes("auto") ? [0] : [0, 1, 2, 3];
-  var workerPath = browser.runtime.getURL("/tesseract/worker.min.js");
+  var workerPath = browser.runtime.getURL("/tesseract/worker-quiet.js");
   var corePath = browser.runtime.getURL(
     "/tesseract/tesseract-core-lstm.wasm.js"
   );
