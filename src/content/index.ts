@@ -89,8 +89,10 @@ async function run(ctx: ContentScriptContext) {
 }
 
 export async function startContentScript(ctx: ContentScriptContext) {
-  // no extension APIs here (sandboxed frame, or the extension was reloaded under this page)
+  // the extension was reloaded under this page: no extension APIs left
   if (!browser.runtime?.id) return;
+  // sandboxed frames (opaque origin) may not touch extension storage
+  if (window.origin === "null") return;
   try {
     await run(ctx);
   } catch (error) {
