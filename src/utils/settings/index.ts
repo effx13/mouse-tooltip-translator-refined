@@ -5,13 +5,16 @@ export * from "./schema";
 
 type StoredSettings = Partial<Settings>;
 
-const localSettings = storage.defineItem<StoredSettings>("local:settings", {
-  fallback: {},
-  version: 1,
+// created on first use: defining an item touches storage, which throws in a context
+// without extension APIs (orphaned content scripts after an update, sandboxed frames)
+const createItems = () => ({
+  local: storage.defineItem<StoredSettings>("local:settings", { fallback: {}, version: 1 }),
+  synced: storage.defineItem<StoredSettings>("sync:settings", { fallback: {} }),
 });
+let cachedItems: ReturnType<typeof createItems> | undefined;
+const items = () => (cachedItems ??= createItems());
 
 // the api key never leaves the device
-const syncedSettings = storage.defineItem<StoredSettings>("sync:settings", { fallback: {} });
 const SYNC_EXCLUDE = ["syncSetting", "lastSettingTab", "llmApiKey", "llmProviderSettings"] as const;
 
 // browser locale -> translate target code (zh -> zh-CN, he -> iw, fil -> tl)
@@ -43,27 +46,36 @@ function merge(local: StoredSettings, synced: StoredSettings): Settings {
 }
 
 export async function getSettings(): Promise<Settings> {
-  const [local, synced] = await Promise.all([localSettings.getValue(), syncedSettings.getValue()]);
+  const [local, synced] = await Promise.all([items().local.getValue(), items().synced.getValue()]);
   return merge(local, synced);
 }
 
 // apply a partial change and persist it
 export async function updateSettings(patch: Partial<Settings>): Promise<Settings> {
-  const local = { ...(await localSettings.getValue()), ...patch };
-  await localSettings.setValue(local);
+  const local = { ...(await items().local.getValue()), ...patch };
+  await items().local.setValue(local);
   if (local.syncSetting) {
     const toSync: StoredSettings = { ...local };
     for (const key of SYNC_EXCLUDE) delete toSync[key];
-    await syncedSettings.setValue(toSync).catch((error) => console.log(error)); // quota/unavailable
+    await items()
+      .synced.setValue(toSync)
+      .catch((error) => console.log(error)); // quota/unavailable
   }
   return getSettings();
 }
 
 // call `cb` with the fresh settings whenever either copy changes; returns unwatch
 export function watchSettings(cb: (settings: Settings) => void): () => void {
-  const refresh = async () => cb(await getSettings());
-  const unwatchLocal = localSettings.watch(refresh);
-  const unwatchSync = syncedSettings.watch(refresh);
+  const refresh = async () => {
+    try {
+      cb(await getSettings());
+    } catch (error) {
+      // the extension was reloaded or updated under this page; nothing left to refresh
+      console.log(error);
+    }
+  };
+  const unwatchLocal = items().local.watch(refresh);
+  const unwatchSync = items().synced.watch(refresh);
   return () => {
     unwatchLocal();
     unwatchSync();
@@ -71,8 +83,10 @@ export function watchSettings(cb: (settings: Settings) => void): () => void {
 }
 
 export async function resetSettings() {
-  await localSettings.removeValue();
-  await syncedSettings.removeValue().catch(() => {});
+  await items().local.removeValue();
+  await items()
+    .synced.removeValue()
+    .catch(() => {});
 }
 
 // export file content: only the values that differ from the defaults are needed, but keep all for readability

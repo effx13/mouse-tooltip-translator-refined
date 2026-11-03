@@ -1,3 +1,4 @@
+import { browser } from "wxt/browser";
 import type { ContentScriptContext } from "wxt/utils/content-script-context";
 import { onMessage } from "@/utils/messaging";
 import { getSettings, watchSettings } from "@/utils/settings";
@@ -88,6 +89,8 @@ async function run(ctx: ContentScriptContext) {
 }
 
 export async function startContentScript(ctx: ContentScriptContext) {
+  // no extension APIs here (sandboxed frame, or the extension was reloaded under this page)
+  if (!browser.runtime?.id) return;
   try {
     await run(ctx);
   } catch (error) {
