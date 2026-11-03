@@ -1,6 +1,7 @@
 import TextUtil from "/src/util/text_util.js";
 import { langList, ocrLangList, listenLangList } from "/src/util/lang.js";
 import _util from "/src/util/lodash_util.js";
+import _ from "lodash";
 var browser;
 try {
   browser = require("webextension-polyfill");

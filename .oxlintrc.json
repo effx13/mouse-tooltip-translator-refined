@@ -36,7 +36,19 @@
         "__tests__/**"
       ],
       "rules": {
-        "vitest/no-standalone-expect": "off"
+        "vitest/no-standalone-expect": "off",
+        "vitest/require-to-throw-message": "off"
+      },
+      "globals": {
+        "describe": "readonly",
+        "test": "readonly",
+        "it": "readonly",
+        "expect": "readonly",
+        "beforeEach": "readonly",
+        "afterEach": "readonly",
+        "beforeAll": "readonly",
+        "afterAll": "readonly",
+        "vi": "readonly"
       }
     }
   ],
@@ -60,6 +72,13 @@
     "no-unassigned-vars": "warn",
     "no-dupe-else-if": "warn",
     "no-unused-private-class-members": "warn",
-    "promise/no-callback-in-promise": "warn"
+    "promise/no-callback-in-promise": "warn",
+    "no-undef": "error"
+  },
+  "globals": {
+    "require": "readonly",
+    "process": "readonly",
+    "cv": "readonly",
+    "PDFViewerApplication": "readonly"
   }
 }
