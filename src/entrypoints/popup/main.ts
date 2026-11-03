@@ -1,9 +1,12 @@
 import { mount } from "svelte";
+import { followColorScheme } from "@/utils/colorScheme.svelte";
 import { getUiLangCode, loadUiLanguage } from "@/utils/i18n";
 import App from "./App.svelte";
 import { initSettings } from "./state.svelte";
 
 const RTL_UI_LANGS = new Set(["ar", "fa", "he", "iw", "ur"]);
+
+followColorScheme();
 
 const settings = await initSettings();
 await loadUiLanguage(settings.uiLanguage);

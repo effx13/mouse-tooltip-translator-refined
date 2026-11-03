@@ -1,80 +1,38 @@
 <script lang="ts">
-  import Icon from "@/components/Icon.svelte";
+  import FileTextIcon from "@lucide/svelte/icons/file-text";
+  import FileXIcon from "@lucide/svelte/icons/file-x";
+  import FolderOpenIcon from "@lucide/svelte/icons/folder-open";
+  import { Button } from "@/components/ui/button";
+  import * as Card from "@/components/ui/card";
   import { t } from "@/utils/i18n";
 
   let { error, onopen }: { error: boolean; onopen: () => void } = $props();
 </script>
 
-<div class="empty">
-  <div class="card">
-    <span class="icon" class:error><Icon name="pdf" size={48} /></span>
-    {#if error}
-      <p class="message">{t("Failed_to_load_the_PDF_file")}</p>
-    {/if}
-    <button type="button" class="open" onclick={onopen}>
-      <Icon name="folderOpen" size={18} />
-      {t("Open_File")}
-    </button>
-    <p class="hint">{t("Drop_a_PDF_file_here")}</p>
-  </div>
+<div
+  class="pointer-events-none absolute inset-x-0 top-(--bar-height) bottom-0 z-[5] grid place-items-center p-4"
+>
+  <Card.Root class="pointer-events-auto w-full max-w-sm items-center text-center">
+    <Card.Content class="flex flex-col items-center gap-4">
+      <span
+        class="grid size-16 place-items-center rounded-2xl {error
+          ? 'bg-destructive/10 text-destructive'
+          : 'bg-primary/10 text-primary'}"
+      >
+        {#if error}
+          <FileXIcon class="size-8" />
+        {:else}
+          <FileTextIcon class="size-8" />
+        {/if}
+      </span>
+      {#if error}
+        <p class="font-medium">{t("Failed_to_load_the_PDF_file")}</p>
+      {/if}
+      <Button onclick={onopen}>
+        <FolderOpenIcon />
+        {t("Open_File")}
+      </Button>
+      <p class="text-muted-foreground">{t("Drop_a_PDF_file_here")}</p>
+    </Card.Content>
+  </Card.Root>
 </div>
-
-<style>
-  .empty {
-    position: absolute;
-    inset: var(--bar-height) 0 0;
-    z-index: 5;
-    display: grid;
-    place-items: center;
-    padding: 16px;
-    pointer-events: none;
-  }
-  .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    max-width: 360px;
-    padding: 32px 40px;
-    background: var(--bar-bg);
-    border: 1px solid var(--bar-border);
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    text-align: center;
-    pointer-events: auto;
-  }
-  .icon {
-    color: var(--accent);
-  }
-  .icon.error {
-    color: var(--danger);
-  }
-  p {
-    margin: 0;
-  }
-  .message {
-    font-weight: 600;
-  }
-  .hint {
-    color: var(--muted);
-  }
-  .open {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 18px;
-    border: 0;
-    border-radius: 999px;
-    background: var(--accent);
-    color: var(--bar-bg);
-    font-weight: 600;
-    cursor: pointer;
-  }
-  .open:hover {
-    filter: brightness(1.08);
-  }
-  .open:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
-</style>

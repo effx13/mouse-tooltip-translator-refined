@@ -1,6 +1,8 @@
 <script lang="ts">
+  import * as Select from "@/components/ui/select";
   import type { Option } from "@/entrypoints/popup/options";
   import type { OptionValue } from "@/utils/settings";
+  import FieldLabel from "./FieldLabel.svelte";
 
   let {
     id,
@@ -18,29 +20,32 @@
     onchange: (value: OptionValue) => void;
   } = $props();
 
+  // items are keyed by index so number and boolean values round-trip
   const selectedIndex = $derived(options.findIndex((option) => option.value === value));
+  const selectedLabel = $derived(options[selectedIndex]?.label ?? String(value ?? ""));
+  const fontStyle = (font: unknown) =>
+    fontPreview ? `font-family: ${String(font || "") || "inherit"}` : undefined;
 </script>
 
-<label class="field" for={id}>
-  <span class="field-label">{label}</span>
-  <select
-    {id}
+<div class="grid gap-1.5">
+  <FieldLabel {id} {label} />
+  <Select.Root
+    type="single"
     value={String(selectedIndex)}
-    style:font-family={fontPreview ? String(value || "") || "inherit" : null}
-    onchange={(e) => {
-      const option = options[Number(e.currentTarget.value)];
+    onValueChange={(next) => {
+      const option = options[Number(next)];
       if (option) onchange(option.value);
     }}
   >
-    {#if selectedIndex === -1}
-      <option value="-1" disabled>{String(value ?? "")}</option>
-    {/if}
-    {#each options as option, index (index)}
-      <option
-        value={String(index)}
-        style:font-family={fontPreview ? String(option.value || "inherit") : null}
-        >{option.label}</option
-      >
-    {/each}
-  </select>
-</label>
+    <Select.Trigger {id} class="w-full" style={fontStyle(value)}>
+      <span class="truncate">{selectedLabel}</span>
+    </Select.Trigger>
+    <Select.Content class="max-h-72">
+      {#each options as option, index (index)}
+        <Select.Item value={String(index)} label={option.label} style={fontStyle(option.value)}>
+          {option.label}
+        </Select.Item>
+      {/each}
+    </Select.Content>
+  </Select.Root>
+</div>

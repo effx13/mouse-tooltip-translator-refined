@@ -1,5 +1,9 @@
 <script lang="ts">
+  import { Input } from "@/components/ui/input";
+  import { Slider } from "@/components/ui/slider";
   import { t } from "@/utils/i18n";
+  import FieldLabel from "./FieldLabel.svelte";
+
   let {
     id,
     label,
@@ -13,6 +17,7 @@
   const alpha = $derived(
     HEX.test(value) && value.length === 9 ? Number.parseInt(value.slice(7), 16) : 255,
   );
+  const dir = document.documentElement.dir === "rtl" ? "rtl" : "ltr";
 
   let focused = $state(false);
   let draft = $state("");
@@ -27,22 +32,25 @@
   }
 </script>
 
-<div class="field">
-  <label class="field-label" for={id}>{label}</label>
-  <div class="color-row">
-    <span class="swatch" style:--swatch={value}>
+<div class="grid gap-1.5">
+  <FieldLabel {id} {label} />
+  <div class="flex items-center gap-3">
+    <span
+      class="swatch relative size-9 shrink-0 overflow-hidden rounded-md border shadow-xs"
+      style:--swatch={value}
+    >
       <input
         type="color"
+        class="absolute inset-0 size-full cursor-pointer opacity-0"
         aria-label={label}
         value={rgb}
         oninput={(e) => onchange(compose(e.currentTarget.value, alpha))}
       />
     </span>
-    <input
+    <Input
       {id}
-      class="hex"
-      type="text"
-      maxlength="9"
+      class="w-28 shrink-0 font-mono"
+      maxlength={9}
       spellcheck="false"
       autocomplete="off"
       value={draft}
@@ -55,60 +63,27 @@
         if (HEX.test(draft)) onchange(draft.toLowerCase());
       }}
     />
-    <input
-      class="alpha"
-      type="range"
-      min="0"
-      max="255"
+    <Slider
+      type="single"
+      class="min-w-16 flex-1"
+      min={0}
+      max={255}
+      step={1}
+      {dir}
       aria-label="{label} {t('Alpha')}"
       value={alpha}
-      oninput={(e) => onchange(compose(rgb, Number(e.currentTarget.value)))}
+      onValueChange={(next) => onchange(compose(rgb, next))}
     />
-    <span class="alpha-value">{Math.round((alpha / 255) * 100)}%</span>
+    <span class="w-10 shrink-0 text-end text-xs text-muted-foreground tabular-nums">
+      {Math.round((alpha / 255) * 100)}%
+    </span>
   </div>
 </div>
 
 <style>
-  .color-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
   .swatch {
-    position: relative;
-    flex: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 2px 6px rgb(0 0 0 / 0.35);
     background:
       linear-gradient(var(--swatch), var(--swatch)),
       repeating-conic-gradient(#bbb 0 25%, #fff 0 50%) 0 0 / 10px 10px;
-  }
-  .swatch input {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
-    border: 0;
-    padding: 0;
-  }
-  .hex {
-    width: 6.5em;
-    font-family: ui-monospace, monospace;
-  }
-  .alpha {
-    flex: 1;
-    min-width: 60px;
-    accent-color: var(--primary);
-  }
-  .alpha-value {
-    width: 3em;
-    text-align: end;
-    font-size: 0.8125rem;
-    opacity: 0.75;
   }
 </style>

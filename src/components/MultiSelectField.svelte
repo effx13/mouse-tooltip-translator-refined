@@ -1,6 +1,8 @@
 <script lang="ts">
+  import { Badge } from "@/components/ui/badge";
+  import * as Select from "@/components/ui/select";
   import type { Option } from "@/entrypoints/popup/options";
-  import Chip from "./Chip.svelte";
+  import FieldLabel from "./FieldLabel.svelte";
 
   let {
     id,
@@ -18,42 +20,27 @@
 
   const selected = $derived(Array.isArray(value) ? (value as string[]) : []);
   const labelOf = $derived(new Map(options.map((option) => [String(option.value), option.label])));
-  const remaining = $derived(options.filter((option) => !selected.includes(String(option.value))));
 </script>
 
-<div class="field">
-  <label class="field-label" for={id}>{label}</label>
-  {#if selected.length}
-    <div class="chips">
-      {#each selected as item (item)}
-        <Chip
-          text={labelOf.get(item) ?? item}
-          onremove={() => onchange(selected.filter((v) => v !== item))}
-        />
+<div class="grid gap-1.5">
+  <FieldLabel {id} {label} />
+  <Select.Root type="multiple" value={selected} onValueChange={onchange}>
+    <Select.Trigger
+      {id}
+      class="w-full whitespace-normal data-[size=default]:h-auto data-[size=default]:min-h-9 data-[size=default]:py-1.5"
+    >
+      <span class="flex min-w-0 flex-1 flex-wrap gap-1">
+        {#each selected as item (item)}
+          <Badge variant="secondary" class="font-normal">{labelOf.get(item) ?? item}</Badge>
+        {:else}
+          <span class="text-muted-foreground">–</span>
+        {/each}
+      </span>
+    </Select.Trigger>
+    <Select.Content class="max-h-72">
+      {#each options as option (option.value)}
+        <Select.Item value={String(option.value)} label={option.label}>{option.label}</Select.Item>
       {/each}
-    </div>
-  {/if}
-  <select
-    {id}
-    value=""
-    onchange={(e) => {
-      const option = remaining[Number(e.currentTarget.value)];
-      e.currentTarget.value = "";
-      if (option) onchange([...selected, String(option.value)]);
-    }}
-  >
-    <option value="" disabled>+</option>
-    {#each remaining as option, index (option.value)}
-      <option value={String(index)}>{option.label}</option>
-    {/each}
-  </select>
+    </Select.Content>
+  </Select.Root>
 </div>
-
-<style>
-  .chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    margin: 4px 0;
-  }
-</style>

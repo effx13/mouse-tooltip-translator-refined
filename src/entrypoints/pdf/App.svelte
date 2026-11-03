@@ -1,6 +1,8 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { toast } from "svelte-sonner";
   import { storage } from "wxt/utils/storage";
+  import { Toaster } from "@/components/ui/sonner";
   import { t } from "@/utils/i18n";
   import { PdfController } from "@/viewers/pdf/controller.svelte";
   import {
@@ -24,8 +26,6 @@
   let findOpen = $state(false);
   let dark = $state(false);
   let dragDepth = $state(0);
-  let toast = $state("");
-  let toastTimer: ReturnType<typeof setTimeout> | undefined;
 
   onMount(() => {
     const controller = new PdfController(container, viewer, reportLoadError);
@@ -57,19 +57,13 @@
     await pdf.open({ data: new Uint8Array(await file.arrayBuffer()), name: file.name });
   }
 
-  function showToast(text: string) {
-    toast = text;
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => (toast = ""), 1200);
-  }
-
   async function copyUrl() {
     if (!pdf) return;
     try {
       await navigator.clipboard.writeText(pdf.url);
-      showToast(t("Copied"));
+      toast(t("Copied"), { duration: 1200 });
     } catch {
-      showToast(t("Copy_failed"));
+      toast.error(t("Copy_failed"), { duration: 1200 });
     }
   }
 
@@ -151,7 +145,10 @@
   />
   <FindBar bind:this={findBar} {pdf} open={findOpen} onclose={closeFind} />
   {#if pdf.status === "loading"}
-    <div class="progress" style:--progress={pdf.progress}></div>
+    <div
+      class="absolute start-0 top-(--bar-height) z-[11] h-0.5 w-[calc(max(var(--progress),0.05)*100%)] bg-primary transition-[width] duration-200"
+      style:--progress={pdf.progress}
+    ></div>
   {:else if pdf.status === "empty" || pdf.status === "error"}
     <EmptyState error={pdf.status === "error"} onopen={() => fileInput.click()} />
   {/if}
@@ -174,48 +171,11 @@
 />
 
 {#if dragDepth > 0}
-  <div class="dropzone">{t("Drop_a_PDF_file_here")}</div>
+  <div
+    class="pointer-events-none fixed inset-2 z-20 grid place-items-center rounded-xl border-2 border-dashed border-primary bg-background/85 text-lg font-semibold text-primary"
+  >
+    {t("Drop_a_PDF_file_here")}
+  </div>
 {/if}
 
-{#if toast}
-  <div class="toast" role="status">{toast}</div>
-{/if}
-
-<style>
-  .progress {
-    position: absolute;
-    top: var(--bar-height);
-    left: 0;
-    z-index: 11;
-    height: 3px;
-    width: calc(max(var(--progress), 0.05) * 100%);
-    background: var(--accent);
-    transition: width 0.2s;
-  }
-  .dropzone {
-    position: fixed;
-    inset: 8px;
-    z-index: 20;
-    display: grid;
-    place-items: center;
-    border: 3px dashed var(--accent);
-    border-radius: 12px;
-    background: color-mix(in srgb, var(--bar-bg) 85%, transparent);
-    color: var(--accent);
-    font-size: 18px;
-    font-weight: 600;
-    pointer-events: none;
-  }
-  .toast {
-    position: fixed;
-    bottom: 24px;
-    left: 50%;
-    z-index: 20;
-    translate: -50% 0;
-    padding: 8px 16px;
-    border-radius: 6px;
-    background: var(--bar-fg);
-    color: var(--bar-bg);
-    box-shadow: var(--shadow);
-  }
-</style>
+<Toaster position="bottom-center" />

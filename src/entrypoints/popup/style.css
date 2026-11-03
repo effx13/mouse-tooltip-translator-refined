@@ -1,128 +1,13 @@
-:root {
-  color-scheme: light dark;
-  --primary: #2196f3;
-  --on-primary: #fff;
-  --tab-indicator: #ff5252;
-  --positive: #43a047;
-  --danger: #e53935;
-  --modified: #fbc02d;
-  --surface: #fff;
-  --page: #f5f5f7;
-  --text: #212121;
-  --border: rgb(0 0 0 / 0.38);
-  --hover: rgb(0 0 0 / 0.06);
-  --chip: rgb(0 0 0 / 0.08);
-  --track: rgb(0 0 0 / 0.3);
-  --toast: #c62828;
-  --app-height: 600px;
-  --app-max-width: none;
-  --app-shadow: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary: #0d47a1;
-    --surface: #1e1e1e;
-    --page: #121212;
-    --text: #e8e8e8;
-    --border: rgb(255 255 255 / 0.38);
-    --hover: rgb(255 255 255 / 0.08);
-    --chip: rgb(255 255 255 / 0.12);
-    --track: rgb(255 255 255 / 0.3);
-  }
-}
+@import "../../assets/app.css";
 
 body {
   width: 420px;
   margin: 0;
-  background: var(--surface);
-  color: var(--text);
-  font:
-    14px/1.4 system-ui,
-    "Segoe UI",
-    Roboto,
-    sans-serif;
 }
 
 /* opened as the options page / a tab */
 @media (min-width: 600px) {
-  :root {
-    --app-height: 100vh;
-    --app-max-width: 800px;
-    --app-shadow: 0 8px 24px rgb(149 157 165 / 0.2);
-  }
   body {
     width: auto;
-    background: var(--page);
   }
-}
-
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.field-label {
-  font-size: 0.75rem;
-  opacity: 0.7;
-}
-
-.field select,
-.field input[type="text"],
-.field input[type="url"],
-.field input[type="password"] {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 4px 0;
-  border: 0;
-  border-bottom: 1px solid var(--border);
-  border-radius: 0;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  font-size: 0.9375rem;
-  outline: none;
-}
-
-.field select {
-  cursor: pointer;
-}
-
-.field select option {
-  background: var(--surface);
-  color: var(--text);
-}
-
-.field select:focus,
-.field input:focus {
-  border-bottom-color: var(--primary);
-}
-
-.icon-btn {
-  display: grid;
-  place-items: center;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  background: transparent;
-  color: inherit;
-  cursor: pointer;
-  opacity: 0.85;
-}
-
-.icon-btn:hover {
-  opacity: 1;
-  background: var(--hover);
-}
-
-.icon-btn:disabled {
-  cursor: default;
-}
-
-:focus-visible {
-  outline: 2px solid var(--primary);
-  outline-offset: 1px;
 }

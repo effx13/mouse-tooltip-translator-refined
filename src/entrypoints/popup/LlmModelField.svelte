@@ -1,8 +1,9 @@
 <script lang="ts">
-  import { t } from "@/utils/i18n";
-  import Icon from "@/components/Icon.svelte";
+  import RefreshCwIcon from "@lucide/svelte/icons/refresh-cw";
   import TextField from "@/components/TextField.svelte";
+  import { Button } from "@/components/ui/button";
   import { fetchLlmModels } from "@/translators/localLlm";
+  import { t } from "@/utils/i18n";
   import { store } from "./state.svelte";
 
   let {
@@ -50,17 +51,16 @@
 
 <TextField {id} {label} value={store.settings.llmModel ?? ""} list="{id}-models" {oninput}>
   {#snippet append()}
-    <button
-      type="button"
-      class="icon-btn"
-      class:spin={loading}
+    <Button
+      variant="ghost"
+      size="icon"
       title={t("Fetch_models_from_endpoint")}
       aria-label={t("Fetch_models_from_endpoint")}
       disabled={loading}
       onclick={refresh}
     >
-      <Icon name="refresh" />
-    </button>
+      <RefreshCwIcon class={loading ? "animate-spin" : ""} />
+    </Button>
   {/snippet}
 </TextField>
 <datalist id="{id}-models">
@@ -68,14 +68,3 @@
     <option value={model}></option>
   {/each}
 </datalist>
-
-<style>
-  .spin :global(svg) {
-    animation: spin 0.8s linear infinite;
-  }
-  @keyframes spin {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-</style>

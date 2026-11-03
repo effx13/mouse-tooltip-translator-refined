@@ -2,7 +2,14 @@
   import { type LanguageMap, type TocItem, View } from "foliate-js/view.js";
   import { onMount } from "svelte";
   import type { ContentScriptContext } from "wxt/utils/content-script-context";
-  import Icon from "@/components/Icon.svelte";
+  import BookOpenIcon from "@lucide/svelte/icons/book-open";
+  import ChevronLeftIcon from "@lucide/svelte/icons/chevron-left";
+  import ChevronRightIcon from "@lucide/svelte/icons/chevron-right";
+  import FolderOpenIcon from "@lucide/svelte/icons/folder-open";
+  import ListTreeIcon from "@lucide/svelte/icons/list-tree";
+  import { Button } from "@/components/ui/button";
+  import * as Sheet from "@/components/ui/sheet";
+  import { cn } from "@/utils/cn";
   import { getUiLangCode, t } from "@/utils/i18n";
   import { getSettings, type Settings, watchSettings } from "@/utils/settings";
   import { bridgeEbookView } from "@/viewers/ebook";
@@ -162,72 +169,79 @@
   ondrop={onDrop}
 />
 
-<div class="reader" class:dragging aria-busy={loading}>
-  <header class="bar">
-    <button
-      class="icon-btn"
+<div
+  class={cn(
+    "grid h-screen grid-rows-[auto_1fr_auto] bg-muted/40",
+    dragging &&
+      "[&>main]:outline-3 [&>main]:-outline-offset-8 [&>main]:outline-primary [&>main]:outline-dashed",
+  )}
+  aria-busy={loading}
+>
+  <header class="flex items-center gap-1 border-b bg-background px-2 py-1.5">
+    <Button
+      variant="ghost"
+      size="icon"
       title={t("Table_of_Contents")}
       aria-label={t("Table_of_Contents")}
       aria-expanded={tocOpen}
       disabled={!toc.length}
       onclick={() => (tocOpen = !tocOpen)}
     >
-      <Icon name="toc" />
-    </button>
-    <button
-      class="icon-btn"
+      <ListTreeIcon />
+    </Button>
+    <Button
+      variant="ghost"
+      size="icon"
       title={t("Open_File")}
       aria-label={t("Open_File")}
       onclick={() => fileInput.click()}
     >
-      <Icon name="folderOpen" />
-    </button>
-    <h1 class="title">{title || t("Ebook_Reader")}</h1>
+      <FolderOpenIcon />
+    </Button>
+    <h1 class="mx-2 min-w-0 flex-1 truncate text-[0.9375rem] font-semibold">
+      {title || t("Ebook_Reader")}
+    </h1>
     <input bind:this={fileInput} type="file" accept={ACCEPT} hidden onchange={onFileChange} />
   </header>
 
-  <main class="stage">
-    <div class="book" bind:this={host}></div>
+  <main class="relative min-h-0 overflow-hidden">
+    <div class="h-full" bind:this={host}></div>
     {#if !view}
-      <div class="empty">
-        <Icon name="book" size={56} />
-        <p>{t("Drop_an_ebook_file_here_or_open_one")}</p>
+      <div class="absolute inset-0 flex flex-col items-center justify-center gap-4 p-6 text-center">
+        <span class="grid size-16 place-items-center rounded-2xl bg-primary/10 text-primary">
+          <BookOpenIcon class="size-8" />
+        </span>
+        <p class="text-muted-foreground">{t("Drop_an_ebook_file_here_or_open_one")}</p>
         {#if error}
-          <p class="error" role="alert">{error}</p>
+          <p class="text-destructive" role="alert">{error}</p>
         {/if}
-        <button class="primary" disabled={loading} onclick={() => fileInput.click()}>
-          <Icon name="folderOpen" />
+        <Button disabled={loading} onclick={() => fileInput.click()}>
+          <FolderOpenIcon />
           {t("Open_File")}
-        </button>
+        </Button>
       </div>
-    {/if}
-
-    {#if tocOpen}
-      <button class="scrim" aria-label={t("Table_of_Contents")} onclick={() => (tocOpen = false)}
-      ></button>
-      <aside class="sidebar">
-        <Toc items={toc} {currentHref} onselect={goToHref} />
-      </aside>
     {/if}
   </main>
 
   {#if view}
-    <footer class="bar">
-      <button
-        class="icon-btn"
+    <footer class="flex items-center gap-2 border-t bg-background px-2 py-1.5">
+      <Button
+        variant="ghost"
+        size="icon"
         title={t("Previous_Page")}
         aria-label={t("Previous_Page")}
         onclick={() => void view?.goLeft()}
       >
-        <Icon name="back" />
-      </button>
+        <ChevronLeftIcon />
+      </Button>
       <input
-        class="progress"
+        class="min-w-0 flex-1 accent-primary"
         type="range"
         min="0"
         max="1"
         step="any"
         list="section-ticks"
+        aria-label={t("Page")}
         dir={view.book?.dir === "rtl" ? "rtl" : "ltr"}
         value={fraction}
         disabled={!canSeek}
@@ -238,126 +252,32 @@
           <option value={tick}></option>
         {/each}
       </datalist>
-      <span class="percent">{percent.format(fraction)}</span>
-      <button
-        class="icon-btn"
+      <span class="min-w-[4.5em] text-center text-sm text-muted-foreground tabular-nums">
+        {percent.format(fraction)}
+      </span>
+      <Button
+        variant="ghost"
+        size="icon"
         title={t("Next_Page")}
         aria-label={t("Next_Page")}
         onclick={() => void view?.goRight()}
       >
-        <Icon name="forward" />
-      </button>
+        <ChevronRightIcon />
+      </Button>
     </footer>
   {/if}
 </div>
 
-<style>
-  .reader {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    height: 100vh;
-  }
-  .reader.dragging .stage {
-    outline: 3px dashed var(--accent);
-    outline-offset: -8px;
-  }
-  .bar {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    padding: 4px 8px;
-    background: var(--surface);
-    border-block: 1px solid var(--border);
-  }
-  .title {
-    flex: 1;
-    min-width: 0;
-    margin: 0 8px;
-    overflow: hidden;
-    font-size: 15px;
-    font-weight: 600;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-  .icon-btn {
-    display: grid;
-    place-items: center;
-    width: 36px;
-    height: 36px;
-    padding: 0;
-    border: 0;
-    border-radius: 50%;
-    background: none;
-    color: inherit;
-    cursor: pointer;
-  }
-  .icon-btn:hover:not(:disabled) {
-    background: var(--hover);
-  }
-  .icon-btn:disabled {
-    opacity: 0.4;
-    cursor: default;
-  }
-  .stage {
-    position: relative;
-    min-height: 0;
-    overflow: hidden;
-  }
-  .book {
-    height: 100%;
-  }
-  .empty {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 24px;
-    text-align: center;
-    opacity: 0.85;
-  }
-  .error {
-    color: var(--danger);
-  }
-  .primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 16px;
-    border: 0;
-    border-radius: 6px;
-    background: var(--accent);
-    color: #fff;
-    font: inherit;
-    cursor: pointer;
-  }
-  .scrim {
-    position: absolute;
-    inset: 0;
-    border: 0;
-    background: rgb(0 0 0 / 0.3);
-    cursor: default;
-  }
-  .sidebar {
-    position: absolute;
-    inset-block: 0;
-    inset-inline-start: 0;
-    width: min(320px, 85vw);
-    padding: 8px;
-    overflow-y: auto;
-    background: var(--surface);
-    box-shadow: 0 0 24px rgb(0 0 0 / 0.3);
-  }
-  .progress {
-    flex: 1;
-    min-width: 0;
-    accent-color: var(--accent);
-  }
-  .percent {
-    min-width: 4.5em;
-    font-variant-numeric: tabular-nums;
-    text-align: center;
-  }
-</style>
+<Sheet.Root bind:open={tocOpen}>
+  <Sheet.Content
+    side="left"
+    class="gap-0 data-[side=left]:w-[min(20rem,85vw)] data-[side=left]:sm:max-w-none"
+  >
+    <Sheet.Header class="border-b">
+      <Sheet.Title>{t("Table_of_Contents")}</Sheet.Title>
+    </Sheet.Header>
+    <div class="min-h-0 flex-1 overflow-y-auto p-2">
+      <Toc items={toc} {currentHref} onselect={goToHref} />
+    </div>
+  </Sheet.Content>
+</Sheet.Root>

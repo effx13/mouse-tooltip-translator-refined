@@ -1,5 +1,7 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
+  import { Input } from "@/components/ui/input";
+  import FieldLabel from "./FieldLabel.svelte";
 
   let {
     id,
@@ -32,15 +34,16 @@
   });
 </script>
 
-<div class="field">
-  <label class="field-label" for={id}>{label}</label>
-  <div class="text-row">
-    <input
+<div class="grid gap-1.5">
+  <FieldLabel {id} {label} />
+  <div class="flex items-center gap-1">
+    <Input
       {id}
       {type}
       {placeholder}
       {readonly}
       {list}
+      class="flex-1 read-only:opacity-60"
       autocomplete="off"
       spellcheck="false"
       value={draft}
@@ -54,18 +57,3 @@
     {@render append?.()}
   </div>
 </div>
-
-<style>
-  .text-row {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-  .text-row input {
-    flex: 1;
-    min-width: 0;
-  }
-  input[readonly] {
-    opacity: 0.6;
-  }
-</style>

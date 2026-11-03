@@ -1,3 +1,4 @@
+import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "wxt";
 
 export default defineConfig({
@@ -47,7 +48,7 @@ export default defineConfig({
       omnibox: { keyword: "/" },
       options_ui: firefox ? { page: "popup.html" } : { page: "popup.html", open_in_tab: true },
       ...(firefox && {
-        browser_specific_settings: { gecko: { id: "mouse-tooltip-translator@effx13" } },
+        browser_specific_settings: { gecko: { id: "mouse-tooltip-translator-refined@effx13" } },
       }),
     };
   },
@@ -57,6 +58,7 @@ export default defineConfig({
   },
 
   vite: ({ mode }) => ({
+    plugins: [tailwindcss()],
     build: {
       chunkSizeWarningLimit: 10_000,
       rolldownOptions: {

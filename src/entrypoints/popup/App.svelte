@@ -1,9 +1,11 @@
 <script lang="ts">
+  import { Toaster } from "@/components/ui/sonner";
   import AboutView from "./AboutView.svelte";
   import SettingsView from "./SettingsView.svelte";
 
   let hash = $state(location.hash);
   const route = $derived(hash.replace(/^#/, "") || "/");
+  const dir = document.documentElement.dir === "rtl" ? "rtl" : "ltr";
 
   function back() {
     if (history.length > 1) history.back();
@@ -13,38 +15,20 @@
 
 <svelte:window onhashchange={() => (hash = location.hash)} />
 
-<div class="shell">
-  {#key route}
-    <div class="view">
-      {#if route === "/about"}
-        <AboutView onback={back} />
-      {:else}
-        <SettingsView onabout={() => (location.hash = "#/about")} />
-      {/if}
-    </div>
-  {/key}
+<div class="min-[600px]:min-h-screen min-[600px]:bg-page min-[600px]:py-6">
+  <div
+    class="mx-auto flex h-[600px] flex-col overflow-hidden bg-background min-[600px]:h-[calc(100vh-3rem)] min-[600px]:max-w-3xl min-[600px]:rounded-xl min-[600px]:border min-[600px]:shadow-sm"
+  >
+    {#key route}
+      <div class="flex min-h-0 flex-1 flex-col animate-in duration-150 fade-in-0">
+        {#if route === "/about"}
+          <AboutView onback={back} />
+        {:else}
+          <SettingsView onabout={() => (location.hash = "#/about")} />
+        {/if}
+      </div>
+    {/key}
+  </div>
 </div>
 
-<style>
-  .shell {
-    display: flex;
-    flex-direction: column;
-    height: var(--app-height);
-    max-width: var(--app-max-width);
-    margin: 0 auto;
-    background: var(--surface);
-    box-shadow: var(--app-shadow);
-  }
-  .view {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    min-height: 0;
-    animation: fade 0.15s ease-out;
-  }
-  @keyframes fade {
-    from {
-      opacity: 0;
-    }
-  }
-</style>
+<Toaster position="bottom-center" {dir} />

@@ -86,7 +86,7 @@ export function createPageTranslator() {
   const abortRun = (reason: string) => {
     if (aborted) return;
     aborted = true;
-    console.log(`MouseTooltipTranslator: page translate stopped - ${reason}`);
+    console.log(`Mouse Tooltip Translator Refined: page translate stopped - ${reason}`);
   };
 
   const noteOutcome = (ok: boolean) => {
@@ -205,7 +205,7 @@ export function createPageTranslator() {
     }
     if (stoppedEarly && !aborted && !cancelled) {
       console.log(
-        "MouseTooltipTranslator: page translate stopped early (request or time budget); the rest of the page was left untranslated",
+        "Mouse Tooltip Translator Refined: page translate stopped early (request or time budget); the rest of the page was left untranslated",
       );
     }
   }

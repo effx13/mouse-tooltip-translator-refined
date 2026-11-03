@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { TocItem } from "foliate-js/view.js";
+  import { cn } from "@/utils/cn";
 
   let {
     items,
@@ -8,63 +9,33 @@
   }: { items: TocItem[]; currentHref?: string; onselect: (href: string) => void } = $props();
 </script>
 
-{#snippet list(entries: TocItem[])}
-  <ul>
+{#snippet list(entries: TocItem[], nested: boolean)}
+  <ul class={cn("grid gap-0.5", nested && "ps-4")}>
     {#each entries as item, i (i)}
       <li>
         {#if item.href}
           {@const href = item.href}
+          {@const current = href === currentHref}
           <button
-            class="entry"
-            class:current={href === currentHref}
-            aria-current={href === currentHref ? "location" : undefined}
+            type="button"
+            class={cn(
+              "block w-full rounded-md px-3 py-1.5 text-start text-sm transition-colors hover:bg-muted",
+              current && "bg-primary/10 font-semibold text-primary hover:bg-primary/15",
+            )}
+            aria-current={current ? "location" : undefined}
             onclick={() => onselect(href)}
           >
             {item.label}
           </button>
         {:else}
-          <span class="entry heading">{item.label}</span>
+          <span class="block px-3 py-1.5 text-sm text-muted-foreground">{item.label}</span>
         {/if}
         {#if item.subitems?.length}
-          {@render list(item.subitems)}
+          {@render list(item.subitems, true)}
         {/if}
       </li>
     {/each}
   </ul>
 {/snippet}
 
-<nav>{@render list(items)}</nav>
-
-<style>
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  ul :global(ul) {
-    padding-inline-start: 16px;
-  }
-  .entry {
-    display: block;
-    width: 100%;
-    padding: 6px 12px;
-    border: 0;
-    border-radius: 6px;
-    background: none;
-    color: inherit;
-    font: inherit;
-    text-align: start;
-    cursor: pointer;
-  }
-  button.entry:hover {
-    background: var(--hover);
-  }
-  .heading {
-    cursor: default;
-    opacity: 0.7;
-  }
-  .current {
-    background: var(--selected);
-    font-weight: 600;
-  }
-</style>
+<nav>{@render list(items, false)}</nav>

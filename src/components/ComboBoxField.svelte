@@ -1,5 +1,6 @@
 <script lang="ts">
   import Chip from "./Chip.svelte";
+  import FieldLabel from "./FieldLabel.svelte";
 
   let {
     id,
@@ -18,15 +19,20 @@
   }
 </script>
 
-<div class="field">
-  <label class="field-label" for={id}>{label}</label>
-  <div class="combo">
+<div class="grid gap-1.5">
+  <FieldLabel {id} {label} />
+  <div
+    class="flex min-h-9 flex-wrap items-center gap-1 rounded-md border border-input bg-transparent px-1.5 py-1 shadow-xs transition-[color,box-shadow] focus-within:border-ring focus-within:ring-3 focus-within:ring-ring/50 dark:bg-input/30"
+  >
     {#each items as item (item)}
       <Chip text={item} onremove={() => onchange(items.filter((v) => v !== item))} />
     {/each}
     <input
       {id}
       type="text"
+      class="h-7 min-w-20 flex-1 bg-transparent px-1 text-sm outline-none"
+      autocomplete="off"
+      spellcheck="false"
       bind:value={draft}
       onkeydown={(e) => {
         if (e.key === "Enter") {
@@ -40,23 +46,3 @@
     />
   </div>
 </div>
-
-<style>
-  .combo {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 4px;
-    padding: 4px 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .combo:focus-within {
-    border-bottom-color: var(--primary);
-  }
-  .combo input {
-    flex: 1;
-    min-width: 80px;
-    border: 0;
-    padding: 4px 0;
-  }
-</style>

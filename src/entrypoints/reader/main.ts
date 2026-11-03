@@ -1,9 +1,12 @@
 import { mount } from "svelte";
 import { ContentScriptContext } from "wxt/utils/content-script-context";
 import { startContentScript } from "@/content";
+import { followColorScheme } from "@/utils/colorScheme.svelte";
 import { getUiLangCode, loadUiLanguage, t } from "@/utils/i18n";
 import { getSettings } from "@/utils/settings";
 import App from "./App.svelte";
+
+followColorScheme();
 
 const ctx = new ContentScriptContext("viewer");
 void startContentScript(ctx);

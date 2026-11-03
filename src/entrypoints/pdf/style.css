@@ -1,37 +1,13 @@
 @import "pdfjs-dist/web/pdf_viewer.css";
+@import "../../assets/app.css";
 
 :root {
-  color-scheme: light dark;
-  --bar-height: 40px;
-  --bar-bg: #f9f9fb;
-  --bar-fg: #15141a;
-  --bar-border: rgb(0 0 0 / 0.12);
-  --muted: rgb(0 0 0 / 0.6);
-  --hover: rgb(0 0 0 / 0.07);
-  --pressed: rgb(11 87 208 / 0.14);
-  --field-bg: #fff;
-  --field-border: rgb(0 0 0 / 0.25);
-  --accent: #0b57d0;
-  --danger: #c5221f;
-  --viewer-bg: #d4d4d7;
-  --shadow: 0 4px 16px rgb(0 0 0 / 0.18);
+  --bar-height: 44px;
+  --viewer-bg: #d4d4d8;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bar-bg: #2b2a33;
-    --bar-fg: #fbfbfe;
-    --bar-border: rgb(255 255 255 / 0.12);
-    --muted: rgb(255 255 255 / 0.65);
-    --hover: rgb(255 255 255 / 0.1);
-    --pressed: rgb(138 180 248 / 0.22);
-    --field-bg: #1c1b22;
-    --field-border: rgb(255 255 255 / 0.25);
-    --accent: #8ab4f8;
-    --danger: #f28b82;
-    --viewer-bg: #1f1e25;
-    --shadow: 0 4px 16px rgb(0 0 0 / 0.5);
-  }
+:root.dark {
+  --viewer-bg: #18181b;
 }
 
 html,
@@ -43,19 +19,6 @@ body {
 
 body {
   background: var(--viewer-bg);
-  color: var(--bar-fg);
-  font:
-    13px/1.4 system-ui,
-    -apple-system,
-    "Segoe UI",
-    sans-serif;
-}
-
-button,
-input,
-select {
-  font: inherit;
-  color: inherit;
 }
 
 #viewerContainer {
@@ -63,6 +26,11 @@ select {
   inset: var(--bar-height) 0 0;
   overflow: auto;
   outline: none;
+}
+
+/* pdf.js sizes pages with a border and expects the default content-box, not preflight's border-box */
+.pdfViewer .page {
+  box-sizing: content-box;
 }
 
 #viewerContainer.panning,

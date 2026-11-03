@@ -63,7 +63,7 @@ export async function runAction(action: ButtonAction): Promise<string | null> {
     }
     case "exportSetting":
       download(
-        "mouse-tooltip-translator-settings.json",
+        "mouse-tooltip-translator-refined-settings.json",
         JSON.stringify(await exportSettings(), null, 2),
       );
       return null;
