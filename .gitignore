@@ -1,7 +1,10 @@
 /build
 .output
 .wxt
+.claude/settings.local.json
 web-ext-artifacts
+test-results
+playwright-report
 /example
 build.zip
 size-plugin.json
