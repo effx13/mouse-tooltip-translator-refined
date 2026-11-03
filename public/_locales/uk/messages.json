@@ -2,9 +2,6 @@
 	"MAIN": {
 		"message": "ГОЛОВНЕ"
 	},
-	"Mouse_Tooltip_Translator": {
-		"message": "Перекладач у підказках для миші"
-	},
 	"Translate_When": {
 		"message": "Коли перекладати"
 	},

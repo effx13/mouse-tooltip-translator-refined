@@ -2,9 +2,6 @@
 	"MAIN": {
 		"message": "ГЛАВНАЯ"
 	},
-	"Mouse_Tooltip_Translator": {
-		"message": "Переводчик контекста мышью"
-	},
 	"Translate_When": {
 		"message": "Переводить при"
 	},

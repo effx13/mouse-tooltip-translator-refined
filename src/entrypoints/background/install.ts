@@ -1,7 +1,8 @@
 import { browser } from "wxt/browser";
+import { REPO_URL } from "@/utils/app";
 import type { ScriptPublicPath } from "wxt/utils/inject-script";
 
-const INTRO_URL = "https://github.com/effx13/MouseTooltipTranslator/blob/main/docs/intro.md";
+const INTRO_URL = `${REPO_URL}/blob/main/docs/intro.md`;
 
 const NOT_INJECTABLE =
   /^(chrome|edge|about|moz-extension|chrome-extension):|^file:|^https:\/\/(chrome\.google\.com|chromewebstore\.google\.com|addons\.mozilla\.org)/;

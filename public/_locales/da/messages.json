@@ -2,9 +2,6 @@
 	"MAIN": {
 		"message": "HOVED"
 	},
-	"Mouse_Tooltip_Translator": {
-		"message": "Oversætter til værktøjstip til mus"
-	},
 	"Translate_When": {
 		"message": "Oversæt Hvornår"
 	},

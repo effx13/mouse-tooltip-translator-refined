@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { APP_NAME } from "@/utils/app";
   import MenuIcon from "@lucide/svelte/icons/menu";
   import { toast } from "svelte-sonner";
   import icon from "@/assets/icon.svg";
@@ -50,7 +51,7 @@
 
 <header class="flex items-center gap-2.5 border-b px-4 py-2.5">
   <img src={icon} alt="" class="size-6 shrink-0" />
-  <h1 class="flex-1 truncate text-[0.9375rem] font-semibold">{t("Mouse_Tooltip_Translator")}</h1>
+  <h1 class="flex-1 truncate text-[0.9375rem] font-semibold">{APP_NAME}</h1>
   <Button
     variant="ghost"
     size="icon-sm"

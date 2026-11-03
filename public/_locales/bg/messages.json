@@ -2,9 +2,6 @@
 	"MAIN": {
 		"message": "ОСНОВЕН"
 	},
-	"Mouse_Tooltip_Translator": {
-		"message": "Преводач на подсказки на мишката"
-	},
 	"Translate_When": {
 		"message": "Превод Когато"
 	},

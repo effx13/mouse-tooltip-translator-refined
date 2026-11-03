@@ -2,9 +2,6 @@
 	"MAIN": {
 		"message": "主要"
 	},
-	"Mouse_Tooltip_Translator": {
-		"message": "鼠标工具提示翻译器"
-	},
 	"Translate_When": {
 		"message": "何时翻译"
 	},

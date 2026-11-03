@@ -2,9 +2,6 @@
 	"MAIN": {
 		"message": "PRINCIPAL"
 	},
-	"Mouse_Tooltip_Translator": {
-		"message": "Traduction Souris Info-bulle"
-	},
 	"Translate_When": {
 		"message": "Traduire quand"
 	},

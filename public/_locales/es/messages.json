@@ -2,9 +2,6 @@
 	"MAIN": {
 		"message": "PRINCIPAL"
 	},
-	"Mouse_Tooltip_Translator": {
-		"message": "Traductor Emergente con el Mouse"
-	},
 	"Translate_When": {
 		"message": "Traducir Cuando"
 	},

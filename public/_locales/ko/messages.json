@@ -2,9 +2,6 @@
 	"MAIN": {
 		"message": "메인"
 	},
-	"Mouse_Tooltip_Translator": {
-		"message": "마우스 툴팁 번역기"
-	},
 	"Translate_When": {
 		"message": "번역 표시:"
 	},

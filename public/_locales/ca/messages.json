@@ -2,9 +2,6 @@
 	"MAIN": {
 		"message": "PRINCIPAL"
 	},
-	"Mouse_Tooltip_Translator": {
-		"message": "Traductor d'informació d'eines del ratolí"
-	},
 	"Translate_When": {
 		"message": "Tradueix quan"
 	},

@@ -2,9 +2,6 @@
 	"MAIN": {
 		"message": "ΚΥΡΙΑ"
 	},
-	"Mouse_Tooltip_Translator": {
-		"message": "Μεταφραστής επεξήγησης ποντικιού"
-	},
 	"Translate_When": {
 		"message": "Μετάφραση Πότε"
 	},

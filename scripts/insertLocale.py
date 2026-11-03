@@ -75,7 +75,6 @@ localeList = [
 translateLangCodeDict = {"zh_CN": "zh-CN", "zh_TW": "zh-TW"}
 i18List = [
     "MAIN",
-    "Mouse Tooltip Translator",
     "Translate When",
     "Translate From",
     "Translate Into",

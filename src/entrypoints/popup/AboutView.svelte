@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { APP_NAME, REPO_URL } from "@/utils/app";
   import ArrowLeftIcon from "@lucide/svelte/icons/arrow-left";
   import BookOpenIcon from "@lucide/svelte/icons/book-open";
   import ChevronRightIcon from "@lucide/svelte/icons/chevron-right";
@@ -15,8 +16,6 @@
 
   let { onback }: { onback: () => void } = $props();
 
-  const REPO = "https://github.com/effx13/MouseTooltipTranslator";
-
   interface Entry {
     name: string;
     sub: string;
@@ -31,7 +30,7 @@
       sub: "Check_how_to_use_this_extension",
       icon: InfoIcon,
       tint: "bg-green-500/15 text-green-600 dark:text-green-400",
-      url: `${REPO}/blob/main/docs/intro.md`,
+      url: `${REPO_URL}/blob/main/docs/intro.md`,
     },
     {
       name: "PDF_Viewer",
@@ -52,14 +51,14 @@
       sub: "Check_source_code_in_github",
       icon: CodeIcon,
       tint: "bg-zinc-500/15 text-zinc-700 dark:text-zinc-300",
-      url: REPO,
+      url: REPO_URL,
     },
     {
       name: "Privacy_Policy",
       sub: "User_privacy_policy",
       icon: ShieldCheckIcon,
       tint: "bg-blue-500/15 text-blue-600 dark:text-blue-400",
-      url: `${REPO}/blob/main/docs/privacy.md`,
+      url: `${REPO_URL}/blob/main/docs/privacy.md`,
     },
   ];
 
@@ -76,7 +75,7 @@
 <main class="min-h-0 flex-1 overflow-y-auto">
   <section class="flex flex-col items-center gap-2 px-4 pt-8 pb-6 text-center">
     <img src={icon} alt="" class="size-16" />
-    <h2 class="text-lg font-semibold">{t("Mouse_Tooltip_Translator")}</h2>
+    <h2 class="text-lg font-semibold">{APP_NAME}</h2>
     <Badge variant="secondary" class="font-mono">v{version}</Badge>
   </section>
 
