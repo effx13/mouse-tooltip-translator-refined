@@ -1,5 +1,5 @@
 import { storage } from "wxt/utils/storage";
-import { normalizeEngineConfig, normalizeEngineList } from "@/translators/catalog";
+import { engineInfos, normalizeEngineConfig, normalizeEngineList } from "@/translators/catalog";
 import { migrateSettingsV2 } from "./migrate";
 import { defaultSettings, type Settings } from "./schema";
 
@@ -47,12 +47,21 @@ export function getDefaults(): Settings {
   return defaults;
 }
 
+function withoutDeviceKeys(settings: StoredSettings): StoredSettings {
+  const copy = { ...settings };
+  for (const key of SYNC_EXCLUDE) delete copy[key];
+  return copy;
+}
+
 function merge(local: StoredSettings, synced: StoredSettings): Settings {
   const settings = { ...getDefaults(), ...local };
   if (settings.syncSetting) {
-    // another device may still write the v1 shape
-    const { syncSetting: _, ...rest } = migrateSettingsV2(synced);
-    Object.assign(settings, rest);
+    // a device still on v1 writes llm* keys and a single translatorVendor: its migrated
+    // engineConfig must not replace this device's keys, nor its guessed list our order
+    const fromV1 = "translatorVendor" in synced;
+    const remote = withoutDeviceKeys(migrateSettingsV2(synced));
+    if (fromV1 && local.translatorEngines) delete remote.translatorEngines;
+    Object.assign(settings, remote);
   }
   settings.translatorEngines = normalizeEngineList(settings.translatorEngines);
   settings.engineConfig = normalizeEngineConfig(settings.engineConfig);
@@ -69,8 +78,7 @@ export async function updateSettings(patch: Partial<Settings>): Promise<Settings
   const local = { ...(await items().local.getValue()), ...patch };
   await items().local.setValue(local);
   if (local.syncSetting) {
-    const toSync: StoredSettings = { ...local };
-    for (const key of SYNC_EXCLUDE) delete toSync[key];
+    const toSync = withoutDeviceKeys(local);
     await items()
       .synced.setValue(toSync)
       .catch((error) => console.log(error)); // quota/unavailable
@@ -103,9 +111,32 @@ export async function resetSettings() {
     .catch(() => {});
 }
 
-// export file content: only the values that differ from the defaults are needed, but keep all for readability
+const secretFields = new Map(
+  engineInfos.map((info) => [
+    info.id,
+    info.fields.filter((field) => field.type === "password").map((field) => field.key),
+  ]),
+);
+
+// the export file gets shared (bug reports), so API keys are left out
 export async function exportSettings(): Promise<Settings> {
-  return getSettings();
+  const settings = await getSettings();
+  const engineConfig = Object.fromEntries(
+    Object.entries(settings.engineConfig).map(([id, config]) => {
+      const secrets = secretFields.get(id) ?? [];
+      return [
+        id,
+        Object.fromEntries(Object.entries(config ?? {}).filter(([key]) => !secrets.includes(key))),
+      ];
+    }),
+  );
+  const llmProviderSettings = Object.fromEntries(
+    Object.entries(settings.llmProviderSettings).map(([provider, entry]) => [
+      provider,
+      Object.fromEntries(Object.entries(entry).filter(([key]) => key !== "apiKey")),
+    ]),
+  );
+  return { ...settings, engineConfig, llmProviderSettings };
 }
 
 export async function importSettings(data: unknown) {

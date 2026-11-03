@@ -1,6 +1,7 @@
 import { fakeBrowser } from "wxt/testing/fake-browser";
 import {
   defaultSettings,
+  exportSettings,
   getSettings,
   importSettings,
   resetSettings,
@@ -95,6 +96,37 @@ describe("settings storage", () => {
     expect(await fakeBrowser.storage.local.get("settings")).toEqual({});
     expect(await fakeBrowser.storage.sync.get("settings")).toEqual({});
     expect((await getSettings()).tooltipFontSize).toBe(defaultSettings().tooltipFontSize);
+  });
+});
+
+describe("sync with an older device", () => {
+  test("a v1 synced copy keeps this device's API keys and engine order", async () => {
+    await updateSettings({
+      syncSetting: true,
+      engineConfig: { deepl: { apiKey: "local-key" } },
+      translatorEngines: [{ id: "deepl", enabled: true }],
+    });
+    await fakeBrowser.storage.sync.set({
+      settings: { translatorVendor: "bing", llmModel: "remote-model", tooltipFontSize: 30 },
+    });
+    const settings = await getSettings();
+    expect(settings.engineConfig.deepl?.apiKey).toBe("local-key");
+    expect(settings.translatorEngines[0]).toEqual({ id: "deepl", enabled: true });
+    expect(settings.tooltipFontSize).toBe(30);
+  });
+});
+
+describe("exportSettings", () => {
+  test("leaves API keys out of the file", async () => {
+    await updateSettings({
+      engineConfig: { deepl: { apiKey: "secret" }, libreTranslate: { url: "https://lt.example" } },
+      llmProviderSettings: { openai: { apiKey: "sk-secret", model: "gpt" } },
+    });
+    const exported = await exportSettings();
+    expect(exported.engineConfig.deepl).toEqual({});
+    expect(exported.engineConfig.libreTranslate).toEqual({ url: "https://lt.example" });
+    expect(exported.llmProviderSettings.openai).toEqual({ model: "gpt" });
+    expect(JSON.stringify(exported)).not.toContain("secret");
   });
 });
 
