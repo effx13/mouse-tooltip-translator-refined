@@ -2,7 +2,7 @@ const protocolAndDomainRE = /^(?:\w+:)?\/\/(\S+)$/;
 const localhostDomainRE = /^localhost[:?\d]*(?:[^:?\d]\S*)?$/;
 const nonLocalhostDomainRE = /^[^\s.]+\.\S{2,}$/;
 
-function isUrl(value: unknown): boolean {
+export function isUrl(value: unknown): boolean {
   if (typeof value !== "string") return false;
   const rest = value.match(protocolAndDomainRE)?.[1];
   if (!rest) return false;
@@ -10,7 +10,7 @@ function isUrl(value: unknown): boolean {
 }
 
 // collapse whitespace runs to one space and trim
-function trimAllSpace(word: string | null | undefined): string {
+export function trimAllSpace(word: string | null | undefined): string {
   if (!word) return "";
   return word.replace(/\s+/g, " ").trim();
 }

@@ -16,16 +16,23 @@
   "ignorePatterns": [".output/**", ".wxt/**", "build/**", "legacy/**", "public/**"],
   "overrides": [
     {
-      "files": ["*.config.ts", "scripts/**"],
-      "env": { "node": true }
+      "files": ["*.config.ts", "e2e/**", "scripts/**"],
+      "env": {
+        "node": true
+      }
     },
     {
-      "files": ["__tests__/**"],
-      "env": { "vitest": true, "node": true }
+      "files": ["**/*.test.ts"],
+      "env": {
+        "vitest": true,
+        "node": true
+      }
     },
     {
       "files": ["**/*.svelte", "**/*.svelte.ts"],
-      "env": { "svelte": true }
+      "env": {
+        "svelte": true
+      }
     }
   ]
 }
