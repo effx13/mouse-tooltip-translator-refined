@@ -10,7 +10,9 @@ pnpm dev              # 개발 모드(브라우저 자동 실행 + 리로드)
 pnpm build            # → .output/chrome-mv3/   (console 제거)
 pnpm build:firefox    # → .output/firefox-mv2/
 pnpm zip | pnpm zip:firefox   # → .output/*-chrome.zip, *-firefox.zip, *-sources.zip
-pnpm test             # vitest
+pnpm test             # vitest (src/**/*.test.ts)
+pnpm test:e2e         # wxt build + Playwright (e2e/*.spec.ts, headless Chromium)
+pnpm screenshots      # wxt build + docs/screenshots/*.png (README용)
 pnpm lint             # oxlint
 pnpm format           # oxfmt
 pnpm typecheck        # svelte-check (TS 포함)
@@ -18,6 +20,7 @@ pnpm typecheck        # svelte-check (TS 포함)
 
 - 확장 로드는 **빌드 결과 폴더**(`.output/chrome-mv3`, `.output/firefox-mv2`)를 "Load unpacked"로 한다.
 - 코드 변경 후 `pnpm build`, `pnpm lint`, `pnpm typecheck`, `pnpm test`가 통과하는지 확인한다.
+- 처음 한 번 `pnpm exec playwright install chromium`이 필요하다.
 - 버전은 배포 시점에 release 워크플로가 `package.json`에 태그 버전을 기록한다. repo 값은 stale하니 직접 올리지 말 것(#209).
 
 ## 저장소 구조
@@ -41,6 +44,14 @@ pnpm typecheck        # svelte-check (TS 포함)
 - `public/`: `_locales`만 있다. 서드파티 코드는 저장소에 복사하지 않고 npm 패키지로 쓴다.
 - `src/assets/icon.svg`: 확장 아이콘 원본. `@wxt-dev/auto-icons`가 빌드 때 `icons/<size>.png`를 만든다.
 - `doc/`: `intro.md`(설치 시 열리는 사용법), `privacy_policy.md`, `insertLocale.py`(로케일 생성, 확장 이름/설명 `appName`/`appDesc` 포함).
+
+## 테스트
+- 단위 테스트는 대상 파일 옆에 `src/**/*.test.ts`로 둔다(vitest `include`가 이 패턴만 읽는다). 확장 API는 `wxt/testing/fake-browser`의 `fakeBrowser`로 대신하고, 번역 엔진은 `vi.mock("@/translators/registry")`로 막는다.
+- 실제 엔진에 요청하는 네트워크 테스트(`src/translators/translator.test.ts`)는 `CI`에서 skip한다.
+- e2e는 WXT 공식 예제(wxt-dev/examples `playwright-e2e-testing`) 구조를 따른다. `e2e/fixtures.ts`가 `context`(빌드 결과 `.output/chrome-mv3`를 올린 persistent context)와 `extensionId`를 주고, `e2e/pages/`는 페이지 헬퍼, `e2e/support/`는 실행 헬퍼다. 빌드가 최신이어야 한다.
+  - 번역은 `e2e/support/server.ts`의 가짜 OpenAI 호환 서버(`/v1/chat/completions`)로 오프라인·결정적으로 한다. `useOfflineSettings()`가 `localLlm` 설정을 `chrome.storage.local`의 `settings` 키에 쓴다.
+  - 브라우저는 `--host-resolver-rules`로 127.0.0.1 외에는 막혀 있다. `channel: "chromium"`의 새 headless가 확장을 올리므로 xvfb가 필요 없다. 창을 보려면 `pnpm exec playwright test --headed`.
+- `scripts/screenshots.ts`는 테스트가 아니라 README용 캡처다. `e2e/support/`를 공유하므로, 그 파일들은 `@/` 별칭 없이 `.ts` 확장자를 붙인 상대 경로로 import한다(Node가 바로 실행한다).
 
 ## 관례
 
@@ -82,6 +93,6 @@ pnpm typecheck        # svelte-check (TS 포함)
 
 ## Gotchas
 - 빌드·lint·타입·테스트가 통과하는 단위마다 커밋한다. 푸시는 요청할 때만 한다.
-- 툴팁, 키 처리, 뷰어, Google Docs 같은 브라우저 동작은 헤드리스로 확인할 수 없다. 실제 브라우저 확인을 요청한다.
+- 툴팁, 선택 번역, 입력창 번역, 뷰어는 e2e로 확인한다. Google Docs, 키 조합(AltGr 등), 시각적 품질은 여전히 실제 브라우저 확인을 요청한다.
 - 번역 엔진 대부분은 소비자용 엔드포인트를 스크래핑하므로, 데이터센터 IP에서는 쉽게 막힌다. 네트워크 테스트는 CI에서 skip한다.
 - Windows 셸에서는 heredoc이 백슬래시를 뭉갤 수 있으니, 정규식 등은 파일로 작성한 뒤 실행한다.
