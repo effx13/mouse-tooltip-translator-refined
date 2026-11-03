@@ -740,6 +740,90 @@
 	"Allow_access_to_file_URLs_to_open_local_PDF_files": {
 		"message": "Allow access to file URLs to open local PDF files"
 	},
+	"Open_File": {
+		"message": "Open File"
+	},
+	"Previous_Page": {
+		"message": "Previous Page"
+	},
+	"Next_Page": {
+		"message": "Next Page"
+	},
+	"Table_of_Contents": {
+		"message": "Table of Contents"
+	},
+	"Drop_an_ebook_file_here_or_open_one": {
+		"message": "Drop an ebook file here or open one"
+	},
+	"Could_not_open_this_file": {
+		"message": "Could not open this file"
+	},
+	"Untitled": {
+		"message": "Untitled"
+	},
+	"Page": {
+		"message": "Page"
+	},
+	"Zoom_out": {
+		"message": "Zoom out"
+	},
+	"Zoom": {
+		"message": "Zoom"
+	},
+	"Zoom_in": {
+		"message": "Zoom in"
+	},
+	"Automatic_zoom": {
+		"message": "Automatic zoom"
+	},
+	"Page_fit": {
+		"message": "Page fit"
+	},
+	"Page_width": {
+		"message": "Page width"
+	},
+	"Find": {
+		"message": "Find"
+	},
+	"Dark_mode": {
+		"message": "Dark mode"
+	},
+	"Download": {
+		"message": "Download"
+	},
+	"Find_in_document": {
+		"message": "Find in document"
+	},
+	"Previous_match": {
+		"message": "Previous match"
+	},
+	"Next_match": {
+		"message": "Next match"
+	},
+	"Highlight_all": {
+		"message": "Highlight all"
+	},
+	"Match_case": {
+		"message": "Match case"
+	},
+	"Phrase_not_found": {
+		"message": "Phrase not found"
+	},
+	"Close": {
+		"message": "Close"
+	},
+	"Failed_to_load_the_PDF_file": {
+		"message": "Failed to load the PDF file"
+	},
+	"Drop_a_PDF_file_here": {
+		"message": "Drop a PDF file here"
+	},
+	"Enter_the_password_to_open_this_PDF_file": {
+		"message": "Enter the password to open this PDF file"
+	},
+	"Invalid_password_try_again": {
+		"message": "Invalid password try again"
+	},
 	"appName": {
 		"message": "Mouse Tooltip Translator"
 	},

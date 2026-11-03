@@ -28,14 +28,14 @@
       sub: "Translate_local_PDF_file",
       icon: "pdf",
       color: "#e53935",
-      url: browser.runtime.getURL("/pdfjs/web/viewer.html"),
+      url: browser.runtime.getURL("/pdf.html"),
     },
     {
       name: "Ebook_Reader",
       sub: "Translate_local_ebook_file",
       icon: "book",
       color: "#fb8c00",
-      url: browser.runtime.getURL("/foliate-js/reader.html"),
+      url: browser.runtime.getURL("/reader.html"),
     },
     {
       name: "Source_code",

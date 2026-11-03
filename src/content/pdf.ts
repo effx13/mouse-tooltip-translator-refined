@@ -1,9 +1,7 @@
 import { browser } from "wxt/browser";
 
 const viewerUrl = (file: string) =>
-  browser.runtime.getURL(
-    `/pdfjs/web/viewer.html?file=${encodeURIComponent(file)}` as "/pdfjs/web/viewer.html",
-  );
+  `${browser.runtime.getURL("/pdf.html")}?file=${encodeURIComponent(file)}`;
 
 // Rewriting the document tears down Chrome's internal PDF guest view; the address bar keeps the
 // original .pdf URL while our viewer runs in a full-page iframe.

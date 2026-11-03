@@ -27,18 +27,18 @@ pnpm typecheck        # svelte-check (TS 포함)
   - `background.ts` → `src/background/`
   - `content/index.ts` → `src/content/` (`content-scripts/content.js`)
   - `popup/`: Svelte 설정 화면. 툴바 팝업 겸 options 페이지(`popup.html`, `#/about`)
-  - unlisted 스크립트(출력 루트 `<name>.js`):
-    - `pdfInject.ts`: `public/pdfjs/web/viewer.html`이 로드
-    - `ebookEventInject.ts`: `public/foliate-js/reader.html`이 로드
-    - `googleDocInject.ts`: content script가 `injectScript`로 page world에 주입
-  - 이 출력명은 뷰어 HTML과 `getURL()`이 하드코딩하므로 바꾸지 말 것.
+  - `pdf/`: PDF 뷰어(`pdf.html`, `pdfjs-dist`). 웹 PDF 가로채기와 로컬 PDF 리다이렉트가 `pdf.html?file=`로 연다.
+  - `reader/`: EPUB/MOBI/FB2/CBZ 리더(`reader.html`, `foliate-js`)
+  - `googleDocInject.ts`: content script가 `injectScript`로 page world에 주입하는 unlisted 스크립트
+  - 출력명(`pdf.html`, `reader.html`, `googleDocInject.js`)은 content script가 경로로 판별하거나 `getURL()`로 참조하니 바꾸지 말 것.
 - `src/background/`: 번역 요청 처리, 복사(컨텍스트 메뉴/단축키), 옴니박스, 설치 처리, PDF 리다이렉트.
 - `src/content/`: 툴팁(Shadow DOM), 텍스트 감지(`detect/`), 키 처리, 입력창/페이지 번역, 사이트 필터, Google Docs, 웹 PDF 가로채기.
 - `src/translators/`: 번역 엔진(`engine.ts`의 `defineEngine`), `registry.ts`, `index.ts`의 `translate()`(캐시, 역번역, 사전, 폴백 엔진과 언어쌍별 쿨다운 #363). background에서만 실행된다(DOM 없음).
-- `src/viewers/`: PDF.js 뷰어 개선, 이북 iframe 이벤트 브리지.
+- `src/viewers/`: PDF 뷰어 로직(`pdf/`: pdf.js 설정, 우클릭 드래그 이동, 줄바꿈 보정), 이북 iframe → content script 이벤트 브리지(`ebook.ts`).
+- `modules/pdfjs-assets.ts`: 로컬 WXT 모듈. pdf.js worker·cmaps·폰트·wasm을 빌드 결과 `pdfjs/`로 복사한다.
 - `src/components/`: 공용 Svelte 컴포넌트.
 - `src/utils/`: `settings/`(스키마 + 저장소), `messaging.ts`, `i18n.ts`, `lang.ts`, `text.ts`, `async.ts`.
-- `public/`: 그대로 복사된다(`_locales`, `pdfjs`, `foliate-js`, `doq`, `injectRightPan.js`).
+- `public/`: `_locales`만 있다. 서드파티 코드는 저장소에 복사하지 않고 npm 패키지로 쓴다.
 - `src/assets/icon.svg`: 확장 아이콘 원본. `@wxt-dev/auto-icons`가 빌드 때 `icons/<size>.png`를 만든다.
 - `doc/`: `intro.md`(설치 시 열리는 사용법), `privacy_policy.md`, `insertLocale.py`(로케일 생성, 확장 이름/설명 `appName`/`appDesc` 포함).
 
@@ -69,7 +69,7 @@ pnpm typecheck        # svelte-check (TS 포함)
   - CSS는 `src/content/tooltip.css?inline`을 `css` 옵션으로 넘긴다(`cssInjectionMode: "manual"`). 그래야 뷰어 페이지에서도 같은 방식으로 동작한다.
   - 페이지에 전역 CSS를 넣지 않는다. 마우스오버 하이라이트는 `CSS.highlights`를 쓴다.
 - 리스너와 타이머는 `ctx`(ContentScriptContext)에 묶어서, 확장이 갱신되면 정리되게 한다.
-- 뷰어 페이지(PDF/이북)는 확장 페이지라 content script가 안 붙는다. 그래서 진입 스크립트가 `startContentScript(new ContentScriptContext("viewer"))`를 직접 호출한다.
+- 뷰어 페이지(`pdf.html`, `reader.html`)는 확장 페이지라 content script가 안 붙는다. 그래서 각 페이지의 `main.ts`가 `startContentScript(new ContentScriptContext("viewer"))`를 직접 호출한다.
 - 무거운 모듈을 content script에 import하지 않는다. 모든 페이지의 모든 프레임에 실린다.
 
 ### UI 텍스트 / 로케일 키 (직접 편집 금지)
@@ -81,7 +81,7 @@ pnpm typecheck        # svelte-check (TS 포함)
 코드에서는 `getMessage(key)`(폴백 없음) 또는 `t(key)`(키 폴백)를 쓴다(`@/utils/i18n`). 사용자가 고른 UI 언어(`uiLanguage`, #76)를 따른다.
 
 ## Gotchas
-- 사용자가 명시적으로 요청할 때만 커밋/푸시한다.
+- 빌드·lint·타입·테스트가 통과하는 단위마다 커밋한다. 푸시는 요청할 때만 한다.
 - 툴팁, 키 처리, 뷰어, Google Docs 같은 브라우저 동작은 헤드리스로 확인할 수 없다. 실제 브라우저 확인을 요청한다.
 - 번역 엔진 대부분은 소비자용 엔드포인트를 스크래핑하므로, 데이터센터 IP에서는 쉽게 막힌다. 네트워크 테스트는 CI에서 skip한다.
 - Windows 셸에서는 heredoc이 백슬래시를 뭉갤 수 있으니, 정규식 등은 파일로 작성한 뒤 실행한다.

@@ -10,7 +10,7 @@ import {
   SELECTION_END_EVENT,
   watchSelection,
 } from "./detect/selection";
-import { getFocusedWritingBox, isBookFusion, isGoogleDoc } from "./env";
+import { getFocusedWritingBox, isBookFusion, isGoogleDoc, isPdfViewer } from "./env";
 import { forwardGoogleDocKeys } from "./googleDocs";
 import { clearHighlight, removeHighlightStyles, showHighlight } from "./highlight";
 import { type KeyAction, KeyState, mouseKey } from "./keys";
@@ -289,8 +289,14 @@ export function createApp(ctx: ContentScriptContext, state: AppState) {
     ctx.addEventListener(window, "mousemove", handleMousemove, capture);
     ctx.addEventListener(window, "touchstart", () => (mouseMoved = true), capture);
     ctx.addEventListener(window, "scroll", () => clearHighlight(), capture);
-    // document scroll only (non-capture): the text under the cursor changed
-    ctx.addEventListener(window, "scroll", () => state.active && detector.schedule());
+    // the text under the cursor changed: document scroll only, except in the pdf viewer whose
+    // pages scroll inside their own container
+    ctx.addEventListener(
+      window,
+      "scroll",
+      () => state.active && detector.schedule(),
+      isPdfViewer() ? capture : undefined,
+    );
     ctx.addEventListener(window, "keydown", (e) => state.active && keys.handleKeydown(e), capture);
     ctx.addEventListener(window, "keyup", (e) => state.active && keys.handleKeyup(e), capture);
     ctx.addEventListener(

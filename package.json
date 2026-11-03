@@ -24,8 +24,10 @@
     "@webext-core/messaging": "^4.0.1",
     "entities": "^9.0.0",
     "es-toolkit": "^1.53.1",
+    "foliate-js": "^1.0.1",
     "ky": "^1.0.1",
-    "node-html-parser": "^9.0.6"
+    "node-html-parser": "^9.0.6",
+    "pdfjs-dist": "^6.5.438"
   },
   "devDependencies": {
     "@types/chrome": "^0.3.7",

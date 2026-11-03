@@ -51,22 +51,39 @@ const isUserSelectNone = (target: EventTarget | null) => {
 
 // selectionchange (keyboard, "select all") settles after 700ms; mouseup reports right away.
 // Emits a `selectionEnd` event on this script's document, so a bridge can watch an ebook iframe.
-export function watchSelection(win: Window, ctx: ContentScriptContext) {
+// `signal` lets callers drop the listeners early (ebook sections that get swapped out)
+export function watchSelection(win: Window, ctx: ContentScriptContext, signal?: AbortSignal) {
   let timer: number | undefined;
   let downOnNoneSelect = false;
   const doc = win.document;
-  ctx.onInvalidated(() => clearTimeout(timer));
+  const options = { signal: signal ? AbortSignal.any([ctx.signal, signal]) : ctx.signal };
+  options.signal.addEventListener("abort", () => clearTimeout(timer), { once: true });
 
-  ctx.addEventListener(doc, "selectionchange", () => {
-    clearTimeout(timer);
-    timer = window.setTimeout(() => emitSelectionEnd(getSelectionText(win)), SELECTION_DEBOUNCE_MS);
-  });
-  ctx.addEventListener(doc, "mousedown", (e: MouseEvent) => {
-    downOnNoneSelect = isUserSelectNone(e.target);
-  });
-  ctx.addEventListener(doc, "mouseup", (e: MouseEvent) => {
-    clearTimeout(timer);
-    const blocked = downOnNoneSelect && isUserSelectNone(e.target);
-    emitSelectionEnd(blocked ? "" : getSelectionText(win));
-  });
+  doc.addEventListener(
+    "selectionchange",
+    () => {
+      clearTimeout(timer);
+      timer = window.setTimeout(
+        () => emitSelectionEnd(getSelectionText(win)),
+        SELECTION_DEBOUNCE_MS,
+      );
+    },
+    options,
+  );
+  doc.addEventListener(
+    "mousedown",
+    (e) => {
+      downOnNoneSelect = isUserSelectNone(e.target);
+    },
+    options,
+  );
+  doc.addEventListener(
+    "mouseup",
+    (e) => {
+      clearTimeout(timer);
+      const blocked = downOnNoneSelect && isUserSelectNone(e.target);
+      emitSelectionEnd(blocked ? "" : getSelectionText(win));
+    },
+    options,
+  );
 }

@@ -1,63 +1,67 @@
+import type { View } from "foliate-js/view.js";
 import type { ContentScriptContext } from "wxt/utils/content-script-context";
 import { watchSelection } from "@/content";
 
-type EbookEvent = CustomEvent & {
-  ebookWindow?: Window;
+type BridgedEvent = CustomEvent & {
+  ebookWindow: Window;
   key?: string;
   code?: string;
   ctrlKey?: boolean;
-  clientX?: number | "";
-  clientY?: number | "";
+  clientX: number | "";
+  clientY: number | "";
   iframeX?: number;
   iframeY?: number;
 };
 
-// foliate renders the book in an iframe inside its shadow DOM; BookFusion uses bf-epub-view-*
-function findBookIframe(): HTMLIFrameElement | null {
-  const roots = [...document.querySelectorAll("*")].flatMap((el) =>
-    el.shadowRoot ? [el.shadowRoot] : [],
-  );
-  return (
-    roots[1]?.querySelector("iframe") ??
-    document.querySelector<HTMLIFrameElement>('iframe[id^="bf-epub-view-"]')
-  );
+const FORWARDED = ["mousemove", "keydown", "keyup"] as const;
+
+// fixed-layout books CSS-scale the iframe, so map its coordinates onto this page
+function toPage(iframe: Element, x: unknown, y: unknown) {
+  if (typeof x !== "number" || typeof y !== "number") return { clientX: "", clientY: "" } as const;
+  const rect = iframe.getBoundingClientRect();
+  const el = iframe as HTMLElement;
+  const scaleX = el.offsetWidth ? rect.width / el.offsetWidth : 1;
+  const scaleY = el.offsetHeight ? rect.height / el.offsetHeight : 1;
+  return { clientX: x * scaleX + rect.left, clientY: y * scaleY + rect.top };
 }
 
-// re-dispatch the book iframe's input on our window so the tooltip sees it,
-// with coordinates shifted into this page
-function bridge(iframe: HTMLIFrameElement, ctx: ContentScriptContext) {
-  const win = iframe.contentWindow;
-  if (!win) return;
-  watchSelection(win, ctx);
-  for (const type of ["mousemove", "keydown", "keyup"] as const) {
-    win.addEventListener(type, (e: Event) => {
-      const source = e as MouseEvent & KeyboardEvent;
-      const rect = iframe.getBoundingClientRect();
-      const evt = new CustomEvent(type, { bubbles: true }) as EbookEvent;
-      Object.assign(evt, {
-        ebookWindow: win,
-        key: source.key,
-        code: source.code,
-        ctrlKey: source.ctrlKey,
-        clientX: source.clientX ? source.clientX + rect.left : "",
-        clientY: source.clientY ? source.clientY + rect.top : "",
-        iframeX: source.clientX,
-        iframeY: source.clientY,
-      });
-      window.dispatchEvent(evt);
-      document.dispatchEvent(evt);
-    });
+function bindSection(doc: Document, ctx: ContentScriptContext, viewSignal: AbortSignal) {
+  const win = doc.defaultView;
+  const iframe = win?.frameElement;
+  if (!win || !iframe) return;
+  // drop our listeners when foliate swaps this section out
+  const unload = new AbortController();
+  win.addEventListener("pagehide", () => unload.abort(), { once: true });
+  const signal = AbortSignal.any([viewSignal, unload.signal]);
+  watchSelection(win, ctx, signal);
+
+  for (const type of FORWARDED) {
+    win.addEventListener(
+      type,
+      (e: Event) => {
+        const source = e as MouseEvent & KeyboardEvent;
+        const evt = new CustomEvent(type, { bubbles: true }) as BridgedEvent;
+        Object.assign(evt, {
+          ebookWindow: win,
+          key: source.key,
+          code: source.code,
+          ctrlKey: source.ctrlKey,
+          ...toPage(iframe, source.clientX, source.clientY),
+          iframeX: source.clientX,
+          iframeY: source.clientY,
+        });
+        // dispatching once on document also reaches window listeners; twice would flip toggle keys back
+        document.dispatchEvent(evt);
+      },
+      { signal },
+    );
   }
 }
 
-export function bridgeEbookFrames(ctx: ContentScriptContext) {
-  let src = "";
-  ctx.setInterval(() => {
-    const iframe = findBookIframe();
-    if (!iframe || iframe.src === src) return;
-    src = iframe.src;
-    bridge(iframe, ctx);
-    // focus so key events reach us
-    iframe.contentWindow?.focus();
-  }, 1000);
+// the book lives in an iframe inside foliate's closed shadow DOM, one document per section
+export function bridgeEbookView(view: View, ctx: ContentScriptContext, signal = ctx.signal) {
+  const viewSignal = AbortSignal.any([ctx.signal, signal]);
+  view.addEventListener("load", (e) => bindSection(e.detail.doc, ctx, viewSignal), {
+    signal: viewSignal,
+  });
 }

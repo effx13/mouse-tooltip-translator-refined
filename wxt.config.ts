@@ -1,7 +1,5 @@
 import { defineConfig } from "wxt";
 
-const PUBLIC_EXCLUDE = [".md", ".map", "compressed.tracemonkey-pldi-09.pdf"];
-
 export default defineConfig({
   srcDir: "src",
   // doc/insertLocale.py writes public/_locales
@@ -32,7 +30,7 @@ export default defineConfig({
       host_permissions: ["<all_urls>"],
       web_accessible_resources: [
         {
-          resources: ["pdfjs/web/viewer.html", "googleDocInject.js"],
+          resources: ["pdf.html", "googleDocInject.js"],
           matches: ["<all_urls>"],
         },
       ],
@@ -56,13 +54,6 @@ export default defineConfig({
 
   zip: {
     excludeSources: ["build/**", "web-ext-artifacts/**", "*.zip"],
-  },
-
-  hooks: {
-    "build:publicAssets": (_wxt, files) => {
-      const keep = files.filter((f) => !PUBLIC_EXCLUDE.some((ex) => f.relativeDest.includes(ex)));
-      files.splice(0, files.length, ...keep);
-    },
   },
 
   vite: ({ mode }) => ({

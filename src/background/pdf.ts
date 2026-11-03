@@ -2,7 +2,7 @@ import { browser } from "wxt/browser";
 import { currentSettings, peekSettings } from "./settings";
 
 export const pdfViewerUrl = (url: string) =>
-  `${browser.runtime.getURL("/pdfjs/web/viewer.html")}?file=${encodeURIComponent(url)}`;
+  `${browser.runtime.getURL("/pdf.html")}?file=${encodeURIComponent(url)}`;
 
 const isLocalPdf = (url = "") => /^file:\/\/.*\.pdf$/i.test(url);
 
@@ -21,7 +21,7 @@ export function registerPdfRedirects() {
     browser.webRequest.onBeforeRequest.addListener(
       (details) => {
         const detectPDF = peekSettings()?.detectPDF ?? true;
-        if (!detectPDF || details.url.includes("/pdfjs/web/viewer.html")) return {};
+        if (!detectPDF || details.url.startsWith(browser.runtime.getURL("/"))) return {};
         return { redirectUrl: pdfViewerUrl(details.url) };
       },
       { urls: ["*://*/*.pdf", "*://*/*.pdf?*"], types: ["main_frame"] },
