@@ -26,7 +26,7 @@
     isTab(store.settings.lastSettingTab) ? store.settings.lastSettingTab : "main",
   );
   let fontOptions = $state<Option[]>([{ label: t("Default"), value: "" }]);
-  let scroller: HTMLElement | undefined = $state();
+  let scroller = $state<HTMLElement | null>(null);
 
   void getFontOptions().then((list) => (fontOptions = list));
 

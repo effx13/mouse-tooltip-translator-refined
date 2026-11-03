@@ -233,9 +233,10 @@ export function createApp(ctx: ContentScriptContext, state: AppState) {
 
   function handleMousemove(e: BridgedMouseEvent) {
     if (!state.active) return;
-    const moved = motion.track(e.clientX, e.clientY);
+    motion.track(e.clientX, e.clientY);
     mouseTarget = e.target;
-    if (moved) tooltip.moveTo(e.clientX, e.clientY);
+    // record the cursor even before the move counts, or a quick double-click shows the tooltip at a stale spot
+    tooltip.moveTo(e.clientX, e.clientY);
     detector.track(e);
   }
 
