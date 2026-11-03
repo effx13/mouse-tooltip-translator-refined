@@ -1,6 +1,6 @@
 import ky from "ky";
-import { defineEngine } from "./engine";
-import { matchOrThrow } from "./parse";
+import { defineEngine } from "../engine";
+import { matchOrThrow } from "../parse";
 
 const tokenUrl = "https://translate.google.com";
 const batchUrl = "https://translate.google.com/_/TranslateWebserverUi/data/batchexecute";

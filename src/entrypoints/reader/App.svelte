@@ -5,6 +5,7 @@
   import FolderOpenIcon from "@lucide/svelte/icons/folder-open";
   import ListTreeIcon from "@lucide/svelte/icons/list-tree";
   import { Button } from "@/components/ui/button";
+  import { ScrollArea } from "@/components/ui/scroll-area";
   import * as Sheet from "@/components/ui/sheet";
   import { cn } from "@/utils/cn";
   import { t } from "@/utils/i18n";
@@ -212,8 +213,10 @@
     <Sheet.Header class="border-b">
       <Sheet.Title>{t("Table_of_Contents")}</Sheet.Title>
     </Sheet.Header>
-    <div class="min-h-0 flex-1 overflow-y-auto p-2">
-      <Toc items={toc} {currentHref} onselect={goToHref} />
-    </div>
+    <ScrollArea class="min-h-0 flex-1">
+      <div class="p-2">
+        <Toc items={toc} {currentHref} onselect={goToHref} />
+      </div>
+    </ScrollArea>
   </Sheet.Content>
 </Sheet.Root>

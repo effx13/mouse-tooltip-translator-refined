@@ -82,13 +82,12 @@ export async function startFixtureServer(): Promise<FixtureServer> {
 
 // settings that route every translation to the fake server
 export const offlineSettings = (server: FixtureServer, patch: Record<string, unknown> = {}) => ({
-  translatorVendor: "localLlm",
-  llmProvider: "custom",
-  llmApiEndpoint: server.llmEndpoint,
-  llmModel: "test",
+  translatorEngines: [{ id: "localLlm", enabled: true }],
+  engineConfig: {
+    localLlm: { provider: "custom", endpoint: server.llmEndpoint, model: "test" },
+  },
   translateSource: "auto",
   translateTarget: "ko",
-  fallbackTranslatorEngine: false,
   tooltipWordDictionary: false,
   detectPDF: false,
   ...patch,

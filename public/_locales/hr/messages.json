@@ -11,8 +11,86 @@
 	"Translate_Into": {
 		"message": "Prevedi na"
 	},
-	"Translator_Engine": {
-		"message": "Prevoditeljski servis"
+	"Mouseover_Text_Type": {
+		"message": "Vrsta teksta pri prelasku mišem"
+	},
+	"Translate_Into_2": {
+		"message": "Drugi jezik prijevoda"
+	},
+	"Writing_Language": {
+		"message": "Jezik pisanja"
+	},
+	"Reverse_Translate_Language": {
+		"message": "Jezik obrnutog prijevoda"
+	},
+	"ENGINE": {
+		"message": "ENGINE"
+	},
+	"Engines_are_tried_from_top_to_bottom_and_the_first_answer_is_used": {
+		"message": "Engines are tried from top to bottom and the first answer is used"
+	},
+	"Ready": {
+		"message": "Ready"
+	},
+	"Uses_API_key": {
+		"message": "Uses API key"
+	},
+	"Needs_API_key": {
+		"message": "Needs API key"
+	},
+	"Needs_setup": {
+		"message": "Needs setup"
+	},
+	"Experimental": {
+		"message": "Experimental"
+	},
+	"Enable": {
+		"message": "Enable"
+	},
+	"Move_up": {
+		"message": "Move up"
+	},
+	"Move_down": {
+		"message": "Move down"
+	},
+	"Press_Alt_and_arrow_keys_to_reorder": {
+		"message": "Press Alt and arrow keys to reorder"
+	},
+	"Test": {
+		"message": "Test"
+	},
+	"Testing": {
+		"message": "Testing"
+	},
+	"Test_succeeded": {
+		"message": "Test succeeded"
+	},
+	"Test_failed": {
+		"message": "Test failed"
+	},
+	"Get_a_key": {
+		"message": "Get a key"
+	},
+	"API_Key": {
+		"message": "API Key"
+	},
+	"Region": {
+		"message": "Region"
+	},
+	"Client_ID": {
+		"message": "Client ID"
+	},
+	"Client_Secret": {
+		"message": "Client Secret"
+	},
+	"Server_URL": {
+		"message": "Server URL"
+	},
+	"Browser_built_in_translator": {
+		"message": "Browser built in translator"
+	},
+	"OpenAI_compatible_LLM": {
+		"message": "OpenAI compatible LLM"
 	},
 	"LLM_Provider": {
 		"message": "Pružatelj LLM-a"
@@ -26,17 +104,14 @@
 	"LLM_Model": {
 		"message": "LLM model"
 	},
-	"Mouseover_Text_Type": {
-		"message": "Vrsta teksta pri prelasku mišem"
+	"Translation_Cache": {
+		"message": "Translation Cache"
 	},
-	"Translate_Into_2": {
-		"message": "Drugi jezik prijevoda"
+	"Clear_translation_cache": {
+		"message": "Clear translation cache"
 	},
-	"Writing_Language": {
-		"message": "Jezik pisanja"
-	},
-	"Reverse_Translate_Language": {
-		"message": "Jezik obrnutog prijevoda"
+	"Translation_cache_cleared": {
+		"message": "Translation cache cleared"
 	},
 	"KEYBOARD": {
 		"message": "TIPKOVNICA"
@@ -184,9 +259,6 @@
 	},
 	"Tooltip_Word_Dictionary_Source": {
 		"message": "Izvor rječnika riječi"
-	},
-	"Fallback_Translator_Engine": {
-		"message": "Rezervni prevoditeljski servis"
 	},
 	"BACKUP": {
 		"message": "SIGURNOSNA KOPIJA"
@@ -346,12 +418,6 @@
 	},
 	"Click_Right": {
 		"message": "Desni klik"
-	},
-	"google": {
-		"message": "Google"
-	},
-	"bing": {
-		"message": "Bing"
 	},
 	"About": {
 		"message": "O proširenju"

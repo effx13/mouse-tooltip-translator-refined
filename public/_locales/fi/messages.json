@@ -11,8 +11,86 @@
 	"Translate_Into": {
 		"message": "Käännä kielelle"
 	},
-	"Translator_Engine": {
-		"message": "Kääntäjä moottori"
+	"Mouseover_Text_Type": {
+		"message": "Vie hiiri Tekstityyppi"
+	},
+	"Translate_Into_2": {
+		"message": "Toissijainen Käännä kielelle"
+	},
+	"Writing_Language": {
+		"message": "Kirjoituskieli"
+	},
+	"Reverse_Translate_Language": {
+		"message": "Käänteinen käännöskieli"
+	},
+	"ENGINE": {
+		"message": "ENGINE"
+	},
+	"Engines_are_tried_from_top_to_bottom_and_the_first_answer_is_used": {
+		"message": "Engines are tried from top to bottom and the first answer is used"
+	},
+	"Ready": {
+		"message": "Ready"
+	},
+	"Uses_API_key": {
+		"message": "Uses API key"
+	},
+	"Needs_API_key": {
+		"message": "Needs API key"
+	},
+	"Needs_setup": {
+		"message": "Needs setup"
+	},
+	"Experimental": {
+		"message": "Experimental"
+	},
+	"Enable": {
+		"message": "Enable"
+	},
+	"Move_up": {
+		"message": "Move up"
+	},
+	"Move_down": {
+		"message": "Move down"
+	},
+	"Press_Alt_and_arrow_keys_to_reorder": {
+		"message": "Press Alt and arrow keys to reorder"
+	},
+	"Test": {
+		"message": "Test"
+	},
+	"Testing": {
+		"message": "Testing"
+	},
+	"Test_succeeded": {
+		"message": "Test succeeded"
+	},
+	"Test_failed": {
+		"message": "Test failed"
+	},
+	"Get_a_key": {
+		"message": "Get a key"
+	},
+	"API_Key": {
+		"message": "API Key"
+	},
+	"Region": {
+		"message": "Region"
+	},
+	"Client_ID": {
+		"message": "Client ID"
+	},
+	"Client_Secret": {
+		"message": "Client Secret"
+	},
+	"Server_URL": {
+		"message": "Server URL"
+	},
+	"Browser_built_in_translator": {
+		"message": "Browser built in translator"
+	},
+	"OpenAI_compatible_LLM": {
+		"message": "OpenAI compatible LLM"
 	},
 	"LLM_Provider": {
 		"message": "LLM-palveluntarjoaja"
@@ -26,17 +104,14 @@
 	"LLM_Model": {
 		"message": "LLM malli"
 	},
-	"Mouseover_Text_Type": {
-		"message": "Vie hiiri Tekstityyppi"
+	"Translation_Cache": {
+		"message": "Translation Cache"
 	},
-	"Translate_Into_2": {
-		"message": "Toissijainen Käännä kielelle"
+	"Clear_translation_cache": {
+		"message": "Clear translation cache"
 	},
-	"Writing_Language": {
-		"message": "Kirjoituskieli"
-	},
-	"Reverse_Translate_Language": {
-		"message": "Käänteinen käännöskieli"
+	"Translation_cache_cleared": {
+		"message": "Translation cache cleared"
 	},
 	"KEYBOARD": {
 		"message": "NÄPPÄIMISTÖ"
@@ -184,9 +259,6 @@
 	},
 	"Tooltip_Word_Dictionary_Source": {
 		"message": "Tooltip Word Dictionary lähde"
-	},
-	"Fallback_Translator_Engine": {
-		"message": "Varakääntäjämoottori"
 	},
 	"BACKUP": {
 		"message": "VARMUUSKOPI"
@@ -346,12 +418,6 @@
 	},
 	"Click_Right": {
 		"message": "Napsauta Oikea"
-	},
-	"google": {
-		"message": "Google"
-	},
-	"bing": {
-		"message": "Bing"
 	},
 	"About": {
 		"message": "Tietoja"

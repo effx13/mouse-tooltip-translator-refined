@@ -20,7 +20,7 @@ export type EngineRequest = (
 ) => Promise<EngineResponse | undefined>;
 
 export interface Engine {
-  // undefined = failed (any error is swallowed so the caller can fall back)
+  // throws or resolves undefined when it failed; the caller moves on to the next engine
   translate(
     text: string,
     sourceLang: string,
@@ -41,24 +41,30 @@ export function defineEngine(
 
   return {
     async translate(text, sourceLang, targetLang, settings) {
-      try {
-        const sl = encode(sourceLang);
-        const tl = encode(targetLang);
-        const res = await request(text, sl, tl, settings);
-        if (!res) return undefined;
-        return {
-          targetText: res.targetText ?? "",
-          transliteration: res.transliteration,
-          dict: res.dict,
-          imageUrl: res.imageUrl,
-          sourceLang: decode(res.detectedLang),
-          targetLang: decode(tl),
-        };
-      } catch (error) {
-        console.log(error);
-        return undefined;
-      }
+      const tl = encode(targetLang);
+      const res = await request(text, encode(sourceLang), tl, settings);
+      if (!res) return undefined;
+      return {
+        targetText: res.targetText ?? "",
+        transliteration: res.transliteration,
+        dict: res.dict,
+        imageUrl: res.imageUrl,
+        sourceLang: decode(res.detectedLang),
+        targetLang: decode(tl),
+      };
     },
+  };
+}
+
+// the official API once its key is configured, the free web endpoint otherwise
+export function preferApi(
+  web: Engine,
+  api: Engine,
+  useApi: (settings: Settings) => boolean,
+): Engine {
+  return {
+    translate: (text, sourceLang, targetLang, settings) =>
+      (useApi(settings) ? api : web).translate(text, sourceLang, targetLang, settings),
   };
 }
 

@@ -1,5 +1,6 @@
 import { defineBackground } from "wxt/utils/define-background";
 import { translate } from "@/translators";
+import { translationCache } from "@/translators/cache";
 import { onMessage } from "@/utils/messaging";
 import { registerCopyListeners, rememberTooltip } from "./copy";
 import { registerInstallListeners } from "./install";
@@ -12,6 +13,10 @@ export default defineBackground({
   main() {
     trackSettings();
     onMessage("translate", async ({ data }) => translate(data, await currentSettings()));
+    onMessage("translationCache", async ({ data }) => {
+      if (data === "clear") await translationCache.clear();
+      return translationCache.count();
+    });
     onMessage("tooltipShown", ({ data }) => rememberTooltip(data.sourceText, data.targetText));
     registerCopyListeners();
     registerInstallListeners();

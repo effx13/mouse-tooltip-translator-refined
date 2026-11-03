@@ -1,5 +1,5 @@
 import ky from "ky";
-import { defineEngine } from "./engine";
+import { defineEngine } from "../engine";
 
 // https://github.com/vtosters/lite/blob/cf17ed64c759d366ae7121dc61c4328205963ed4/app/src/main/java/ru/vtosters/lite/translators/YandexTranslator.java#L35
 const yandexLangCode: Record<string, string> = {

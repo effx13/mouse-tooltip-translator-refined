@@ -1,5 +1,5 @@
 import ky from "ky";
-import { defineEngine } from "./engine";
+import { defineEngine } from "../engine";
 
 const apiUrl = "https://translate.googleapis.com/translate_a/single";
 

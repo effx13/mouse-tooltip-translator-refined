@@ -85,6 +85,22 @@ async function settingsShot(server: FixtureServer, dark: boolean) {
   });
 }
 
+async function enginesShot(server: FixtureServer) {
+  await withSession(server, { viewport: POPUP_SIZE }, null, async (session, page) => {
+    await page.goto(session.extensionUrl("popup.html"));
+    await page.getByRole("tab", { name: "ENGINES" }).click();
+    // one open config panel shows the API key field next to the list
+    await page.locator("li[data-engine='deepl']").locator("button[aria-expanded]").click();
+    await page.getByLabel("API Key *").waitFor();
+    await page.mouse.move(0, 0);
+    await page.waitForTimeout(300);
+    const png = await page.screenshot();
+    const framePage = await session.context.newPage();
+    await framePage.emulateMedia({ colorScheme: "light" });
+    await framePopup(framePage, png, false, "engines.png");
+  });
+}
+
 async function articleHoverShot(server: FixtureServer) {
   await withSession(server, {}, tooltipSettings, async (_session, page) => {
     await page.goto(`${server.origin}/article.html`);
@@ -142,6 +158,7 @@ const server = await startFixtureServer();
 try {
   await settingsShot(server, false);
   await settingsShot(server, true);
+  await enginesShot(server);
   await articleHoverShot(server);
   await selectionShot(server);
   await pdfShot(server);

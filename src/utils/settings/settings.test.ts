@@ -38,15 +38,15 @@ describe("settings storage", () => {
   });
 
   test("only the changed values are stored, merged over the defaults on read", async () => {
-    const result = await updateSettings({ tooltipFontSize: 24, translatorVendor: "bing" });
+    const result = await updateSettings({ tooltipFontSize: 24, translateWhen: "select" });
     expect(result.tooltipFontSize).toBe(24);
     expect(result.tooltipWidth).toBe(defaultSettings().tooltipWidth);
 
     const { settings: stored } = await fakeBrowser.storage.local.get("settings");
-    expect(stored).toEqual({ tooltipFontSize: 24, translatorVendor: "bing" });
+    expect(stored).toEqual({ tooltipFontSize: 24, translateWhen: "select" });
 
     await updateSettings({ tooltipFontSize: 30 });
-    expect((await getSettings()).translatorVendor).toBe("bing");
+    expect((await getSettings()).translateWhen).toBe("select");
     expect((await getSettings()).tooltipFontSize).toBe(30);
   });
 
@@ -59,7 +59,7 @@ describe("settings storage", () => {
     await updateSettings({
       syncSetting: true,
       tooltipFontSize: 22,
-      llmApiKey: "secret",
+      engineConfig: { deepl: { apiKey: "secret" }, localLlm: { apiKey: "secret" } },
       llmProviderSettings: { openai: { apiKey: "secret" } },
       lastSettingTab: "graphic",
     });
@@ -104,13 +104,30 @@ describe("importSettings", () => {
       tooltipFontSize: 30,
       mouseoverHighlightText: true,
       websiteExcludeList: ["a.com"],
-      translatorVendor: "deepl",
+      engineConfig: { deepl: { apiKey: "key" } },
     });
     const settings = await getSettings();
     expect(settings.tooltipFontSize).toBe(30);
     expect(settings.mouseoverHighlightText).toBe(true);
     expect(settings.websiteExcludeList).toEqual(["a.com"]);
-    expect(settings.translatorVendor).toBe("deepl");
+    expect(settings.engineConfig).toEqual({ deepl: { apiKey: "key" } });
+  });
+
+  test("a v1 export file keeps its engine choice and LLM setup", async () => {
+    await importSettings({
+      translatorVendor: "localLlm",
+      fallbackTranslatorEngine: true,
+      llmApiEndpoint: "http://localhost:1234/v1",
+      llmModel: "qwen",
+    });
+    const settings = await getSettings();
+    expect(settings.translatorEngines.filter((e) => e.enabled).map((e) => e.id)).toEqual([
+      "localLlm",
+    ]);
+    expect(settings.engineConfig.localLlm).toEqual({
+      endpoint: "http://localhost:1234/v1",
+      model: "qwen",
+    });
   });
 
   test("drops unknown keys and mismatched types", async () => {
@@ -118,7 +135,7 @@ describe("importSettings", () => {
       notASetting: 1,
       tooltipFontSize: "30",
       mouseoverHighlightText: "yes",
-      translatorVendor: 5,
+      translatorEngines: "google",
       importSetting: "button",
     });
     const { settings: stored } = await fakeBrowser.storage.local.get("settings");

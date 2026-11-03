@@ -1,8 +1,8 @@
 import ky from "ky";
-import { defineEngine } from "./engine";
-import { matchOrThrow, required } from "./parse";
+import { defineEngine } from "../engine";
+import { matchOrThrow, required } from "../parse";
 
-const bingLangCode: Record<string, string> = {
+export const bingLangCode: Record<string, string> = {
   auto: "auto-detect",
   af: "af",
   sq: "sq",

@@ -1,6 +1,6 @@
 import ky from "ky";
-import { defineEngine, detectLangBrowser } from "./engine";
-import { matchOrThrow, required } from "./parse";
+import { defineEngine, detectLangBrowser } from "../engine";
+import { matchOrThrow, required } from "../parse";
 
 const googleSearchUrl = "https://www.google.com/search";
 

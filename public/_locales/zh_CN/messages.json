@@ -11,8 +11,86 @@
 	"Translate_Into": {
 		"message": "翻译成"
 	},
-	"Translator_Engine": {
-		"message": "翻译引擎"
+	"Mouseover_Text_Type": {
+		"message": "鼠标悬停文本类型"
+	},
+	"Translate_Into_2": {
+		"message": "次要翻译成"
+	},
+	"Writing_Language": {
+		"message": "写作语言"
+	},
+	"Reverse_Translate_Language": {
+		"message": "反向翻译语言"
+	},
+	"ENGINE": {
+		"message": "ENGINE"
+	},
+	"Engines_are_tried_from_top_to_bottom_and_the_first_answer_is_used": {
+		"message": "Engines are tried from top to bottom and the first answer is used"
+	},
+	"Ready": {
+		"message": "Ready"
+	},
+	"Uses_API_key": {
+		"message": "Uses API key"
+	},
+	"Needs_API_key": {
+		"message": "Needs API key"
+	},
+	"Needs_setup": {
+		"message": "Needs setup"
+	},
+	"Experimental": {
+		"message": "Experimental"
+	},
+	"Enable": {
+		"message": "Enable"
+	},
+	"Move_up": {
+		"message": "Move up"
+	},
+	"Move_down": {
+		"message": "Move down"
+	},
+	"Press_Alt_and_arrow_keys_to_reorder": {
+		"message": "Press Alt and arrow keys to reorder"
+	},
+	"Test": {
+		"message": "Test"
+	},
+	"Testing": {
+		"message": "Testing"
+	},
+	"Test_succeeded": {
+		"message": "Test succeeded"
+	},
+	"Test_failed": {
+		"message": "Test failed"
+	},
+	"Get_a_key": {
+		"message": "Get a key"
+	},
+	"API_Key": {
+		"message": "API Key"
+	},
+	"Region": {
+		"message": "Region"
+	},
+	"Client_ID": {
+		"message": "Client ID"
+	},
+	"Client_Secret": {
+		"message": "Client Secret"
+	},
+	"Server_URL": {
+		"message": "Server URL"
+	},
+	"Browser_built_in_translator": {
+		"message": "Browser built in translator"
+	},
+	"OpenAI_compatible_LLM": {
+		"message": "OpenAI compatible LLM"
 	},
 	"LLM_Provider": {
 		"message": "LLM 提供商"
@@ -26,17 +104,14 @@
 	"LLM_Model": {
 		"message": "LLM 模型"
 	},
-	"Mouseover_Text_Type": {
-		"message": "鼠标悬停文本类型"
+	"Translation_Cache": {
+		"message": "Translation Cache"
 	},
-	"Translate_Into_2": {
-		"message": "次要翻译成"
+	"Clear_translation_cache": {
+		"message": "Clear translation cache"
 	},
-	"Writing_Language": {
-		"message": "写作语言"
-	},
-	"Reverse_Translate_Language": {
-		"message": "反向翻译语言"
+	"Translation_cache_cleared": {
+		"message": "Translation cache cleared"
 	},
 	"KEYBOARD": {
 		"message": "键盘"
@@ -184,9 +259,6 @@
 	},
 	"Tooltip_Word_Dictionary_Source": {
 		"message": "工具提示词典来源"
-	},
-	"Fallback_Translator_Engine": {
-		"message": "备用翻译引擎"
 	},
 	"BACKUP": {
 		"message": "备份"
@@ -346,12 +418,6 @@
 	},
 	"Click_Right": {
 		"message": "右键点击"
-	},
-	"google": {
-		"message": "Google"
-	},
-	"bing": {
-		"message": "Bing"
 	},
 	"About": {
 		"message": "关于"

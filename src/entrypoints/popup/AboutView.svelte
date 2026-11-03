@@ -12,6 +12,7 @@
   import icon from "@/assets/icon.svg";
   import { Badge } from "@/components/ui/badge";
   import { Button } from "@/components/ui/button";
+  import { ScrollArea } from "@/components/ui/scroll-area";
   import { t } from "@/utils/i18n";
 
   let { onback }: { onback: () => void } = $props();
@@ -72,31 +73,33 @@
   <h1 class="truncate text-[0.9375rem] font-semibold">{t("About")}</h1>
 </header>
 
-<main class="min-h-0 flex-1 overflow-y-auto">
-  <section class="flex flex-col items-center gap-2 px-4 pt-8 pb-6 text-center">
-    <img src={icon} alt="" class="size-16" />
-    <h2 class="text-lg font-semibold">{APP_NAME}</h2>
-    <Badge variant="secondary" class="font-mono">v{version}</Badge>
-  </section>
+<ScrollArea class="min-h-0 flex-1">
+  <main>
+    <section class="flex flex-col items-center gap-2 px-4 pt-8 pb-6 text-center">
+      <img src={icon} alt="" class="size-16" />
+      <h2 class="text-lg font-semibold">{APP_NAME}</h2>
+      <Badge variant="secondary" class="font-mono">v{version}</Badge>
+    </section>
 
-  <ul class="mx-3 mb-4 divide-y overflow-hidden rounded-xl border">
-    {#each entries as entry (entry.name)}
-      <li>
-        <button
-          type="button"
-          class="flex w-full items-center gap-3 px-3 py-2.5 text-start transition-colors hover:bg-muted focus-visible:bg-muted focus-visible:outline-none"
-          onclick={() => void browser.tabs.create({ url: entry.url })}
-        >
-          <span class="grid size-9 shrink-0 place-items-center rounded-lg {entry.tint}">
-            <entry.icon class="size-[1.125rem]" />
-          </span>
-          <span class="flex min-w-0 flex-1 flex-col">
-            <span class="text-sm font-medium">{t(entry.name)}</span>
-            <span class="truncate text-xs text-muted-foreground">{t(entry.sub)}</span>
-          </span>
-          <ChevronRightIcon class="size-4 shrink-0 text-muted-foreground rtl:-scale-x-100" />
-        </button>
-      </li>
-    {/each}
-  </ul>
-</main>
+    <ul class="mx-3 mb-4 divide-y overflow-hidden rounded-xl border">
+      {#each entries as entry (entry.name)}
+        <li>
+          <button
+            type="button"
+            class="flex w-full items-center gap-3 px-3 py-2.5 text-start transition-colors hover:bg-muted focus-visible:bg-muted focus-visible:outline-none"
+            onclick={() => void browser.tabs.create({ url: entry.url })}
+          >
+            <span class="grid size-9 shrink-0 place-items-center rounded-lg {entry.tint}">
+              <entry.icon class="size-[1.125rem]" />
+            </span>
+            <span class="flex min-w-0 flex-1 flex-col">
+              <span class="text-sm font-medium">{t(entry.name)}</span>
+              <span class="truncate text-xs text-muted-foreground">{t(entry.sub)}</span>
+            </span>
+            <ChevronRightIcon class="size-4 shrink-0 text-muted-foreground rtl:-scale-x-100" />
+          </button>
+        </li>
+      {/each}
+    </ul>
+  </main>
+</ScrollArea>

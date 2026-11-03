@@ -1,6 +1,6 @@
 import { decodeHTML } from "entities";
 import ky from "ky";
-import { defineEngine } from "./engine";
+import { defineEngine } from "../engine";
 
 const googleTranslateTKK = "448487.932609646";
 const apiPath = "https://translate.googleapis.com/translate_a/t";

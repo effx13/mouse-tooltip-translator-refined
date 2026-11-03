@@ -1,31 +1,13 @@
-import baidu from "./baidu";
-import bing from "./bing";
-import browserAPI from "./browserAPI";
-import deepl from "./deepl";
 import type { Engine } from "./engine";
-import google from "./google";
-import googleGTX from "./googleGTX";
-import googleV2 from "./googleV2";
-import googleWeb from "./googleWeb";
-import googleWebImage from "./googleWebImage";
-import localLlm from "./localLlm";
-import papago from "./papago";
-import yandex from "./yandex";
 
-export const engines = {
-  google,
-  googleWeb,
-  googleV2,
-  googleGTX,
-  googleWebImage,
-  bing,
-  papago,
-  deepl,
-  yandex,
-  baidu,
-  browserAPI,
-  localLlm,
-} satisfies Record<string, Engine>;
+// one folder per engine; its index.ts is the request implementation (background only)
+const modules = import.meta.glob<Engine>("./*/index.ts", { eager: true, import: "default" });
+
+const folderId = (path: string) => path.split("/")[1] ?? path;
+
+export const engines: Readonly<Record<string, Engine>> = Object.fromEntries(
+  Object.entries(modules).map(([path, engine]) => [folderId(path), engine]),
+);
 
 const engineByName: ReadonlyMap<string, Engine> = new Map(Object.entries(engines));
 

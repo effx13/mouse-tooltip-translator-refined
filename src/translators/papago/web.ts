@@ -1,11 +1,11 @@
 import { hmac } from "@noble/hashes/hmac.js";
 import { md5 } from "@noble/hashes/legacy.js";
 import ky from "ky";
-import { defineEngine } from "./engine";
-import { matchOrThrow } from "./parse";
+import { defineEngine } from "../engine";
+import { matchOrThrow } from "../parse";
 
 // https://github.com/PinMIlk/nodepapago
-const papagoLangCode: Record<string, string> = {
+export const papagoLangCode: Record<string, string> = {
   ar: "ar",
   en: "en",
   fa: "fa",

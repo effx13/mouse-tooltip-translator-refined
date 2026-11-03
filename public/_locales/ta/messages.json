@@ -11,8 +11,86 @@
 	"Translate_Into": {
 		"message": "இதற்கு மொழிபெயர்"
 	},
-	"Translator_Engine": {
-		"message": "மொழிபெயர்ப்பு இயந்திரம்"
+	"Mouseover_Text_Type": {
+		"message": "மவுஸ் மேல்வைப்பு உரை வகை"
+	},
+	"Translate_Into_2": {
+		"message": "இரண்டாம் இலக்கு மொழி"
+	},
+	"Writing_Language": {
+		"message": "எழுதும் மொழி"
+	},
+	"Reverse_Translate_Language": {
+		"message": "தலைகீழ் மொழிபெயர்ப்பு மொழி"
+	},
+	"ENGINE": {
+		"message": "ENGINE"
+	},
+	"Engines_are_tried_from_top_to_bottom_and_the_first_answer_is_used": {
+		"message": "Engines are tried from top to bottom and the first answer is used"
+	},
+	"Ready": {
+		"message": "Ready"
+	},
+	"Uses_API_key": {
+		"message": "Uses API key"
+	},
+	"Needs_API_key": {
+		"message": "Needs API key"
+	},
+	"Needs_setup": {
+		"message": "Needs setup"
+	},
+	"Experimental": {
+		"message": "Experimental"
+	},
+	"Enable": {
+		"message": "Enable"
+	},
+	"Move_up": {
+		"message": "Move up"
+	},
+	"Move_down": {
+		"message": "Move down"
+	},
+	"Press_Alt_and_arrow_keys_to_reorder": {
+		"message": "Press Alt and arrow keys to reorder"
+	},
+	"Test": {
+		"message": "Test"
+	},
+	"Testing": {
+		"message": "Testing"
+	},
+	"Test_succeeded": {
+		"message": "Test succeeded"
+	},
+	"Test_failed": {
+		"message": "Test failed"
+	},
+	"Get_a_key": {
+		"message": "Get a key"
+	},
+	"API_Key": {
+		"message": "API Key"
+	},
+	"Region": {
+		"message": "Region"
+	},
+	"Client_ID": {
+		"message": "Client ID"
+	},
+	"Client_Secret": {
+		"message": "Client Secret"
+	},
+	"Server_URL": {
+		"message": "Server URL"
+	},
+	"Browser_built_in_translator": {
+		"message": "Browser built in translator"
+	},
+	"OpenAI_compatible_LLM": {
+		"message": "OpenAI compatible LLM"
 	},
 	"LLM_Provider": {
 		"message": "LLM வழங்குநர்"
@@ -26,17 +104,14 @@
 	"LLM_Model": {
 		"message": "LLM மாதிரி"
 	},
-	"Mouseover_Text_Type": {
-		"message": "மவுஸ் மேல்வைப்பு உரை வகை"
+	"Translation_Cache": {
+		"message": "Translation Cache"
 	},
-	"Translate_Into_2": {
-		"message": "இரண்டாம் இலக்கு மொழி"
+	"Clear_translation_cache": {
+		"message": "Clear translation cache"
 	},
-	"Writing_Language": {
-		"message": "எழுதும் மொழி"
-	},
-	"Reverse_Translate_Language": {
-		"message": "தலைகீழ் மொழிபெயர்ப்பு மொழி"
+	"Translation_cache_cleared": {
+		"message": "Translation cache cleared"
 	},
 	"KEYBOARD": {
 		"message": "விசைப்பலகை"
@@ -184,9 +259,6 @@
 	},
 	"Tooltip_Word_Dictionary_Source": {
 		"message": "சொல் அகராதி மூலம்"
-	},
-	"Fallback_Translator_Engine": {
-		"message": "மாற்று மொழிபெயர்ப்பு இயந்திரம்"
 	},
 	"BACKUP": {
 		"message": "காப்புப்பிரதி"
@@ -346,12 +418,6 @@
 	},
 	"Click_Right": {
 		"message": "வலது கிளிக்"
-	},
-	"google": {
-		"message": "Google"
-	},
-	"bing": {
-		"message": "Bing"
 	},
 	"About": {
 		"message": "அறிமுகம்"

@@ -7,8 +7,10 @@ export interface TranslateRequest {
   targetLang: string;
   // when the detected source already is the target, translate into this ("null" = off)
   reverseLang?: string;
-  // override the configured engine
+  // try this engine first, before the configured order
   engine?: string;
+  // only `engine`: no fallback, no cache (the settings "Test" button)
+  noFallback?: boolean;
 }
 
 export interface TranslateResult {
@@ -23,6 +25,8 @@ export interface TranslateResult {
   dict?: string;
   // engine (and fallbacks) failed; targetText holds "<engine> is broken"
   isBroken?: boolean;
+  // why a noFallback request failed
+  error?: string;
 }
 
 interface ProtocolMap {
@@ -30,6 +34,8 @@ interface ProtocolMap {
   translate(data: TranslateRequest): TranslateResult | null;
   // content -> background: the tooltip showed this pair (feeds the "copy" context menu / commands)
   tooltipShown(data: { sourceText: string; targetText: string }): void;
+  // popup -> background: entry count of the persistent translation cache, emptied first on "clear"
+  translationCache(action: "count" | "clear"): number;
   // background -> content (active tab): copy this text to the clipboard
   copyText(text: string): void;
 }

@@ -11,8 +11,86 @@
 	"Translate_Into": {
 		"message": "Traducir En"
 	},
-	"Translator_Engine": {
-		"message": "Motor de Traducción"
+	"Mouseover_Text_Type": {
+		"message": "Tipo de Texto al Pasar el Mouse"
+	},
+	"Translate_Into_2": {
+		"message": "Traducción Secundaria a"
+	},
+	"Writing_Language": {
+		"message": "Idioma de Escritura"
+	},
+	"Reverse_Translate_Language": {
+		"message": "Idioma de Traducción Inversa"
+	},
+	"ENGINE": {
+		"message": "ENGINE"
+	},
+	"Engines_are_tried_from_top_to_bottom_and_the_first_answer_is_used": {
+		"message": "Engines are tried from top to bottom and the first answer is used"
+	},
+	"Ready": {
+		"message": "Ready"
+	},
+	"Uses_API_key": {
+		"message": "Uses API key"
+	},
+	"Needs_API_key": {
+		"message": "Needs API key"
+	},
+	"Needs_setup": {
+		"message": "Needs setup"
+	},
+	"Experimental": {
+		"message": "Experimental"
+	},
+	"Enable": {
+		"message": "Enable"
+	},
+	"Move_up": {
+		"message": "Move up"
+	},
+	"Move_down": {
+		"message": "Move down"
+	},
+	"Press_Alt_and_arrow_keys_to_reorder": {
+		"message": "Press Alt and arrow keys to reorder"
+	},
+	"Test": {
+		"message": "Test"
+	},
+	"Testing": {
+		"message": "Testing"
+	},
+	"Test_succeeded": {
+		"message": "Test succeeded"
+	},
+	"Test_failed": {
+		"message": "Test failed"
+	},
+	"Get_a_key": {
+		"message": "Get a key"
+	},
+	"API_Key": {
+		"message": "API Key"
+	},
+	"Region": {
+		"message": "Region"
+	},
+	"Client_ID": {
+		"message": "Client ID"
+	},
+	"Client_Secret": {
+		"message": "Client Secret"
+	},
+	"Server_URL": {
+		"message": "Server URL"
+	},
+	"Browser_built_in_translator": {
+		"message": "Browser built in translator"
+	},
+	"OpenAI_compatible_LLM": {
+		"message": "OpenAI compatible LLM"
 	},
 	"LLM_Provider": {
 		"message": "Proveedor de LLM"
@@ -26,17 +104,14 @@
 	"LLM_Model": {
 		"message": "Modelo de LLM"
 	},
-	"Mouseover_Text_Type": {
-		"message": "Tipo de Texto al Pasar el Mouse"
+	"Translation_Cache": {
+		"message": "Translation Cache"
 	},
-	"Translate_Into_2": {
-		"message": "Traducción Secundaria a"
+	"Clear_translation_cache": {
+		"message": "Clear translation cache"
 	},
-	"Writing_Language": {
-		"message": "Idioma de Escritura"
-	},
-	"Reverse_Translate_Language": {
-		"message": "Idioma de Traducción Inversa"
+	"Translation_cache_cleared": {
+		"message": "Translation cache cleared"
 	},
 	"KEYBOARD": {
 		"message": "TECLADO"
@@ -184,9 +259,6 @@
 	},
 	"Tooltip_Word_Dictionary_Source": {
 		"message": "Fuente del diccionario de palabras de información sobre herramientas"
-	},
-	"Fallback_Translator_Engine": {
-		"message": "Motor de traducción alternativo"
 	},
 	"BACKUP": {
 		"message": "RESPALDO"
@@ -346,12 +418,6 @@
 	},
 	"Click_Right": {
 		"message": "Haga clic derecho"
-	},
-	"google": {
-		"message": "Google"
-	},
-	"bing": {
-		"message": "Bing"
 	},
 	"About": {
 		"message": "Acerca de"

@@ -9,6 +9,7 @@ test("renders every settings tab with the main tab selected", async ({ page, ext
   ).toBeVisible();
   await expect(page.getByRole("tab")).toHaveText([
     "MAIN",
+    "ENGINES",
     "KEYBOARD",
     "GRAPHIC",
     "EXCLUDE",
@@ -16,7 +17,7 @@ test("renders every settings tab with the main tab selected", async ({ page, ext
     "BACKUP",
   ]);
   await expect(popup.tab("MAIN")).toHaveAttribute("aria-selected", "true");
-  await expect(page.getByText("Translator Engine")).toBeVisible();
+  await expect(page.getByText("Translate Into", { exact: true })).toBeVisible();
 });
 
 test("switching tabs shows that tab's settings and remembers it", async ({ page, extensionId }) => {
@@ -24,7 +25,7 @@ test("switching tabs shows that tab's settings and remembers it", async ({ page,
   await popup.tab("GRAPHIC").click();
   await expect(popup.tab("GRAPHIC")).toHaveAttribute("aria-selected", "true");
   await expect(page.getByText("Tooltip Font Size")).toBeVisible();
-  await expect(page.getByText("Translator Engine")).toBeHidden();
+  await expect(page.getByText("Translate Into", { exact: true })).toBeHidden();
 
   await expect.poll(async () => (await getStoredSettings(page)).lastSettingTab).toBe("graphic");
   await page.reload();

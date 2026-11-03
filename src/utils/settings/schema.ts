@@ -1,7 +1,9 @@
+import { defaultEngineList, type EngineConfig, type EngineEntry } from "@/translators/catalog";
 import { langList } from "../lang";
 
 export type SettingTab =
   | "main"
+  | "engine"
   | "keyboard"
   | "graphic"
   | "exclude"
@@ -12,6 +14,7 @@ export type SettingTab =
 // rendered tab order
 export const SETTING_TABS: readonly Exclude<SettingTab, "remains">[] = [
   "main",
+  "engine",
   "keyboard",
   "graphic",
   "exclude",
@@ -34,7 +37,8 @@ export type ButtonAction =
   | "whitelistCurrentWebsite"
   | "importSetting"
   | "exportSetting"
-  | "resetSetting";
+  | "resetSetting"
+  | "clearTranslationCache";
 
 // loosely typed so the schema does not depend on its own inferred Settings type
 type SettingsView = Readonly<Record<string, unknown>>;
@@ -60,7 +64,7 @@ export type SettingItem<V = unknown> = BaseItem &
         placeholder?: string;
         readonlyWhen?: (setting: SettingsView) => boolean;
       }
-    | { optionType: "llmModelSelect"; default: V }
+    | { optionType: "engineList"; default: V }
     | {
         optionType: "button";
         default?: undefined;
@@ -88,47 +92,6 @@ const keyList: OptionList = {
   F9: "F9",
 };
 const keyListWithAlways: OptionList = { ...keyList, Always: "always" };
-
-const translatorList: OptionList = {
-  google: "google",
-  bing: "bing",
-  "LLM - OpenAI / Claude / Gemini / Local (Experimental)": "localLlm",
-  "deepl (Experimental)": "deepl",
-  "yandex (Experimental)": "yandex",
-  "baidu (Experimental)": "baidu",
-  "papago (Experimental)": "papago",
-  "browser API (Experimental)": "browserAPI",
-  "googleWebImage (Experimental)": "googleWebImage",
-  "googleGTX (Experimental)": "googleGTX",
-  "googleWeb (Experimental)": "googleWeb",
-  "googleV2 (Experimental)": "googleV2",
-};
-
-export const llmProviderEndpoints: Record<string, string> = {
-  custom: "",
-  openai: "https://api.openai.com/v1",
-  claude: "https://api.anthropic.com/v1",
-  gemini: "https://generativelanguage.googleapis.com/v1beta/openai",
-  grok: "https://api.x.ai/v1",
-  groq: "https://api.groq.com/openai/v1",
-  openrouter: "https://openrouter.ai/api/v1",
-  githubModels: "https://models.inference.ai.azure.com",
-  ollama: "http://localhost:11434/v1",
-  lmstudio: "http://localhost:1234/v1",
-};
-
-const llmProviderList: OptionList = {
-  Custom: "custom",
-  "OpenAI (ChatGPT)": "openai",
-  "Claude (Anthropic)": "claude",
-  "Gemini (Google, free tier available)": "gemini",
-  "Grok (xAI)": "grok",
-  "Groq (free, fast Llama)": "groq",
-  "OpenRouter (free models with :free suffix)": "openrouter",
-  "GitHub Models (free with GitHub token)": "githubModels",
-  "Ollama (local)": "ollama",
-  "LM Studio (local)": "lmstudio",
-};
 
 // {"6": 6, "8": 8, ...} for start <= n < end
 function rangeOption(start: number, end: number, step = 1): OptionList {
@@ -202,8 +165,6 @@ const uiLanguageList: OptionList = {
   "中文(繁體)": "zh_TW",
 };
 
-const isLlm = (s: SettingsView) => s.translatorVendor === "localLlm";
-
 // declaration order = row order inside a tab
 
 export const settingSchema = {
@@ -228,45 +189,6 @@ export const settingSchema = {
     optionList: withNone,
     langOptionList: true,
     settingTab: "main",
-  },
-  translatorVendor: {
-    default: "google",
-    i18nKey: "Translator_Engine",
-    optionList: translatorList,
-    settingTab: "main",
-  },
-  llmProvider: {
-    default: "custom",
-    i18nKey: "LLM_Provider",
-    optionList: llmProviderList,
-    settingTab: "main",
-    visibleWhen: isLlm,
-  },
-  llmApiEndpoint: {
-    default: "",
-    i18nKey: "LLM_Api_Endpoint",
-    optionType: "textField",
-    inputType: "url",
-    placeholder: "http://localhost:11434/v1",
-    settingTab: "main",
-    visibleWhen: isLlm,
-    readonlyWhen: (s) => Boolean(s.llmProvider) && s.llmProvider !== "custom",
-  },
-  llmApiKey: {
-    default: "",
-    i18nKey: "LLM_Api_Key",
-    optionType: "textField",
-    inputType: "password",
-    placeholder: "sk-...",
-    settingTab: "main",
-    visibleWhen: isLlm,
-  },
-  llmModel: {
-    default: "",
-    i18nKey: "LLM_Model",
-    optionType: "llmModelSelect",
-    settingTab: "main",
-    visibleWhen: isLlm,
   },
   translateWhen: {
     default: "mouseoverselect",
@@ -293,6 +215,28 @@ export const settingSchema = {
     optionList: withNone,
     langOptionList: true,
     settingTab: "main",
+  },
+
+  // engine: tried top to bottom, the first answer wins
+  translatorEngines: {
+    default: defaultEngineList() as EngineEntry[],
+    i18nKey: "Engines_are_tried_from_top_to_bottom_and_the_first_answer_is_used",
+    optionType: "engineList",
+    settingTab: "engine",
+  },
+  // finished translations are kept in IndexedDB for 30 days
+  translationCache: {
+    default: true,
+    i18nKey: "Translation_Cache",
+    optionType: "toggle",
+    settingTab: "engine",
+  },
+  clearTranslationCache: {
+    i18nKey: "Clear_translation_cache",
+    optionType: "button",
+    action: "clearTranslationCache",
+    tone: "danger",
+    settingTab: "engine",
   },
 
   // keyboard
@@ -572,12 +516,6 @@ export const settingSchema = {
     optionList: { Translator: "translator", Wiktionary: "wiktionary" },
     settingTab: "advanced",
   },
-  fallbackTranslatorEngine: {
-    default: true,
-    i18nKey: "Fallback_Translator_Engine",
-    optionType: "toggle",
-    settingTab: "advanced",
-  },
   // debounce (ms) before the mouseover tooltip appears
   mouseoverEventInterval: {
     default: 300,
@@ -617,7 +555,14 @@ export const settingSchema = {
   },
 
   // remains: stored, never rendered
-  // per-provider {apiEndpoint, apiKey, model}
+  // per-engine field values (API keys, server URLs, LLM provider/endpoint/model), edited in the engine tab
+  engineConfig: {
+    default: {} as EngineConfig,
+    i18nKey: "Engine_Config",
+    optionType: "hidden",
+    settingTab: "remains",
+  },
+  // LLM {apiEndpoint, apiKey, model} remembered per provider
   llmProviderSettings: {
     default: {} as Record<string, { apiEndpoint?: string; apiKey?: string; model?: string }>,
     i18nKey: "LLM_Provider_Settings",

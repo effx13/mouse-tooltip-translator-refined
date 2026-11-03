@@ -4,40 +4,44 @@
   import { Button } from "@/components/ui/button";
   import { fetchLlmModels } from "@/translators/localLlm";
   import { t } from "@/utils/i18n";
-  import { store } from "./state.svelte";
 
   let {
     id,
     label,
+    value,
+    provider,
+    endpoint,
+    apiKey,
     oninput,
     onerror,
   }: {
     id: string;
     label: string;
+    value: string;
+    provider: string;
+    endpoint: string;
+    apiKey: string;
     oninput: (value: string) => void;
     onerror: (message: string) => void;
   } = $props();
 
-  let models = $state<string[]>([]);
+  let fetched = $state<{ source: string; models: string[] }>({ source: "", models: [] });
   let loading = $state(false);
 
   // a different provider/endpoint has a different model list
-  const source = $derived(`${store.settings.llmProvider}|${store.settings.llmApiEndpoint}`);
-  $effect(() => {
-    void source;
-    models = [];
-  });
+  const source = $derived(`${provider}|${endpoint}`);
+  const models = $derived(fetched.source === source ? fetched.models : []);
 
   async function refresh() {
-    const { llmProvider: provider, llmApiEndpoint: endpoint, llmApiKey: apiKey } = store.settings;
     if (!endpoint) {
       onerror(t("API_endpoint_is_empty"));
       return;
     }
     loading = true;
     try {
+      const requested = source;
       const list = await fetchLlmModels({ provider, endpoint, apiKey });
-      models = list;
+      fetched = { source: requested, models: list };
       if (!list.length) onerror(t("No_models_returned_by_endpoint"));
     } catch (error) {
       onerror(
@@ -49,7 +53,7 @@
   }
 </script>
 
-<TextField {id} {label} value={store.settings.llmModel ?? ""} list="{id}-models" {oninput}>
+<TextField {id} {label} {value} list="{id}-models" {oninput}>
   {#snippet append()}
     <Button
       variant="ghost"

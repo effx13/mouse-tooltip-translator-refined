@@ -1,4 +1,6 @@
 import { storage } from "wxt/utils/storage";
+import { normalizeEngineConfig, normalizeEngineList } from "@/translators/catalog";
+import { migrateSettingsV2 } from "./migrate";
 import { defaultSettings, type Settings } from "./schema";
 
 export * from "./schema";
@@ -8,14 +10,23 @@ type StoredSettings = Partial<Settings>;
 // created on first use: defining an item touches storage, which throws in a context
 // without extension APIs (orphaned content scripts after an update, sandboxed frames)
 const createItems = () => ({
-  local: storage.defineItem<StoredSettings>("local:settings", { fallback: {}, version: 1 }),
+  local: storage.defineItem<StoredSettings>("local:settings", {
+    fallback: {},
+    version: 2,
+    migrations: { 2: migrateSettingsV2 },
+  }),
   synced: storage.defineItem<StoredSettings>("sync:settings", { fallback: {} }),
 });
 let cachedItems: ReturnType<typeof createItems> | undefined;
 const items = () => (cachedItems ??= createItems());
 
-// the api key never leaves the device
-const SYNC_EXCLUDE = ["syncSetting", "lastSettingTab", "llmApiKey", "llmProviderSettings"] as const;
+// API keys never leave the device; engineConfig is excluded whole because merge() overlays shallowly
+const SYNC_EXCLUDE = [
+  "syncSetting",
+  "lastSettingTab",
+  "engineConfig",
+  "llmProviderSettings",
+] as const;
 
 // browser locale -> translate target code (zh -> zh-CN, he -> iw, fil -> tl)
 function parseLocaleLang(localeLang: string): string {
@@ -39,9 +50,12 @@ export function getDefaults(): Settings {
 function merge(local: StoredSettings, synced: StoredSettings): Settings {
   const settings = { ...getDefaults(), ...local };
   if (settings.syncSetting) {
-    const { syncSetting: _, ...rest } = synced;
+    // another device may still write the v1 shape
+    const { syncSetting: _, ...rest } = migrateSettingsV2(synced);
     Object.assign(settings, rest);
   }
+  settings.translatorEngines = normalizeEngineList(settings.translatorEngines);
+  settings.engineConfig = normalizeEngineConfig(settings.engineConfig);
   return settings;
 }
 
@@ -100,7 +114,8 @@ export async function importSettings(data: unknown) {
   }
   const known: Readonly<Record<string, unknown>> = getDefaults();
   const patch: Record<string, unknown> = {};
-  for (const [key, value] of Object.entries(data)) {
+  // files exported before v2 still name a single translatorVendor
+  for (const [key, value] of Object.entries(migrateSettingsV2(data))) {
     if (key in known && typeof value === typeof known[key]) patch[key] = value;
   }
   await updateSettings(patch as Partial<Settings>);

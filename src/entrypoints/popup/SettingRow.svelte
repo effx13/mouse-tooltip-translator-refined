@@ -2,6 +2,7 @@
   import BanIcon from "@lucide/svelte/icons/ban";
   import CircleCheckIcon from "@lucide/svelte/icons/circle-check";
   import DownloadIcon from "@lucide/svelte/icons/download";
+  import EraserIcon from "@lucide/svelte/icons/eraser";
   import RotateCcwIcon from "@lucide/svelte/icons/rotate-ccw";
   import Trash2Icon from "@lucide/svelte/icons/trash-2";
   import UploadIcon from "@lucide/svelte/icons/upload";
@@ -17,9 +18,10 @@
   import { Button, type ButtonVariant } from "@/components/ui/button";
   import { cn } from "@/utils/cn";
   import { t } from "@/utils/i18n";
+  import { sendMessage } from "@/utils/messaging";
   import type { ButtonAction, Option, SettingItem, Settings } from "@/utils/settings";
   import { runAction } from "./actions";
-  import LlmModelField from "./LlmModelField.svelte";
+  import EngineList from "./EngineList.svelte";
   import { getOptions } from "./options";
   import { defaults, setValue, store } from "./state.svelte";
 
@@ -37,6 +39,7 @@
     importSetting: UploadIcon,
     exportSetting: DownloadIcon,
     resetSetting: Trash2Icon,
+    clearTranslationCache: EraserIcon,
   };
   const TONE_VARIANTS: Record<"primary" | "positive" | "danger", ButtonVariant> = {
     primary: "outline",
@@ -66,6 +69,22 @@
 
   let confirming = $state(false);
   let busy = $state(false);
+  // entry count shown on the "clear translation cache" button
+  let cacheCount = $state<number | null>(null);
+
+  const refreshCacheCount = async () => {
+    try {
+      cacheCount = await sendMessage("translationCache", "count");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  $effect(() => {
+    if (item.optionType === "button" && item.action === "clearTranslationCache") {
+      void refreshCacheCount();
+    }
+  });
 
   const change = (next: unknown) => void setValue(settingKey, next);
 
@@ -75,13 +94,16 @@
     try {
       const message = await runAction(action);
       if (message) notify(message);
+      if (action === "clearTranslationCache") await refreshCacheCount();
     } finally {
       busy = false;
     }
   }
 </script>
 
-{#if visible}
+{#if item.optionType === "engineList"}
+  <EngineList hint={label} {notify} />
+{:else if visible}
   <div
     class={cn(
       "flex items-center gap-1 border-s-2 py-(--row-gap) ps-3.5 transition-colors",
@@ -98,7 +120,9 @@
           onclick={() => (action === "resetSetting" ? (confirming = true) : void run(action))}
         >
           <ActionIcon class={TONE_ICON_CLASSES[item.tone]} />
-          {label}
+          {label}{action === "clearTranslationCache" && cacheCount !== null
+            ? ` (${cacheCount})`
+            : ""}
         </Button>
         {#if action === "resetSetting"}
           <AlertDialog.Root bind:open={confirming}>
@@ -135,8 +159,6 @@
           readonly={item.readonlyWhen?.(store.settings) ?? false}
           oninput={change}
         />
-      {:else if item.optionType === "llmModelSelect"}
-        <LlmModelField {id} {label} oninput={change} onerror={notify} />
       {:else if item.optionType !== "hidden"}
         <SelectField {id} {label} {value} {options} onchange={change} />
       {/if}

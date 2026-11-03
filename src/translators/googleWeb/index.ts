@@ -1,6 +1,6 @@
 import ky from "ky";
 import { parse } from "node-html-parser";
-import { defineEngine, detectLangBrowser } from "./engine";
+import { defineEngine, detectLangBrowser } from "../engine";
 
 const googleSearchUrl = "https://www.google.com/search";
 

@@ -1,6 +1,7 @@
 import { browser } from "wxt/browser";
 import { downloadBlob } from "@/utils/download";
 import { t } from "@/utils/i18n";
+import { sendMessage } from "@/utils/messaging";
 import { exportSettings, importSettings, resetSettings, type ButtonAction } from "@/utils/settings";
 import { save, store } from "./state.svelte";
 
@@ -67,5 +68,8 @@ export async function runAction(action: ButtonAction): Promise<string | null> {
       await resetSettings();
       location.reload();
       return null;
+    case "clearTranslationCache":
+      await sendMessage("translationCache", "clear");
+      return t("Translation_cache_cleared");
   }
 }

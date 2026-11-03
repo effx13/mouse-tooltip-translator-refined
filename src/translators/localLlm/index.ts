@@ -1,7 +1,8 @@
 import ky from "ky";
 import { langListOpposite } from "@/utils/lang";
-import { llmProviderEndpoints } from "@/utils/settings";
-import { defineEngine } from "./engine";
+import { getFieldValue } from "../catalog";
+import { llmProviderEndpoints } from "./meta";
+import { defineEngine } from "../engine";
 
 interface ChatCompletion {
   choices?: { message?: { content?: string } }[];
@@ -33,9 +34,10 @@ export function parseLlmReply(raw: string): { targetText: string; detectedLang: 
   return { targetText: text.trim(), detectedLang: lang.toLowerCase() };
 }
 
-export default defineEngine(async (text, sourceLang, targetLang, settings) => {
-  const endpoint = settings.llmApiEndpoint ?? "";
-  const model = settings.llmModel ?? "";
+export default defineEngine(async (text, sourceLang, targetLang, { engineConfig }) => {
+  const endpoint = getFieldValue(engineConfig, "localLlm", "endpoint");
+  const model = getFieldValue(engineConfig, "localLlm", "model");
+  const apiKey = getFieldValue(engineConfig, "localLlm", "apiKey");
   if (!endpoint || !model) {
     const key = `${endpoint}|${model}`;
     if (lastWarnConfigKey !== key) {
@@ -53,7 +55,7 @@ export default defineEngine(async (text, sourceLang, targetLang, settings) => {
 
   const res = await ky
     .post(`${trimSlash(endpoint)}/chat/completions`, {
-      headers: { "Content-Type": "application/json", ...authHeaders(settings.llmApiKey ?? "") },
+      headers: { "Content-Type": "application/json", ...authHeaders(apiKey) },
       timeout: 60000,
       retry: 0,
       json: {

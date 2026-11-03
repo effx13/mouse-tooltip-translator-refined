@@ -4,6 +4,7 @@
   import { toast } from "svelte-sonner";
   import icon from "@/assets/icon.svg";
   import { Button } from "@/components/ui/button";
+  import { ScrollArea } from "@/components/ui/scroll-area";
   import * as Tabs from "@/components/ui/tabs";
   import { cn } from "@/utils/cn";
   import { t } from "@/utils/i18n";
@@ -79,16 +80,18 @@
     {/each}
   </Tabs.List>
 
-  <Tabs.Content
-    value={tab}
-    bind:ref={scroller}
-    class={cn(
-      "min-h-0 flex-1 overflow-y-auto py-2 pe-1",
-      store.settings.compactMode ? "[--row-gap:0.125rem]" : "[--row-gap:0.5rem]",
-    )}
-  >
-    {#each rowsByTab[tab] ?? [] as [key, item] (key)}
-      <SettingRow {key} {item} {fontOptions} {notify} />
-    {/each}
+  <Tabs.Content value={tab} class="flex min-h-0 flex-1 flex-col">
+    <ScrollArea class="min-h-0 flex-1" bind:viewportRef={scroller}>
+      <div
+        class={cn(
+          "py-2 pe-1",
+          store.settings.compactMode ? "[--row-gap:0.125rem]" : "[--row-gap:0.5rem]",
+        )}
+      >
+        {#each rowsByTab[tab] ?? [] as [key, item] (key)}
+          <SettingRow {key} {item} {fontOptions} {notify} />
+        {/each}
+      </div>
+    </ScrollArea>
   </Tabs.Content>
 </Tabs.Root>

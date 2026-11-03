@@ -33,6 +33,7 @@
     "ky": "^1.0.1",
     "node-html-parser": "^9.0.6",
     "pdfjs-dist": "^6.5.438",
+    "simple-icons": "^16.36.0",
     "svelte-sonner": "^1.2.2",
     "tailwind-merge": "^3.7.0",
     "tailwind-variants": "^3.3.1"
@@ -44,6 +45,7 @@
     "@types/node": "^26.6.6",
     "@wxt-dev/auto-icons": "^1.1.2",
     "@wxt-dev/module-svelte": "^2.0.5",
+    "fake-indexeddb": "^6.2.7",
     "oxfmt": "^0.75.0",
     "oxlint": "^1.90.0",
     "playwright": "^1.64.1",

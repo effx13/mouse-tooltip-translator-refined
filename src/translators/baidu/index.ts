@@ -1,6 +1,6 @@
 import ky from "ky";
-import { defineEngine } from "./engine";
-import { required } from "./parse";
+import { defineEngine } from "../engine";
+import { required } from "../parse";
 
 const baseUrl = "https://fanyi.baidu.com/transapi";
 const baiduLangCode: Record<string, string> = {

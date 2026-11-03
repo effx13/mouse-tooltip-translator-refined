@@ -13,8 +13,7 @@ const { translate } = await import("@/translators");
 
 const settings: Settings = {
   ...defaultSettings(),
-  translatorVendor: "google",
-  fallbackTranslatorEngine: false,
+  translatorEngines: [{ id: "google", enabled: true }],
   tooltipWordDictionarySource: "translator",
 };
 
@@ -50,7 +49,7 @@ describe("translate", () => {
     engineTranslate.mockResolvedValue({ targetText: "x", sourceLang: "en", targetLang: "ko" });
     await translate(request({ text: "named engine", engine: "google" }), {
       ...settings,
-      translatorVendor: "",
+      translatorEngines: [],
     });
     expect(engineTranslate).toHaveBeenCalledOnce();
   });
