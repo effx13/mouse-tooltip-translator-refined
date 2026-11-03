@@ -1,7 +1,4 @@
 {
-	"MAIN______________________________________": {
-		"message": "主要                                      "
-	},
 	"MAIN": {
 		"message": "主要"
 	},
@@ -21,16 +18,16 @@
 		"message": "翻译引擎"
 	},
 	"LLM_Provider": {
-		"message": "LLM Provider"
+		"message": "LLM 提供商"
 	},
 	"LLM_Api_Endpoint": {
-		"message": "LLM API Endpoint URL"
+		"message": "LLM API 端点 URL"
 	},
 	"LLM_Api_Key": {
-		"message": "LLM API Key"
+		"message": "LLM API 密钥(可选)"
 	},
 	"LLM_Model": {
-		"message": "LLM Model"
+		"message": "LLM 模型"
 	},
 	"Mouseover_Text_Type": {
 		"message": "鼠标悬停文本类型"
@@ -44,65 +41,32 @@
 	"Reverse_Translate_Language": {
 		"message": "反向翻译语言"
 	},
-	"OCR_Language": {
-		"message": "OCR 语言"
-	},
-	"Detect_Subtitle": {
-		"message": "检测字幕"
-	},
-	"KEYBOARD______________________________________": {
-		"message": "键盘                                      "
-	},
 	"KEYBOARD": {
 		"message": "键盘"
 	},
 	"Show_Tooltip_When": {
 		"message": "何时显示工具提示"
 	},
-	"Voice_When": {
-		"message": "何时语音"
-	},
 	"Translate_Writing_When": {
 		"message": "何时翻译书写"
 	},
 	"Ignore_AltGr_Modifier": {
-		"message": "Ignore AltGr Modifier"
-	},
-	"Auto_Reader_When": {
-		"message": "何时进行自动阅读"
+		"message": "忽略 AltGr 修饰键"
 	},
 	"Translate_Page_When": {
-		"message": "Translate Page When"
-	},
-	"OCR_When": {
-		"message": "何时进行OCR"
-	},
-	"Mouseover_Text_Type_Swap_Key": {
-		"message": "鼠标悬停文本类型切换键"
-	},
-	"Speech_Recognition_When": {
-		"message": "何时进行语音识别"
-	},
-	"Toggle_Mouseover_Text_Type_When": {
-		"message": "Toggle Mouseover Text Type When"
+		"message": "何时翻译页面"
 	},
 	"Mouseover_Text_Type_Key_Hold": {
-		"message": "Mouseover Text Type Key Hold"
+		"message": "切换悬停文本类型的按键"
 	},
 	"Secondary_Language_When": {
-		"message": "Secondary Language When"
+		"message": "何时使用次要语言"
 	},
 	"Swap_Key_Toggle_Mode": {
-		"message": "Swap Key Toggle Mode"
+		"message": "切换键改为按一次开关"
 	},
 	"Toggle_Extension_When": {
-		"message": "Toggle Extension When"
-	},
-	"TTS_Pause_Resume_When": {
-		"message": "TTS Pause Resume When"
-	},
-	"GRAPHIC______________________________________": {
-		"message": "图形                                      "
+		"message": "何时开关扩展"
 	},
 	"GRAPHIC": {
 		"message": "图形"
@@ -111,10 +75,7 @@
 		"message": "工具提示字体大小"
 	},
 	"Tooltip_Font_Family": {
-		"message": "Tooltip Font Family"
-	},
-	"Subtitle_Background": {
-		"message": "Subtitle Background"
+		"message": "工具提示字体"
 	},
 	"Tooltip_Width": {
 		"message": "工具提示宽度"
@@ -126,19 +87,19 @@
 		"message": "工具提示动画"
 	},
 	"Tooltip_Disappear_Duration": {
-		"message": "Tooltip Disappear Duration"
+		"message": "工具提示消失时长"
 	},
 	"Tooltip_Position": {
 		"message": "工具提示位置"
 	},
 	"Tooltip_Placement": {
-		"message": "Tooltip Placement"
+		"message": "工具提示方位"
 	},
 	"Above": {
-		"message": "Above"
+		"message": "上方"
 	},
 	"Below": {
-		"message": "Below"
+		"message": "下方"
 	},
 	"Tooltip_Text_Align": {
 		"message": "工具提示文本对齐"
@@ -162,37 +123,10 @@
 		"message": "鼠标悬停文本高亮颜色"
 	},
 	"Ebook_Theme": {
-		"message": "Ebook Theme"
+		"message": "电子书主题"
 	},
 	"Setting_Compact_mode": {
-		"message": "Setting Compact mode"
-	},
-	"VOICE______________________________________": {
-		"message": "语音                                      "
-	},
-	"VOICE": {
-		"message": "语音"
-	},
-	"Voice_Volume": {
-		"message": "语音音量"
-	},
-	"Voice_Speed": {
-		"message": "语音速度"
-	},
-	"Voice_Target": {
-		"message": "语音目标"
-	},
-	"Voice_Repeat": {
-		"message": "语音重复"
-	},
-	"Voice_for_": {
-		"message": "语音用于 "
-	},
-	"Voice_speed_for_": {
-		"message": "Voice speed for "
-	},
-	"EXCLUDE______________________________________": {
-		"message": "排除                                      "
+		"message": "设置紧凑模式"
 	},
 	"EXCLUDE": {
 		"message": "排除"
@@ -201,7 +135,7 @@
 		"message": "排除语言"
 	},
 	"Website_Filter_Mode": {
-		"message": "Website Filter Mode"
+		"message": "网站过滤模式"
 	},
 	"Exclude_Website": {
 		"message": "排除网站"
@@ -210,40 +144,34 @@
 		"message": "网站白名单"
 	},
 	"Website_Target_Language": {
-		"message": "Website Target Language"
+		"message": "按网站设置目标语言(例如 github.com=ko)"
 	},
 	"Block_Current_Site": {
-		"message": "Block Current Site"
+		"message": "屏蔽当前网站"
 	},
 	"Allow_Current_Site": {
-		"message": "Allow Current Site"
-	},
-	"ADVANCED______________________________________": {
-		"message": "高级                                      "
+		"message": "允许当前网站"
 	},
 	"ADVANCED": {
 		"message": "高级"
 	},
 	"UI_Language": {
-		"message": "UI Language"
+		"message": "界面语言"
 	},
 	"Detect_PDF": {
 		"message": "检测PDF"
 	},
 	"Mouseover_Text_Type_2": {
-		"message": "Secondary Mouseover Text Type"
-	},
-	"Mouseover_Pause_Subtitle": {
-		"message": "鼠标悬停暂停字幕"
+		"message": "次要鼠标悬停文本类型"
 	},
 	"Show_Tooltip_While_Typing": {
-		"message": "Show Tooltip While Typing"
+		"message": "输入时显示工具提示"
 	},
 	"Tooltip_Info_Source_Text": {
 		"message": "工具提示信息源文本"
 	},
 	"Translate_Exclude_Regex": {
-		"message": "Translate Exclude Regex"
+		"message": "翻译排除正则表达式"
 	},
 	"Tooltip_Info_Source_Language": {
 		"message": "工具提示信息源语言"
@@ -251,68 +179,23 @@
 	"Tooltip_Info_Transliteration": {
 		"message": "工具提示信息音译"
 	},
-	"Tooltip_Interval_Time": {
-		"message": "工具提示间隔时间"
-	},
 	"Tooltip_Show_Delay": {
-		"message": "Tooltip Show Delay"
+		"message": "工具提示显示延迟"
 	},
 	"Tooltip_Word_Dictionary": {
 		"message": "工具提示词典"
 	},
 	"Tooltip_Word_Dictionary_Source": {
-		"message": "Tooltip Word Dictionary Source"
+		"message": "工具提示词典来源"
 	},
 	"Fallback_Translator_Engine": {
 		"message": "备用翻译引擎"
-	},
-	"SPEECH": {
-		"message": "语音"
-	},
-	"Speech_Recognition_Language": {
-		"message": "语音识别语言"
-	},
-	"Voice_Panel_Translate_Language": {
-		"message": "语音面板翻译语言"
-	},
-	"Voice_Panel_Text_Target": {
-		"message": "语音面板文本目标"
-	},
-	"Voice_Panel_Padding": {
-		"message": "语音面板填充"
-	},
-	"Voice_Panel_Text_Align": {
-		"message": "语音面板文本对齐"
-	},
-	"Voice_Panel_Source_Font_Size": {
-		"message": "语音面板源字体大小"
-	},
-	"Voice_Panel_Target_Font_Size": {
-		"message": "语音面板目标字体大小"
-	},
-	"Voice_Panel_Source_Font_Color": {
-		"message": "语音面板源字体颜色"
-	},
-	"Voice_Panel_Target_Font_Color": {
-		"message": "语音面板目标字体颜色"
-	},
-	"Voice_Panel_Source_Border_Color": {
-		"message": "语音面板源边框颜色"
-	},
-	"Voice_Panel_Target_Border_Color": {
-		"message": "语音面板目标边框颜色"
-	},
-	"Voice_Panel_Background_Color": {
-		"message": "语音面板背景颜色"
-	},
-	"BACKUP______________________________________": {
-		"message": "备份                                      "
 	},
 	"BACKUP": {
 		"message": "备份"
 	},
 	"Sync_Setting": {
-		"message": "Sync Setting"
+		"message": "在设备间同步设置"
 	},
 	"Import_Setting": {
 		"message": "导入设置"
@@ -322,9 +205,6 @@
 	},
 	"Reset_Setting": {
 		"message": "重置设置"
-	},
-	"About______________________________________": {
-		"message": "关于                                      "
 	},
 	"How_to_use": {
 		"message": "如何使用"
@@ -344,18 +224,6 @@
 	"Translate_local_ebook_file": {
 		"message": "翻译本地电子书文件"
 	},
-	"Twitter": {
-		"message": "推特"
-	},
-	"Retweet_twitter_post": {
-		"message": "转发推特帖子"
-	},
-	"Review_Page": {
-		"message": "评论页面"
-	},
-	"Comment_on_this_extension": {
-		"message": "评论此扩展"
-	},
 	"Source_code": {
 		"message": "源代码"
 	},
@@ -367,42 +235,6 @@
 	},
 	"User_privacy_policy": {
 		"message": "用户隐私政策"
-	},
-	"Voice_Panel": {
-		"message": "语音面板"
-	},
-	"Translate_Voice": {
-		"message": "翻译语音"
-	},
-	"Review______________________________________": {
-		"message": "评论                                      "
-	},
-	"Review_this": {
-		"message": "评论此"
-	},
-	"Developer_love_criticism": {
-		"message": "开发者欢迎批评"
-	},
-	"Coffee______________________________________": {
-		"message": "咖啡                                      "
-	},
-	"Support_this_extension": {
-		"message": "支持此扩展程序"
-	},
-	"Feed_a_coffee_to_the_extension_devs": {
-		"message": "请开发者喝杯咖啡"
-	},
-	"Title______________________________________": {
-		"message": "标题                                      "
-	},
-	"SELECT_OPTION______________________________": {
-		"message": "选择选项                              "
-	},
-	"On": {
-		"message": "开"
-	},
-	"Off": {
-		"message": "关"
 	},
 	"Auto": {
 		"message": "自动"
@@ -426,7 +258,7 @@
 		"message": "固定"
 	},
 	"Top_Right": {
-		"message": "Top Right"
+		"message": "右上角"
 	},
 	"Fade": {
 		"message": "淡入淡出"
@@ -453,37 +285,13 @@
 		"message": "容器"
 	},
 	"Both": {
-		"message": "Both"
+		"message": "两者"
 	},
 	"Blacklist": {
-		"message": "Blacklist"
+		"message": "黑名单"
 	},
 	"Whitelist": {
-		"message": "Whitelist"
-	},
-	"Source": {
-		"message": "原文"
-	},
-	"Source_Text": {
-		"message": "原文文本"
-	},
-	"Translated_Text": {
-		"message": "翻译文本"
-	},
-	"Source_n_Translated": {
-		"message": "原文 + 翻译"
-	},
-	"Translated_n_Source": {
-		"message": "翻译 + 原文"
-	},
-	"Dual_Subtitle": {
-		"message": "双语字幕"
-	},
-	"Target_Single_Subtitle": {
-		"message": "译文字幕"
-	},
-	"Source_Single_Subtitle": {
-		"message": "原文字幕"
+		"message": "白名单"
 	},
 	"Always": {
 		"message": "总是显示"
@@ -501,10 +309,10 @@
 		"message": "两端对齐"
 	},
 	"Light": {
-		"message": "Light"
+		"message": "浅色"
 	},
 	"Dark": {
-		"message": "Dark"
+		"message": "深色"
 	},
 	"Default": {
 		"message": "默认"
@@ -548,286 +356,148 @@
 	"bing": {
 		"message": "Bing"
 	},
-	"Saved_Words": {
-		"message": "Saved Words"
-	},
-	"Group": {
-		"message": "Group"
-	},
-	"All": {
-		"message": "All"
-	},
-	"Move_to_group": {
-		"message": "Move to group"
-	},
-	"Delete": {
-		"message": "Delete"
-	},
-	"Clear": {
-		"message": "Clear"
-	},
-	"selected": {
-		"message": "selected"
-	},
-	"Date": {
-		"message": "Date"
-	},
-	"Translation": {
-		"message": "Translation"
-	},
-	"No_saved_words_yet": {
-		"message": "No saved words yet"
-	},
-	"Manage_Groups": {
-		"message": "Manage Groups"
-	},
-	"Remove_all": {
-		"message": "Remove all"
-	},
-	"Import_CSV": {
-		"message": "Import CSV"
-	},
-	"Download_CSV": {
-		"message": "Download CSV"
-	},
-	"Save_key": {
-		"message": "Save key"
-	},
-	"Highlight_on_page": {
-		"message": "Highlight on page"
-	},
-	"Right_click_menu": {
-		"message": "Right click menu"
-	},
-	"Add_right_click_context_menu": {
-		"message": "Add right click context menu"
-	},
-	"Done": {
-		"message": "Done"
-	},
-	"On_Select": {
-		"message": "On Select"
-	},
-	"On_Hover": {
-		"message": "On Hover"
-	},
-	"On_Select_n_Hover": {
-		"message": "On Select n Hover"
-	},
-	"Select_group_to_play": {
-		"message": "Select group to play"
-	},
-	"No_Group_Selected": {
-		"message": "No Group Selected"
-	},
-	"Check_groups_to_play": {
-		"message": "Check groups to play"
-	},
-	"Flashcard_makes_cards_from_your_saved_words": {
-		"message": "Flashcard makes cards from your saved words"
-	},
-	"Flashcard": {
-		"message": "Flashcard"
-	},
-	"Play_Flashcard": {
-		"message": "Play Flashcard"
-	},
-	"Reset_progress": {
-		"message": "Reset progress"
-	},
-	"No_History_Data": {
-		"message": "No History Data"
-	},
-	"Today_play_is_completed": {
-		"message": "Today play is completed"
-	},
-	"Try_on_next_day": {
-		"message": "Try on next day"
-	},
-	"No_more_card_to_learn_today": {
-		"message": "No more card to learn today"
-	},
-	"Add_more_history_data_to_play_with": {
-		"message": "Add more history data to play with"
-	},
-	"Finish": {
-		"message": "Finish"
-	},
-	"Today_Flashcards_are_Completed": {
-		"message": "Today Flashcards are Completed"
-	},
-	"No_More_Card_Data": {
-		"message": "No More Card Data"
-	},
-	"Show_Answer": {
-		"message": "Show Answer"
-	},
-	"Again": {
-		"message": "Again"
-	},
-	"Hard": {
-		"message": "Hard"
-	},
-	"Good": {
-		"message": "Good"
-	},
-	"Easy": {
-		"message": "Easy"
-	},
-	"New": {
-		"message": "New"
-	},
-	"Review": {
-		"message": "Review"
-	},
-	"Learning": {
-		"message": "Learning"
-	},
 	"About": {
-		"message": "About"
+		"message": "关于"
 	},
 	"Translator": {
-		"message": "Translator"
+		"message": "翻译器"
 	},
 	"Wiktionary": {
 		"message": "Wiktionary"
 	},
-	"Translated": {
-		"message": "Translated"
-	},
 	"Custom": {
-		"message": "Custom"
+		"message": "自定义"
 	},
 	"Back": {
-		"message": "Back"
+		"message": "返回"
 	},
 	"Cancel": {
-		"message": "Cancel"
+		"message": "取消"
 	},
 	"Remove": {
-		"message": "Remove"
+		"message": "移除"
 	},
 	"Alpha": {
-		"message": "Alpha"
+		"message": "透明度"
 	},
 	"Fetch_models_from_endpoint": {
-		"message": "Fetch models from endpoint"
+		"message": "从端点获取模型"
 	},
 	"No_models_returned_by_endpoint": {
-		"message": "No models returned by endpoint"
+		"message": "端点未返回任何模型"
 	},
 	"API_endpoint_is_empty": {
-		"message": "API endpoint is empty"
+		"message": "API 端点为空"
 	},
 	"Failed_to_fetch_LLM_models": {
-		"message": "Failed to fetch LLM models"
+		"message": "获取 LLM 模型失败"
 	},
 	"Open_this_popup_on_a_website_to_use_this_button": {
-		"message": "Open this popup on a website to use this button"
+		"message": "请在网页上打开此弹出窗口以使用此按钮"
 	},
 	"Import_failed": {
-		"message": "Import failed"
+		"message": "导入失败"
 	},
 	"Copy_PDF_URL": {
-		"message": "Copy PDF URL"
+		"message": "复制 PDF URL"
 	},
 	"Copied": {
-		"message": "Copied"
+		"message": "已复制"
 	},
 	"Copy_failed": {
-		"message": "Copy failed"
+		"message": "复制失败"
 	},
 	"Allow_access_to_file_URLs_to_open_local_PDF_files": {
-		"message": "Allow access to file URLs to open local PDF files"
+		"message": "请允许访问文件网址以打开本地 PDF 文件"
 	},
 	"Open_File": {
-		"message": "Open File"
+		"message": "打开文件"
 	},
 	"Previous_Page": {
-		"message": "Previous Page"
+		"message": "上一页"
 	},
 	"Next_Page": {
-		"message": "Next Page"
+		"message": "下一页"
 	},
 	"Table_of_Contents": {
-		"message": "Table of Contents"
+		"message": "目录"
 	},
 	"Drop_an_ebook_file_here_or_open_one": {
-		"message": "Drop an ebook file here or open one"
+		"message": "将电子书文件拖放到此处，或打开一个文件"
 	},
 	"Could_not_open_this_file": {
-		"message": "Could not open this file"
+		"message": "无法打开此文件"
 	},
 	"Untitled": {
-		"message": "Untitled"
+		"message": "无标题"
 	},
 	"Page": {
-		"message": "Page"
+		"message": "页"
 	},
 	"Zoom_out": {
-		"message": "Zoom out"
+		"message": "缩小"
 	},
 	"Zoom": {
-		"message": "Zoom"
+		"message": "缩放"
 	},
 	"Zoom_in": {
-		"message": "Zoom in"
+		"message": "放大"
 	},
 	"Automatic_zoom": {
-		"message": "Automatic zoom"
+		"message": "自动缩放"
 	},
 	"Page_fit": {
-		"message": "Page fit"
+		"message": "适合页面"
 	},
 	"Page_width": {
-		"message": "Page width"
+		"message": "适合页宽"
 	},
 	"Find": {
-		"message": "Find"
+		"message": "查找"
 	},
 	"Dark_mode": {
-		"message": "Dark mode"
+		"message": "深色模式"
 	},
 	"Download": {
-		"message": "Download"
+		"message": "下载"
 	},
 	"Find_in_document": {
-		"message": "Find in document"
+		"message": "在文档中查找"
 	},
 	"Previous_match": {
-		"message": "Previous match"
+		"message": "上一个匹配"
 	},
 	"Next_match": {
-		"message": "Next match"
+		"message": "下一个匹配"
 	},
 	"Highlight_all": {
-		"message": "Highlight all"
+		"message": "全部高亮"
 	},
 	"Match_case": {
-		"message": "Match case"
+		"message": "区分大小写"
 	},
 	"Phrase_not_found": {
-		"message": "Phrase not found"
+		"message": "找不到指定词语"
 	},
 	"Close": {
-		"message": "Close"
+		"message": "关闭"
 	},
 	"Failed_to_load_the_PDF_file": {
-		"message": "Failed to load the PDF file"
+		"message": "无法加载 PDF 文件"
 	},
 	"Drop_a_PDF_file_here": {
-		"message": "Drop a PDF file here"
+		"message": "将 PDF 文件拖放到此处"
 	},
 	"Enter_the_password_to_open_this_PDF_file": {
-		"message": "Enter the password to open this PDF file"
+		"message": "输入密码以打开此 PDF 文件"
 	},
 	"Invalid_password_try_again": {
-		"message": "Invalid password try again"
+		"message": "密码无效，请重试"
 	},
 	"appName": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Mouse Tooltip Translator Refined"
 	},
 	"appDesc": {
-		"message": "Hover or select text to translate it in a tooltip. Also works in PDF and ebook files."
+		"message": "悬停或选中文本，即可在工具提示中查看翻译。同样适用于 PDF 和电子书文件。"
 	}
 }

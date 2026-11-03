@@ -1,7 +1,4 @@
 {
-	"MAIN______________________________________": {
-		"message": "메인                                      "
-	},
 	"MAIN": {
 		"message": "메인"
 	},
@@ -21,100 +18,64 @@
 		"message": "번역 엔진"
 	},
 	"LLM_Provider": {
-		"message": "LLM Provider"
+		"message": "LLM 제공자"
 	},
 	"LLM_Api_Endpoint": {
-		"message": "LLM API Endpoint URL"
+		"message": "LLM API 엔드포인트 URL"
 	},
 	"LLM_Api_Key": {
-		"message": "LLM API Key"
+		"message": "LLM API 키 (선택)"
 	},
 	"LLM_Model": {
-		"message": "LLM Model"
+		"message": "LLM 모델"
 	},
 	"Mouseover_Text_Type": {
 		"message": "마우스오버 텍스트 타입"
 	},
 	"Translate_Into_2": {
-		"message": "Secondary Translate Into"
+		"message": "두 번째 번역 언어"
 	},
 	"Writing_Language": {
 		"message": "쓰기 언어"
 	},
 	"Reverse_Translate_Language": {
-		"message": "Reverse Translate Language"
-	},
-	"OCR_Language": {
-		"message": "OCR 언어"
-	},
-	"Detect_Subtitle": {
-		"message": "Detect Subtitle"
-	},
-	"KEYBOARD______________________________________": {
-		"message": "KEYBOARD                                      "
+		"message": "역번역 언어"
 	},
 	"KEYBOARD": {
-		"message": "KEYBOARD"
+		"message": "키보드"
 	},
 	"Show_Tooltip_When": {
 		"message": "툴팁 표시:"
 	},
-	"Voice_When": {
-		"message": "음성 표시:"
-	},
 	"Translate_Writing_When": {
-		"message": "Translate Writing When"
+		"message": "입력 중 글 번역 키"
 	},
 	"Ignore_AltGr_Modifier": {
-		"message": "Ignore AltGr Modifier"
-	},
-	"Auto_Reader_When": {
-		"message": "Auto Reader When"
+		"message": "AltGr 키 무시"
 	},
 	"Translate_Page_When": {
-		"message": "Translate Page When"
-	},
-	"OCR_When": {
-		"message": "OCR When"
-	},
-	"Mouseover_Text_Type_Swap_Key": {
-		"message": "Mouseover Text Type Swap Key"
-	},
-	"Speech_Recognition_When": {
-		"message": "음성 인지 시기"
-	},
-	"Toggle_Mouseover_Text_Type_When": {
-		"message": "Toggle Mouseover Text Type When"
+		"message": "페이지 번역 키"
 	},
 	"Mouseover_Text_Type_Key_Hold": {
-		"message": "Mouseover Text Type Key Hold"
+		"message": "누르는 동안 감지 단위 전환 키"
 	},
 	"Secondary_Language_When": {
-		"message": "Secondary Language When"
+		"message": "두 번째 언어 전환 키"
 	},
 	"Swap_Key_Toggle_Mode": {
-		"message": "Swap Key Toggle Mode"
+		"message": "전환 키를 토글로 사용"
 	},
 	"Toggle_Extension_When": {
-		"message": "Toggle Extension When"
-	},
-	"TTS_Pause_Resume_When": {
-		"message": "TTS Pause Resume When"
-	},
-	"GRAPHIC______________________________________": {
-		"message": "GRAPHIC                                      "
+		"message": "확장 켜기/끄기 키"
 	},
 	"GRAPHIC": {
-		"message": "GRAPHIC"
+		"message": "그래픽"
 	},
 	"Tooltip_Font_Size": {
 		"message": "툴팁 폰트 크기"
 	},
 	"Tooltip_Font_Family": {
-		"message": "Tooltip Font Family"
-	},
-	"Subtitle_Background": {
-		"message": "Subtitle Background"
+		"message": "툴팁 글꼴"
 	},
 	"Tooltip_Width": {
 		"message": "툴팁 너비"
@@ -126,19 +87,19 @@
 		"message": "툴팁 애니메이션"
 	},
 	"Tooltip_Disappear_Duration": {
-		"message": "Tooltip Disappear Duration"
+		"message": "툴팁 사라지는 시간"
 	},
 	"Tooltip_Position": {
 		"message": "툴팁 위치"
 	},
 	"Tooltip_Placement": {
-		"message": "Tooltip Placement"
+		"message": "툴팁 위치(위/아래)"
 	},
 	"Above": {
-		"message": "Above"
+		"message": "위"
 	},
 	"Below": {
-		"message": "Below"
+		"message": "아래"
 	},
 	"Tooltip_Text_Align": {
 		"message": "툴팁 텍스트 정렬"
@@ -147,7 +108,7 @@
 		"message": "툴팁 배경 Blur"
 	},
 	"Mouseover_Highlight_Text": {
-		"message": "Mouseover Highlight Text"
+		"message": "마우스오버 텍스트 강조"
 	},
 	"Tooltip_Font_Color": {
 		"message": "툴팁 폰트 색상"
@@ -162,172 +123,91 @@
 		"message": "마우스오버 텍스트 하이라이트 색상"
 	},
 	"Ebook_Theme": {
-		"message": "Ebook Theme"
+		"message": "이북 테마"
 	},
 	"Setting_Compact_mode": {
-		"message": "Setting Compact mode"
-	},
-	"VOICE______________________________________": {
-		"message": "VOICE                                      "
-	},
-	"VOICE": {
-		"message": "VOICE"
-	},
-	"Voice_Volume": {
-		"message": "Voice 볼륨"
-	},
-	"Voice_Speed": {
-		"message": "Voice 속도"
-	},
-	"Voice_Target": {
-		"message": "Voice Target"
-	},
-	"Voice_Repeat": {
-		"message": "Voice 반복"
-	},
-	"Voice_for_": {
-		"message": "Voice for "
-	},
-	"Voice_speed_for_": {
-		"message": "Voice speed for "
-	},
-	"EXCLUDE______________________________________": {
-		"message": "EXCLUDE                                      "
+		"message": "설정 화면 간단히 보기"
 	},
 	"EXCLUDE": {
-		"message": "EXCLUDE"
+		"message": "제외"
 	},
 	"Exclude_Language": {
 		"message": "제외할 언어"
 	},
 	"Website_Filter_Mode": {
-		"message": "Website Filter Mode"
+		"message": "웹사이트 필터 방식"
 	},
 	"Exclude_Website": {
-		"message": "Exclude Website"
+		"message": "제외할 웹사이트"
 	},
 	"Whitelist_Website": {
-		"message": "Whitelist Website"
+		"message": "허용할 웹사이트"
 	},
 	"Website_Target_Language": {
-		"message": "Website Target Language"
+		"message": "웹사이트별 번역 언어"
 	},
 	"Block_Current_Site": {
-		"message": "Block Current Site"
+		"message": "현재 사이트 차단"
 	},
 	"Allow_Current_Site": {
-		"message": "Allow Current Site"
-	},
-	"ADVANCED______________________________________": {
-		"message": "ADVANCED                                      "
+		"message": "현재 사이트 허용"
 	},
 	"ADVANCED": {
-		"message": "ADVANCED"
+		"message": "고급"
 	},
 	"UI_Language": {
-		"message": "UI Language"
+		"message": "UI 언어"
 	},
 	"Detect_PDF": {
-		"message": "Detect PDF"
+		"message": "PDF를 내장 뷰어로 열기"
 	},
 	"Mouseover_Text_Type_2": {
-		"message": "Secondary Mouseover Text Type"
-	},
-	"Mouseover_Pause_Subtitle": {
-		"message": "Mouseover Pause Subtitle"
+		"message": "두 번째 마우스오버 감지 단위"
 	},
 	"Show_Tooltip_While_Typing": {
-		"message": "Show Tooltip While Typing"
+		"message": "입력 중에도 툴팁 표시"
 	},
 	"Tooltip_Info_Source_Text": {
-		"message": "Tooltip Info Source Text"
+		"message": "툴팁에 원문 표시"
 	},
 	"Translate_Exclude_Regex": {
-		"message": "Translate Exclude Regex"
+		"message": "번역 제외 정규식"
 	},
 	"Tooltip_Info_Source_Language": {
-		"message": "Tooltip Info Source Language"
+		"message": "툴팁에 원문 언어 표시"
 	},
 	"Tooltip_Info_Transliteration": {
-		"message": "Tooltip Info Transliteration"
-	},
-	"Tooltip_Interval_Time": {
-		"message": "Tooltip Interval Time"
+		"message": "툴팁에 발음 표기 표시"
 	},
 	"Tooltip_Show_Delay": {
-		"message": "Tooltip Show Delay"
+		"message": "툴팁 표시 지연"
 	},
 	"Tooltip_Word_Dictionary": {
 		"message": "툴팁 단어 사전"
 	},
 	"Tooltip_Word_Dictionary_Source": {
-		"message": "Tooltip Word Dictionary Source"
+		"message": "단어 사전 출처"
 	},
 	"Fallback_Translator_Engine": {
-		"message": "Fallback Translator Engine"
-	},
-	"SPEECH": {
-		"message": "음성 알림"
-	},
-	"Speech_Recognition_Language": {
-		"message": "음성 인지 언어"
-	},
-	"Voice_Panel_Translate_Language": {
-		"message": "음성 패널 번역 언어"
-	},
-	"Voice_Panel_Text_Target": {
-		"message": "음성 패널 도착어 텍스트"
-	},
-	"Voice_Panel_Padding": {
-		"message": "음성 패널 여백"
-	},
-	"Voice_Panel_Text_Align": {
-		"message": "음성 패널 텍스트 정렬"
-	},
-	"Voice_Panel_Source_Font_Size": {
-		"message": "음성 패널 출발어 글꼴 크기"
-	},
-	"Voice_Panel_Target_Font_Size": {
-		"message": "음성 패널 도착어 글꼴 크기"
-	},
-	"Voice_Panel_Source_Font_Color": {
-		"message": "음성 패널 출발어 글꼴 크기"
-	},
-	"Voice_Panel_Target_Font_Color": {
-		"message": "음성 패널 도착어 글꼴색"
-	},
-	"Voice_Panel_Source_Border_Color": {
-		"message": "음성 패널 출발어 가장자리 색"
-	},
-	"Voice_Panel_Target_Border_Color": {
-		"message": "음성 패널 도착어 가장자리 색"
-	},
-	"Voice_Panel_Background_Color": {
-		"message": "음성 패널 출발어 배경색"
-	},
-	"BACKUP______________________________________": {
-		"message": "BACKUP                                      "
+		"message": "실패 시 다른 번역 엔진 사용"
 	},
 	"BACKUP": {
-		"message": "BACKUP"
+		"message": "백업"
 	},
 	"Sync_Setting": {
-		"message": "Sync Setting"
+		"message": "설정 동기화"
 	},
 	"Import_Setting": {
-		"message": "Import Setting"
+		"message": "설정 가져오기"
 	},
 	"Export_Setting": {
-		"message": "Export Setting"
+		"message": "설정 내보내기"
 	},
 	"Reset_Setting": {
-		"message": "Reset Setting"
-	},
-	"About______________________________________": {
-		"message": "About                                      "
+		"message": "설정 초기화"
 	},
 	"How_to_use": {
-		"message": "How to use"
+		"message": "사용 방법"
 	},
 	"Check_how_to_use_this_extension": {
 		"message": "이 확장 프로그램 사용 방법 확인"
@@ -344,203 +224,131 @@
 	"Translate_local_ebook_file": {
 		"message": "로컬 ebook 파일 번역"
 	},
-	"Twitter": {
-		"message": "Twitter"
-	},
-	"Retweet_twitter_post": {
-		"message": "Retweet twitter post"
-	},
-	"Review_Page": {
-		"message": "Review Page"
-	},
-	"Comment_on_this_extension": {
-		"message": "Comment on this extension"
-	},
 	"Source_code": {
-		"message": "Source code"
+		"message": "소스 코드"
 	},
 	"Check_source_code_in_github": {
-		"message": "Check source code in github"
+		"message": "GitHub에서 소스 코드 보기"
 	},
 	"Privacy_Policy": {
-		"message": "Privacy Policy"
+		"message": "개인정보처리방침"
 	},
 	"User_privacy_policy": {
-		"message": "User privacy policy"
-	},
-	"Voice_Panel": {
-		"message": "음성 패널"
-	},
-	"Translate_Voice": {
-		"message": "음성 번역"
-	},
-	"Review______________________________________": {
-		"message": "Review                                      "
-	},
-	"Review_this": {
-		"message": "Review this"
-	},
-	"Developer_love_criticism": {
-		"message": "Developer love criticism"
-	},
-	"Coffee______________________________________": {
-		"message": "커피                                      "
-	},
-	"Support_this_extension": {
-		"message": "Support this extension"
-	},
-	"Feed_a_coffee_to_the_extension_devs": {
-		"message": "Feed a coffee to the extension devs"
-	},
-	"Title______________________________________": {
-		"message": "Title                                      "
-	},
-	"SELECT_OPTION______________________________": {
-		"message": "SELECT OPTION                              "
-	},
-	"On": {
-		"message": "On"
-	},
-	"Off": {
-		"message": "Off"
+		"message": "사용자 개인정보 보호 정책"
 	},
 	"Auto": {
-		"message": "Auto"
+		"message": "자동"
 	},
 	"None": {
-		"message": "None"
+		"message": "없음"
 	},
 	"Select": {
-		"message": "Select"
+		"message": "선택"
 	},
 	"Mouseover": {
-		"message": "Mouseover"
+		"message": "마우스오버"
 	},
 	"Mouseover_n_Select": {
-		"message": "Mouseover n Select"
+		"message": "마우스오버 및 선택"
 	},
 	"Follow": {
-		"message": "Follow"
+		"message": "커서 따라가기"
 	},
 	"Fixed": {
-		"message": "Fixed"
+		"message": "고정"
 	},
 	"Top_Right": {
-		"message": "Top Right"
+		"message": "오른쪽 위"
 	},
 	"Fade": {
-		"message": "Fade"
+		"message": "페이드"
 	},
 	"Scale": {
-		"message": "Scale"
+		"message": "확대"
 	},
 	"Shift_away": {
-		"message": "Shift away"
+		"message": "밀려나기"
 	},
 	"Shift_toward": {
-		"message": "Shift toward"
+		"message": "다가오기"
 	},
 	"Perspective": {
-		"message": "Perspective"
+		"message": "원근"
 	},
 	"Word": {
-		"message": "Word"
+		"message": "단어"
 	},
 	"Sentence": {
-		"message": "Sentence"
+		"message": "문장"
 	},
 	"Container": {
-		"message": "Container"
+		"message": "문단"
 	},
 	"Both": {
-		"message": "Both"
+		"message": "둘 다"
 	},
 	"Blacklist": {
-		"message": "Blacklist"
+		"message": "차단 목록"
 	},
 	"Whitelist": {
-		"message": "Whitelist"
-	},
-	"Source": {
-		"message": "Source"
-	},
-	"Source_Text": {
-		"message": "Source Text"
-	},
-	"Translated_Text": {
-		"message": "Translated Text"
-	},
-	"Source_n_Translated": {
-		"message": "Source n Translated"
-	},
-	"Translated_n_Source": {
-		"message": "Translated n Source"
-	},
-	"Dual_Subtitle": {
-		"message": "Dual Subtitle"
-	},
-	"Target_Single_Subtitle": {
-		"message": "Target Single Subtitle"
-	},
-	"Source_Single_Subtitle": {
-		"message": "Source Single Subtitle"
+		"message": "허용 목록"
 	},
 	"Always": {
-		"message": "Always"
+		"message": "항상"
 	},
 	"Center": {
-		"message": "Center"
+		"message": "가운데"
 	},
 	"Left": {
-		"message": "Left"
+		"message": "왼쪽"
 	},
 	"Right": {
-		"message": "Right"
+		"message": "오른쪽"
 	},
 	"Justify": {
-		"message": "Justify"
+		"message": "양쪽 맞춤"
 	},
 	"Light": {
-		"message": "Light"
+		"message": "밝게"
 	},
 	"Dark": {
-		"message": "Dark"
+		"message": "어둡게"
 	},
 	"Default": {
-		"message": "Default"
+		"message": "기본값"
 	},
 	"Ctrl_Left": {
-		"message": "Ctrl Left"
+		"message": "왼쪽 Ctrl"
 	},
 	"Ctrl_Right": {
-		"message": "Ctrl Right"
+		"message": "오른쪽 Ctrl"
 	},
 	"Alt_Left": {
-		"message": "Alt Left"
+		"message": "왼쪽 Alt"
 	},
 	"Alt_Right": {
-		"message": "Alt Right"
+		"message": "오른쪽 Alt"
 	},
 	"Shift_Left": {
-		"message": "Shift Left"
+		"message": "왼쪽 Shift"
 	},
 	"Shift_Right": {
-		"message": "Shift Right"
+		"message": "오른쪽 Shift"
 	},
 	"Meta_Left": {
-		"message": "Meta Left"
+		"message": "왼쪽 Meta"
 	},
 	"Meta_Right": {
-		"message": "Meta Right"
+		"message": "오른쪽 Meta"
 	},
 	"Click_Left": {
-		"message": "Click Left"
+		"message": "왼쪽 클릭"
 	},
 	"Click_Middle": {
-		"message": "Click Middle"
+		"message": "가운데 클릭"
 	},
 	"Click_Right": {
-		"message": "Click Right"
+		"message": "오른쪽 클릭"
 	},
 	"google": {
 		"message": "google"
@@ -548,286 +356,148 @@
 	"bing": {
 		"message": "bing"
 	},
-	"Saved_Words": {
-		"message": "Saved Words"
-	},
-	"Group": {
-		"message": "Group"
-	},
-	"All": {
-		"message": "All"
-	},
-	"Move_to_group": {
-		"message": "Move to group"
-	},
-	"Delete": {
-		"message": "Delete"
-	},
-	"Clear": {
-		"message": "Clear"
-	},
-	"selected": {
-		"message": "selected"
-	},
-	"Date": {
-		"message": "Date"
-	},
-	"Translation": {
-		"message": "Translation"
-	},
-	"No_saved_words_yet": {
-		"message": "No saved words yet"
-	},
-	"Manage_Groups": {
-		"message": "Manage Groups"
-	},
-	"Remove_all": {
-		"message": "Remove all"
-	},
-	"Import_CSV": {
-		"message": "Import CSV"
-	},
-	"Download_CSV": {
-		"message": "Download CSV"
-	},
-	"Save_key": {
-		"message": "Save key"
-	},
-	"Highlight_on_page": {
-		"message": "Highlight on page"
-	},
-	"Right_click_menu": {
-		"message": "Right click menu"
-	},
-	"Add_right_click_context_menu": {
-		"message": "Add right click context menu"
-	},
-	"Done": {
-		"message": "Done"
-	},
-	"On_Select": {
-		"message": "On Select"
-	},
-	"On_Hover": {
-		"message": "On Hover"
-	},
-	"On_Select_n_Hover": {
-		"message": "On Select n Hover"
-	},
-	"Select_group_to_play": {
-		"message": "Select group to play"
-	},
-	"No_Group_Selected": {
-		"message": "No Group Selected"
-	},
-	"Check_groups_to_play": {
-		"message": "Check groups to play"
-	},
-	"Flashcard_makes_cards_from_your_saved_words": {
-		"message": "Flashcard makes cards from your saved words"
-	},
-	"Flashcard": {
-		"message": "Flashcard"
-	},
-	"Play_Flashcard": {
-		"message": "Play Flashcard"
-	},
-	"Reset_progress": {
-		"message": "Reset progress"
-	},
-	"No_History_Data": {
-		"message": "No History Data"
-	},
-	"Today_play_is_completed": {
-		"message": "Today play is completed"
-	},
-	"Try_on_next_day": {
-		"message": "Try on next day"
-	},
-	"No_more_card_to_learn_today": {
-		"message": "No more card to learn today"
-	},
-	"Add_more_history_data_to_play_with": {
-		"message": "Add more history data to play with"
-	},
-	"Finish": {
-		"message": "Finish"
-	},
-	"Today_Flashcards_are_Completed": {
-		"message": "Today Flashcards are Completed"
-	},
-	"No_More_Card_Data": {
-		"message": "No More Card Data"
-	},
-	"Show_Answer": {
-		"message": "Show Answer"
-	},
-	"Again": {
-		"message": "Again"
-	},
-	"Hard": {
-		"message": "Hard"
-	},
-	"Good": {
-		"message": "Good"
-	},
-	"Easy": {
-		"message": "Easy"
-	},
-	"New": {
-		"message": "New"
-	},
-	"Review": {
-		"message": "Review"
-	},
-	"Learning": {
-		"message": "Learning"
-	},
 	"About": {
-		"message": "About"
+		"message": "정보"
 	},
 	"Translator": {
-		"message": "Translator"
+		"message": "번역기"
 	},
 	"Wiktionary": {
 		"message": "Wiktionary"
 	},
-	"Translated": {
-		"message": "Translated"
-	},
 	"Custom": {
-		"message": "Custom"
+		"message": "사용자 지정"
 	},
 	"Back": {
-		"message": "Back"
+		"message": "뒤로"
 	},
 	"Cancel": {
-		"message": "Cancel"
+		"message": "취소"
 	},
 	"Remove": {
-		"message": "Remove"
+		"message": "삭제"
 	},
 	"Alpha": {
-		"message": "Alpha"
+		"message": "투명도"
 	},
 	"Fetch_models_from_endpoint": {
-		"message": "Fetch models from endpoint"
+		"message": "엔드포인트에서 모델 목록 가져오기"
 	},
 	"No_models_returned_by_endpoint": {
-		"message": "No models returned by endpoint"
+		"message": "엔드포인트에서 받은 모델이 없습니다"
 	},
 	"API_endpoint_is_empty": {
-		"message": "API endpoint is empty"
+		"message": "API 엔드포인트가 비어 있습니다"
 	},
 	"Failed_to_fetch_LLM_models": {
-		"message": "Failed to fetch LLM models"
+		"message": "LLM 모델 목록을 가져오지 못했습니다"
 	},
 	"Open_this_popup_on_a_website_to_use_this_button": {
-		"message": "Open this popup on a website to use this button"
+		"message": "웹사이트에서 이 팝업을 열어야 사용할 수 있습니다"
 	},
 	"Import_failed": {
-		"message": "Import failed"
+		"message": "가져오기 실패"
 	},
 	"Copy_PDF_URL": {
-		"message": "Copy PDF URL"
+		"message": "PDF URL 복사"
 	},
 	"Copied": {
-		"message": "Copied"
+		"message": "복사됨"
 	},
 	"Copy_failed": {
-		"message": "Copy failed"
+		"message": "복사 실패"
 	},
 	"Allow_access_to_file_URLs_to_open_local_PDF_files": {
-		"message": "Allow access to file URLs to open local PDF files"
+		"message": "로컬 PDF 파일을 열려면 '파일 URL에 대한 액세스 허용'을 켜 주세요"
 	},
 	"Open_File": {
-		"message": "Open File"
+		"message": "파일 열기"
 	},
 	"Previous_Page": {
-		"message": "Previous Page"
+		"message": "이전 페이지"
 	},
 	"Next_Page": {
-		"message": "Next Page"
+		"message": "다음 페이지"
 	},
 	"Table_of_Contents": {
-		"message": "Table of Contents"
+		"message": "목차"
 	},
 	"Drop_an_ebook_file_here_or_open_one": {
-		"message": "Drop an ebook file here or open one"
+		"message": "이북 파일을 여기에 끌어다 놓거나 열어 주세요"
 	},
 	"Could_not_open_this_file": {
-		"message": "Could not open this file"
+		"message": "이 파일을 열 수 없습니다"
 	},
 	"Untitled": {
-		"message": "Untitled"
+		"message": "제목 없음"
 	},
 	"Page": {
-		"message": "Page"
+		"message": "페이지"
 	},
 	"Zoom_out": {
-		"message": "Zoom out"
+		"message": "축소"
 	},
 	"Zoom": {
-		"message": "Zoom"
+		"message": "확대/축소"
 	},
 	"Zoom_in": {
-		"message": "Zoom in"
+		"message": "확대"
 	},
 	"Automatic_zoom": {
-		"message": "Automatic zoom"
+		"message": "자동 맞춤"
 	},
 	"Page_fit": {
-		"message": "Page fit"
+		"message": "쪽 맞춤"
 	},
 	"Page_width": {
-		"message": "Page width"
+		"message": "쪽 너비 맞춤"
 	},
 	"Find": {
-		"message": "Find"
+		"message": "찾기"
 	},
 	"Dark_mode": {
-		"message": "Dark mode"
+		"message": "다크 모드"
 	},
 	"Download": {
-		"message": "Download"
+		"message": "다운로드"
 	},
 	"Find_in_document": {
-		"message": "Find in document"
+		"message": "문서에서 찾기"
 	},
 	"Previous_match": {
-		"message": "Previous match"
+		"message": "이전 결과"
 	},
 	"Next_match": {
-		"message": "Next match"
+		"message": "다음 결과"
 	},
 	"Highlight_all": {
-		"message": "Highlight all"
+		"message": "모두 강조"
 	},
 	"Match_case": {
-		"message": "Match case"
+		"message": "대소문자 구분"
 	},
 	"Phrase_not_found": {
-		"message": "Phrase not found"
+		"message": "찾는 문자열이 없습니다"
 	},
 	"Close": {
-		"message": "Close"
+		"message": "닫기"
 	},
 	"Failed_to_load_the_PDF_file": {
-		"message": "Failed to load the PDF file"
+		"message": "PDF 파일을 불러오지 못했습니다"
 	},
 	"Drop_a_PDF_file_here": {
-		"message": "Drop a PDF file here"
+		"message": "PDF 파일을 여기에 끌어다 놓으세요"
 	},
 	"Enter_the_password_to_open_this_PDF_file": {
-		"message": "Enter the password to open this PDF file"
+		"message": "이 PDF 파일을 열려면 비밀번호를 입력하세요"
 	},
 	"Invalid_password_try_again": {
-		"message": "Invalid password try again"
+		"message": "비밀번호가 틀렸습니다. 다시 입력하세요"
 	},
 	"appName": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Mouse Tooltip Translator Refined"
 	},
 	"appDesc": {
-		"message": "Hover or select text to translate it in a tooltip. Also works in PDF and ebook files."
+		"message": "텍스트에 마우스를 올리거나 선택하면 툴팁으로 번역합니다. PDF와 이북 파일에서도 동작합니다."
 	}
 }

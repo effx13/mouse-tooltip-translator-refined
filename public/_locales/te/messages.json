@@ -1,546 +1,354 @@
 {
-	"MAIN______________________________________": {
-		"message": "MAIN                                      "
-	},
 	"MAIN": {
-		"message": "MAIN"
+		"message": "ప్రధానం"
 	},
 	"Mouse_Tooltip_Translator": {
-		"message": "Mouse Tooltip Translator"
+		"message": "మౌస్ టూల్‌టిప్ అనువాదకం"
 	},
 	"Translate_When": {
-		"message": "Translate When"
+		"message": "ఎప్పుడు అనువదించాలి"
 	},
 	"Translate_From": {
-		"message": "Translate From"
+		"message": "ఈ భాష నుండి అనువదించు"
 	},
 	"Translate_Into": {
-		"message": "Translate Into"
+		"message": "ఈ భాషలోకి అనువదించు"
 	},
 	"Translator_Engine": {
-		"message": "Translator Engine"
+		"message": "అనువాద ఇంజిన్"
 	},
 	"LLM_Provider": {
-		"message": "LLM Provider"
+		"message": "LLM ప్రొవైడర్"
 	},
 	"LLM_Api_Endpoint": {
-		"message": "LLM API Endpoint URL"
+		"message": "LLM API ఎండ్‌పాయింట్ URL"
 	},
 	"LLM_Api_Key": {
-		"message": "LLM API Key"
+		"message": "LLM API కీ (ఐచ్ఛికం)"
 	},
 	"LLM_Model": {
-		"message": "LLM Model"
+		"message": "LLM మోడల్"
 	},
 	"Mouseover_Text_Type": {
-		"message": "Mouseover Text Type"
+		"message": "మౌస్‌ఓవర్ టెక్స్ట్ రకం"
 	},
 	"Translate_Into_2": {
-		"message": "Secondary Translate Into"
+		"message": "రెండవ అనువాద భాష"
 	},
 	"Writing_Language": {
-		"message": "Writing Language"
+		"message": "రాసే భాష"
 	},
 	"Reverse_Translate_Language": {
-		"message": "Reverse Translate Language"
-	},
-	"OCR_Language": {
-		"message": "OCR Language"
-	},
-	"Detect_Subtitle": {
-		"message": "Detect Subtitle"
-	},
-	"KEYBOARD______________________________________": {
-		"message": "KEYBOARD                                      "
+		"message": "రివర్స్ అనువాద భాష"
 	},
 	"KEYBOARD": {
-		"message": "KEYBOARD"
+		"message": "కీబోర్డ్"
 	},
 	"Show_Tooltip_When": {
-		"message": "Show Tooltip When"
-	},
-	"Voice_When": {
-		"message": "Voice When"
+		"message": "టూల్‌టిప్ ఎప్పుడు చూపాలి"
 	},
 	"Translate_Writing_When": {
-		"message": "Translate Writing When"
+		"message": "రాసినదాన్ని ఎప్పుడు అనువదించాలి"
 	},
 	"Ignore_AltGr_Modifier": {
-		"message": "Ignore AltGr Modifier"
-	},
-	"Auto_Reader_When": {
-		"message": "Auto Reader When"
+		"message": "AltGr మాడిఫైయర్‌ను విస్మరించు"
 	},
 	"Translate_Page_When": {
-		"message": "Translate Page When"
-	},
-	"OCR_When": {
-		"message": "OCR When"
-	},
-	"Mouseover_Text_Type_Swap_Key": {
-		"message": "Mouseover Text Type Swap Key"
-	},
-	"Speech_Recognition_When": {
-		"message": "Speech Recognition When"
-	},
-	"Toggle_Mouseover_Text_Type_When": {
-		"message": "Toggle Mouseover Text Type When"
+		"message": "పేజీని ఎప్పుడు అనువదించాలి"
 	},
 	"Mouseover_Text_Type_Key_Hold": {
-		"message": "Mouseover Text Type Key Hold"
+		"message": "మౌస్‌ఓవర్ టెక్స్ట్ రకం మార్చే కీ"
 	},
 	"Secondary_Language_When": {
-		"message": "Secondary Language When"
+		"message": "రెండవ భాష ఎప్పుడు"
 	},
 	"Swap_Key_Toggle_Mode": {
-		"message": "Swap Key Toggle Mode"
+		"message": "మార్పు కీలను టోగుల్‌గా వాడు"
 	},
 	"Toggle_Extension_When": {
-		"message": "Toggle Extension When"
-	},
-	"TTS_Pause_Resume_When": {
-		"message": "TTS Pause Resume When"
-	},
-	"GRAPHIC______________________________________": {
-		"message": "GRAPHIC                                      "
+		"message": "ఎక్స్‌టెన్షన్‌ను ఎప్పుడు ఆన్/ఆఫ్ చేయాలి"
 	},
 	"GRAPHIC": {
-		"message": "GRAPHIC"
+		"message": "రూపం"
 	},
 	"Tooltip_Font_Size": {
-		"message": "Tooltip Font Size"
+		"message": "టూల్‌టిప్ ఫాంట్ పరిమాణం"
 	},
 	"Tooltip_Font_Family": {
-		"message": "Tooltip Font Family"
-	},
-	"Subtitle_Background": {
-		"message": "Subtitle Background"
+		"message": "టూల్‌టిప్ ఫాంట్"
 	},
 	"Tooltip_Width": {
-		"message": "Tooltip Width"
+		"message": "టూల్‌టిప్ వెడల్పు"
 	},
 	"Tooltip_Distance": {
-		"message": "Tooltip Distance"
+		"message": "టూల్‌టిప్ దూరం"
 	},
 	"Tooltip_Animation": {
-		"message": "Tooltip Animation"
+		"message": "టూల్‌టిప్ యానిమేషన్"
 	},
 	"Tooltip_Disappear_Duration": {
-		"message": "Tooltip Disappear Duration"
+		"message": "టూల్‌టిప్ కనుమరుగయ్యే సమయం"
 	},
 	"Tooltip_Position": {
-		"message": "Tooltip Position"
+		"message": "టూల్‌టిప్ స్థానం"
 	},
 	"Tooltip_Placement": {
-		"message": "Tooltip Placement"
+		"message": "టూల్‌టిప్ అమరిక"
 	},
 	"Above": {
-		"message": "Above"
+		"message": "పైన"
 	},
 	"Below": {
-		"message": "Below"
+		"message": "కింద"
 	},
 	"Tooltip_Text_Align": {
-		"message": "Tooltip Text Align"
+		"message": "టూల్‌టిప్ టెక్స్ట్ అమరిక"
 	},
 	"Tooltip_Background_Blur": {
-		"message": "Tooltip Background Blur"
+		"message": "టూల్‌టిప్ నేపథ్య బ్లర్"
 	},
 	"Mouseover_Highlight_Text": {
-		"message": "Mouseover Highlight Text"
+		"message": "మౌస్‌ఓవర్ టెక్స్ట్‌ను హైలైట్ చేయి"
 	},
 	"Tooltip_Font_Color": {
-		"message": "Tooltip Font Color"
+		"message": "టూల్‌టిప్ ఫాంట్ రంగు"
 	},
 	"Tooltip_Background_Color": {
-		"message": "Tooltip Background Color"
+		"message": "టూల్‌టిప్ నేపథ్య రంగు"
 	},
 	"Tooltip_Border_Color": {
-		"message": "Tooltip Border Color"
+		"message": "టూల్‌టిప్ అంచు రంగు"
 	},
 	"Mouseover_Text_Highlight_Color": {
-		"message": "Mouseover Text Highlight Color"
+		"message": "మౌస్‌ఓవర్ టెక్స్ట్ హైలైట్ రంగు"
 	},
 	"Ebook_Theme": {
-		"message": "Ebook Theme"
+		"message": "ఈబుక్ థీమ్"
 	},
 	"Setting_Compact_mode": {
-		"message": "Setting Compact mode"
-	},
-	"VOICE______________________________________": {
-		"message": "VOICE                                      "
-	},
-	"VOICE": {
-		"message": "VOICE"
-	},
-	"Voice_Volume": {
-		"message": "Voice Volume"
-	},
-	"Voice_Speed": {
-		"message": "Voice Speed"
-	},
-	"Voice_Target": {
-		"message": "Voice Target"
-	},
-	"Voice_Repeat": {
-		"message": "Voice Repeat"
-	},
-	"Voice_for_": {
-		"message": "Voice for "
-	},
-	"Voice_speed_for_": {
-		"message": "Voice speed for "
-	},
-	"EXCLUDE______________________________________": {
-		"message": "EXCLUDE                                      "
+		"message": "సెట్టింగ్‌ల కాంపాక్ట్ మోడ్"
 	},
 	"EXCLUDE": {
-		"message": "EXCLUDE"
+		"message": "మినహాయింపు"
 	},
 	"Exclude_Language": {
-		"message": "Exclude Language"
+		"message": "మినహాయించే భాషలు"
 	},
 	"Website_Filter_Mode": {
-		"message": "Website Filter Mode"
+		"message": "వెబ్‌సైట్ ఫిల్టర్ మోడ్"
 	},
 	"Exclude_Website": {
-		"message": "Exclude Website"
+		"message": "మినహాయించే వెబ్‌సైట్‌లు"
 	},
 	"Whitelist_Website": {
-		"message": "Whitelist Website"
+		"message": "అనుమతించిన వెబ్‌సైట్‌లు"
 	},
 	"Website_Target_Language": {
-		"message": "Website Target Language"
+		"message": "సైట్ వారీ లక్ష్య భాష (ఉదా. github.com=ko)"
 	},
 	"Block_Current_Site": {
-		"message": "Block Current Site"
+		"message": "ఈ సైట్‌ను బ్లాక్ చేయి"
 	},
 	"Allow_Current_Site": {
-		"message": "Allow Current Site"
-	},
-	"ADVANCED______________________________________": {
-		"message": "ADVANCED                                      "
+		"message": "ఈ సైట్‌ను అనుమతించు"
 	},
 	"ADVANCED": {
-		"message": "ADVANCED"
+		"message": "అధునాతనం"
 	},
 	"UI_Language": {
-		"message": "UI Language"
+		"message": "ఇంటర్‌ఫేస్ భాష"
 	},
 	"Detect_PDF": {
-		"message": "Detect PDF"
+		"message": "PDFని గుర్తించు"
 	},
 	"Mouseover_Text_Type_2": {
-		"message": "Secondary Mouseover Text Type"
-	},
-	"Mouseover_Pause_Subtitle": {
-		"message": "Mouseover Pause Subtitle"
+		"message": "రెండవ మౌస్‌ఓవర్ టెక్స్ట్ రకం"
 	},
 	"Show_Tooltip_While_Typing": {
-		"message": "Show Tooltip While Typing"
+		"message": "టైప్ చేస్తున్నప్పుడు టూల్‌టిప్ చూపు"
 	},
 	"Tooltip_Info_Source_Text": {
-		"message": "Tooltip Info Source Text"
+		"message": "టూల్‌టిప్‌లో మూల టెక్స్ట్"
 	},
 	"Translate_Exclude_Regex": {
-		"message": "Translate Exclude Regex"
+		"message": "అనువాద మినహాయింపు Regex"
 	},
 	"Tooltip_Info_Source_Language": {
-		"message": "Tooltip Info Source Language"
+		"message": "టూల్‌టిప్‌లో మూల భాష"
 	},
 	"Tooltip_Info_Transliteration": {
-		"message": "Tooltip Info Transliteration"
-	},
-	"Tooltip_Interval_Time": {
-		"message": "Tooltip Interval Time"
+		"message": "టూల్‌టిప్‌లో లిప్యంతరీకరణ"
 	},
 	"Tooltip_Show_Delay": {
-		"message": "Tooltip Show Delay"
+		"message": "టూల్‌టిప్ చూపే ఆలస్యం"
 	},
 	"Tooltip_Word_Dictionary": {
-		"message": "Tooltip Word Dictionary"
+		"message": "టూల్‌టిప్ పద నిఘంటువు"
 	},
 	"Tooltip_Word_Dictionary_Source": {
-		"message": "Tooltip Word Dictionary Source"
+		"message": "టూల్‌టిప్ పద నిఘంటువు మూలం"
 	},
 	"Fallback_Translator_Engine": {
-		"message": "Fallback Translator Engine"
-	},
-	"SPEECH": {
-		"message": "SPEECH"
-	},
-	"Speech_Recognition_Language": {
-		"message": "Speech Recognition Language"
-	},
-	"Voice_Panel_Translate_Language": {
-		"message": "Voice Panel Translate Language"
-	},
-	"Voice_Panel_Text_Target": {
-		"message": "Voice Panel Text Target"
-	},
-	"Voice_Panel_Padding": {
-		"message": "Voice Panel Padding"
-	},
-	"Voice_Panel_Text_Align": {
-		"message": "Voice Panel Text Align"
-	},
-	"Voice_Panel_Source_Font_Size": {
-		"message": "Voice Panel Source Font Size"
-	},
-	"Voice_Panel_Target_Font_Size": {
-		"message": "Voice Panel Target Font Size"
-	},
-	"Voice_Panel_Source_Font_Color": {
-		"message": "Voice Panel Source Font Color"
-	},
-	"Voice_Panel_Target_Font_Color": {
-		"message": "Voice Panel Target Font Color"
-	},
-	"Voice_Panel_Source_Border_Color": {
-		"message": "Voice Panel Source Border Color"
-	},
-	"Voice_Panel_Target_Border_Color": {
-		"message": "Voice Panel Target Border Color"
-	},
-	"Voice_Panel_Background_Color": {
-		"message": "Voice Panel Background Color"
-	},
-	"BACKUP______________________________________": {
-		"message": "BACKUP                                      "
+		"message": "ప్రత్యామ్నాయ అనువాద ఇంజిన్"
 	},
 	"BACKUP": {
-		"message": "BACKUP"
+		"message": "బ్యాకప్"
 	},
 	"Sync_Setting": {
-		"message": "Sync Setting"
+		"message": "పరికరాల మధ్య సెట్టింగ్‌లను సింక్ చేయండి"
 	},
 	"Import_Setting": {
-		"message": "Import Setting"
+		"message": "సెట్టింగ్‌లను దిగుమతి చేయి"
 	},
 	"Export_Setting": {
-		"message": "Export Setting"
+		"message": "సెట్టింగ్‌లను ఎగుమతి చేయి"
 	},
 	"Reset_Setting": {
-		"message": "Reset Setting"
-	},
-	"About______________________________________": {
-		"message": "About                                      "
+		"message": "సెట్టింగ్‌లను రీసెట్ చేయి"
 	},
 	"How_to_use": {
-		"message": "How to use"
+		"message": "ఎలా ఉపయోగించాలి"
 	},
 	"Check_how_to_use_this_extension": {
-		"message": "Check how to use this extension"
+		"message": "ఈ ఎక్స్‌టెన్షన్‌ను ఎలా ఉపయోగించాలో చూడండి"
 	},
 	"PDF_Viewer": {
-		"message": "PDF Viewer"
+		"message": "PDF వ్యూయర్"
 	},
 	"Translate_local_PDF_file": {
-		"message": "Translate local PDF file"
+		"message": "స్థానిక PDF ఫైల్‌ను అనువదించండి"
 	},
 	"Ebook_Reader": {
-		"message": "Ebook Reader"
+		"message": "ఈబుక్ రీడర్"
 	},
 	"Translate_local_ebook_file": {
-		"message": "Translate local ebook file"
-	},
-	"Twitter": {
-		"message": "Twitter"
-	},
-	"Retweet_twitter_post": {
-		"message": "Retweet twitter post"
-	},
-	"Review_Page": {
-		"message": "Review Page"
-	},
-	"Comment_on_this_extension": {
-		"message": "Comment on this extension"
+		"message": "స్థానిక ఈబుక్ ఫైల్‌ను అనువదించండి"
 	},
 	"Source_code": {
-		"message": "Source code"
+		"message": "సోర్స్ కోడ్"
 	},
 	"Check_source_code_in_github": {
-		"message": "Check source code in github"
+		"message": "GitHubలో సోర్స్ కోడ్ చూడండి"
 	},
 	"Privacy_Policy": {
-		"message": "Privacy Policy"
+		"message": "గోప్యతా విధానం"
 	},
 	"User_privacy_policy": {
-		"message": "User privacy policy"
-	},
-	"Voice_Panel": {
-		"message": "Voice Panel"
-	},
-	"Translate_Voice": {
-		"message": "Translate Voice"
-	},
-	"Review______________________________________": {
-		"message": "Review                                      "
-	},
-	"Review_this": {
-		"message": "Review this"
-	},
-	"Developer_love_criticism": {
-		"message": "Developer love criticism"
-	},
-	"Coffee______________________________________": {
-		"message": "Coffee                                      "
-	},
-	"Support_this_extension": {
-		"message": "Support this extension"
-	},
-	"Feed_a_coffee_to_the_extension_devs": {
-		"message": "Feed a coffee to the extension devs"
-	},
-	"Title______________________________________": {
-		"message": "Title                                      "
-	},
-	"SELECT_OPTION______________________________": {
-		"message": "SELECT OPTION                              "
-	},
-	"On": {
-		"message": "On"
-	},
-	"Off": {
-		"message": "Off"
+		"message": "వినియోగదారు గోప్యతా విధానం"
 	},
 	"Auto": {
-		"message": "Auto"
+		"message": "ఆటోమేటిక్"
 	},
 	"None": {
-		"message": "None"
+		"message": "ఏదీ లేదు"
 	},
 	"Select": {
-		"message": "Select"
+		"message": "ఎంపిక"
 	},
 	"Mouseover": {
-		"message": "Mouseover"
+		"message": "మౌస్‌ఓవర్"
 	},
 	"Mouseover_n_Select": {
-		"message": "Mouseover n Select"
+		"message": "మౌస్‌ఓవర్ & ఎంపిక"
 	},
 	"Follow": {
-		"message": "Follow"
+		"message": "కర్సర్‌ను అనుసరించు"
 	},
 	"Fixed": {
-		"message": "Fixed"
+		"message": "స్థిరం"
 	},
 	"Top_Right": {
-		"message": "Top Right"
+		"message": "పై కుడి మూల"
 	},
 	"Fade": {
-		"message": "Fade"
+		"message": "ఫేడ్"
 	},
 	"Scale": {
-		"message": "Scale"
+		"message": "స్కేల్"
 	},
 	"Shift_away": {
-		"message": "Shift away"
+		"message": "దూరంగా జరుగు"
 	},
 	"Shift_toward": {
-		"message": "Shift toward"
+		"message": "దగ్గరగా జరుగు"
 	},
 	"Perspective": {
-		"message": "Perspective"
+		"message": "పర్స్పెక్టివ్"
 	},
 	"Word": {
-		"message": "Word"
+		"message": "పదం"
 	},
 	"Sentence": {
-		"message": "Sentence"
+		"message": "వాక్యం"
 	},
 	"Container": {
-		"message": "Container"
+		"message": "పేరా"
 	},
 	"Both": {
-		"message": "Both"
+		"message": "రెండూ"
 	},
 	"Blacklist": {
-		"message": "Blacklist"
+		"message": "బ్లాక్ జాబితా"
 	},
 	"Whitelist": {
-		"message": "Whitelist"
-	},
-	"Source": {
-		"message": "Source"
-	},
-	"Source_Text": {
-		"message": "Source Text"
-	},
-	"Translated_Text": {
-		"message": "Translated Text"
-	},
-	"Source_n_Translated": {
-		"message": "Source n Translated"
-	},
-	"Translated_n_Source": {
-		"message": "Translated n Source"
-	},
-	"Dual_Subtitle": {
-		"message": "Dual Subtitle"
-	},
-	"Target_Single_Subtitle": {
-		"message": "Target Single Subtitle"
-	},
-	"Source_Single_Subtitle": {
-		"message": "Source Single Subtitle"
+		"message": "అనుమతి జాబితా"
 	},
 	"Always": {
-		"message": "Always"
+		"message": "ఎల్లప్పుడూ"
 	},
 	"Center": {
-		"message": "Center"
+		"message": "మధ్యలో"
 	},
 	"Left": {
-		"message": "Left"
+		"message": "ఎడమ"
 	},
 	"Right": {
-		"message": "Right"
+		"message": "కుడి"
 	},
 	"Justify": {
-		"message": "Justify"
+		"message": "సమానంగా"
 	},
 	"Light": {
-		"message": "Light"
+		"message": "లైట్"
 	},
 	"Dark": {
-		"message": "Dark"
+		"message": "డార్క్"
 	},
 	"Default": {
-		"message": "Default"
+		"message": "డిఫాల్ట్"
 	},
 	"Ctrl_Left": {
-		"message": "Ctrl Left"
+		"message": "ఎడమ Ctrl"
 	},
 	"Ctrl_Right": {
-		"message": "Ctrl Right"
+		"message": "కుడి Ctrl"
 	},
 	"Alt_Left": {
-		"message": "Alt Left"
+		"message": "ఎడమ Alt"
 	},
 	"Alt_Right": {
-		"message": "Alt Right"
+		"message": "కుడి Alt"
 	},
 	"Shift_Left": {
-		"message": "Shift Left"
+		"message": "ఎడమ Shift"
 	},
 	"Shift_Right": {
-		"message": "Shift Right"
+		"message": "కుడి Shift"
 	},
 	"Meta_Left": {
-		"message": "Meta Left"
+		"message": "ఎడమ Meta"
 	},
 	"Meta_Right": {
-		"message": "Meta Right"
+		"message": "కుడి Meta"
 	},
 	"Click_Left": {
-		"message": "Click Left"
+		"message": "ఎడమ క్లిక్"
 	},
 	"Click_Middle": {
-		"message": "Click Middle"
+		"message": "మధ్య క్లిక్"
 	},
 	"Click_Right": {
-		"message": "Click Right"
+		"message": "కుడి క్లిక్"
 	},
 	"google": {
 		"message": "google"
@@ -548,286 +356,148 @@
 	"bing": {
 		"message": "bing"
 	},
-	"Saved_Words": {
-		"message": "Saved Words"
-	},
-	"Group": {
-		"message": "Group"
-	},
-	"All": {
-		"message": "All"
-	},
-	"Move_to_group": {
-		"message": "Move to group"
-	},
-	"Delete": {
-		"message": "Delete"
-	},
-	"Clear": {
-		"message": "Clear"
-	},
-	"selected": {
-		"message": "selected"
-	},
-	"Date": {
-		"message": "Date"
-	},
-	"Translation": {
-		"message": "Translation"
-	},
-	"No_saved_words_yet": {
-		"message": "No saved words yet"
-	},
-	"Manage_Groups": {
-		"message": "Manage Groups"
-	},
-	"Remove_all": {
-		"message": "Remove all"
-	},
-	"Import_CSV": {
-		"message": "Import CSV"
-	},
-	"Download_CSV": {
-		"message": "Download CSV"
-	},
-	"Save_key": {
-		"message": "Save key"
-	},
-	"Highlight_on_page": {
-		"message": "Highlight on page"
-	},
-	"Right_click_menu": {
-		"message": "Right click menu"
-	},
-	"Add_right_click_context_menu": {
-		"message": "Add right click context menu"
-	},
-	"Done": {
-		"message": "Done"
-	},
-	"On_Select": {
-		"message": "On Select"
-	},
-	"On_Hover": {
-		"message": "On Hover"
-	},
-	"On_Select_n_Hover": {
-		"message": "On Select n Hover"
-	},
-	"Select_group_to_play": {
-		"message": "Select group to play"
-	},
-	"No_Group_Selected": {
-		"message": "No Group Selected"
-	},
-	"Check_groups_to_play": {
-		"message": "Check groups to play"
-	},
-	"Flashcard_makes_cards_from_your_saved_words": {
-		"message": "Flashcard makes cards from your saved words"
-	},
-	"Flashcard": {
-		"message": "Flashcard"
-	},
-	"Play_Flashcard": {
-		"message": "Play Flashcard"
-	},
-	"Reset_progress": {
-		"message": "Reset progress"
-	},
-	"No_History_Data": {
-		"message": "No History Data"
-	},
-	"Today_play_is_completed": {
-		"message": "Today play is completed"
-	},
-	"Try_on_next_day": {
-		"message": "Try on next day"
-	},
-	"No_more_card_to_learn_today": {
-		"message": "No more card to learn today"
-	},
-	"Add_more_history_data_to_play_with": {
-		"message": "Add more history data to play with"
-	},
-	"Finish": {
-		"message": "Finish"
-	},
-	"Today_Flashcards_are_Completed": {
-		"message": "Today Flashcards are Completed"
-	},
-	"No_More_Card_Data": {
-		"message": "No More Card Data"
-	},
-	"Show_Answer": {
-		"message": "Show Answer"
-	},
-	"Again": {
-		"message": "Again"
-	},
-	"Hard": {
-		"message": "Hard"
-	},
-	"Good": {
-		"message": "Good"
-	},
-	"Easy": {
-		"message": "Easy"
-	},
-	"New": {
-		"message": "New"
-	},
-	"Review": {
-		"message": "Review"
-	},
-	"Learning": {
-		"message": "Learning"
-	},
 	"About": {
-		"message": "About"
+		"message": "పరిచయం"
 	},
 	"Translator": {
-		"message": "Translator"
+		"message": "అనువాదకం"
 	},
 	"Wiktionary": {
 		"message": "Wiktionary"
 	},
-	"Translated": {
-		"message": "Translated"
-	},
 	"Custom": {
-		"message": "Custom"
+		"message": "అనుకూలం"
 	},
 	"Back": {
-		"message": "Back"
+		"message": "వెనుకకు"
 	},
 	"Cancel": {
-		"message": "Cancel"
+		"message": "రద్దు చేయి"
 	},
 	"Remove": {
-		"message": "Remove"
+		"message": "తీసివేయి"
 	},
 	"Alpha": {
-		"message": "Alpha"
+		"message": "పారదర్శకత"
 	},
 	"Fetch_models_from_endpoint": {
-		"message": "Fetch models from endpoint"
+		"message": "ఎండ్‌పాయింట్ నుండి మోడల్‌లను పొందు"
 	},
 	"No_models_returned_by_endpoint": {
-		"message": "No models returned by endpoint"
+		"message": "ఎండ్‌పాయింట్ ఏ మోడల్‌నూ ఇవ్వలేదు"
 	},
 	"API_endpoint_is_empty": {
-		"message": "API endpoint is empty"
+		"message": "API ఎండ్‌పాయింట్ ఖాళీగా ఉంది"
 	},
 	"Failed_to_fetch_LLM_models": {
-		"message": "Failed to fetch LLM models"
+		"message": "LLM మోడల్‌లను పొందడం విఫలమైంది"
 	},
 	"Open_this_popup_on_a_website_to_use_this_button": {
-		"message": "Open this popup on a website to use this button"
+		"message": "ఈ బటన్‌ను ఉపయోగించడానికి ఈ పాప్అప్‌ను ఏదైనా వెబ్‌సైట్‌లో తెరవండి"
 	},
 	"Import_failed": {
-		"message": "Import failed"
+		"message": "దిగుమతి విఫలమైంది"
 	},
 	"Copy_PDF_URL": {
-		"message": "Copy PDF URL"
+		"message": "PDF URLను కాపీ చేయి"
 	},
 	"Copied": {
-		"message": "Copied"
+		"message": "కాపీ అయింది"
 	},
 	"Copy_failed": {
-		"message": "Copy failed"
+		"message": "కాపీ విఫలమైంది"
 	},
 	"Allow_access_to_file_URLs_to_open_local_PDF_files": {
-		"message": "Allow access to file URLs to open local PDF files"
+		"message": "స్థానిక PDF ఫైల్‌లను తెరవడానికి ఫైల్ URLలకు యాక్సెస్ అనుమతించండి"
 	},
 	"Open_File": {
-		"message": "Open File"
+		"message": "ఫైల్ తెరువు"
 	},
 	"Previous_Page": {
-		"message": "Previous Page"
+		"message": "మునుపటి పేజీ"
 	},
 	"Next_Page": {
-		"message": "Next Page"
+		"message": "తదుపరి పేజీ"
 	},
 	"Table_of_Contents": {
-		"message": "Table of Contents"
+		"message": "విషయ సూచిక"
 	},
 	"Drop_an_ebook_file_here_or_open_one": {
-		"message": "Drop an ebook file here or open one"
+		"message": "ఈబుక్ ఫైల్‌ను ఇక్కడ వదలండి లేదా ఒకదాన్ని తెరవండి"
 	},
 	"Could_not_open_this_file": {
-		"message": "Could not open this file"
+		"message": "ఈ ఫైల్‌ను తెరవలేకపోయాం"
 	},
 	"Untitled": {
-		"message": "Untitled"
+		"message": "శీర్షిక లేదు"
 	},
 	"Page": {
-		"message": "Page"
+		"message": "పేజీ"
 	},
 	"Zoom_out": {
-		"message": "Zoom out"
+		"message": "జూమ్ అవుట్"
 	},
 	"Zoom": {
-		"message": "Zoom"
+		"message": "జూమ్"
 	},
 	"Zoom_in": {
-		"message": "Zoom in"
+		"message": "జూమ్ ఇన్"
 	},
 	"Automatic_zoom": {
-		"message": "Automatic zoom"
+		"message": "ఆటోమేటిక్ జూమ్"
 	},
 	"Page_fit": {
-		"message": "Page fit"
+		"message": "పేజీకి సరిపోయేలా"
 	},
 	"Page_width": {
-		"message": "Page width"
+		"message": "పేజీ వెడల్పు"
 	},
 	"Find": {
-		"message": "Find"
+		"message": "కనుగొను"
 	},
 	"Dark_mode": {
-		"message": "Dark mode"
+		"message": "డార్క్ మోడ్"
 	},
 	"Download": {
-		"message": "Download"
+		"message": "డౌన్‌లోడ్"
 	},
 	"Find_in_document": {
-		"message": "Find in document"
+		"message": "పత్రంలో కనుగొను"
 	},
 	"Previous_match": {
-		"message": "Previous match"
+		"message": "మునుపటి సరిపోలిక"
 	},
 	"Next_match": {
-		"message": "Next match"
+		"message": "తదుపరి సరిపోలిక"
 	},
 	"Highlight_all": {
-		"message": "Highlight all"
+		"message": "అన్నీ హైలైట్ చేయి"
 	},
 	"Match_case": {
-		"message": "Match case"
+		"message": "కేస్ సరిపోల్చు"
 	},
 	"Phrase_not_found": {
-		"message": "Phrase not found"
+		"message": "పదబంధం కనుగొనబడలేదు"
 	},
 	"Close": {
-		"message": "Close"
+		"message": "మూసివేయి"
 	},
 	"Failed_to_load_the_PDF_file": {
-		"message": "Failed to load the PDF file"
+		"message": "PDF ఫైల్‌ను లోడ్ చేయడం విఫలమైంది"
 	},
 	"Drop_a_PDF_file_here": {
-		"message": "Drop a PDF file here"
+		"message": "PDF ఫైల్‌ను ఇక్కడ వదలండి"
 	},
 	"Enter_the_password_to_open_this_PDF_file": {
-		"message": "Enter the password to open this PDF file"
+		"message": "ఈ PDF ఫైల్‌ను తెరవడానికి పాస్‌వర్డ్ నమోదు చేయండి"
 	},
 	"Invalid_password_try_again": {
-		"message": "Invalid password try again"
+		"message": "పాస్‌వర్డ్ చెల్లదు, మళ్లీ ప్రయత్నించండి"
 	},
 	"appName": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Mouse Tooltip Translator Refined"
 	},
 	"appDesc": {
-		"message": "Hover or select text to translate it in a tooltip. Also works in PDF and ebook files."
+		"message": "టెక్స్ట్‌పై హోవర్ చేయండి లేదా ఎంచుకోండి, టూల్‌టిప్‌లో అనువాదం పొందండి. PDF, ఈబుక్ ఫైల్‌లలో కూడా పనిచేస్తుంది."
 	}
 }

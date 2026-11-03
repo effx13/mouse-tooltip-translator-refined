@@ -1,546 +1,354 @@
 {
-	"MAIN______________________________________": {
-		"message": "MAIN                                      "
-	},
 	"MAIN": {
-		"message": "MAIN"
+		"message": "GLAVNO"
 	},
 	"Mouse_Tooltip_Translator": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Mouse Tooltip Translator Refined"
 	},
 	"Translate_When": {
-		"message": "Translate When"
+		"message": "Prevedi kada"
 	},
 	"Translate_From": {
-		"message": "Translate From"
+		"message": "Prevedi s"
 	},
 	"Translate_Into": {
-		"message": "Translate Into"
+		"message": "Prevedi na"
 	},
 	"Translator_Engine": {
-		"message": "Translator Engine"
+		"message": "Prevoditeljski servis"
 	},
 	"LLM_Provider": {
-		"message": "LLM Provider"
+		"message": "Pružatelj LLM-a"
 	},
 	"LLM_Api_Endpoint": {
-		"message": "LLM API Endpoint URL"
+		"message": "URL krajnje točke LLM API-ja"
 	},
 	"LLM_Api_Key": {
-		"message": "LLM API Key"
+		"message": "API ključ za LLM (neobavezno)"
 	},
 	"LLM_Model": {
-		"message": "LLM Model"
+		"message": "LLM model"
 	},
 	"Mouseover_Text_Type": {
-		"message": "Mouseover Text Type"
+		"message": "Vrsta teksta pri prelasku mišem"
 	},
 	"Translate_Into_2": {
-		"message": "Secondary Translate Into"
+		"message": "Drugi jezik prijevoda"
 	},
 	"Writing_Language": {
-		"message": "Writing Language"
+		"message": "Jezik pisanja"
 	},
 	"Reverse_Translate_Language": {
-		"message": "Reverse Translate Language"
-	},
-	"OCR_Language": {
-		"message": "OCR Language"
-	},
-	"Detect_Subtitle": {
-		"message": "Detect Subtitle"
-	},
-	"KEYBOARD______________________________________": {
-		"message": "KEYBOARD                                      "
+		"message": "Jezik obrnutog prijevoda"
 	},
 	"KEYBOARD": {
-		"message": "KEYBOARD"
+		"message": "TIPKOVNICA"
 	},
 	"Show_Tooltip_When": {
-		"message": "Show Tooltip When"
-	},
-	"Voice_When": {
-		"message": "Voice When"
+		"message": "Prikaži opis kada"
 	},
 	"Translate_Writing_When": {
-		"message": "Translate Writing When"
+		"message": "Prevedi napisani tekst kada"
 	},
 	"Ignore_AltGr_Modifier": {
-		"message": "Ignore AltGr Modifier"
-	},
-	"Auto_Reader_When": {
-		"message": "Auto Reader When"
+		"message": "Zanemari modifikator AltGr"
 	},
 	"Translate_Page_When": {
-		"message": "Translate Page When"
-	},
-	"OCR_When": {
-		"message": "OCR When"
-	},
-	"Mouseover_Text_Type_Swap_Key": {
-		"message": "Mouseover Text Type Swap Key"
-	},
-	"Speech_Recognition_When": {
-		"message": "Speech Recognition When"
-	},
-	"Toggle_Mouseover_Text_Type_When": {
-		"message": "Toggle Mouseover Text Type When"
+		"message": "Prevedi stranicu kada"
 	},
 	"Mouseover_Text_Type_Key_Hold": {
-		"message": "Mouseover Text Type Key Hold"
+		"message": "Tipka za držanje (vrsta teksta)"
 	},
 	"Secondary_Language_When": {
-		"message": "Secondary Language When"
+		"message": "Drugi jezik kada"
 	},
 	"Swap_Key_Toggle_Mode": {
-		"message": "Swap Key Toggle Mode"
+		"message": "Tipke u načinu uključi/isključi"
 	},
 	"Toggle_Extension_When": {
-		"message": "Toggle Extension When"
-	},
-	"TTS_Pause_Resume_When": {
-		"message": "TTS Pause Resume When"
-	},
-	"GRAPHIC______________________________________": {
-		"message": "GRAPHIC                                      "
+		"message": "Uključi/isključi proširenje kada"
 	},
 	"GRAPHIC": {
-		"message": "GRAPHIC"
+		"message": "IZGLED"
 	},
 	"Tooltip_Font_Size": {
-		"message": "Tooltip Font Size"
+		"message": "Veličina fonta opisa"
 	},
 	"Tooltip_Font_Family": {
-		"message": "Tooltip Font Family"
-	},
-	"Subtitle_Background": {
-		"message": "Subtitle Background"
+		"message": "Font opisa"
 	},
 	"Tooltip_Width": {
-		"message": "Tooltip Width"
+		"message": "Širina opisa"
 	},
 	"Tooltip_Distance": {
-		"message": "Tooltip Distance"
+		"message": "Udaljenost opisa"
 	},
 	"Tooltip_Animation": {
-		"message": "Tooltip Animation"
+		"message": "Animacija opisa"
 	},
 	"Tooltip_Disappear_Duration": {
-		"message": "Tooltip Disappear Duration"
+		"message": "Vrijeme do nestanka opisa"
 	},
 	"Tooltip_Position": {
-		"message": "Tooltip Position"
+		"message": "Položaj opisa"
 	},
 	"Tooltip_Placement": {
-		"message": "Tooltip Placement"
+		"message": "Smještaj opisa"
 	},
 	"Above": {
-		"message": "Above"
+		"message": "Iznad"
 	},
 	"Below": {
-		"message": "Below"
+		"message": "Ispod"
 	},
 	"Tooltip_Text_Align": {
-		"message": "Tooltip Text Align"
+		"message": "Poravnanje teksta opisa"
 	},
 	"Tooltip_Background_Blur": {
-		"message": "Tooltip Background Blur"
+		"message": "Zamućenje pozadine opisa"
 	},
 	"Mouseover_Highlight_Text": {
-		"message": "Mouseover Highlight Text"
+		"message": "Istakni tekst pri prelasku mišem"
 	},
 	"Tooltip_Font_Color": {
-		"message": "Tooltip Font Color"
+		"message": "Boja teksta opisa"
 	},
 	"Tooltip_Background_Color": {
-		"message": "Tooltip Background Color"
+		"message": "Boja pozadine opisa"
 	},
 	"Tooltip_Border_Color": {
-		"message": "Tooltip Border Color"
+		"message": "Boja obruba opisa"
 	},
 	"Mouseover_Text_Highlight_Color": {
-		"message": "Mouseover Text Highlight Color"
+		"message": "Boja isticanja pri prelasku mišem"
 	},
 	"Ebook_Theme": {
-		"message": "Ebook Theme"
+		"message": "Tema e-knjige"
 	},
 	"Setting_Compact_mode": {
-		"message": "Setting Compact mode"
-	},
-	"VOICE______________________________________": {
-		"message": "VOICE                                      "
-	},
-	"VOICE": {
-		"message": "VOICE"
-	},
-	"Voice_Volume": {
-		"message": "Voice Volume"
-	},
-	"Voice_Speed": {
-		"message": "Voice Speed"
-	},
-	"Voice_Target": {
-		"message": "Voice Target"
-	},
-	"Voice_Repeat": {
-		"message": "Voice Repeat"
-	},
-	"Voice_for_": {
-		"message": "Voice for "
-	},
-	"Voice_speed_for_": {
-		"message": "Voice speed for "
-	},
-	"EXCLUDE______________________________________": {
-		"message": "EXCLUDE                                      "
+		"message": "Kompaktni prikaz postavki"
 	},
 	"EXCLUDE": {
-		"message": "EXCLUDE"
+		"message": "IZUZMI"
 	},
 	"Exclude_Language": {
-		"message": "Exclude Language"
+		"message": "Izuzmi jezik"
 	},
 	"Website_Filter_Mode": {
-		"message": "Website Filter Mode"
+		"message": "Način filtriranja web-mjesta"
 	},
 	"Exclude_Website": {
-		"message": "Exclude Website"
+		"message": "Izuzmi web-mjesto"
 	},
 	"Whitelist_Website": {
-		"message": "Whitelist Website"
+		"message": "Dopuštena web-mjesta"
 	},
 	"Website_Target_Language": {
-		"message": "Website Target Language"
+		"message": "Ciljni jezik po web-mjestu (npr. github.com=ko)"
 	},
 	"Block_Current_Site": {
-		"message": "Block Current Site"
+		"message": "Blokiraj ovo web-mjesto"
 	},
 	"Allow_Current_Site": {
-		"message": "Allow Current Site"
-	},
-	"ADVANCED______________________________________": {
-		"message": "ADVANCED                                      "
+		"message": "Dopusti ovo web-mjesto"
 	},
 	"ADVANCED": {
-		"message": "ADVANCED"
+		"message": "NAPREDNO"
 	},
 	"UI_Language": {
-		"message": "UI Language"
+		"message": "Jezik sučelja"
 	},
 	"Detect_PDF": {
-		"message": "Detect PDF"
+		"message": "Prepoznaj PDF"
 	},
 	"Mouseover_Text_Type_2": {
-		"message": "Secondary Mouseover Text Type"
-	},
-	"Mouseover_Pause_Subtitle": {
-		"message": "Mouseover Pause Subtitle"
+		"message": "Druga vrsta teksta pri prelasku mišem"
 	},
 	"Show_Tooltip_While_Typing": {
-		"message": "Show Tooltip While Typing"
+		"message": "Prikaži opis tijekom tipkanja"
 	},
 	"Tooltip_Info_Source_Text": {
-		"message": "Tooltip Info Source Text"
+		"message": "Prikaži izvorni tekst u opisu"
 	},
 	"Translate_Exclude_Regex": {
-		"message": "Translate Exclude Regex"
+		"message": "Regularni izraz za izuzimanje iz prijevoda"
 	},
 	"Tooltip_Info_Source_Language": {
-		"message": "Tooltip Info Source Language"
+		"message": "Prikaži izvorni jezik u opisu"
 	},
 	"Tooltip_Info_Transliteration": {
-		"message": "Tooltip Info Transliteration"
-	},
-	"Tooltip_Interval_Time": {
-		"message": "Tooltip Interval Time"
+		"message": "Prikaži transliteraciju u opisu"
 	},
 	"Tooltip_Show_Delay": {
-		"message": "Tooltip Show Delay"
+		"message": "Odgoda prikaza opisa"
 	},
 	"Tooltip_Word_Dictionary": {
-		"message": "Tooltip Word Dictionary"
+		"message": "Rječnik riječi u opisu"
 	},
 	"Tooltip_Word_Dictionary_Source": {
-		"message": "Tooltip Word Dictionary Source"
+		"message": "Izvor rječnika riječi"
 	},
 	"Fallback_Translator_Engine": {
-		"message": "Fallback Translator Engine"
-	},
-	"SPEECH": {
-		"message": "SPEECH"
-	},
-	"Speech_Recognition_Language": {
-		"message": "Speech Recognition Language"
-	},
-	"Voice_Panel_Translate_Language": {
-		"message": "Voice Panel Translate Language"
-	},
-	"Voice_Panel_Text_Target": {
-		"message": "Voice Panel Text Target"
-	},
-	"Voice_Panel_Padding": {
-		"message": "Voice Panel Padding"
-	},
-	"Voice_Panel_Text_Align": {
-		"message": "Voice Panel Text Align"
-	},
-	"Voice_Panel_Source_Font_Size": {
-		"message": "Voice Panel Source Font Size"
-	},
-	"Voice_Panel_Target_Font_Size": {
-		"message": "Voice Panel Target Font Size"
-	},
-	"Voice_Panel_Source_Font_Color": {
-		"message": "Voice Panel Source Font Color"
-	},
-	"Voice_Panel_Target_Font_Color": {
-		"message": "Voice Panel Target Font Color"
-	},
-	"Voice_Panel_Source_Border_Color": {
-		"message": "Voice Panel Source Border Color"
-	},
-	"Voice_Panel_Target_Border_Color": {
-		"message": "Voice Panel Target Border Color"
-	},
-	"Voice_Panel_Background_Color": {
-		"message": "Voice Panel Background Color"
-	},
-	"BACKUP______________________________________": {
-		"message": "BACKUP                                      "
+		"message": "Rezervni prevoditeljski servis"
 	},
 	"BACKUP": {
-		"message": "BACKUP"
+		"message": "SIGURNOSNA KOPIJA"
 	},
 	"Sync_Setting": {
-		"message": "Sync Setting"
+		"message": "Sinkroniziraj postavke na svim uređajima"
 	},
 	"Import_Setting": {
-		"message": "Import Setting"
+		"message": "Uvezi postavke"
 	},
 	"Export_Setting": {
-		"message": "Export Setting"
+		"message": "Izvezi postavke"
 	},
 	"Reset_Setting": {
-		"message": "Reset Setting"
-	},
-	"About______________________________________": {
-		"message": "About                                      "
+		"message": "Vrati zadane postavke"
 	},
 	"How_to_use": {
-		"message": "How to use"
+		"message": "Kako koristiti"
 	},
 	"Check_how_to_use_this_extension": {
-		"message": "Check how to use this extension"
+		"message": "Saznajte kako koristiti ovo proširenje"
 	},
 	"PDF_Viewer": {
-		"message": "PDF Viewer"
+		"message": "PDF preglednik"
 	},
 	"Translate_local_PDF_file": {
-		"message": "Translate local PDF file"
+		"message": "Prevedi lokalnu PDF datoteku"
 	},
 	"Ebook_Reader": {
-		"message": "Ebook Reader"
+		"message": "Čitač e-knjiga"
 	},
 	"Translate_local_ebook_file": {
-		"message": "Translate local ebook file"
-	},
-	"Twitter": {
-		"message": "Twitter"
-	},
-	"Retweet_twitter_post": {
-		"message": "Retweet twitter post"
-	},
-	"Review_Page": {
-		"message": "Review Page"
-	},
-	"Comment_on_this_extension": {
-		"message": "Comment on this extension"
+		"message": "Prevedi lokalnu datoteku e-knjige"
 	},
 	"Source_code": {
-		"message": "Source code"
+		"message": "Izvorni kod"
 	},
 	"Check_source_code_in_github": {
-		"message": "Check source code in github"
+		"message": "Pogledajte izvorni kod na GitHubu"
 	},
 	"Privacy_Policy": {
-		"message": "Privacy Policy"
+		"message": "Pravila privatnosti"
 	},
 	"User_privacy_policy": {
-		"message": "User privacy policy"
-	},
-	"Voice_Panel": {
-		"message": "Voice Panel"
-	},
-	"Translate_Voice": {
-		"message": "Translate Voice"
-	},
-	"Review______________________________________": {
-		"message": "Review                                      "
-	},
-	"Review_this": {
-		"message": "Review this"
-	},
-	"Developer_love_criticism": {
-		"message": "Developer love criticism"
-	},
-	"Coffee______________________________________": {
-		"message": "Coffee                                      "
-	},
-	"Support_this_extension": {
-		"message": "Support this extension"
-	},
-	"Feed_a_coffee_to_the_extension_devs": {
-		"message": "Feed a coffee to the extension devs"
-	},
-	"Title______________________________________": {
-		"message": "Title                                      "
-	},
-	"SELECT_OPTION______________________________": {
-		"message": "SELECT OPTION                              "
-	},
-	"On": {
-		"message": "On"
-	},
-	"Off": {
-		"message": "Off"
+		"message": "Pravila privatnosti korisnika"
 	},
 	"Auto": {
-		"message": "Auto"
+		"message": "Automatski"
 	},
 	"None": {
-		"message": "None"
+		"message": "Ništa"
 	},
 	"Select": {
-		"message": "Select"
+		"message": "Odabir"
 	},
 	"Mouseover": {
-		"message": "Mouseover"
+		"message": "Prelazak mišem"
 	},
 	"Mouseover_n_Select": {
-		"message": "Mouseover n Select"
+		"message": "Prelazak mišem i odabir"
 	},
 	"Follow": {
-		"message": "Follow"
+		"message": "Prati pokazivač"
 	},
 	"Fixed": {
-		"message": "Fixed"
+		"message": "Fiksno"
 	},
 	"Top_Right": {
-		"message": "Top Right"
+		"message": "Gore desno"
 	},
 	"Fade": {
-		"message": "Fade"
+		"message": "Blijeđenje"
 	},
 	"Scale": {
-		"message": "Scale"
+		"message": "Skaliranje"
 	},
 	"Shift_away": {
-		"message": "Shift away"
+		"message": "Odmicanje"
 	},
 	"Shift_toward": {
-		"message": "Shift toward"
+		"message": "Primicanje"
 	},
 	"Perspective": {
-		"message": "Perspective"
+		"message": "Perspektiva"
 	},
 	"Word": {
-		"message": "Word"
+		"message": "Riječ"
 	},
 	"Sentence": {
-		"message": "Sentence"
+		"message": "Rečenica"
 	},
 	"Container": {
-		"message": "Container"
+		"message": "Odlomak"
 	},
 	"Both": {
-		"message": "Both"
+		"message": "Oboje"
 	},
 	"Blacklist": {
-		"message": "Blacklist"
+		"message": "Popis blokiranih"
 	},
 	"Whitelist": {
-		"message": "Whitelist"
-	},
-	"Source": {
-		"message": "Source"
-	},
-	"Source_Text": {
-		"message": "Source Text"
-	},
-	"Translated_Text": {
-		"message": "Translated Text"
-	},
-	"Source_n_Translated": {
-		"message": "Source n Translated"
-	},
-	"Translated_n_Source": {
-		"message": "Translated n Source"
-	},
-	"Dual_Subtitle": {
-		"message": "Dual Subtitle"
-	},
-	"Target_Single_Subtitle": {
-		"message": "Target Single Subtitle"
-	},
-	"Source_Single_Subtitle": {
-		"message": "Source Single Subtitle"
+		"message": "Popis dopuštenih"
 	},
 	"Always": {
-		"message": "Always"
+		"message": "Uvijek"
 	},
 	"Center": {
-		"message": "Center"
+		"message": "Sredina"
 	},
 	"Left": {
-		"message": "Left"
+		"message": "Lijevo"
 	},
 	"Right": {
-		"message": "Right"
+		"message": "Desno"
 	},
 	"Justify": {
-		"message": "Justify"
+		"message": "Obostrano"
 	},
 	"Light": {
-		"message": "Light"
+		"message": "Svijetla"
 	},
 	"Dark": {
-		"message": "Dark"
+		"message": "Tamna"
 	},
 	"Default": {
-		"message": "Default"
+		"message": "Zadano"
 	},
 	"Ctrl_Left": {
-		"message": "Ctrl Left"
+		"message": "Lijevi Ctrl"
 	},
 	"Ctrl_Right": {
-		"message": "Ctrl Right"
+		"message": "Desni Ctrl"
 	},
 	"Alt_Left": {
-		"message": "Alt Left"
+		"message": "Lijevi Alt"
 	},
 	"Alt_Right": {
-		"message": "Alt Right"
+		"message": "Desni Alt"
 	},
 	"Shift_Left": {
-		"message": "Shift Left"
+		"message": "Lijevi Shift"
 	},
 	"Shift_Right": {
-		"message": "Shift Right"
+		"message": "Desni Shift"
 	},
 	"Meta_Left": {
-		"message": "Meta Left"
+		"message": "Lijevi Meta"
 	},
 	"Meta_Right": {
-		"message": "Meta Right"
+		"message": "Desni Meta"
 	},
 	"Click_Left": {
-		"message": "Click Left"
+		"message": "Lijevi klik"
 	},
 	"Click_Middle": {
-		"message": "Click Middle"
+		"message": "Srednji klik"
 	},
 	"Click_Right": {
-		"message": "Click Right"
+		"message": "Desni klik"
 	},
 	"google": {
 		"message": "google"
@@ -548,286 +356,148 @@
 	"bing": {
 		"message": "bing"
 	},
-	"Saved_Words": {
-		"message": "Saved Words"
-	},
-	"Group": {
-		"message": "Group"
-	},
-	"All": {
-		"message": "All"
-	},
-	"Move_to_group": {
-		"message": "Move to group"
-	},
-	"Delete": {
-		"message": "Delete"
-	},
-	"Clear": {
-		"message": "Clear"
-	},
-	"selected": {
-		"message": "selected"
-	},
-	"Date": {
-		"message": "Date"
-	},
-	"Translation": {
-		"message": "Translation"
-	},
-	"No_saved_words_yet": {
-		"message": "No saved words yet"
-	},
-	"Manage_Groups": {
-		"message": "Manage Groups"
-	},
-	"Remove_all": {
-		"message": "Remove all"
-	},
-	"Import_CSV": {
-		"message": "Import CSV"
-	},
-	"Download_CSV": {
-		"message": "Download CSV"
-	},
-	"Save_key": {
-		"message": "Save key"
-	},
-	"Highlight_on_page": {
-		"message": "Highlight on page"
-	},
-	"Right_click_menu": {
-		"message": "Right click menu"
-	},
-	"Add_right_click_context_menu": {
-		"message": "Add right click context menu"
-	},
-	"Done": {
-		"message": "Done"
-	},
-	"On_Select": {
-		"message": "On Select"
-	},
-	"On_Hover": {
-		"message": "On Hover"
-	},
-	"On_Select_n_Hover": {
-		"message": "On Select n Hover"
-	},
-	"Select_group_to_play": {
-		"message": "Select group to play"
-	},
-	"No_Group_Selected": {
-		"message": "No Group Selected"
-	},
-	"Check_groups_to_play": {
-		"message": "Check groups to play"
-	},
-	"Flashcard_makes_cards_from_your_saved_words": {
-		"message": "Flashcard makes cards from your saved words"
-	},
-	"Flashcard": {
-		"message": "Flashcard"
-	},
-	"Play_Flashcard": {
-		"message": "Play Flashcard"
-	},
-	"Reset_progress": {
-		"message": "Reset progress"
-	},
-	"No_History_Data": {
-		"message": "No History Data"
-	},
-	"Today_play_is_completed": {
-		"message": "Today play is completed"
-	},
-	"Try_on_next_day": {
-		"message": "Try on next day"
-	},
-	"No_more_card_to_learn_today": {
-		"message": "No more card to learn today"
-	},
-	"Add_more_history_data_to_play_with": {
-		"message": "Add more history data to play with"
-	},
-	"Finish": {
-		"message": "Finish"
-	},
-	"Today_Flashcards_are_Completed": {
-		"message": "Today Flashcards are Completed"
-	},
-	"No_More_Card_Data": {
-		"message": "No More Card Data"
-	},
-	"Show_Answer": {
-		"message": "Show Answer"
-	},
-	"Again": {
-		"message": "Again"
-	},
-	"Hard": {
-		"message": "Hard"
-	},
-	"Good": {
-		"message": "Good"
-	},
-	"Easy": {
-		"message": "Easy"
-	},
-	"New": {
-		"message": "New"
-	},
-	"Review": {
-		"message": "Review"
-	},
-	"Learning": {
-		"message": "Learning"
-	},
 	"About": {
-		"message": "About"
+		"message": "O proširenju"
 	},
 	"Translator": {
-		"message": "Translator"
+		"message": "Prevoditelj"
 	},
 	"Wiktionary": {
 		"message": "Wiktionary"
 	},
-	"Translated": {
-		"message": "Translated"
-	},
 	"Custom": {
-		"message": "Custom"
+		"message": "Prilagođeno"
 	},
 	"Back": {
-		"message": "Back"
+		"message": "Natrag"
 	},
 	"Cancel": {
-		"message": "Cancel"
+		"message": "Odustani"
 	},
 	"Remove": {
-		"message": "Remove"
+		"message": "Ukloni"
 	},
 	"Alpha": {
-		"message": "Alpha"
+		"message": "Neprozirnost"
 	},
 	"Fetch_models_from_endpoint": {
-		"message": "Fetch models from endpoint"
+		"message": "Dohvati modele s krajnje točke"
 	},
 	"No_models_returned_by_endpoint": {
-		"message": "No models returned by endpoint"
+		"message": "Krajnja točka nije vratila nijedan model"
 	},
 	"API_endpoint_is_empty": {
-		"message": "API endpoint is empty"
+		"message": "Krajnja točka API-ja je prazna"
 	},
 	"Failed_to_fetch_LLM_models": {
-		"message": "Failed to fetch LLM models"
+		"message": "Dohvaćanje LLM modela nije uspjelo"
 	},
 	"Open_this_popup_on_a_website_to_use_this_button": {
-		"message": "Open this popup on a website to use this button"
+		"message": "Otvorite ovaj skočni prozor na web-mjestu da biste koristili ovaj gumb"
 	},
 	"Import_failed": {
-		"message": "Import failed"
+		"message": "Uvoz nije uspio"
 	},
 	"Copy_PDF_URL": {
-		"message": "Copy PDF URL"
+		"message": "Kopiraj URL PDF-a"
 	},
 	"Copied": {
-		"message": "Copied"
+		"message": "Kopirano"
 	},
 	"Copy_failed": {
-		"message": "Copy failed"
+		"message": "Kopiranje nije uspjelo"
 	},
 	"Allow_access_to_file_URLs_to_open_local_PDF_files": {
-		"message": "Allow access to file URLs to open local PDF files"
+		"message": "Dopustite pristup URL-ovima datoteka za otvaranje lokalnih PDF datoteka"
 	},
 	"Open_File": {
-		"message": "Open File"
+		"message": "Otvori datoteku"
 	},
 	"Previous_Page": {
-		"message": "Previous Page"
+		"message": "Prethodna stranica"
 	},
 	"Next_Page": {
-		"message": "Next Page"
+		"message": "Sljedeća stranica"
 	},
 	"Table_of_Contents": {
-		"message": "Table of Contents"
+		"message": "Sadržaj"
 	},
 	"Drop_an_ebook_file_here_or_open_one": {
-		"message": "Drop an ebook file here or open one"
+		"message": "Ispustite datoteku e-knjige ovdje ili je otvorite"
 	},
 	"Could_not_open_this_file": {
-		"message": "Could not open this file"
+		"message": "Nije moguće otvoriti ovu datoteku"
 	},
 	"Untitled": {
-		"message": "Untitled"
+		"message": "Bez naslova"
 	},
 	"Page": {
-		"message": "Page"
+		"message": "Stranica"
 	},
 	"Zoom_out": {
-		"message": "Zoom out"
+		"message": "Umanji"
 	},
 	"Zoom": {
-		"message": "Zoom"
+		"message": "Zumiranje"
 	},
 	"Zoom_in": {
-		"message": "Zoom in"
+		"message": "Uvećaj"
 	},
 	"Automatic_zoom": {
-		"message": "Automatic zoom"
+		"message": "Automatsko zumiranje"
 	},
 	"Page_fit": {
-		"message": "Page fit"
+		"message": "Prilagodi stranici"
 	},
 	"Page_width": {
-		"message": "Page width"
+		"message": "Prilagodi širini"
 	},
 	"Find": {
-		"message": "Find"
+		"message": "Traži"
 	},
 	"Dark_mode": {
-		"message": "Dark mode"
+		"message": "Tamni način"
 	},
 	"Download": {
-		"message": "Download"
+		"message": "Preuzmi"
 	},
 	"Find_in_document": {
-		"message": "Find in document"
+		"message": "Traži u dokumentu"
 	},
 	"Previous_match": {
-		"message": "Previous match"
+		"message": "Prethodno podudaranje"
 	},
 	"Next_match": {
-		"message": "Next match"
+		"message": "Sljedeće podudaranje"
 	},
 	"Highlight_all": {
-		"message": "Highlight all"
+		"message": "Istakni sve"
 	},
 	"Match_case": {
-		"message": "Match case"
+		"message": "Razlikuj velika i mala slova"
 	},
 	"Phrase_not_found": {
-		"message": "Phrase not found"
+		"message": "Izraz nije pronađen"
 	},
 	"Close": {
-		"message": "Close"
+		"message": "Zatvori"
 	},
 	"Failed_to_load_the_PDF_file": {
-		"message": "Failed to load the PDF file"
+		"message": "Učitavanje PDF datoteke nije uspjelo"
 	},
 	"Drop_a_PDF_file_here": {
-		"message": "Drop a PDF file here"
+		"message": "Ispustite PDF datoteku ovdje"
 	},
 	"Enter_the_password_to_open_this_PDF_file": {
-		"message": "Enter the password to open this PDF file"
+		"message": "Unesite lozinku za otvaranje ove PDF datoteke"
 	},
 	"Invalid_password_try_again": {
-		"message": "Invalid password try again"
+		"message": "Neispravna lozinka, pokušajte ponovno"
 	},
 	"appName": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Mouse Tooltip Translator Refined"
 	},
 	"appDesc": {
-		"message": "Hover or select text to translate it in a tooltip. Also works in PDF and ebook files."
+		"message": "Postavite pokazivač iznad teksta ili ga odaberite za prijevod u opisu. Radi i u PDF datotekama i e-knjigama."
 	}
 }

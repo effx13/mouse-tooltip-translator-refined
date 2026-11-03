@@ -1,7 +1,4 @@
 {
-	"MAIN______________________________________": {
-		"message": "MAIN                                      "
-	},
 	"MAIN": {
 		"message": "ANA PANEL"
 	},
@@ -21,22 +18,22 @@
 		"message": "Çeviri Motoru"
 	},
 	"LLM_Provider": {
-		"message": "LLM Provider"
+		"message": "LLM Sağlayıcısı"
 	},
 	"LLM_Api_Endpoint": {
-		"message": "LLM API Endpoint URL"
+		"message": "LLM API Uç Nokta URL'si"
 	},
 	"LLM_Api_Key": {
-		"message": "LLM API Key"
+		"message": "LLM API anahtarı (isteğe bağlı)"
 	},
 	"LLM_Model": {
-		"message": "LLM Model"
+		"message": "LLM Modeli"
 	},
 	"Mouseover_Text_Type": {
 		"message": "Fare Hareketi Yazı Tipi"
 	},
 	"Translate_Into_2": {
-		"message": "Secondary Translate Into"
+		"message": "İkinci Hedef Dil"
 	},
 	"Writing_Language": {
 		"message": "Yazım Dili"
@@ -44,77 +41,41 @@
 	"Reverse_Translate_Language": {
 		"message": "Ters Çeviri Dili"
 	},
-	"OCR_Language": {
-		"message": "OCR Dili"
-	},
-	"Detect_Subtitle": {
-		"message": "Altyazı Algıla"
-	},
-	"KEYBOARD______________________________________": {
-		"message": "KEYBOARD                                      "
-	},
 	"KEYBOARD": {
 		"message": "KLAVYE"
 	},
 	"Show_Tooltip_When": {
 		"message": "İpucu Şu Durumda Gösterilsin"
 	},
-	"Voice_When": {
-		"message": "Şu Durumda Seslendir"
-	},
 	"Translate_Writing_When": {
 		"message": "Yazıyı Şu Durumda Çevir"
 	},
 	"Ignore_AltGr_Modifier": {
-		"message": "Ignore AltGr Modifier"
-	},
-	"Auto_Reader_When": {
-		"message": "Otomatik Okuyucu Ne Zaman"
+		"message": "AltGr Değiştiricisini Yok Say"
 	},
 	"Translate_Page_When": {
-		"message": "Translate Page When"
-	},
-	"OCR_When": {
-		"message": "OCR Şu Durumda"
-	},
-	"Mouseover_Text_Type_Swap_Key": {
-		"message": "Üzerine Gelince Metin Türünü Değiştirme Tuşu"
-	},
-	"Speech_Recognition_When": {
-		"message": "Konuşma Tanıma Ne Zaman"
-	},
-	"Toggle_Mouseover_Text_Type_When": {
-		"message": "Toggle Mouseover Text Type When"
+		"message": "Sayfayı Şu Durumda Çevir"
 	},
 	"Mouseover_Text_Type_Key_Hold": {
-		"message": "Mouseover Text Type Key Hold"
+		"message": "Fare Üstü Metin Türünü Değiştirme Tuşu"
 	},
 	"Secondary_Language_When": {
-		"message": "Secondary Language When"
+		"message": "İkinci Dil Şu Durumda"
 	},
 	"Swap_Key_Toggle_Mode": {
-		"message": "Swap Key Toggle Mode"
+		"message": "Geçiş Tuşları Aç/Kapa Gibi Çalışsın"
 	},
 	"Toggle_Extension_When": {
-		"message": "Toggle Extension When"
-	},
-	"TTS_Pause_Resume_When": {
-		"message": "TTS Pause Resume When"
-	},
-	"GRAPHIC______________________________________": {
-		"message": "GRAPHIC                                      "
+		"message": "Uzantıyı Şu Durumda Aç/Kapat"
 	},
 	"GRAPHIC": {
-		"message": "GRAPHIC"
+		"message": "GÖRÜNÜM"
 	},
 	"Tooltip_Font_Size": {
 		"message": "İpucu Yazı Boyutu"
 	},
 	"Tooltip_Font_Family": {
-		"message": "Tooltip Font Family"
-	},
-	"Subtitle_Background": {
-		"message": "Subtitle Background"
+		"message": "İpucu Yazı Tipi"
 	},
 	"Tooltip_Width": {
 		"message": "İpucu Genişliği"
@@ -126,19 +87,19 @@
 		"message": "İpucu Animasyonu"
 	},
 	"Tooltip_Disappear_Duration": {
-		"message": "Tooltip Disappear Duration"
+		"message": "İpucu Kaybolma Süresi"
 	},
 	"Tooltip_Position": {
 		"message": "İpucu Konumu"
 	},
 	"Tooltip_Placement": {
-		"message": "Tooltip Placement"
+		"message": "İpucu Yerleşimi"
 	},
 	"Above": {
-		"message": "Above"
+		"message": "Üstte"
 	},
 	"Below": {
-		"message": "Below"
+		"message": "Altta"
 	},
 	"Tooltip_Text_Align": {
 		"message": "İpucu Metni Hizalama"
@@ -162,46 +123,19 @@
 		"message": "Üzerine Gelince Metin Vurgu Rengi"
 	},
 	"Ebook_Theme": {
-		"message": "Ebook Theme"
+		"message": "E-Kitap Teması"
 	},
 	"Setting_Compact_mode": {
-		"message": "Setting Compact mode"
-	},
-	"VOICE______________________________________": {
-		"message": "VOICE                                      "
-	},
-	"VOICE": {
-		"message": "VOICE"
-	},
-	"Voice_Volume": {
-		"message": "Ses Seviyesi"
-	},
-	"Voice_Speed": {
-		"message": "Ses Hızı"
-	},
-	"Voice_Target": {
-		"message": "Ses Hedefi"
-	},
-	"Voice_Repeat": {
-		"message": "Ses Tekrarı"
-	},
-	"Voice_for_": {
-		"message": "Şunun İçin Seslendirme"
-	},
-	"Voice_speed_for_": {
-		"message": "Voice speed for "
-	},
-	"EXCLUDE______________________________________": {
-		"message": "EXCLUDE                                      "
+		"message": "Ayarlar Kompakt Modu"
 	},
 	"EXCLUDE": {
-		"message": "EXCLUDE"
+		"message": "HARİÇ TUT"
 	},
 	"Exclude_Language": {
 		"message": "Dili Hariç Tut"
 	},
 	"Website_Filter_Mode": {
-		"message": "Website Filter Mode"
+		"message": "Web Sitesi Filtre Modu"
 	},
 	"Exclude_Website": {
 		"message": "Veb Sitesini Hariç Tut"
@@ -210,109 +144,58 @@
 		"message": "Beyaz Liste Web Sitesi"
 	},
 	"Website_Target_Language": {
-		"message": "Website Target Language"
+		"message": "Siteye göre hedef dil (ör. github.com=ko)"
 	},
 	"Block_Current_Site": {
-		"message": "Block Current Site"
+		"message": "Bu Siteyi Engelle"
 	},
 	"Allow_Current_Site": {
-		"message": "Allow Current Site"
-	},
-	"ADVANCED______________________________________": {
-		"message": "ADVANCED                                      "
+		"message": "Bu Siteye İzin Ver"
 	},
 	"ADVANCED": {
-		"message": "ADVANCED"
+		"message": "GELİŞMİŞ"
 	},
 	"UI_Language": {
-		"message": "UI Language"
+		"message": "Arayüz Dili"
 	},
 	"Detect_PDF": {
-		"message": "Detect PDF"
+		"message": "PDF'leri Algıla"
 	},
 	"Mouseover_Text_Type_2": {
-		"message": "Secondary Mouseover Text Type"
-	},
-	"Mouseover_Pause_Subtitle": {
-		"message": "Mouseover Pause Subtitle"
+		"message": "İkinci Fare Üstü Metin Türü"
 	},
 	"Show_Tooltip_While_Typing": {
-		"message": "Show Tooltip While Typing"
+		"message": "Yazarken İpucunu Göster"
 	},
 	"Tooltip_Info_Source_Text": {
 		"message": "İpucu Kaynak Metni"
 	},
 	"Translate_Exclude_Regex": {
-		"message": "Translate Exclude Regex"
+		"message": "Çeviriden Hariç Tutma Regex'i"
 	},
 	"Tooltip_Info_Source_Language": {
-		"message": "Tooltip Info Source Language"
+		"message": "İpucunda Kaynak Dil"
 	},
 	"Tooltip_Info_Transliteration": {
-		"message": "Tooltip Info Transliteration"
-	},
-	"Tooltip_Interval_Time": {
-		"message": "İpucu Süre Aralığı"
+		"message": "İpucunda Harf Çevirisi"
 	},
 	"Tooltip_Show_Delay": {
-		"message": "Tooltip Show Delay"
+		"message": "İpucu Gösterme Gecikmesi"
 	},
 	"Tooltip_Word_Dictionary": {
 		"message": "Tooltip Kelime Sözlüğü"
 	},
 	"Tooltip_Word_Dictionary_Source": {
-		"message": "Tooltip Word Dictionary Source"
+		"message": "İpucu Kelime Sözlüğü Kaynağı"
 	},
 	"Fallback_Translator_Engine": {
 		"message": "Yedek Çevirmen Motoru"
-	},
-	"SPEECH": {
-		"message": "Konuşma"
-	},
-	"Speech_Recognition_Language": {
-		"message": "Konuşma Tanıma Dili"
-	},
-	"Voice_Panel_Translate_Language": {
-		"message": "Ses Paneli Dil Çevirme"
-	},
-	"Voice_Panel_Text_Target": {
-		"message": "Ses Paneli Metin Hedefi"
-	},
-	"Voice_Panel_Padding": {
-		"message": "Ses Paneli Dolgusu"
-	},
-	"Voice_Panel_Text_Align": {
-		"message": "Ses Paneli Metin Hizalama"
-	},
-	"Voice_Panel_Source_Font_Size": {
-		"message": "Ses Paneli Kaynak Yazı Tipi Boyutu"
-	},
-	"Voice_Panel_Target_Font_Size": {
-		"message": "Ses Paneli Hedef Yazı Tipi Boyutu"
-	},
-	"Voice_Panel_Source_Font_Color": {
-		"message": "Ses Paneli Kaynak Yazı Tipi Rengi"
-	},
-	"Voice_Panel_Target_Font_Color": {
-		"message": "Ses Paneli Hedef Yazı Tipi Rengi"
-	},
-	"Voice_Panel_Source_Border_Color": {
-		"message": "Ses Paneli Kaynak Kenarlık Rengi"
-	},
-	"Voice_Panel_Target_Border_Color": {
-		"message": "Ses Paneli Hedef Kenarlık Rengi"
-	},
-	"Voice_Panel_Background_Color": {
-		"message": "Ses Paneli Arka Plan Rengi"
-	},
-	"BACKUP______________________________________": {
-		"message": "YEDEKLE                                      "
 	},
 	"BACKUP": {
 		"message": "YEDEKLE"
 	},
 	"Sync_Setting": {
-		"message": "Sync Setting"
+		"message": "Ayarları cihazlar arasında eşitle"
 	},
 	"Import_Setting": {
 		"message": "Ayarları İçe Aktar"
@@ -323,86 +206,35 @@
 	"Reset_Setting": {
 		"message": "Ayarları Sıfırla"
 	},
-	"About______________________________________": {
-		"message": "About                                      "
-	},
 	"How_to_use": {
-		"message": "How to use"
+		"message": "Nasıl Kullanılır"
 	},
 	"Check_how_to_use_this_extension": {
-		"message": "Check how to use this extension"
+		"message": "Bu uzantının nasıl kullanılacağına bakın"
 	},
 	"PDF_Viewer": {
-		"message": "PDF Viewer"
+		"message": "PDF Görüntüleyici"
 	},
 	"Translate_local_PDF_file": {
-		"message": "Translate local PDF file"
+		"message": "Yerel PDF dosyasını çevir"
 	},
 	"Ebook_Reader": {
-		"message": "Ebook Reader"
+		"message": "E-Kitap Okuyucu"
 	},
 	"Translate_local_ebook_file": {
-		"message": "Translate local ebook file"
-	},
-	"Twitter": {
-		"message": "Twitter"
-	},
-	"Retweet_twitter_post": {
-		"message": "Retweet twitter post"
-	},
-	"Review_Page": {
-		"message": "Review Page"
-	},
-	"Comment_on_this_extension": {
-		"message": "Comment on this extension"
+		"message": "Yerel e-kitap dosyasını çevir"
 	},
 	"Source_code": {
-		"message": "Source code"
+		"message": "Kaynak kodu"
 	},
 	"Check_source_code_in_github": {
-		"message": "Check source code in github"
+		"message": "Kaynak kodunu GitHub'da inceleyin"
 	},
 	"Privacy_Policy": {
-		"message": "Privacy Policy"
+		"message": "Gizlilik Politikası"
 	},
 	"User_privacy_policy": {
-		"message": "User privacy policy"
-	},
-	"Voice_Panel": {
-		"message": "Ses Paneli"
-	},
-	"Translate_Voice": {
-		"message": "Ses Çevir"
-	},
-	"Review______________________________________": {
-		"message": "Review                                      "
-	},
-	"Review_this": {
-		"message": "Review this"
-	},
-	"Developer_love_criticism": {
-		"message": "Developer love criticism"
-	},
-	"Coffee______________________________________": {
-		"message": "Kahve                                      "
-	},
-	"Support_this_extension": {
-		"message": "Bu uzantıyı destekleyin"
-	},
-	"Feed_a_coffee_to_the_extension_devs": {
-		"message": "Uzantı geliştiricilerine bir kahve verin"
-	},
-	"Title______________________________________": {
-		"message": "Title                                      "
-	},
-	"SELECT_OPTION______________________________": {
-		"message": "SEÇENEĞİ SEÇ                              "
-	},
-	"On": {
-		"message": "Açık"
-	},
-	"Off": {
-		"message": "Kapalı"
+		"message": "Kullanıcı gizlilik politikası"
 	},
 	"Auto": {
 		"message": "Otomatik"
@@ -426,7 +258,7 @@
 		"message": "Düzeltildi"
 	},
 	"Top_Right": {
-		"message": "Top Right"
+		"message": "Sağ Üst"
 	},
 	"Fade": {
 		"message": "Karart"
@@ -435,7 +267,7 @@
 		"message": "Ölçek"
 	},
 	"Shift_away": {
-		"message": "Shift away"
+		"message": "Uzaklaş"
 	},
 	"Shift_toward": {
 		"message": "Yaklaş"
@@ -453,37 +285,13 @@
 		"message": "Kapsayıcı"
 	},
 	"Both": {
-		"message": "Both"
+		"message": "Her İkisi"
 	},
 	"Blacklist": {
-		"message": "Blacklist"
+		"message": "Engelleme Listesi"
 	},
 	"Whitelist": {
-		"message": "Whitelist"
-	},
-	"Source": {
-		"message": "Kaynak"
-	},
-	"Source_Text": {
-		"message": "Kaynak Metin"
-	},
-	"Translated_Text": {
-		"message": "Çevirilmiş Metin"
-	},
-	"Source_n_Translated": {
-		"message": "Kaynak & Çeviri"
-	},
-	"Translated_n_Source": {
-		"message": "Çeviri & Kaynak"
-	},
-	"Dual_Subtitle": {
-		"message": "Çift Altyazı"
-	},
-	"Target_Single_Subtitle": {
-		"message": "Hedef Tek Altyazı"
-	},
-	"Source_Single_Subtitle": {
-		"message": "Kaynak Tek Altyazı"
+		"message": "İzin Listesi"
 	},
 	"Always": {
 		"message": "Her Zaman"
@@ -501,10 +309,10 @@
 		"message": "Yasla"
 	},
 	"Light": {
-		"message": "Light"
+		"message": "Açık"
 	},
 	"Dark": {
-		"message": "Dark"
+		"message": "Koyu"
 	},
 	"Default": {
 		"message": "Varsayılan"
@@ -548,286 +356,148 @@
 	"bing": {
 		"message": "bing"
 	},
-	"Saved_Words": {
-		"message": "Saved Words"
-	},
-	"Group": {
-		"message": "Group"
-	},
-	"All": {
-		"message": "All"
-	},
-	"Move_to_group": {
-		"message": "Move to group"
-	},
-	"Delete": {
-		"message": "Delete"
-	},
-	"Clear": {
-		"message": "Clear"
-	},
-	"selected": {
-		"message": "selected"
-	},
-	"Date": {
-		"message": "Date"
-	},
-	"Translation": {
-		"message": "Translation"
-	},
-	"No_saved_words_yet": {
-		"message": "No saved words yet"
-	},
-	"Manage_Groups": {
-		"message": "Manage Groups"
-	},
-	"Remove_all": {
-		"message": "Remove all"
-	},
-	"Import_CSV": {
-		"message": "Import CSV"
-	},
-	"Download_CSV": {
-		"message": "Download CSV"
-	},
-	"Save_key": {
-		"message": "Save key"
-	},
-	"Highlight_on_page": {
-		"message": "Highlight on page"
-	},
-	"Right_click_menu": {
-		"message": "Right click menu"
-	},
-	"Add_right_click_context_menu": {
-		"message": "Add right click context menu"
-	},
-	"Done": {
-		"message": "Done"
-	},
-	"On_Select": {
-		"message": "On Select"
-	},
-	"On_Hover": {
-		"message": "On Hover"
-	},
-	"On_Select_n_Hover": {
-		"message": "On Select n Hover"
-	},
-	"Select_group_to_play": {
-		"message": "Select group to play"
-	},
-	"No_Group_Selected": {
-		"message": "No Group Selected"
-	},
-	"Check_groups_to_play": {
-		"message": "Check groups to play"
-	},
-	"Flashcard_makes_cards_from_your_saved_words": {
-		"message": "Flashcard makes cards from your saved words"
-	},
-	"Flashcard": {
-		"message": "Flashcard"
-	},
-	"Play_Flashcard": {
-		"message": "Play Flashcard"
-	},
-	"Reset_progress": {
-		"message": "Reset progress"
-	},
-	"No_History_Data": {
-		"message": "No History Data"
-	},
-	"Today_play_is_completed": {
-		"message": "Today play is completed"
-	},
-	"Try_on_next_day": {
-		"message": "Try on next day"
-	},
-	"No_more_card_to_learn_today": {
-		"message": "No more card to learn today"
-	},
-	"Add_more_history_data_to_play_with": {
-		"message": "Add more history data to play with"
-	},
-	"Finish": {
-		"message": "Finish"
-	},
-	"Today_Flashcards_are_Completed": {
-		"message": "Today Flashcards are Completed"
-	},
-	"No_More_Card_Data": {
-		"message": "No More Card Data"
-	},
-	"Show_Answer": {
-		"message": "Show Answer"
-	},
-	"Again": {
-		"message": "Again"
-	},
-	"Hard": {
-		"message": "Hard"
-	},
-	"Good": {
-		"message": "Good"
-	},
-	"Easy": {
-		"message": "Easy"
-	},
-	"New": {
-		"message": "New"
-	},
-	"Review": {
-		"message": "Review"
-	},
-	"Learning": {
-		"message": "Learning"
-	},
 	"About": {
-		"message": "About"
+		"message": "Hakkında"
 	},
 	"Translator": {
-		"message": "Translator"
+		"message": "Çevirmen"
 	},
 	"Wiktionary": {
 		"message": "Wiktionary"
 	},
-	"Translated": {
-		"message": "Translated"
-	},
 	"Custom": {
-		"message": "Custom"
+		"message": "Özel"
 	},
 	"Back": {
-		"message": "Back"
+		"message": "Geri"
 	},
 	"Cancel": {
-		"message": "Cancel"
+		"message": "İptal"
 	},
 	"Remove": {
-		"message": "Remove"
+		"message": "Kaldır"
 	},
 	"Alpha": {
-		"message": "Alpha"
+		"message": "Saydamlık"
 	},
 	"Fetch_models_from_endpoint": {
-		"message": "Fetch models from endpoint"
+		"message": "Modelleri uç noktadan getir"
 	},
 	"No_models_returned_by_endpoint": {
-		"message": "No models returned by endpoint"
+		"message": "Uç nokta hiç model döndürmedi"
 	},
 	"API_endpoint_is_empty": {
-		"message": "API endpoint is empty"
+		"message": "API uç noktası boş"
 	},
 	"Failed_to_fetch_LLM_models": {
-		"message": "Failed to fetch LLM models"
+		"message": "LLM modelleri getirilemedi"
 	},
 	"Open_this_popup_on_a_website_to_use_this_button": {
-		"message": "Open this popup on a website to use this button"
+		"message": "Bu düğmeyi kullanmak için bu açılır pencereyi bir web sitesinde açın"
 	},
 	"Import_failed": {
-		"message": "Import failed"
+		"message": "İçe aktarma başarısız"
 	},
 	"Copy_PDF_URL": {
-		"message": "Copy PDF URL"
+		"message": "PDF URL'sini kopyala"
 	},
 	"Copied": {
-		"message": "Copied"
+		"message": "Kopyalandı"
 	},
 	"Copy_failed": {
-		"message": "Copy failed"
+		"message": "Kopyalanamadı"
 	},
 	"Allow_access_to_file_URLs_to_open_local_PDF_files": {
-		"message": "Allow access to file URLs to open local PDF files"
+		"message": "Yerel PDF dosyalarını açmak için dosya URL'lerine erişime izin verin"
 	},
 	"Open_File": {
-		"message": "Open File"
+		"message": "Dosya Aç"
 	},
 	"Previous_Page": {
-		"message": "Previous Page"
+		"message": "Önceki Sayfa"
 	},
 	"Next_Page": {
-		"message": "Next Page"
+		"message": "Sonraki Sayfa"
 	},
 	"Table_of_Contents": {
-		"message": "Table of Contents"
+		"message": "İçindekiler"
 	},
 	"Drop_an_ebook_file_here_or_open_one": {
-		"message": "Drop an ebook file here or open one"
+		"message": "Bir e-kitap dosyasını buraya bırakın veya bir dosya açın"
 	},
 	"Could_not_open_this_file": {
-		"message": "Could not open this file"
+		"message": "Bu dosya açılamadı"
 	},
 	"Untitled": {
-		"message": "Untitled"
+		"message": "Adsız"
 	},
 	"Page": {
-		"message": "Page"
+		"message": "Sayfa"
 	},
 	"Zoom_out": {
-		"message": "Zoom out"
+		"message": "Uzaklaştır"
 	},
 	"Zoom": {
-		"message": "Zoom"
+		"message": "Yakınlaştırma"
 	},
 	"Zoom_in": {
-		"message": "Zoom in"
+		"message": "Yakınlaştır"
 	},
 	"Automatic_zoom": {
-		"message": "Automatic zoom"
+		"message": "Otomatik yakınlaştır"
 	},
 	"Page_fit": {
-		"message": "Page fit"
+		"message": "Sayfaya sığdır"
 	},
 	"Page_width": {
-		"message": "Page width"
+		"message": "Sayfa genişliği"
 	},
 	"Find": {
-		"message": "Find"
+		"message": "Bul"
 	},
 	"Dark_mode": {
-		"message": "Dark mode"
+		"message": "Karanlık mod"
 	},
 	"Download": {
-		"message": "Download"
+		"message": "İndir"
 	},
 	"Find_in_document": {
-		"message": "Find in document"
+		"message": "Belgede bul"
 	},
 	"Previous_match": {
-		"message": "Previous match"
+		"message": "Önceki eşleşme"
 	},
 	"Next_match": {
-		"message": "Next match"
+		"message": "Sonraki eşleşme"
 	},
 	"Highlight_all": {
-		"message": "Highlight all"
+		"message": "Tümünü vurgula"
 	},
 	"Match_case": {
-		"message": "Match case"
+		"message": "Büyük-küçük harf eşleştir"
 	},
 	"Phrase_not_found": {
-		"message": "Phrase not found"
+		"message": "İfade bulunamadı"
 	},
 	"Close": {
-		"message": "Close"
+		"message": "Kapat"
 	},
 	"Failed_to_load_the_PDF_file": {
-		"message": "Failed to load the PDF file"
+		"message": "PDF dosyası yüklenemedi"
 	},
 	"Drop_a_PDF_file_here": {
-		"message": "Drop a PDF file here"
+		"message": "PDF dosyasını buraya bırakın"
 	},
 	"Enter_the_password_to_open_this_PDF_file": {
-		"message": "Enter the password to open this PDF file"
+		"message": "Bu PDF dosyasını açmak için parolayı girin"
 	},
 	"Invalid_password_try_again": {
-		"message": "Invalid password try again"
+		"message": "Geçersiz parola, yeniden deneyin"
 	},
 	"appName": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Mouse Tooltip Translator Refined"
 	},
 	"appDesc": {
-		"message": "Hover or select text to translate it in a tooltip. Also works in PDF and ebook files."
+		"message": "Metnin üzerine gelin veya seçin, çevirisi bir ipucunda görünsün. PDF ve e-kitap dosyalarında da çalışır."
 	}
 }

@@ -3,8 +3,6 @@
 .wxt
 web-ext-artifacts
 /example
-mouse_tooltip_translator_*.zip
-mouse_tooltip_translator.zip
 build.zip
 size-plugin.json
 .vscode/

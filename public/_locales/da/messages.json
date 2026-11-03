@@ -1,546 +1,354 @@
 {
-	"MAIN______________________________________": {
-		"message": "MAIN                                      "
-	},
 	"MAIN": {
-		"message": "MAIN"
+		"message": "HOVED"
 	},
 	"Mouse_Tooltip_Translator": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Oversætter til værktøjstip til mus"
 	},
 	"Translate_When": {
-		"message": "Translate When"
+		"message": "Oversæt Hvornår"
 	},
 	"Translate_From": {
-		"message": "Translate From"
+		"message": "Oversæt fra"
 	},
 	"Translate_Into": {
-		"message": "Translate Into"
+		"message": "Oversæt til"
 	},
 	"Translator_Engine": {
-		"message": "Translator Engine"
+		"message": "Oversættermotor"
 	},
 	"LLM_Provider": {
-		"message": "LLM Provider"
+		"message": "LLM udbyder"
 	},
 	"LLM_Api_Endpoint": {
-		"message": "LLM API Endpoint URL"
+		"message": "URL til LLM API-endpoint"
 	},
 	"LLM_Api_Key": {
-		"message": "LLM API Key"
+		"message": "LLM API-nøgle (valgfri)"
 	},
 	"LLM_Model": {
-		"message": "LLM Model"
+		"message": "LLM model"
 	},
 	"Mouseover_Text_Type": {
-		"message": "Mouseover Text Type"
+		"message": "Hold musen over teksttype"
 	},
 	"Translate_Into_2": {
-		"message": "Secondary Translate Into"
+		"message": "Sekundær Oversæt til"
 	},
 	"Writing_Language": {
-		"message": "Writing Language"
+		"message": "Skrivesprog"
 	},
 	"Reverse_Translate_Language": {
-		"message": "Reverse Translate Language"
-	},
-	"OCR_Language": {
-		"message": "OCR Language"
-	},
-	"Detect_Subtitle": {
-		"message": "Detect Subtitle"
-	},
-	"KEYBOARD______________________________________": {
-		"message": "KEYBOARD                                      "
+		"message": "Omvendt oversættelsessprog"
 	},
 	"KEYBOARD": {
-		"message": "KEYBOARD"
+		"message": "TASTATUR"
 	},
 	"Show_Tooltip_When": {
-		"message": "Show Tooltip When"
-	},
-	"Voice_When": {
-		"message": "Voice When"
+		"message": "Vis værktøjstip Hvornår"
 	},
 	"Translate_Writing_When": {
-		"message": "Translate Writing When"
+		"message": "Oversæt Writing When"
 	},
 	"Ignore_AltGr_Modifier": {
-		"message": "Ignore AltGr Modifier"
-	},
-	"Auto_Reader_When": {
-		"message": "Auto Reader When"
+		"message": "Ignorer AltGr Modifier"
 	},
 	"Translate_Page_When": {
-		"message": "Translate Page When"
-	},
-	"OCR_When": {
-		"message": "OCR When"
-	},
-	"Mouseover_Text_Type_Swap_Key": {
-		"message": "Mouseover Text Type Swap Key"
-	},
-	"Speech_Recognition_When": {
-		"message": "Speech Recognition When"
-	},
-	"Toggle_Mouseover_Text_Type_When": {
-		"message": "Toggle Mouseover Text Type When"
+		"message": "Oversæt side Hvornår"
 	},
 	"Mouseover_Text_Type_Key_Hold": {
-		"message": "Mouseover Text Type Key Hold"
+		"message": "Hold musen over Teksttype Tast Hold"
 	},
 	"Secondary_Language_When": {
-		"message": "Secondary Language When"
+		"message": "Sekundært sprog Hvornår"
 	},
 	"Swap_Key_Toggle_Mode": {
-		"message": "Swap Key Toggle Mode"
+		"message": "Skiftetaster slår til/fra"
 	},
 	"Toggle_Extension_When": {
-		"message": "Toggle Extension When"
-	},
-	"TTS_Pause_Resume_When": {
-		"message": "TTS Pause Resume When"
-	},
-	"GRAPHIC______________________________________": {
-		"message": "GRAPHIC                                      "
+		"message": "Slå udvidelse til/fra hvornår"
 	},
 	"GRAPHIC": {
-		"message": "GRAPHIC"
+		"message": "GRAFIK"
 	},
 	"Tooltip_Font_Size": {
-		"message": "Tooltip Font Size"
+		"message": "Værktøjstip skrifttypestørrelse"
 	},
 	"Tooltip_Font_Family": {
-		"message": "Tooltip Font Family"
-	},
-	"Subtitle_Background": {
-		"message": "Subtitle Background"
+		"message": "Værktøjstip skrifttypefamilie"
 	},
 	"Tooltip_Width": {
-		"message": "Tooltip Width"
+		"message": "Værktøjstip bredde"
 	},
 	"Tooltip_Distance": {
-		"message": "Tooltip Distance"
+		"message": "Værktøjstip afstand"
 	},
 	"Tooltip_Animation": {
-		"message": "Tooltip Animation"
+		"message": "Værktøjstip-animation"
 	},
 	"Tooltip_Disappear_Duration": {
-		"message": "Tooltip Disappear Duration"
+		"message": "Værktøjstip forsvinder varighed"
 	},
 	"Tooltip_Position": {
-		"message": "Tooltip Position"
+		"message": "Værktøjstip position"
 	},
 	"Tooltip_Placement": {
-		"message": "Tooltip Placement"
+		"message": "Placering af værktøjstip"
 	},
 	"Above": {
-		"message": "Above"
+		"message": "ovenfor"
 	},
 	"Below": {
-		"message": "Below"
+		"message": "Nedenfor"
 	},
 	"Tooltip_Text_Align": {
-		"message": "Tooltip Text Align"
+		"message": "Værktøjstip Tekstjustering"
 	},
 	"Tooltip_Background_Blur": {
-		"message": "Tooltip Background Blur"
+		"message": "Værktøjstip baggrundssløring"
 	},
 	"Mouseover_Highlight_Text": {
-		"message": "Mouseover Highlight Text"
+		"message": "Marker tekst med musen over"
 	},
 	"Tooltip_Font_Color": {
-		"message": "Tooltip Font Color"
+		"message": "Værktøjstip skrifttypefarve"
 	},
 	"Tooltip_Background_Color": {
-		"message": "Tooltip Background Color"
+		"message": "Værktøjstip baggrundsfarve"
 	},
 	"Tooltip_Border_Color": {
-		"message": "Tooltip Border Color"
+		"message": "Værktøjstip kantfarve"
 	},
 	"Mouseover_Text_Highlight_Color": {
-		"message": "Mouseover Text Highlight Color"
+		"message": "Hold musen over tekstfremhævningsfarve"
 	},
 	"Ebook_Theme": {
-		"message": "Ebook Theme"
+		"message": "E-bog tema"
 	},
 	"Setting_Compact_mode": {
-		"message": "Setting Compact mode"
-	},
-	"VOICE______________________________________": {
-		"message": "VOICE                                      "
-	},
-	"VOICE": {
-		"message": "VOICE"
-	},
-	"Voice_Volume": {
-		"message": "Voice Volume"
-	},
-	"Voice_Speed": {
-		"message": "Voice Speed"
-	},
-	"Voice_Target": {
-		"message": "Voice Target"
-	},
-	"Voice_Repeat": {
-		"message": "Voice Repeat"
-	},
-	"Voice_for_": {
-		"message": "Voice for "
-	},
-	"Voice_speed_for_": {
-		"message": "Voice speed for "
-	},
-	"EXCLUDE______________________________________": {
-		"message": "EXCLUDE                                      "
+		"message": "Indstilling af kompakt tilstand"
 	},
 	"EXCLUDE": {
-		"message": "EXCLUDE"
+		"message": "UDELUKK"
 	},
 	"Exclude_Language": {
-		"message": "Exclude Language"
+		"message": "Udelad sprog"
 	},
 	"Website_Filter_Mode": {
-		"message": "Website Filter Mode"
+		"message": "Hjemmesidefiltertilstand"
 	},
 	"Exclude_Website": {
-		"message": "Exclude Website"
+		"message": "Ekskluder websted"
 	},
 	"Whitelist_Website": {
-		"message": "Whitelist Website"
+		"message": "Whitelist hjemmeside"
 	},
 	"Website_Target_Language": {
-		"message": "Website Target Language"
+		"message": "Målsprog pr. websted (f.eks. github.com=ko)"
 	},
 	"Block_Current_Site": {
-		"message": "Block Current Site"
+		"message": "Bloker nuværende websted"
 	},
 	"Allow_Current_Site": {
-		"message": "Allow Current Site"
-	},
-	"ADVANCED______________________________________": {
-		"message": "ADVANCED                                      "
+		"message": "Tillad nuværende websted"
 	},
 	"ADVANCED": {
-		"message": "ADVANCED"
+		"message": "AVANCERET"
 	},
 	"UI_Language": {
-		"message": "UI Language"
+		"message": "UI sprog"
 	},
 	"Detect_PDF": {
-		"message": "Detect PDF"
+		"message": "Find PDF"
 	},
 	"Mouseover_Text_Type_2": {
-		"message": "Secondary Mouseover Text Type"
-	},
-	"Mouseover_Pause_Subtitle": {
-		"message": "Mouseover Pause Subtitle"
+		"message": "Sekundær Mouseover-teksttype"
 	},
 	"Show_Tooltip_While_Typing": {
-		"message": "Show Tooltip While Typing"
+		"message": "Vis værktøjstip, mens du skriver"
 	},
 	"Tooltip_Info_Source_Text": {
-		"message": "Tooltip Info Source Text"
+		"message": "Værktøjstip Info Kildetekst"
 	},
 	"Translate_Exclude_Regex": {
-		"message": "Translate Exclude Regex"
+		"message": "Oversæt Ekskluder regulært udtryk"
 	},
 	"Tooltip_Info_Source_Language": {
-		"message": "Tooltip Info Source Language"
+		"message": "Værktøjstip Info Kildesprog"
 	},
 	"Tooltip_Info_Transliteration": {
-		"message": "Tooltip Info Transliteration"
-	},
-	"Tooltip_Interval_Time": {
-		"message": "Tooltip Interval Time"
+		"message": "Værktøjstip Info Translitteration"
 	},
 	"Tooltip_Show_Delay": {
-		"message": "Tooltip Show Delay"
+		"message": "Værktøjstip Vis forsinkelse"
 	},
 	"Tooltip_Word_Dictionary": {
-		"message": "Tooltip Word Dictionary"
+		"message": "Værktøjstip Word-ordbog"
 	},
 	"Tooltip_Word_Dictionary_Source": {
-		"message": "Tooltip Word Dictionary Source"
+		"message": "Værktøjstip Word Ordbog Kilde"
 	},
 	"Fallback_Translator_Engine": {
-		"message": "Fallback Translator Engine"
-	},
-	"SPEECH": {
-		"message": "SPEECH"
-	},
-	"Speech_Recognition_Language": {
-		"message": "Speech Recognition Language"
-	},
-	"Voice_Panel_Translate_Language": {
-		"message": "Voice Panel Translate Language"
-	},
-	"Voice_Panel_Text_Target": {
-		"message": "Voice Panel Text Target"
-	},
-	"Voice_Panel_Padding": {
-		"message": "Voice Panel Padding"
-	},
-	"Voice_Panel_Text_Align": {
-		"message": "Voice Panel Text Align"
-	},
-	"Voice_Panel_Source_Font_Size": {
-		"message": "Voice Panel Source Font Size"
-	},
-	"Voice_Panel_Target_Font_Size": {
-		"message": "Voice Panel Target Font Size"
-	},
-	"Voice_Panel_Source_Font_Color": {
-		"message": "Voice Panel Source Font Color"
-	},
-	"Voice_Panel_Target_Font_Color": {
-		"message": "Voice Panel Target Font Color"
-	},
-	"Voice_Panel_Source_Border_Color": {
-		"message": "Voice Panel Source Border Color"
-	},
-	"Voice_Panel_Target_Border_Color": {
-		"message": "Voice Panel Target Border Color"
-	},
-	"Voice_Panel_Background_Color": {
-		"message": "Voice Panel Background Color"
-	},
-	"BACKUP______________________________________": {
-		"message": "BACKUP                                      "
+		"message": "Fallback oversættermotor"
 	},
 	"BACKUP": {
-		"message": "BACKUP"
+		"message": "SIKKERHEDSKOPI"
 	},
 	"Sync_Setting": {
-		"message": "Sync Setting"
+		"message": "Synkroniser indstillinger på tværs af enheder"
 	},
 	"Import_Setting": {
-		"message": "Import Setting"
+		"message": "Importindstilling"
 	},
 	"Export_Setting": {
-		"message": "Export Setting"
+		"message": "Eksportindstilling"
 	},
 	"Reset_Setting": {
-		"message": "Reset Setting"
-	},
-	"About______________________________________": {
-		"message": "About                                      "
+		"message": "Nulstil indstilling"
 	},
 	"How_to_use": {
-		"message": "How to use"
+		"message": "Sådan bruges"
 	},
 	"Check_how_to_use_this_extension": {
-		"message": "Check how to use this extension"
+		"message": "Tjek, hvordan du bruger denne udvidelse"
 	},
 	"PDF_Viewer": {
-		"message": "PDF Viewer"
+		"message": "PDF-fremviser"
 	},
 	"Translate_local_PDF_file": {
-		"message": "Translate local PDF file"
+		"message": "Oversæt lokal PDF-fil"
 	},
 	"Ebook_Reader": {
-		"message": "Ebook Reader"
+		"message": "E-bogslæser"
 	},
 	"Translate_local_ebook_file": {
-		"message": "Translate local ebook file"
-	},
-	"Twitter": {
-		"message": "Twitter"
-	},
-	"Retweet_twitter_post": {
-		"message": "Retweet twitter post"
-	},
-	"Review_Page": {
-		"message": "Review Page"
-	},
-	"Comment_on_this_extension": {
-		"message": "Comment on this extension"
+		"message": "Oversæt lokal e-bogsfil"
 	},
 	"Source_code": {
-		"message": "Source code"
+		"message": "Kildekode"
 	},
 	"Check_source_code_in_github": {
-		"message": "Check source code in github"
+		"message": "Tjek kildekoden i github"
 	},
 	"Privacy_Policy": {
-		"message": "Privacy Policy"
+		"message": "Privatlivspolitik"
 	},
 	"User_privacy_policy": {
-		"message": "User privacy policy"
-	},
-	"Voice_Panel": {
-		"message": "Voice Panel"
-	},
-	"Translate_Voice": {
-		"message": "Translate Voice"
-	},
-	"Review______________________________________": {
-		"message": "Review                                      "
-	},
-	"Review_this": {
-		"message": "Review this"
-	},
-	"Developer_love_criticism": {
-		"message": "Developer love criticism"
-	},
-	"Coffee______________________________________": {
-		"message": "Coffee                                      "
-	},
-	"Support_this_extension": {
-		"message": "Support this extension"
-	},
-	"Feed_a_coffee_to_the_extension_devs": {
-		"message": "Feed a coffee to the extension devs"
-	},
-	"Title______________________________________": {
-		"message": "Title                                      "
-	},
-	"SELECT_OPTION______________________________": {
-		"message": "SELECT OPTION                              "
-	},
-	"On": {
-		"message": "On"
-	},
-	"Off": {
-		"message": "Off"
+		"message": "Bruger privatlivspolitik"
 	},
 	"Auto": {
-		"message": "Auto"
+		"message": "Automatisk"
 	},
 	"None": {
-		"message": "None"
+		"message": "Ingen"
 	},
 	"Select": {
-		"message": "Select"
+		"message": "Vælg"
 	},
 	"Mouseover": {
-		"message": "Mouseover"
+		"message": "Hold musen over"
 	},
 	"Mouseover_n_Select": {
-		"message": "Mouseover n Select"
+		"message": "Hold musen over n Vælg"
 	},
 	"Follow": {
-		"message": "Follow"
+		"message": "Følg med"
 	},
 	"Fixed": {
-		"message": "Fixed"
+		"message": "Fast"
 	},
 	"Top_Right": {
-		"message": "Top Right"
+		"message": "Øverst til højre"
 	},
 	"Fade": {
-		"message": "Fade"
+		"message": "Udton"
 	},
 	"Scale": {
-		"message": "Scale"
+		"message": "Skala"
 	},
 	"Shift_away": {
-		"message": "Shift away"
+		"message": "Skift væk"
 	},
 	"Shift_toward": {
-		"message": "Shift toward"
+		"message": "Skift mod"
 	},
 	"Perspective": {
-		"message": "Perspective"
+		"message": "Perspektiv"
 	},
 	"Word": {
-		"message": "Word"
+		"message": "Ord"
 	},
 	"Sentence": {
-		"message": "Sentence"
+		"message": "Sætning"
 	},
 	"Container": {
-		"message": "Container"
+		"message": "Afsnit"
 	},
 	"Both": {
-		"message": "Both"
+		"message": "Begge dele"
 	},
 	"Blacklist": {
-		"message": "Blacklist"
+		"message": "Sortliste"
 	},
 	"Whitelist": {
-		"message": "Whitelist"
-	},
-	"Source": {
-		"message": "Source"
-	},
-	"Source_Text": {
-		"message": "Source Text"
-	},
-	"Translated_Text": {
-		"message": "Translated Text"
-	},
-	"Source_n_Translated": {
-		"message": "Source n Translated"
-	},
-	"Translated_n_Source": {
-		"message": "Translated n Source"
-	},
-	"Dual_Subtitle": {
-		"message": "Dual Subtitle"
-	},
-	"Target_Single_Subtitle": {
-		"message": "Target Single Subtitle"
-	},
-	"Source_Single_Subtitle": {
-		"message": "Source Single Subtitle"
+		"message": "Hvidliste"
 	},
 	"Always": {
-		"message": "Always"
+		"message": "Altid"
 	},
 	"Center": {
-		"message": "Center"
+		"message": "Centreret"
 	},
 	"Left": {
-		"message": "Left"
+		"message": "venstre"
 	},
 	"Right": {
-		"message": "Right"
+		"message": "Højre"
 	},
 	"Justify": {
-		"message": "Justify"
+		"message": "retfærdiggøre"
 	},
 	"Light": {
-		"message": "Light"
+		"message": "Lys"
 	},
 	"Dark": {
-		"message": "Dark"
+		"message": "Mørk"
 	},
 	"Default": {
-		"message": "Default"
+		"message": "Standard"
 	},
 	"Ctrl_Left": {
-		"message": "Ctrl Left"
+		"message": "Ctrl til venstre"
 	},
 	"Ctrl_Right": {
-		"message": "Ctrl Right"
+		"message": "Ctrl højre"
 	},
 	"Alt_Left": {
-		"message": "Alt Left"
+		"message": "Alt til venstre"
 	},
 	"Alt_Right": {
-		"message": "Alt Right"
+		"message": "Alt højre"
 	},
 	"Shift_Left": {
-		"message": "Shift Left"
+		"message": "Skift til venstre"
 	},
 	"Shift_Right": {
-		"message": "Shift Right"
+		"message": "Skift til højre"
 	},
 	"Meta_Left": {
-		"message": "Meta Left"
+		"message": "Meta Venstre"
 	},
 	"Meta_Right": {
-		"message": "Meta Right"
+		"message": "Meta højre"
 	},
 	"Click_Left": {
-		"message": "Click Left"
+		"message": "Klik på Venstre"
 	},
 	"Click_Middle": {
-		"message": "Click Middle"
+		"message": "Klik i midten"
 	},
 	"Click_Right": {
-		"message": "Click Right"
+		"message": "Klik på Højre"
 	},
 	"google": {
 		"message": "google"
@@ -548,286 +356,148 @@
 	"bing": {
 		"message": "bing"
 	},
-	"Saved_Words": {
-		"message": "Saved Words"
-	},
-	"Group": {
-		"message": "Group"
-	},
-	"All": {
-		"message": "All"
-	},
-	"Move_to_group": {
-		"message": "Move to group"
-	},
-	"Delete": {
-		"message": "Delete"
-	},
-	"Clear": {
-		"message": "Clear"
-	},
-	"selected": {
-		"message": "selected"
-	},
-	"Date": {
-		"message": "Date"
-	},
-	"Translation": {
-		"message": "Translation"
-	},
-	"No_saved_words_yet": {
-		"message": "No saved words yet"
-	},
-	"Manage_Groups": {
-		"message": "Manage Groups"
-	},
-	"Remove_all": {
-		"message": "Remove all"
-	},
-	"Import_CSV": {
-		"message": "Import CSV"
-	},
-	"Download_CSV": {
-		"message": "Download CSV"
-	},
-	"Save_key": {
-		"message": "Save key"
-	},
-	"Highlight_on_page": {
-		"message": "Highlight on page"
-	},
-	"Right_click_menu": {
-		"message": "Right click menu"
-	},
-	"Add_right_click_context_menu": {
-		"message": "Add right click context menu"
-	},
-	"Done": {
-		"message": "Done"
-	},
-	"On_Select": {
-		"message": "On Select"
-	},
-	"On_Hover": {
-		"message": "On Hover"
-	},
-	"On_Select_n_Hover": {
-		"message": "On Select n Hover"
-	},
-	"Select_group_to_play": {
-		"message": "Select group to play"
-	},
-	"No_Group_Selected": {
-		"message": "No Group Selected"
-	},
-	"Check_groups_to_play": {
-		"message": "Check groups to play"
-	},
-	"Flashcard_makes_cards_from_your_saved_words": {
-		"message": "Flashcard makes cards from your saved words"
-	},
-	"Flashcard": {
-		"message": "Flashcard"
-	},
-	"Play_Flashcard": {
-		"message": "Play Flashcard"
-	},
-	"Reset_progress": {
-		"message": "Reset progress"
-	},
-	"No_History_Data": {
-		"message": "No History Data"
-	},
-	"Today_play_is_completed": {
-		"message": "Today play is completed"
-	},
-	"Try_on_next_day": {
-		"message": "Try on next day"
-	},
-	"No_more_card_to_learn_today": {
-		"message": "No more card to learn today"
-	},
-	"Add_more_history_data_to_play_with": {
-		"message": "Add more history data to play with"
-	},
-	"Finish": {
-		"message": "Finish"
-	},
-	"Today_Flashcards_are_Completed": {
-		"message": "Today Flashcards are Completed"
-	},
-	"No_More_Card_Data": {
-		"message": "No More Card Data"
-	},
-	"Show_Answer": {
-		"message": "Show Answer"
-	},
-	"Again": {
-		"message": "Again"
-	},
-	"Hard": {
-		"message": "Hard"
-	},
-	"Good": {
-		"message": "Good"
-	},
-	"Easy": {
-		"message": "Easy"
-	},
-	"New": {
-		"message": "New"
-	},
-	"Review": {
-		"message": "Review"
-	},
-	"Learning": {
-		"message": "Learning"
-	},
 	"About": {
-		"message": "About"
+		"message": "Om"
 	},
 	"Translator": {
-		"message": "Translator"
+		"message": "Oversætter"
 	},
 	"Wiktionary": {
 		"message": "Wiktionary"
 	},
-	"Translated": {
-		"message": "Translated"
-	},
 	"Custom": {
-		"message": "Custom"
+		"message": "Brugerdefineret"
 	},
 	"Back": {
-		"message": "Back"
+		"message": "Tilbage"
 	},
 	"Cancel": {
-		"message": "Cancel"
+		"message": "Annuller"
 	},
 	"Remove": {
-		"message": "Remove"
+		"message": "Fjern"
 	},
 	"Alpha": {
-		"message": "Alpha"
+		"message": "Alfa"
 	},
 	"Fetch_models_from_endpoint": {
-		"message": "Fetch models from endpoint"
+		"message": "Hent modeller fra slutpunktet"
 	},
 	"No_models_returned_by_endpoint": {
-		"message": "No models returned by endpoint"
+		"message": "Ingen modeller returneret af slutpunktet"
 	},
 	"API_endpoint_is_empty": {
-		"message": "API endpoint is empty"
+		"message": "API-endepunktet er tomt"
 	},
 	"Failed_to_fetch_LLM_models": {
-		"message": "Failed to fetch LLM models"
+		"message": "LLM-modeller kunne ikke hentes"
 	},
 	"Open_this_popup_on_a_website_to_use_this_button": {
-		"message": "Open this popup on a website to use this button"
+		"message": "Åbn denne popup på et websted for at bruge denne knap"
 	},
 	"Import_failed": {
-		"message": "Import failed"
+		"message": "Import mislykkedes"
 	},
 	"Copy_PDF_URL": {
-		"message": "Copy PDF URL"
+		"message": "Kopier PDF-URL"
 	},
 	"Copied": {
-		"message": "Copied"
+		"message": "Kopieret"
 	},
 	"Copy_failed": {
-		"message": "Copy failed"
+		"message": "Kopiering mislykkedes"
 	},
 	"Allow_access_to_file_URLs_to_open_local_PDF_files": {
-		"message": "Allow access to file URLs to open local PDF files"
+		"message": "Tillad adgang til fil-URL'er for at åbne lokale PDF-filer"
 	},
 	"Open_File": {
-		"message": "Open File"
+		"message": "Åbn fil"
 	},
 	"Previous_Page": {
-		"message": "Previous Page"
+		"message": "Forrige side"
 	},
 	"Next_Page": {
-		"message": "Next Page"
+		"message": "Næste side"
 	},
 	"Table_of_Contents": {
-		"message": "Table of Contents"
+		"message": "Indholdsfortegnelse"
 	},
 	"Drop_an_ebook_file_here_or_open_one": {
-		"message": "Drop an ebook file here or open one"
+		"message": "Slip en e-bogsfil her, eller åbn en"
 	},
 	"Could_not_open_this_file": {
-		"message": "Could not open this file"
+		"message": "Kunne ikke åbne denne fil"
 	},
 	"Untitled": {
-		"message": "Untitled"
+		"message": "Uden titel"
 	},
 	"Page": {
-		"message": "Page"
+		"message": "Side"
 	},
 	"Zoom_out": {
-		"message": "Zoom out"
+		"message": "Zoom ud"
 	},
 	"Zoom": {
 		"message": "Zoom"
 	},
 	"Zoom_in": {
-		"message": "Zoom in"
+		"message": "Zoom ind"
 	},
 	"Automatic_zoom": {
-		"message": "Automatic zoom"
+		"message": "Automatisk zoom"
 	},
 	"Page_fit": {
-		"message": "Page fit"
+		"message": "Sidetilpasning"
 	},
 	"Page_width": {
-		"message": "Page width"
+		"message": "Sidebredde"
 	},
 	"Find": {
-		"message": "Find"
+		"message": "Søg"
 	},
 	"Dark_mode": {
-		"message": "Dark mode"
+		"message": "Mørk tilstand"
 	},
 	"Download": {
-		"message": "Download"
+		"message": "Hent"
 	},
 	"Find_in_document": {
-		"message": "Find in document"
+		"message": "Find i dokument"
 	},
 	"Previous_match": {
-		"message": "Previous match"
+		"message": "Forrige kamp"
 	},
 	"Next_match": {
-		"message": "Next match"
+		"message": "Næste kamp"
 	},
 	"Highlight_all": {
-		"message": "Highlight all"
+		"message": "Fremhæv alle"
 	},
 	"Match_case": {
-		"message": "Match case"
+		"message": "Matchetui"
 	},
 	"Phrase_not_found": {
-		"message": "Phrase not found"
+		"message": "Sætningen blev ikke fundet"
 	},
 	"Close": {
-		"message": "Close"
+		"message": "Luk"
 	},
 	"Failed_to_load_the_PDF_file": {
-		"message": "Failed to load the PDF file"
+		"message": "Kunne ikke indlæse PDF-filen"
 	},
 	"Drop_a_PDF_file_here": {
-		"message": "Drop a PDF file here"
+		"message": "Smid en PDF-fil her"
 	},
 	"Enter_the_password_to_open_this_PDF_file": {
-		"message": "Enter the password to open this PDF file"
+		"message": "Indtast adgangskoden for at åbne denne PDF-fil"
 	},
 	"Invalid_password_try_again": {
-		"message": "Invalid password try again"
+		"message": "Ugyldig adgangskode prøv igen"
 	},
 	"appName": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Mouse Tooltip Translator Refined"
 	},
 	"appDesc": {
-		"message": "Hover or select text to translate it in a tooltip. Also works in PDF and ebook files."
+		"message": "Hold musen over tekst, eller markér den, for at oversætte den i et værktøjstip. Virker også i PDF- og e-bogsfiler."
 	}
 }

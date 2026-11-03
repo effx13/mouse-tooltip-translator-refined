@@ -1,546 +1,354 @@
 {
-	"MAIN______________________________________": {
-		"message": "MAIN                                      "
-	},
 	"MAIN": {
-		"message": "MAIN"
+		"message": "GALVENIE"
 	},
 	"Mouse_Tooltip_Translator": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Mouse Tooltip Translator Refined"
 	},
 	"Translate_When": {
-		"message": "Translate When"
+		"message": "Tulkot, kad"
 	},
 	"Translate_From": {
-		"message": "Translate From"
+		"message": "Tulkot no"
 	},
 	"Translate_Into": {
-		"message": "Translate Into"
+		"message": "Tulkot uz"
 	},
 	"Translator_Engine": {
-		"message": "Translator Engine"
+		"message": "Tulkošanas dzinējs"
 	},
 	"LLM_Provider": {
-		"message": "LLM Provider"
+		"message": "LLM nodrošinātājs"
 	},
 	"LLM_Api_Endpoint": {
-		"message": "LLM API Endpoint URL"
+		"message": "LLM API galapunkta URL"
 	},
 	"LLM_Api_Key": {
-		"message": "LLM API Key"
+		"message": "LLM API atslēga (neobligāti)"
 	},
 	"LLM_Model": {
-		"message": "LLM Model"
+		"message": "LLM modelis"
 	},
 	"Mouseover_Text_Type": {
-		"message": "Mouseover Text Type"
+		"message": "Teksta veids, novietojot peli"
 	},
 	"Translate_Into_2": {
-		"message": "Secondary Translate Into"
+		"message": "Otrā mērķa valoda"
 	},
 	"Writing_Language": {
-		"message": "Writing Language"
+		"message": "Rakstīšanas valoda"
 	},
 	"Reverse_Translate_Language": {
-		"message": "Reverse Translate Language"
-	},
-	"OCR_Language": {
-		"message": "OCR Language"
-	},
-	"Detect_Subtitle": {
-		"message": "Detect Subtitle"
-	},
-	"KEYBOARD______________________________________": {
-		"message": "KEYBOARD                                      "
+		"message": "Apgrieztās tulkošanas valoda"
 	},
 	"KEYBOARD": {
-		"message": "KEYBOARD"
+		"message": "TASTATŪRA"
 	},
 	"Show_Tooltip_When": {
-		"message": "Show Tooltip When"
-	},
-	"Voice_When": {
-		"message": "Voice When"
+		"message": "Rādīt rīka padomu, kad"
 	},
 	"Translate_Writing_When": {
-		"message": "Translate Writing When"
+		"message": "Tulkot rakstīto tekstu, kad"
 	},
 	"Ignore_AltGr_Modifier": {
-		"message": "Ignore AltGr Modifier"
-	},
-	"Auto_Reader_When": {
-		"message": "Auto Reader When"
+		"message": "Ignorēt AltGr taustiņu"
 	},
 	"Translate_Page_When": {
-		"message": "Translate Page When"
-	},
-	"OCR_When": {
-		"message": "OCR When"
-	},
-	"Mouseover_Text_Type_Swap_Key": {
-		"message": "Mouseover Text Type Swap Key"
-	},
-	"Speech_Recognition_When": {
-		"message": "Speech Recognition When"
-	},
-	"Toggle_Mouseover_Text_Type_When": {
-		"message": "Toggle Mouseover Text Type When"
+		"message": "Tulkot lapu, kad"
 	},
 	"Mouseover_Text_Type_Key_Hold": {
-		"message": "Mouseover Text Type Key Hold"
+		"message": "Teksta veids, novietojot peli (turot taustiņu)"
 	},
 	"Secondary_Language_When": {
-		"message": "Secondary Language When"
+		"message": "Otrā valoda, kad"
 	},
 	"Swap_Key_Toggle_Mode": {
-		"message": "Swap Key Toggle Mode"
+		"message": "Taustiņu pārslēgšanas režīms"
 	},
 	"Toggle_Extension_When": {
-		"message": "Toggle Extension When"
-	},
-	"TTS_Pause_Resume_When": {
-		"message": "TTS Pause Resume When"
-	},
-	"GRAPHIC______________________________________": {
-		"message": "GRAPHIC                                      "
+		"message": "Ieslēgt/izslēgt paplašinājumu, kad"
 	},
 	"GRAPHIC": {
-		"message": "GRAPHIC"
+		"message": "IZSKATS"
 	},
 	"Tooltip_Font_Size": {
-		"message": "Tooltip Font Size"
+		"message": "Rīka padoma fonta lielums"
 	},
 	"Tooltip_Font_Family": {
-		"message": "Tooltip Font Family"
-	},
-	"Subtitle_Background": {
-		"message": "Subtitle Background"
+		"message": "Rīka padoma fonts"
 	},
 	"Tooltip_Width": {
-		"message": "Tooltip Width"
+		"message": "Rīka padoma platums"
 	},
 	"Tooltip_Distance": {
-		"message": "Tooltip Distance"
+		"message": "Rīka padoma attālums"
 	},
 	"Tooltip_Animation": {
-		"message": "Tooltip Animation"
+		"message": "Rīka padoma animācija"
 	},
 	"Tooltip_Disappear_Duration": {
-		"message": "Tooltip Disappear Duration"
+		"message": "Rīka padoma pazušanas laiks"
 	},
 	"Tooltip_Position": {
-		"message": "Tooltip Position"
+		"message": "Rīka padoma pozīcija"
 	},
 	"Tooltip_Placement": {
-		"message": "Tooltip Placement"
+		"message": "Rīka padoma novietojums"
 	},
 	"Above": {
-		"message": "Above"
+		"message": "Virs"
 	},
 	"Below": {
-		"message": "Below"
+		"message": "Zem"
 	},
 	"Tooltip_Text_Align": {
-		"message": "Tooltip Text Align"
+		"message": "Rīka padoma teksta līdzinājums"
 	},
 	"Tooltip_Background_Blur": {
-		"message": "Tooltip Background Blur"
+		"message": "Rīka padoma fona izpludinājums"
 	},
 	"Mouseover_Highlight_Text": {
-		"message": "Mouseover Highlight Text"
+		"message": "Izcelt tekstu, novietojot peli"
 	},
 	"Tooltip_Font_Color": {
-		"message": "Tooltip Font Color"
+		"message": "Rīka padoma teksta krāsa"
 	},
 	"Tooltip_Background_Color": {
-		"message": "Tooltip Background Color"
+		"message": "Rīka padoma fona krāsa"
 	},
 	"Tooltip_Border_Color": {
-		"message": "Tooltip Border Color"
+		"message": "Rīka padoma apmales krāsa"
 	},
 	"Mouseover_Text_Highlight_Color": {
-		"message": "Mouseover Text Highlight Color"
+		"message": "Izcēluma krāsa, novietojot peli"
 	},
 	"Ebook_Theme": {
-		"message": "Ebook Theme"
+		"message": "E-grāmatas motīvs"
 	},
 	"Setting_Compact_mode": {
-		"message": "Setting Compact mode"
-	},
-	"VOICE______________________________________": {
-		"message": "VOICE                                      "
-	},
-	"VOICE": {
-		"message": "VOICE"
-	},
-	"Voice_Volume": {
-		"message": "Voice Volume"
-	},
-	"Voice_Speed": {
-		"message": "Voice Speed"
-	},
-	"Voice_Target": {
-		"message": "Voice Target"
-	},
-	"Voice_Repeat": {
-		"message": "Voice Repeat"
-	},
-	"Voice_for_": {
-		"message": "Voice for "
-	},
-	"Voice_speed_for_": {
-		"message": "Voice speed for "
-	},
-	"EXCLUDE______________________________________": {
-		"message": "EXCLUDE                                      "
+		"message": "Kompakts iestatījumu režīms"
 	},
 	"EXCLUDE": {
-		"message": "EXCLUDE"
+		"message": "IZŅĒMUMI"
 	},
 	"Exclude_Language": {
-		"message": "Exclude Language"
+		"message": "Izslēgt valodas"
 	},
 	"Website_Filter_Mode": {
-		"message": "Website Filter Mode"
+		"message": "Vietņu filtrēšanas režīms"
 	},
 	"Exclude_Website": {
-		"message": "Exclude Website"
+		"message": "Izslēgt vietnes"
 	},
 	"Whitelist_Website": {
-		"message": "Whitelist Website"
+		"message": "Atļautās vietnes"
 	},
 	"Website_Target_Language": {
-		"message": "Website Target Language"
+		"message": "Mērķvaloda katrai vietnei (piem., github.com=ko)"
 	},
 	"Block_Current_Site": {
-		"message": "Block Current Site"
+		"message": "Bloķēt pašreizējo vietni"
 	},
 	"Allow_Current_Site": {
-		"message": "Allow Current Site"
-	},
-	"ADVANCED______________________________________": {
-		"message": "ADVANCED                                      "
+		"message": "Atļaut pašreizējo vietni"
 	},
 	"ADVANCED": {
-		"message": "ADVANCED"
+		"message": "PAPILDU"
 	},
 	"UI_Language": {
-		"message": "UI Language"
+		"message": "Saskarnes valoda"
 	},
 	"Detect_PDF": {
-		"message": "Detect PDF"
+		"message": "Atvērt PDF skatītājā"
 	},
 	"Mouseover_Text_Type_2": {
-		"message": "Secondary Mouseover Text Type"
-	},
-	"Mouseover_Pause_Subtitle": {
-		"message": "Mouseover Pause Subtitle"
+		"message": "Otrais teksta veids, novietojot peli"
 	},
 	"Show_Tooltip_While_Typing": {
-		"message": "Show Tooltip While Typing"
+		"message": "Rādīt rīka padomu rakstīšanas laikā"
 	},
 	"Tooltip_Info_Source_Text": {
-		"message": "Tooltip Info Source Text"
+		"message": "Rīka padoma informācija: avota teksts"
 	},
 	"Translate_Exclude_Regex": {
-		"message": "Translate Exclude Regex"
+		"message": "Izņēmumu regulārā izteiksme"
 	},
 	"Tooltip_Info_Source_Language": {
-		"message": "Tooltip Info Source Language"
+		"message": "Rīka padoma informācija: avota valoda"
 	},
 	"Tooltip_Info_Transliteration": {
-		"message": "Tooltip Info Transliteration"
-	},
-	"Tooltip_Interval_Time": {
-		"message": "Tooltip Interval Time"
+		"message": "Rīka padoma informācija: transliterācija"
 	},
 	"Tooltip_Show_Delay": {
-		"message": "Tooltip Show Delay"
+		"message": "Rīka padoma parādīšanas aizture"
 	},
 	"Tooltip_Word_Dictionary": {
-		"message": "Tooltip Word Dictionary"
+		"message": "Rīka padoma vārdnīca"
 	},
 	"Tooltip_Word_Dictionary_Source": {
-		"message": "Tooltip Word Dictionary Source"
+		"message": "Rīka padoma vārdnīcas avots"
 	},
 	"Fallback_Translator_Engine": {
-		"message": "Fallback Translator Engine"
-	},
-	"SPEECH": {
-		"message": "SPEECH"
-	},
-	"Speech_Recognition_Language": {
-		"message": "Speech Recognition Language"
-	},
-	"Voice_Panel_Translate_Language": {
-		"message": "Voice Panel Translate Language"
-	},
-	"Voice_Panel_Text_Target": {
-		"message": "Voice Panel Text Target"
-	},
-	"Voice_Panel_Padding": {
-		"message": "Voice Panel Padding"
-	},
-	"Voice_Panel_Text_Align": {
-		"message": "Voice Panel Text Align"
-	},
-	"Voice_Panel_Source_Font_Size": {
-		"message": "Voice Panel Source Font Size"
-	},
-	"Voice_Panel_Target_Font_Size": {
-		"message": "Voice Panel Target Font Size"
-	},
-	"Voice_Panel_Source_Font_Color": {
-		"message": "Voice Panel Source Font Color"
-	},
-	"Voice_Panel_Target_Font_Color": {
-		"message": "Voice Panel Target Font Color"
-	},
-	"Voice_Panel_Source_Border_Color": {
-		"message": "Voice Panel Source Border Color"
-	},
-	"Voice_Panel_Target_Border_Color": {
-		"message": "Voice Panel Target Border Color"
-	},
-	"Voice_Panel_Background_Color": {
-		"message": "Voice Panel Background Color"
-	},
-	"BACKUP______________________________________": {
-		"message": "BACKUP                                      "
+		"message": "Rezerves tulkošanas dzinējs"
 	},
 	"BACKUP": {
-		"message": "BACKUP"
+		"message": "DUBLĒŠANA"
 	},
 	"Sync_Setting": {
-		"message": "Sync Setting"
+		"message": "Sinhronizēt iestatījumus starp ierīcēm"
 	},
 	"Import_Setting": {
-		"message": "Import Setting"
+		"message": "Importēt iestatījumus"
 	},
 	"Export_Setting": {
-		"message": "Export Setting"
+		"message": "Eksportēt iestatījumus"
 	},
 	"Reset_Setting": {
-		"message": "Reset Setting"
-	},
-	"About______________________________________": {
-		"message": "About                                      "
+		"message": "Atiestatīt iestatījumus"
 	},
 	"How_to_use": {
-		"message": "How to use"
+		"message": "Kā lietot"
 	},
 	"Check_how_to_use_this_extension": {
-		"message": "Check how to use this extension"
+		"message": "Uzziniet, kā lietot šo paplašinājumu"
 	},
 	"PDF_Viewer": {
-		"message": "PDF Viewer"
+		"message": "PDF skatītājs"
 	},
 	"Translate_local_PDF_file": {
-		"message": "Translate local PDF file"
+		"message": "Tulkot lokālu PDF failu"
 	},
 	"Ebook_Reader": {
-		"message": "Ebook Reader"
+		"message": "E-grāmatu lasītājs"
 	},
 	"Translate_local_ebook_file": {
-		"message": "Translate local ebook file"
-	},
-	"Twitter": {
-		"message": "Twitter"
-	},
-	"Retweet_twitter_post": {
-		"message": "Retweet twitter post"
-	},
-	"Review_Page": {
-		"message": "Review Page"
-	},
-	"Comment_on_this_extension": {
-		"message": "Comment on this extension"
+		"message": "Tulkot lokālu e-grāmatas failu"
 	},
 	"Source_code": {
-		"message": "Source code"
+		"message": "Pirmkods"
 	},
 	"Check_source_code_in_github": {
-		"message": "Check source code in github"
+		"message": "Skatīt pirmkodu vietnē GitHub"
 	},
 	"Privacy_Policy": {
-		"message": "Privacy Policy"
+		"message": "Privātuma politika"
 	},
 	"User_privacy_policy": {
-		"message": "User privacy policy"
-	},
-	"Voice_Panel": {
-		"message": "Voice Panel"
-	},
-	"Translate_Voice": {
-		"message": "Translate Voice"
-	},
-	"Review______________________________________": {
-		"message": "Review                                      "
-	},
-	"Review_this": {
-		"message": "Review this"
-	},
-	"Developer_love_criticism": {
-		"message": "Developer love criticism"
-	},
-	"Coffee______________________________________": {
-		"message": "Coffee                                      "
-	},
-	"Support_this_extension": {
-		"message": "Support this extension"
-	},
-	"Feed_a_coffee_to_the_extension_devs": {
-		"message": "Feed a coffee to the extension devs"
-	},
-	"Title______________________________________": {
-		"message": "Title                                      "
-	},
-	"SELECT_OPTION______________________________": {
-		"message": "SELECT OPTION                              "
-	},
-	"On": {
-		"message": "On"
-	},
-	"Off": {
-		"message": "Off"
+		"message": "Lietotāja privātuma politika"
 	},
 	"Auto": {
-		"message": "Auto"
+		"message": "Automātiski"
 	},
 	"None": {
-		"message": "None"
+		"message": "Nav"
 	},
 	"Select": {
-		"message": "Select"
+		"message": "Atlasot"
 	},
 	"Mouseover": {
-		"message": "Mouseover"
+		"message": "Novietojot peli"
 	},
 	"Mouseover_n_Select": {
-		"message": "Mouseover n Select"
+		"message": "Novietojot peli un atlasot"
 	},
 	"Follow": {
-		"message": "Follow"
+		"message": "Sekot"
 	},
 	"Fixed": {
-		"message": "Fixed"
+		"message": "Fiksēts"
 	},
 	"Top_Right": {
-		"message": "Top Right"
+		"message": "Augšā pa labi"
 	},
 	"Fade": {
-		"message": "Fade"
+		"message": "Izgaisšana"
 	},
 	"Scale": {
-		"message": "Scale"
+		"message": "Mērogošana"
 	},
 	"Shift_away": {
-		"message": "Shift away"
+		"message": "Attālināšanās"
 	},
 	"Shift_toward": {
-		"message": "Shift toward"
+		"message": "Pietuvošanās"
 	},
 	"Perspective": {
-		"message": "Perspective"
+		"message": "Perspektīva"
 	},
 	"Word": {
-		"message": "Word"
+		"message": "Vārds"
 	},
 	"Sentence": {
-		"message": "Sentence"
+		"message": "Teikums"
 	},
 	"Container": {
-		"message": "Container"
+		"message": "Rindkopa"
 	},
 	"Both": {
-		"message": "Both"
+		"message": "Abi"
 	},
 	"Blacklist": {
-		"message": "Blacklist"
+		"message": "Bloķēto saraksts"
 	},
 	"Whitelist": {
-		"message": "Whitelist"
-	},
-	"Source": {
-		"message": "Source"
-	},
-	"Source_Text": {
-		"message": "Source Text"
-	},
-	"Translated_Text": {
-		"message": "Translated Text"
-	},
-	"Source_n_Translated": {
-		"message": "Source n Translated"
-	},
-	"Translated_n_Source": {
-		"message": "Translated n Source"
-	},
-	"Dual_Subtitle": {
-		"message": "Dual Subtitle"
-	},
-	"Target_Single_Subtitle": {
-		"message": "Target Single Subtitle"
-	},
-	"Source_Single_Subtitle": {
-		"message": "Source Single Subtitle"
+		"message": "Atļauto saraksts"
 	},
 	"Always": {
-		"message": "Always"
+		"message": "Vienmēr"
 	},
 	"Center": {
-		"message": "Center"
+		"message": "Centrā"
 	},
 	"Left": {
-		"message": "Left"
+		"message": "Pa kreisi"
 	},
 	"Right": {
-		"message": "Right"
+		"message": "Pa labi"
 	},
 	"Justify": {
-		"message": "Justify"
+		"message": "Izlīdzināt"
 	},
 	"Light": {
-		"message": "Light"
+		"message": "Gaišs"
 	},
 	"Dark": {
-		"message": "Dark"
+		"message": "Tumšs"
 	},
 	"Default": {
-		"message": "Default"
+		"message": "Noklusējums"
 	},
 	"Ctrl_Left": {
-		"message": "Ctrl Left"
+		"message": "Kreisais Ctrl"
 	},
 	"Ctrl_Right": {
-		"message": "Ctrl Right"
+		"message": "Labais Ctrl"
 	},
 	"Alt_Left": {
-		"message": "Alt Left"
+		"message": "Kreisais Alt"
 	},
 	"Alt_Right": {
-		"message": "Alt Right"
+		"message": "Labais Alt"
 	},
 	"Shift_Left": {
-		"message": "Shift Left"
+		"message": "Kreisais Shift"
 	},
 	"Shift_Right": {
-		"message": "Shift Right"
+		"message": "Labais Shift"
 	},
 	"Meta_Left": {
-		"message": "Meta Left"
+		"message": "Kreisais Meta"
 	},
 	"Meta_Right": {
-		"message": "Meta Right"
+		"message": "Labais Meta"
 	},
 	"Click_Left": {
-		"message": "Click Left"
+		"message": "Kreisais klikšķis"
 	},
 	"Click_Middle": {
-		"message": "Click Middle"
+		"message": "Vidējais klikšķis"
 	},
 	"Click_Right": {
-		"message": "Click Right"
+		"message": "Labais klikšķis"
 	},
 	"google": {
 		"message": "google"
@@ -548,286 +356,148 @@
 	"bing": {
 		"message": "bing"
 	},
-	"Saved_Words": {
-		"message": "Saved Words"
-	},
-	"Group": {
-		"message": "Group"
-	},
-	"All": {
-		"message": "All"
-	},
-	"Move_to_group": {
-		"message": "Move to group"
-	},
-	"Delete": {
-		"message": "Delete"
-	},
-	"Clear": {
-		"message": "Clear"
-	},
-	"selected": {
-		"message": "selected"
-	},
-	"Date": {
-		"message": "Date"
-	},
-	"Translation": {
-		"message": "Translation"
-	},
-	"No_saved_words_yet": {
-		"message": "No saved words yet"
-	},
-	"Manage_Groups": {
-		"message": "Manage Groups"
-	},
-	"Remove_all": {
-		"message": "Remove all"
-	},
-	"Import_CSV": {
-		"message": "Import CSV"
-	},
-	"Download_CSV": {
-		"message": "Download CSV"
-	},
-	"Save_key": {
-		"message": "Save key"
-	},
-	"Highlight_on_page": {
-		"message": "Highlight on page"
-	},
-	"Right_click_menu": {
-		"message": "Right click menu"
-	},
-	"Add_right_click_context_menu": {
-		"message": "Add right click context menu"
-	},
-	"Done": {
-		"message": "Done"
-	},
-	"On_Select": {
-		"message": "On Select"
-	},
-	"On_Hover": {
-		"message": "On Hover"
-	},
-	"On_Select_n_Hover": {
-		"message": "On Select n Hover"
-	},
-	"Select_group_to_play": {
-		"message": "Select group to play"
-	},
-	"No_Group_Selected": {
-		"message": "No Group Selected"
-	},
-	"Check_groups_to_play": {
-		"message": "Check groups to play"
-	},
-	"Flashcard_makes_cards_from_your_saved_words": {
-		"message": "Flashcard makes cards from your saved words"
-	},
-	"Flashcard": {
-		"message": "Flashcard"
-	},
-	"Play_Flashcard": {
-		"message": "Play Flashcard"
-	},
-	"Reset_progress": {
-		"message": "Reset progress"
-	},
-	"No_History_Data": {
-		"message": "No History Data"
-	},
-	"Today_play_is_completed": {
-		"message": "Today play is completed"
-	},
-	"Try_on_next_day": {
-		"message": "Try on next day"
-	},
-	"No_more_card_to_learn_today": {
-		"message": "No more card to learn today"
-	},
-	"Add_more_history_data_to_play_with": {
-		"message": "Add more history data to play with"
-	},
-	"Finish": {
-		"message": "Finish"
-	},
-	"Today_Flashcards_are_Completed": {
-		"message": "Today Flashcards are Completed"
-	},
-	"No_More_Card_Data": {
-		"message": "No More Card Data"
-	},
-	"Show_Answer": {
-		"message": "Show Answer"
-	},
-	"Again": {
-		"message": "Again"
-	},
-	"Hard": {
-		"message": "Hard"
-	},
-	"Good": {
-		"message": "Good"
-	},
-	"Easy": {
-		"message": "Easy"
-	},
-	"New": {
-		"message": "New"
-	},
-	"Review": {
-		"message": "Review"
-	},
-	"Learning": {
-		"message": "Learning"
-	},
 	"About": {
-		"message": "About"
+		"message": "Par"
 	},
 	"Translator": {
-		"message": "Translator"
+		"message": "Tulkotājs"
 	},
 	"Wiktionary": {
 		"message": "Wiktionary"
 	},
-	"Translated": {
-		"message": "Translated"
-	},
 	"Custom": {
-		"message": "Custom"
+		"message": "Pielāgots"
 	},
 	"Back": {
-		"message": "Back"
+		"message": "Atpakaļ"
 	},
 	"Cancel": {
-		"message": "Cancel"
+		"message": "Atcelt"
 	},
 	"Remove": {
-		"message": "Remove"
+		"message": "Noņemt"
 	},
 	"Alpha": {
-		"message": "Alpha"
+		"message": "Alfa"
 	},
 	"Fetch_models_from_endpoint": {
-		"message": "Fetch models from endpoint"
+		"message": "Ielādēt modeļus no galapunkta"
 	},
 	"No_models_returned_by_endpoint": {
-		"message": "No models returned by endpoint"
+		"message": "Galapunkts neatgrieza nevienu modeli"
 	},
 	"API_endpoint_is_empty": {
-		"message": "API endpoint is empty"
+		"message": "API galapunkts ir tukšs"
 	},
 	"Failed_to_fetch_LLM_models": {
-		"message": "Failed to fetch LLM models"
+		"message": "Neizdevās ielādēt LLM modeļus"
 	},
 	"Open_this_popup_on_a_website_to_use_this_button": {
-		"message": "Open this popup on a website to use this button"
+		"message": "Atveriet šo uznirstošo logu vietnē, lai izmantotu šo pogu"
 	},
 	"Import_failed": {
-		"message": "Import failed"
+		"message": "Importēšana neizdevās"
 	},
 	"Copy_PDF_URL": {
-		"message": "Copy PDF URL"
+		"message": "Kopēt PDF URL"
 	},
 	"Copied": {
-		"message": "Copied"
+		"message": "Nokopēts"
 	},
 	"Copy_failed": {
-		"message": "Copy failed"
+		"message": "Kopēšana neizdevās"
 	},
 	"Allow_access_to_file_URLs_to_open_local_PDF_files": {
-		"message": "Allow access to file URLs to open local PDF files"
+		"message": "Atļaujiet piekļuvi failu URL, lai atvērtu lokālus PDF failus"
 	},
 	"Open_File": {
-		"message": "Open File"
+		"message": "Atvērt failu"
 	},
 	"Previous_Page": {
-		"message": "Previous Page"
+		"message": "Iepriekšējā lapa"
 	},
 	"Next_Page": {
-		"message": "Next Page"
+		"message": "Nākamā lapa"
 	},
 	"Table_of_Contents": {
-		"message": "Table of Contents"
+		"message": "Satura rādītājs"
 	},
 	"Drop_an_ebook_file_here_or_open_one": {
-		"message": "Drop an ebook file here or open one"
+		"message": "Ievelciet šeit e-grāmatas failu vai atveriet to"
 	},
 	"Could_not_open_this_file": {
-		"message": "Could not open this file"
+		"message": "Nevarēja atvērt šo failu"
 	},
 	"Untitled": {
-		"message": "Untitled"
+		"message": "Bez nosaukuma"
 	},
 	"Page": {
-		"message": "Page"
+		"message": "Lapa"
 	},
 	"Zoom_out": {
-		"message": "Zoom out"
+		"message": "Tālināt"
 	},
 	"Zoom": {
-		"message": "Zoom"
+		"message": "Tālummaiņa"
 	},
 	"Zoom_in": {
-		"message": "Zoom in"
+		"message": "Tuvināt"
 	},
 	"Automatic_zoom": {
-		"message": "Automatic zoom"
+		"message": "Automātiska tālummaiņa"
 	},
 	"Page_fit": {
-		"message": "Page fit"
+		"message": "Ietilpināt lapu"
 	},
 	"Page_width": {
-		"message": "Page width"
+		"message": "Lapas platums"
 	},
 	"Find": {
-		"message": "Find"
+		"message": "Meklēt"
 	},
 	"Dark_mode": {
-		"message": "Dark mode"
+		"message": "Tumšais režīms"
 	},
 	"Download": {
-		"message": "Download"
+		"message": "Lejupielādēt"
 	},
 	"Find_in_document": {
-		"message": "Find in document"
+		"message": "Meklēt dokumentā"
 	},
 	"Previous_match": {
-		"message": "Previous match"
+		"message": "Iepriekšējā atbilstība"
 	},
 	"Next_match": {
-		"message": "Next match"
+		"message": "Nākamā atbilstība"
 	},
 	"Highlight_all": {
-		"message": "Highlight all"
+		"message": "Iekrāsot visus"
 	},
 	"Match_case": {
-		"message": "Match case"
+		"message": "Reģistrjutīgs"
 	},
 	"Phrase_not_found": {
-		"message": "Phrase not found"
+		"message": "Frāze nav atrasta"
 	},
 	"Close": {
-		"message": "Close"
+		"message": "Aizvērt"
 	},
 	"Failed_to_load_the_PDF_file": {
-		"message": "Failed to load the PDF file"
+		"message": "Neizdevās ielādēt PDF failu"
 	},
 	"Drop_a_PDF_file_here": {
-		"message": "Drop a PDF file here"
+		"message": "Ievelciet šeit PDF failu"
 	},
 	"Enter_the_password_to_open_this_PDF_file": {
-		"message": "Enter the password to open this PDF file"
+		"message": "Ievadiet paroli, lai atvērtu šo PDF failu"
 	},
 	"Invalid_password_try_again": {
-		"message": "Invalid password try again"
+		"message": "Nepareiza parole, mēģiniet vēlreiz"
 	},
 	"appName": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Mouse Tooltip Translator Refined"
 	},
 	"appDesc": {
-		"message": "Hover or select text to translate it in a tooltip. Also works in PDF and ebook files."
+		"message": "Novietojiet peli uz teksta vai atlasiet to, lai redzētu tulkojumu rīka padomā. Darbojas arī PDF un e-grāmatās."
 	}
 }

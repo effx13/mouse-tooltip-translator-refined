@@ -1,7 +1,4 @@
 {
-	"MAIN______________________________________": {
-		"message": "หลัก                                      "
-	},
 	"MAIN": {
 		"message": "หน้าหลัก"
 	},
@@ -21,22 +18,22 @@
 		"message": "นักแปล"
 	},
 	"LLM_Provider": {
-		"message": "LLM Provider"
+		"message": "ผู้ให้บริการ LLM"
 	},
 	"LLM_Api_Endpoint": {
-		"message": "LLM API Endpoint URL"
+		"message": "URL ปลายทาง LLM API"
 	},
 	"LLM_Api_Key": {
-		"message": "LLM API Key"
+		"message": "คีย์ API ของ LLM (ไม่บังคับ)"
 	},
 	"LLM_Model": {
-		"message": "LLM Model"
+		"message": "โมเดล LLM"
 	},
 	"Mouseover_Text_Type": {
 		"message": "ประเภทข้อความ"
 	},
 	"Translate_Into_2": {
-		"message": "Secondary Translate Into"
+		"message": "ภาษาปลายทางที่สอง"
 	},
 	"Writing_Language": {
 		"message": "แปลภาษาพิมพ์"
@@ -44,65 +41,32 @@
 	"Reverse_Translate_Language": {
 		"message": "ย้อนกลับแปลภาษา"
 	},
-	"OCR_Language": {
-		"message": "แปลภาษา OCR"
-	},
-	"Detect_Subtitle": {
-		"message": "ตรวจจับคำบรรยาย"
-	},
-	"KEYBOARD______________________________________": {
-		"message": "KEYBOARD                                      "
-	},
 	"KEYBOARD": {
-		"message": "KEYBOARD"
+		"message": "แป้นพิมพ์"
 	},
 	"Show_Tooltip_When": {
 		"message": "แสดงข้อความ"
-	},
-	"Voice_When": {
-		"message": "Voice When"
 	},
 	"Translate_Writing_When": {
 		"message": "แปลการพิมพ์เมื่อ"
 	},
 	"Ignore_AltGr_Modifier": {
-		"message": "Ignore AltGr Modifier"
-	},
-	"Auto_Reader_When": {
-		"message": "Auto Reader When"
+		"message": "ละเว้นปุ่ม AltGr"
 	},
 	"Translate_Page_When": {
-		"message": "Translate Page When"
-	},
-	"OCR_When": {
-		"message": "OCR เมื่อใด"
-	},
-	"Mouseover_Text_Type_Swap_Key": {
-		"message": "คีย์สลับประเภทข้อความ Mouseover"
-	},
-	"Speech_Recognition_When": {
-		"message": "ภาษาการรู้จำเสียงพูด"
-	},
-	"Toggle_Mouseover_Text_Type_When": {
-		"message": "Toggle Mouseover Text Type When"
+		"message": "แปลหน้าเว็บเมื่อ"
 	},
 	"Mouseover_Text_Type_Key_Hold": {
-		"message": "Mouseover Text Type Key Hold"
+		"message": "ปุ่มสลับประเภทข้อความเมื่อชี้เมาส์"
 	},
 	"Secondary_Language_When": {
-		"message": "Secondary Language When"
+		"message": "ใช้ภาษาที่สองเมื่อ"
 	},
 	"Swap_Key_Toggle_Mode": {
-		"message": "Swap Key Toggle Mode"
+		"message": "ให้ปุ่มสลับทำงานแบบเปิด/ปิด"
 	},
 	"Toggle_Extension_When": {
-		"message": "Toggle Extension When"
-	},
-	"TTS_Pause_Resume_When": {
-		"message": "TTS Pause Resume When"
-	},
-	"GRAPHIC______________________________________": {
-		"message": "กราฟิก                                      "
+		"message": "เปิด/ปิดส่วนขยายเมื่อ"
 	},
 	"GRAPHIC": {
 		"message": "กราฟิก"
@@ -111,10 +75,7 @@
 		"message": "ขนาดตัวอักษร Tooltip"
 	},
 	"Tooltip_Font_Family": {
-		"message": "Tooltip Font Family"
-	},
-	"Subtitle_Background": {
-		"message": "Subtitle Background"
+		"message": "แบบอักษร Tooltip"
 	},
 	"Tooltip_Width": {
 		"message": "ความกว้างของ Tooltip"
@@ -126,19 +87,19 @@
 		"message": "แอนิเมชั่น Tooltip"
 	},
 	"Tooltip_Disappear_Duration": {
-		"message": "Tooltip Disappear Duration"
+		"message": "ระยะเวลาก่อน Tooltip หายไป"
 	},
 	"Tooltip_Position": {
 		"message": "ตำแหน่ง Tooltip"
 	},
 	"Tooltip_Placement": {
-		"message": "Tooltip Placement"
+		"message": "การวาง Tooltip"
 	},
 	"Above": {
-		"message": "Above"
+		"message": "ด้านบน"
 	},
 	"Below": {
-		"message": "Below"
+		"message": "ด้านล่าง"
 	},
 	"Tooltip_Text_Align": {
 		"message": "จัดแนวข้อความ"
@@ -162,37 +123,10 @@
 		"message": "สีเน้นข้อความ"
 	},
 	"Ebook_Theme": {
-		"message": "Ebook Theme"
+		"message": "ธีม eBook"
 	},
 	"Setting_Compact_mode": {
-		"message": "Setting Compact mode"
-	},
-	"VOICE______________________________________": {
-		"message": "เสียง                                      "
-	},
-	"VOICE": {
-		"message": "เสียง"
-	},
-	"Voice_Volume": {
-		"message": "ระดับเสียง"
-	},
-	"Voice_Speed": {
-		"message": "ความเร็วเสียง"
-	},
-	"Voice_Target": {
-		"message": "อ่านออกเสียงที่"
-	},
-	"Voice_Repeat": {
-		"message": "เล่นเสียงซ้ำ"
-	},
-	"Voice_for_": {
-		"message": "สำหรับเสียง "
-	},
-	"Voice_speed_for_": {
-		"message": "Voice speed for "
-	},
-	"EXCLUDE______________________________________": {
-		"message": "ยกเว้น                                      "
+		"message": "โหมดการตั้งค่าแบบกะทัดรัด"
 	},
 	"EXCLUDE": {
 		"message": "ยกเว้น"
@@ -201,49 +135,43 @@
 		"message": "ยกเว้นภาษา"
 	},
 	"Website_Filter_Mode": {
-		"message": "Website Filter Mode"
+		"message": "โหมดกรองเว็บไซต์"
 	},
 	"Exclude_Website": {
 		"message": "ยกเว้นเว็บไซต์"
 	},
 	"Whitelist_Website": {
-		"message": "Whitelist Website"
+		"message": "เว็บไซต์ที่อนุญาต"
 	},
 	"Website_Target_Language": {
-		"message": "Website Target Language"
+		"message": "ภาษาปลายทางรายเว็บไซต์ (เช่น github.com=ko)"
 	},
 	"Block_Current_Site": {
-		"message": "Block Current Site"
+		"message": "บล็อกเว็บไซต์นี้"
 	},
 	"Allow_Current_Site": {
-		"message": "Allow Current Site"
-	},
-	"ADVANCED______________________________________": {
-		"message": "ขั้นสูง                                      "
+		"message": "อนุญาตเว็บไซต์นี้"
 	},
 	"ADVANCED": {
 		"message": "ขั้นสูง"
 	},
 	"UI_Language": {
-		"message": "UI Language"
+		"message": "ภาษาของอินเทอร์เฟซ"
 	},
 	"Detect_PDF": {
 		"message": "ตรวจจับ PDF"
 	},
 	"Mouseover_Text_Type_2": {
-		"message": "Secondary Mouseover Text Type"
-	},
-	"Mouseover_Pause_Subtitle": {
-		"message": "หยุดคำบรรยายชั่วคราว Mouseover"
+		"message": "ประเภทข้อความเมื่อชี้เมาส์ (ที่สอง)"
 	},
 	"Show_Tooltip_While_Typing": {
-		"message": "Show Tooltip While Typing"
+		"message": "แสดง Tooltip ขณะพิมพ์"
 	},
 	"Tooltip_Info_Source_Text": {
 		"message": "ข้อความแหล่งที่มาข้อมูล Tooltip"
 	},
 	"Translate_Exclude_Regex": {
-		"message": "Translate Exclude Regex"
+		"message": "Regex ข้อความที่ไม่ต้องแปล"
 	},
 	"Tooltip_Info_Source_Language": {
 		"message": "ภาษาแหล่งที่มา Tooltip"
@@ -251,80 +179,32 @@
 	"Tooltip_Info_Transliteration": {
 		"message": "การทับศัพท์ Tooltip"
 	},
-	"Tooltip_Interval_Time": {
-		"message": "ช่วงเวลา Tooltip"
-	},
 	"Tooltip_Show_Delay": {
-		"message": "Tooltip Show Delay"
+		"message": "หน่วงเวลาแสดง Tooltip"
 	},
 	"Tooltip_Word_Dictionary": {
 		"message": "คำอธิบายพจนานุกรมสั้นๆ เมื่อชี้เมาส์"
 	},
 	"Tooltip_Word_Dictionary_Source": {
-		"message": "Tooltip Word Dictionary Source"
+		"message": "แหล่งพจนานุกรมใน Tooltip"
 	},
 	"Fallback_Translator_Engine": {
-		"message": "Fallback Translator Engine"
-	},
-	"SPEECH": {
-		"message": "การพูด"
-	},
-	"Speech_Recognition_Language": {
-		"message": "ภาษาสำหรับการจดจำเสียงพูด"
-	},
-	"Voice_Panel_Translate_Language": {
-		"message": "แผงเสียงแปลภาษา"
-	},
-	"Voice_Panel_Text_Target": {
-		"message": "เป้าหมายข้อความแผงเสียง"
-	},
-	"Voice_Panel_Padding": {
-		"message": "การขยายแผงเสียง"
-	},
-	"Voice_Panel_Text_Align": {
-		"message": "จัดตำแหน่งข้อความแผงเสียง"
-	},
-	"Voice_Panel_Source_Font_Size": {
-		"message": "ขนาดแบบอักษรแหล่งที่มาของแผงเสียง"
-	},
-	"Voice_Panel_Target_Font_Size": {
-		"message": "ขนาดตัวอักษรเป้าหมายของแผงเสียง"
-	},
-	"Voice_Panel_Source_Font_Color": {
-		"message": "สีแบบอักษรแหล่งที่มาของแผงเสียง"
-	},
-	"Voice_Panel_Target_Font_Color": {
-		"message": "สีแบบอักษรเป้าหมายของแผงเสียง"
-	},
-	"Voice_Panel_Source_Border_Color": {
-		"message": "สีเส้นขอบแหล่งที่มาของแผงเสียง"
-	},
-	"Voice_Panel_Target_Border_Color": {
-		"message": "สีเส้นขอบเป้าหมายของแผงเสียง"
-	},
-	"Voice_Panel_Background_Color": {
-		"message": "สีพื้นหลังของแผงเสียง"
-	},
-	"BACKUP______________________________________": {
-		"message": "BACKUP                                      "
+		"message": "นักแปลสำรอง"
 	},
 	"BACKUP": {
-		"message": "BACKUP"
+		"message": "สำรองข้อมูล"
 	},
 	"Sync_Setting": {
-		"message": "Sync Setting"
+		"message": "ซิงค์การตั้งค่าระหว่างอุปกรณ์"
 	},
 	"Import_Setting": {
-		"message": "Import Setting"
+		"message": "นำเข้าการตั้งค่า"
 	},
 	"Export_Setting": {
-		"message": "Export Setting"
+		"message": "ส่งออกการตั้งค่า"
 	},
 	"Reset_Setting": {
-		"message": "Reset Setting"
-	},
-	"About______________________________________": {
-		"message": "เกี่ยวกับ                                      "
+		"message": "รีเซ็ตการตั้งค่า"
 	},
 	"How_to_use": {
 		"message": "วิธีใช้"
@@ -342,19 +222,7 @@
 		"message": "E-book reader"
 	},
 	"Translate_local_ebook_file": {
-		"message": "Translate local ebook file"
-	},
-	"Twitter": {
-		"message": "ทวิตเตอร์"
-	},
-	"Retweet_twitter_post": {
-		"message": "รีทวีตโพสต์บนทวิตเตอร์"
-	},
-	"Review_Page": {
-		"message": "หน้ารีวิว"
-	},
-	"Comment_on_this_extension": {
-		"message": "แสดงความคิดเห็นเกี่ยวกับส่วนขยายนี้"
+		"message": "แปลไฟล์ eBook ในเครื่อง"
 	},
 	"Source_code": {
 		"message": "ซอร์สโค้ด"
@@ -368,179 +236,119 @@
 	"User_privacy_policy": {
 		"message": "นโยบายความเป็นส่วนตัวของผู้ใช้"
 	},
-	"Voice_Panel": {
-		"message": "แผงเสียง"
-	},
-	"Translate_Voice": {
-		"message": "แปลเสียง"
-	},
-	"Review______________________________________": {
-		"message": "Review                                      "
-	},
-	"Review_this": {
-		"message": "Review this"
-	},
-	"Developer_love_criticism": {
-		"message": "Developer love criticism"
-	},
-	"Coffee______________________________________": {
-		"message": "Coffee                                      "
-	},
-	"Support_this_extension": {
-		"message": "Support this extension"
-	},
-	"Feed_a_coffee_to_the_extension_devs": {
-		"message": "Feed a coffee to the extension devs"
-	},
-	"Title______________________________________": {
-		"message": "Title                                      "
-	},
-	"SELECT_OPTION______________________________": {
-		"message": "SELECT OPTION                              "
-	},
-	"On": {
-		"message": "On"
-	},
-	"Off": {
-		"message": "Off"
-	},
 	"Auto": {
-		"message": "Auto"
+		"message": "อัตโนมัติ"
 	},
 	"None": {
-		"message": "None"
+		"message": "ไม่มี"
 	},
 	"Select": {
-		"message": "Select"
+		"message": "เลือก"
 	},
 	"Mouseover": {
-		"message": "Mouseover"
+		"message": "ชี้เมาส์"
 	},
 	"Mouseover_n_Select": {
-		"message": "Mouseover n Select"
+		"message": "ชี้เมาส์และเลือก"
 	},
 	"Follow": {
-		"message": "Follow"
+		"message": "ตามเคอร์เซอร์"
 	},
 	"Fixed": {
-		"message": "Fixed"
+		"message": "คงที่"
 	},
 	"Top_Right": {
-		"message": "Top Right"
+		"message": "มุมขวาบน"
 	},
 	"Fade": {
-		"message": "Fade"
+		"message": "จางหาย"
 	},
 	"Scale": {
-		"message": "Scale"
+		"message": "ย่อขยาย"
 	},
 	"Shift_away": {
-		"message": "Shift away"
+		"message": "เลื่อนออก"
 	},
 	"Shift_toward": {
-		"message": "Shift toward"
+		"message": "เลื่อนเข้า"
 	},
 	"Perspective": {
-		"message": "Perspective"
+		"message": "มุมมอง 3 มิติ"
 	},
 	"Word": {
-		"message": "Word"
+		"message": "คำ"
 	},
 	"Sentence": {
-		"message": "Sentence"
+		"message": "ประโยค"
 	},
 	"Container": {
-		"message": "Container"
+		"message": "ย่อหน้า"
 	},
 	"Both": {
-		"message": "Both"
+		"message": "ทั้งสองอย่าง"
 	},
 	"Blacklist": {
-		"message": "Blacklist"
+		"message": "รายการที่บล็อก"
 	},
 	"Whitelist": {
-		"message": "Whitelist"
-	},
-	"Source": {
-		"message": "Source"
-	},
-	"Source_Text": {
-		"message": "Source Text"
-	},
-	"Translated_Text": {
-		"message": "Translated Text"
-	},
-	"Source_n_Translated": {
-		"message": "Source n Translated"
-	},
-	"Translated_n_Source": {
-		"message": "Translated n Source"
-	},
-	"Dual_Subtitle": {
-		"message": "Dual Subtitle"
-	},
-	"Target_Single_Subtitle": {
-		"message": "Target Single Subtitle"
-	},
-	"Source_Single_Subtitle": {
-		"message": "Source Single Subtitle"
+		"message": "รายการที่อนุญาต"
 	},
 	"Always": {
-		"message": "Always"
+		"message": "เสมอ"
 	},
 	"Center": {
-		"message": "Center"
+		"message": "กึ่งกลาง"
 	},
 	"Left": {
-		"message": "Left"
+		"message": "ซ้าย"
 	},
 	"Right": {
-		"message": "Right"
+		"message": "ขวา"
 	},
 	"Justify": {
-		"message": "Justify"
+		"message": "เต็มแนว"
 	},
 	"Light": {
-		"message": "Light"
+		"message": "สว่าง"
 	},
 	"Dark": {
-		"message": "Dark"
+		"message": "มืด"
 	},
 	"Default": {
-		"message": "Default"
+		"message": "ค่าเริ่มต้น"
 	},
 	"Ctrl_Left": {
-		"message": "Ctrl Left"
+		"message": "Ctrl ซ้าย"
 	},
 	"Ctrl_Right": {
-		"message": "Ctrl Right"
+		"message": "Ctrl ขวา"
 	},
 	"Alt_Left": {
-		"message": "Alt Left"
+		"message": "Alt ซ้าย"
 	},
 	"Alt_Right": {
-		"message": "Alt Right"
+		"message": "Alt ขวา"
 	},
 	"Shift_Left": {
-		"message": "Shift Left"
+		"message": "Shift ซ้าย"
 	},
 	"Shift_Right": {
-		"message": "Shift Right"
+		"message": "Shift ขวา"
 	},
 	"Meta_Left": {
-		"message": "Meta Left"
+		"message": "Meta ซ้าย"
 	},
 	"Meta_Right": {
-		"message": "Meta Right"
+		"message": "Meta ขวา"
 	},
 	"Click_Left": {
-		"message": "Click Left"
+		"message": "คลิกซ้าย"
 	},
 	"Click_Middle": {
-		"message": "Click Middle"
+		"message": "คลิกกลาง"
 	},
 	"Click_Right": {
-		"message": "Click Right"
+		"message": "คลิกขวา"
 	},
 	"google": {
 		"message": "google"
@@ -548,286 +356,148 @@
 	"bing": {
 		"message": "bing"
 	},
-	"Saved_Words": {
-		"message": "Saved Words"
-	},
-	"Group": {
-		"message": "Group"
-	},
-	"All": {
-		"message": "All"
-	},
-	"Move_to_group": {
-		"message": "Move to group"
-	},
-	"Delete": {
-		"message": "Delete"
-	},
-	"Clear": {
-		"message": "Clear"
-	},
-	"selected": {
-		"message": "selected"
-	},
-	"Date": {
-		"message": "Date"
-	},
-	"Translation": {
-		"message": "Translation"
-	},
-	"No_saved_words_yet": {
-		"message": "No saved words yet"
-	},
-	"Manage_Groups": {
-		"message": "Manage Groups"
-	},
-	"Remove_all": {
-		"message": "Remove all"
-	},
-	"Import_CSV": {
-		"message": "Import CSV"
-	},
-	"Download_CSV": {
-		"message": "Download CSV"
-	},
-	"Save_key": {
-		"message": "Save key"
-	},
-	"Highlight_on_page": {
-		"message": "Highlight on page"
-	},
-	"Right_click_menu": {
-		"message": "Right click menu"
-	},
-	"Add_right_click_context_menu": {
-		"message": "Add right click context menu"
-	},
-	"Done": {
-		"message": "Done"
-	},
-	"On_Select": {
-		"message": "On Select"
-	},
-	"On_Hover": {
-		"message": "On Hover"
-	},
-	"On_Select_n_Hover": {
-		"message": "On Select n Hover"
-	},
-	"Select_group_to_play": {
-		"message": "Select group to play"
-	},
-	"No_Group_Selected": {
-		"message": "No Group Selected"
-	},
-	"Check_groups_to_play": {
-		"message": "Check groups to play"
-	},
-	"Flashcard_makes_cards_from_your_saved_words": {
-		"message": "Flashcard makes cards from your saved words"
-	},
-	"Flashcard": {
-		"message": "Flashcard"
-	},
-	"Play_Flashcard": {
-		"message": "Play Flashcard"
-	},
-	"Reset_progress": {
-		"message": "Reset progress"
-	},
-	"No_History_Data": {
-		"message": "No History Data"
-	},
-	"Today_play_is_completed": {
-		"message": "Today play is completed"
-	},
-	"Try_on_next_day": {
-		"message": "Try on next day"
-	},
-	"No_more_card_to_learn_today": {
-		"message": "No more card to learn today"
-	},
-	"Add_more_history_data_to_play_with": {
-		"message": "Add more history data to play with"
-	},
-	"Finish": {
-		"message": "Finish"
-	},
-	"Today_Flashcards_are_Completed": {
-		"message": "Today Flashcards are Completed"
-	},
-	"No_More_Card_Data": {
-		"message": "No More Card Data"
-	},
-	"Show_Answer": {
-		"message": "Show Answer"
-	},
-	"Again": {
-		"message": "Again"
-	},
-	"Hard": {
-		"message": "Hard"
-	},
-	"Good": {
-		"message": "Good"
-	},
-	"Easy": {
-		"message": "Easy"
-	},
-	"New": {
-		"message": "New"
-	},
-	"Review": {
-		"message": "Review"
-	},
-	"Learning": {
-		"message": "Learning"
-	},
 	"About": {
-		"message": "About"
+		"message": "เกี่ยวกับ"
 	},
 	"Translator": {
-		"message": "Translator"
+		"message": "นักแปล"
 	},
 	"Wiktionary": {
 		"message": "Wiktionary"
 	},
-	"Translated": {
-		"message": "Translated"
-	},
 	"Custom": {
-		"message": "Custom"
+		"message": "กำหนดเอง"
 	},
 	"Back": {
-		"message": "Back"
+		"message": "กลับ"
 	},
 	"Cancel": {
-		"message": "Cancel"
+		"message": "ยกเลิก"
 	},
 	"Remove": {
-		"message": "Remove"
+		"message": "ลบ"
 	},
 	"Alpha": {
-		"message": "Alpha"
+		"message": "ความโปร่งใส"
 	},
 	"Fetch_models_from_endpoint": {
-		"message": "Fetch models from endpoint"
+		"message": "ดึงรายการโมเดลจากปลายทาง"
 	},
 	"No_models_returned_by_endpoint": {
-		"message": "No models returned by endpoint"
+		"message": "ปลายทางไม่ส่งโมเดลใดกลับมา"
 	},
 	"API_endpoint_is_empty": {
-		"message": "API endpoint is empty"
+		"message": "ยังไม่ได้ระบุปลายทาง API"
 	},
 	"Failed_to_fetch_LLM_models": {
-		"message": "Failed to fetch LLM models"
+		"message": "ดึงรายการโมเดล LLM ไม่สำเร็จ"
 	},
 	"Open_this_popup_on_a_website_to_use_this_button": {
-		"message": "Open this popup on a website to use this button"
+		"message": "เปิดป๊อปอัปนี้บนเว็บไซต์เพื่อใช้ปุ่มนี้"
 	},
 	"Import_failed": {
-		"message": "Import failed"
+		"message": "นำเข้าไม่สำเร็จ"
 	},
 	"Copy_PDF_URL": {
-		"message": "Copy PDF URL"
+		"message": "คัดลอก URL ของ PDF"
 	},
 	"Copied": {
-		"message": "Copied"
+		"message": "คัดลอกแล้ว"
 	},
 	"Copy_failed": {
-		"message": "Copy failed"
+		"message": "คัดลอกไม่สำเร็จ"
 	},
 	"Allow_access_to_file_URLs_to_open_local_PDF_files": {
-		"message": "Allow access to file URLs to open local PDF files"
+		"message": "อนุญาตให้เข้าถึง URL ของไฟล์เพื่อเปิดไฟล์ PDF ในเครื่อง"
 	},
 	"Open_File": {
-		"message": "Open File"
+		"message": "เปิดไฟล์"
 	},
 	"Previous_Page": {
-		"message": "Previous Page"
+		"message": "หน้าก่อนหน้า"
 	},
 	"Next_Page": {
-		"message": "Next Page"
+		"message": "หน้าถัดไป"
 	},
 	"Table_of_Contents": {
-		"message": "Table of Contents"
+		"message": "สารบัญ"
 	},
 	"Drop_an_ebook_file_here_or_open_one": {
-		"message": "Drop an ebook file here or open one"
+		"message": "วางไฟล์ eBook ที่นี่หรือเปิดไฟล์"
 	},
 	"Could_not_open_this_file": {
-		"message": "Could not open this file"
+		"message": "ไม่สามารถเปิดไฟล์นี้ได้"
 	},
 	"Untitled": {
-		"message": "Untitled"
+		"message": "ไม่มีชื่อ"
 	},
 	"Page": {
-		"message": "Page"
+		"message": "หน้า"
 	},
 	"Zoom_out": {
-		"message": "Zoom out"
+		"message": "ซูมออก"
 	},
 	"Zoom": {
-		"message": "Zoom"
+		"message": "ซูม"
 	},
 	"Zoom_in": {
-		"message": "Zoom in"
+		"message": "ซูมเข้า"
 	},
 	"Automatic_zoom": {
-		"message": "Automatic zoom"
+		"message": "ซูมอัตโนมัติ"
 	},
 	"Page_fit": {
-		"message": "Page fit"
+		"message": "พอดีหน้า"
 	},
 	"Page_width": {
-		"message": "Page width"
+		"message": "พอดีความกว้างหน้า"
 	},
 	"Find": {
-		"message": "Find"
+		"message": "ค้นหา"
 	},
 	"Dark_mode": {
-		"message": "Dark mode"
+		"message": "โหมดมืด"
 	},
 	"Download": {
-		"message": "Download"
+		"message": "ดาวน์โหลด"
 	},
 	"Find_in_document": {
-		"message": "Find in document"
+		"message": "ค้นหาในเอกสาร"
 	},
 	"Previous_match": {
-		"message": "Previous match"
+		"message": "รายการก่อนหน้า"
 	},
 	"Next_match": {
-		"message": "Next match"
+		"message": "รายการถัดไป"
 	},
 	"Highlight_all": {
-		"message": "Highlight all"
+		"message": "เน้นสีทั้งหมด"
 	},
 	"Match_case": {
-		"message": "Match case"
+		"message": "ตรงตามตัวพิมพ์ใหญ่เล็ก"
 	},
 	"Phrase_not_found": {
-		"message": "Phrase not found"
+		"message": "ไม่พบวลี"
 	},
 	"Close": {
-		"message": "Close"
+		"message": "ปิด"
 	},
 	"Failed_to_load_the_PDF_file": {
-		"message": "Failed to load the PDF file"
+		"message": "โหลดไฟล์ PDF ไม่สำเร็จ"
 	},
 	"Drop_a_PDF_file_here": {
-		"message": "Drop a PDF file here"
+		"message": "วางไฟล์ PDF ที่นี่"
 	},
 	"Enter_the_password_to_open_this_PDF_file": {
-		"message": "Enter the password to open this PDF file"
+		"message": "ป้อนรหัสผ่านเพื่อเปิดไฟล์ PDF นี้"
 	},
 	"Invalid_password_try_again": {
-		"message": "Invalid password try again"
+		"message": "รหัสผ่านไม่ถูกต้อง โปรดลองอีกครั้ง"
 	},
 	"appName": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Mouse Tooltip Translator Refined"
 	},
 	"appDesc": {
-		"message": "Hover or select text to translate it in a tooltip. Also works in PDF and ebook files."
+		"message": "ชี้เมาส์หรือเลือกข้อความเพื่อดูคำแปลใน Tooltip ใช้ได้กับไฟล์ PDF และ eBook ด้วย"
 	}
 }

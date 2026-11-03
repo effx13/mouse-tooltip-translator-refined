@@ -1,546 +1,354 @@
 {
-	"MAIN______________________________________": {
-		"message": "MAIN                                      "
-	},
 	"MAIN": {
-		"message": "MAIN"
+		"message": "ዋና"
 	},
 	"Mouse_Tooltip_Translator": {
-		"message": "Mouse Tooltip Translator"
+		"message": "የመዳፊት መሣሪያ ተርጓሚ"
 	},
 	"Translate_When": {
-		"message": "Translate When"
+		"message": "መቼ ተርጉም።"
 	},
 	"Translate_From": {
-		"message": "Translate From"
+		"message": "ከ ተርጉም።"
 	},
 	"Translate_Into": {
-		"message": "Translate Into"
+		"message": "ወደ ተርጉም"
 	},
 	"Translator_Engine": {
-		"message": "Translator Engine"
+		"message": "ተርጓሚ ሞተር"
 	},
 	"LLM_Provider": {
-		"message": "LLM Provider"
+		"message": "LLM አቅራቢ"
 	},
 	"LLM_Api_Endpoint": {
-		"message": "LLM API Endpoint URL"
+		"message": "LLM ኤፒአይ የመጨረሻ ነጥብ URL"
 	},
 	"LLM_Api_Key": {
-		"message": "LLM API Key"
+		"message": "የLLM API ቁልፍ (አማራጭ)"
 	},
 	"LLM_Model": {
-		"message": "LLM Model"
+		"message": "LLM ሞዴል"
 	},
 	"Mouseover_Text_Type": {
-		"message": "Mouseover Text Type"
+		"message": "Mouseover ጽሑፍ አይነት"
 	},
 	"Translate_Into_2": {
-		"message": "Secondary Translate Into"
+		"message": "ሁለተኛ ደረጃ ወደ መተርጎም"
 	},
 	"Writing_Language": {
-		"message": "Writing Language"
+		"message": "ቋንቋ መጻፍ"
 	},
 	"Reverse_Translate_Language": {
-		"message": "Reverse Translate Language"
-	},
-	"OCR_Language": {
-		"message": "OCR Language"
-	},
-	"Detect_Subtitle": {
-		"message": "Detect Subtitle"
-	},
-	"KEYBOARD______________________________________": {
-		"message": "KEYBOARD                                      "
+		"message": "የተገላቢጦሽ መተርጎም ቋንቋ"
 	},
 	"KEYBOARD": {
-		"message": "KEYBOARD"
+		"message": "የቁልፍ ሰሌዳ"
 	},
 	"Show_Tooltip_When": {
-		"message": "Show Tooltip When"
-	},
-	"Voice_When": {
-		"message": "Voice When"
+		"message": "የመሳሪያ ምክሮችን መቼ አሳይ"
 	},
 	"Translate_Writing_When": {
-		"message": "Translate Writing When"
+		"message": "መቼ መፃፍ ተርጉም።"
 	},
 	"Ignore_AltGr_Modifier": {
-		"message": "Ignore AltGr Modifier"
-	},
-	"Auto_Reader_When": {
-		"message": "Auto Reader When"
+		"message": "AltGr መቀየሪያን ችላ በል"
 	},
 	"Translate_Page_When": {
-		"message": "Translate Page When"
-	},
-	"OCR_When": {
-		"message": "OCR When"
-	},
-	"Mouseover_Text_Type_Swap_Key": {
-		"message": "Mouseover Text Type Swap Key"
-	},
-	"Speech_Recognition_When": {
-		"message": "Speech Recognition When"
-	},
-	"Toggle_Mouseover_Text_Type_When": {
-		"message": "Toggle Mouseover Text Type When"
+		"message": "መቼ ነው ገጹን ተርጉም።"
 	},
 	"Mouseover_Text_Type_Key_Hold": {
-		"message": "Mouseover Text Type Key Hold"
+		"message": "Mouseover ጽሑፍ አይነት ቁልፍ ያዝ"
 	},
 	"Secondary_Language_When": {
-		"message": "Secondary Language When"
+		"message": "ሁለተኛ ደረጃ ቋንቋ መቼ"
 	},
 	"Swap_Key_Toggle_Mode": {
-		"message": "Swap Key Toggle Mode"
+		"message": "የቁልፍ መቀየሪያ ሁነታን ይቀያይሩ"
 	},
 	"Toggle_Extension_When": {
-		"message": "Toggle Extension When"
-	},
-	"TTS_Pause_Resume_When": {
-		"message": "TTS Pause Resume When"
-	},
-	"GRAPHIC______________________________________": {
-		"message": "GRAPHIC                                      "
+		"message": "ቅጥያውን መቼ ይቀያይሩ"
 	},
 	"GRAPHIC": {
-		"message": "GRAPHIC"
+		"message": "ግራፊክ"
 	},
 	"Tooltip_Font_Size": {
-		"message": "Tooltip Font Size"
+		"message": "የመሳሪያ ምክር የቅርጸ ቁምፊ መጠን"
 	},
 	"Tooltip_Font_Family": {
-		"message": "Tooltip Font Family"
-	},
-	"Subtitle_Background": {
-		"message": "Subtitle Background"
+		"message": "Tooltip ቅርጸ-ቁምፊ ቤተሰብ"
 	},
 	"Tooltip_Width": {
-		"message": "Tooltip Width"
+		"message": "የመሳሪያ ጫፍ ስፋት"
 	},
 	"Tooltip_Distance": {
-		"message": "Tooltip Distance"
+		"message": "የመሳሪያ ርቀት"
 	},
 	"Tooltip_Animation": {
-		"message": "Tooltip Animation"
+		"message": "Tooltip እነማ"
 	},
 	"Tooltip_Disappear_Duration": {
-		"message": "Tooltip Disappear Duration"
+		"message": "ጠቃሚ ምክር የቆይታ ጊዜ ይጠፋል"
 	},
 	"Tooltip_Position": {
-		"message": "Tooltip Position"
+		"message": "የመሳሪያ ምክር አቀማመጥ"
 	},
 	"Tooltip_Placement": {
-		"message": "Tooltip Placement"
+		"message": "የመሳሪያዎች አቀማመጥ"
 	},
 	"Above": {
-		"message": "Above"
+		"message": "በላይ"
 	},
 	"Below": {
-		"message": "Below"
+		"message": "ከታች"
 	},
 	"Tooltip_Text_Align": {
-		"message": "Tooltip Text Align"
+		"message": "የመሳሪያ ምክር ጽሑፍ አሰላለፍ"
 	},
 	"Tooltip_Background_Blur": {
-		"message": "Tooltip Background Blur"
+		"message": "የመሳሪያ ምክሮች ዳራ ብዥታ"
 	},
 	"Mouseover_Highlight_Text": {
-		"message": "Mouseover Highlight Text"
+		"message": "Mouseover Highlight ጽሑፍ"
 	},
 	"Tooltip_Font_Color": {
-		"message": "Tooltip Font Color"
+		"message": "የመሳሪያ ምክር ቅርጸ-ቁምፊ ቀለም"
 	},
 	"Tooltip_Background_Color": {
-		"message": "Tooltip Background Color"
+		"message": "Tooltip ዳራ ቀለም"
 	},
 	"Tooltip_Border_Color": {
-		"message": "Tooltip Border Color"
+		"message": "የመሳሪያ ጫፍ የድንበር ቀለም"
 	},
 	"Mouseover_Text_Highlight_Color": {
-		"message": "Mouseover Text Highlight Color"
+		"message": "Mouseover ጽሑፍ ማድመቂያ ቀለም"
 	},
 	"Ebook_Theme": {
-		"message": "Ebook Theme"
+		"message": "የኢመጽሐፍ ጭብጥ"
 	},
 	"Setting_Compact_mode": {
-		"message": "Setting Compact mode"
-	},
-	"VOICE______________________________________": {
-		"message": "VOICE                                      "
-	},
-	"VOICE": {
-		"message": "VOICE"
-	},
-	"Voice_Volume": {
-		"message": "Voice Volume"
-	},
-	"Voice_Speed": {
-		"message": "Voice Speed"
-	},
-	"Voice_Target": {
-		"message": "Voice Target"
-	},
-	"Voice_Repeat": {
-		"message": "Voice Repeat"
-	},
-	"Voice_for_": {
-		"message": "Voice for "
-	},
-	"Voice_speed_for_": {
-		"message": "Voice speed for "
-	},
-	"EXCLUDE______________________________________": {
-		"message": "EXCLUDE                                      "
+		"message": "የታመቀ ሁነታን በማቀናበር ላይ"
 	},
 	"EXCLUDE": {
-		"message": "EXCLUDE"
+		"message": "አግልል።"
 	},
 	"Exclude_Language": {
-		"message": "Exclude Language"
+		"message": "ቋንቋን አግልል።"
 	},
 	"Website_Filter_Mode": {
-		"message": "Website Filter Mode"
+		"message": "የድር ጣቢያ ማጣሪያ ሁነታ"
 	},
 	"Exclude_Website": {
-		"message": "Exclude Website"
+		"message": "ድህረ ገጽን አግልል።"
 	},
 	"Whitelist_Website": {
-		"message": "Whitelist Website"
+		"message": "የተፈቀደላቸው ዝርዝር ድር ጣቢያ"
 	},
 	"Website_Target_Language": {
-		"message": "Website Target Language"
+		"message": "የድረ-ገጽ ዒላማ ቋንቋ (ለምሳሌ github.com=ko)"
 	},
 	"Block_Current_Site": {
-		"message": "Block Current Site"
+		"message": "የአሁኑን ጣቢያ አግድ"
 	},
 	"Allow_Current_Site": {
-		"message": "Allow Current Site"
-	},
-	"ADVANCED______________________________________": {
-		"message": "ADVANCED                                      "
+		"message": "የአሁኑን ጣቢያ ፍቀድ"
 	},
 	"ADVANCED": {
-		"message": "ADVANCED"
+		"message": "የላቀ"
 	},
 	"UI_Language": {
-		"message": "UI Language"
+		"message": "የዩአይ ቋንቋ"
 	},
 	"Detect_PDF": {
-		"message": "Detect PDF"
+		"message": "ፒዲኤፍን ያግኙ"
 	},
 	"Mouseover_Text_Type_2": {
-		"message": "Secondary Mouseover Text Type"
-	},
-	"Mouseover_Pause_Subtitle": {
-		"message": "Mouseover Pause Subtitle"
+		"message": "ሁለተኛ ደረጃ Mouseover ጽሑፍ ዓይነት"
 	},
 	"Show_Tooltip_While_Typing": {
-		"message": "Show Tooltip While Typing"
+		"message": "በሚተይቡበት ጊዜ የመሳሪያ ምክሮችን አሳይ"
 	},
 	"Tooltip_Info_Source_Text": {
-		"message": "Tooltip Info Source Text"
+		"message": "የመረጃ ምንጭ ጽሑፍ"
 	},
 	"Translate_Exclude_Regex": {
-		"message": "Translate Exclude Regex"
+		"message": "ሬጌክስን አግልል ተርጉም።"
 	},
 	"Tooltip_Info_Source_Language": {
-		"message": "Tooltip Info Source Language"
+		"message": "የመረጃ ምንጭ ቋንቋ"
 	},
 	"Tooltip_Info_Transliteration": {
-		"message": "Tooltip Info Transliteration"
-	},
-	"Tooltip_Interval_Time": {
-		"message": "Tooltip Interval Time"
+		"message": "የመሳሪያ መረጃ በቋንቋ ፊደል መጻፍ"
 	},
 	"Tooltip_Show_Delay": {
-		"message": "Tooltip Show Delay"
+		"message": "የመሳሪያ ምክር ማሳያ መዘግየት"
 	},
 	"Tooltip_Word_Dictionary": {
-		"message": "Tooltip Word Dictionary"
+		"message": "Tooltip የቃል መዝገበ ቃላት"
 	},
 	"Tooltip_Word_Dictionary_Source": {
-		"message": "Tooltip Word Dictionary Source"
+		"message": "Tooltip የቃል መዝገበ ቃላት ምንጭ"
 	},
 	"Fallback_Translator_Engine": {
-		"message": "Fallback Translator Engine"
-	},
-	"SPEECH": {
-		"message": "SPEECH"
-	},
-	"Speech_Recognition_Language": {
-		"message": "Speech Recognition Language"
-	},
-	"Voice_Panel_Translate_Language": {
-		"message": "Voice Panel Translate Language"
-	},
-	"Voice_Panel_Text_Target": {
-		"message": "Voice Panel Text Target"
-	},
-	"Voice_Panel_Padding": {
-		"message": "Voice Panel Padding"
-	},
-	"Voice_Panel_Text_Align": {
-		"message": "Voice Panel Text Align"
-	},
-	"Voice_Panel_Source_Font_Size": {
-		"message": "Voice Panel Source Font Size"
-	},
-	"Voice_Panel_Target_Font_Size": {
-		"message": "Voice Panel Target Font Size"
-	},
-	"Voice_Panel_Source_Font_Color": {
-		"message": "Voice Panel Source Font Color"
-	},
-	"Voice_Panel_Target_Font_Color": {
-		"message": "Voice Panel Target Font Color"
-	},
-	"Voice_Panel_Source_Border_Color": {
-		"message": "Voice Panel Source Border Color"
-	},
-	"Voice_Panel_Target_Border_Color": {
-		"message": "Voice Panel Target Border Color"
-	},
-	"Voice_Panel_Background_Color": {
-		"message": "Voice Panel Background Color"
-	},
-	"BACKUP______________________________________": {
-		"message": "BACKUP                                      "
+		"message": "የኋሊት ተርጓሚ ሞተር"
 	},
 	"BACKUP": {
-		"message": "BACKUP"
+		"message": "ምትኬ"
 	},
 	"Sync_Setting": {
-		"message": "Sync Setting"
+		"message": "ቅንብሮችን በመሣሪያዎች መካከል አመሳስል"
 	},
 	"Import_Setting": {
-		"message": "Import Setting"
+		"message": "የማስመጣት ቅንብር"
 	},
 	"Export_Setting": {
-		"message": "Export Setting"
+		"message": "ቅንብር ወደ ውጪ ላክ"
 	},
 	"Reset_Setting": {
-		"message": "Reset Setting"
-	},
-	"About______________________________________": {
-		"message": "About                                      "
+		"message": "ቅንብርን ዳግም አስጀምር"
 	},
 	"How_to_use": {
-		"message": "How to use"
+		"message": "እንዴት መጠቀም እንደሚቻል"
 	},
 	"Check_how_to_use_this_extension": {
-		"message": "Check how to use this extension"
+		"message": "ይህን ቅጥያ እንዴት እንደሚጠቀሙበት ያረጋግጡ"
 	},
 	"PDF_Viewer": {
-		"message": "PDF Viewer"
+		"message": "ፒዲኤፍ መመልከቻ"
 	},
 	"Translate_local_PDF_file": {
-		"message": "Translate local PDF file"
+		"message": "አካባቢያዊ ፒዲኤፍ ፋይልን ተርጉም።"
 	},
 	"Ebook_Reader": {
-		"message": "Ebook Reader"
+		"message": "ኢመጽሐፍ አንባቢ"
 	},
 	"Translate_local_ebook_file": {
-		"message": "Translate local ebook file"
-	},
-	"Twitter": {
-		"message": "Twitter"
-	},
-	"Retweet_twitter_post": {
-		"message": "Retweet twitter post"
-	},
-	"Review_Page": {
-		"message": "Review Page"
-	},
-	"Comment_on_this_extension": {
-		"message": "Comment on this extension"
+		"message": "የአካባቢ ኢመጽሐፍ ፋይልን ተርጉም።"
 	},
 	"Source_code": {
-		"message": "Source code"
+		"message": "ምንጭ ኮድ"
 	},
 	"Check_source_code_in_github": {
-		"message": "Check source code in github"
+		"message": "በgithub ውስጥ የምንጭ ኮድን ያረጋግጡ"
 	},
 	"Privacy_Policy": {
-		"message": "Privacy Policy"
+		"message": "የግላዊነት ፖሊሲ"
 	},
 	"User_privacy_policy": {
-		"message": "User privacy policy"
-	},
-	"Voice_Panel": {
-		"message": "Voice Panel"
-	},
-	"Translate_Voice": {
-		"message": "Translate Voice"
-	},
-	"Review______________________________________": {
-		"message": "Review                                      "
-	},
-	"Review_this": {
-		"message": "Review this"
-	},
-	"Developer_love_criticism": {
-		"message": "Developer love criticism"
-	},
-	"Coffee______________________________________": {
-		"message": "Coffee                                      "
-	},
-	"Support_this_extension": {
-		"message": "Support this extension"
-	},
-	"Feed_a_coffee_to_the_extension_devs": {
-		"message": "Feed a coffee to the extension devs"
-	},
-	"Title______________________________________": {
-		"message": "Title                                      "
-	},
-	"SELECT_OPTION______________________________": {
-		"message": "SELECT OPTION                              "
-	},
-	"On": {
-		"message": "On"
-	},
-	"Off": {
-		"message": "Off"
+		"message": "የተጠቃሚ ግላዊነት መመሪያ"
 	},
 	"Auto": {
-		"message": "Auto"
+		"message": "መኪና"
 	},
 	"None": {
-		"message": "None"
+		"message": "ምንም"
 	},
 	"Select": {
-		"message": "Select"
+		"message": "ይምረጡ"
 	},
 	"Mouseover": {
-		"message": "Mouseover"
+		"message": "በማውዝ ማንዣበብ"
 	},
 	"Mouseover_n_Select": {
-		"message": "Mouseover n Select"
+		"message": "Mouseover n ይምረጡ"
 	},
 	"Follow": {
-		"message": "Follow"
+		"message": "ተከተል"
 	},
 	"Fixed": {
-		"message": "Fixed"
+		"message": "ቋሚ"
 	},
 	"Top_Right": {
-		"message": "Top Right"
+		"message": "ከላይ በቀኝ"
 	},
 	"Fade": {
-		"message": "Fade"
+		"message": "ደብዛዛ"
 	},
 	"Scale": {
-		"message": "Scale"
+		"message": "ልኬት"
 	},
 	"Shift_away": {
-		"message": "Shift away"
+		"message": "ቀይር"
 	},
 	"Shift_toward": {
-		"message": "Shift toward"
+		"message": "ወደ ቀይር"
 	},
 	"Perspective": {
-		"message": "Perspective"
+		"message": "አተያይ"
 	},
 	"Word": {
-		"message": "Word"
+		"message": "ቃል"
 	},
 	"Sentence": {
-		"message": "Sentence"
+		"message": "ዓረፍተ ነገር"
 	},
 	"Container": {
-		"message": "Container"
+		"message": "መያዣ"
 	},
 	"Both": {
-		"message": "Both"
+		"message": "ሁለቱም"
 	},
 	"Blacklist": {
-		"message": "Blacklist"
+		"message": "ጥቁር መዝገብ"
 	},
 	"Whitelist": {
-		"message": "Whitelist"
-	},
-	"Source": {
-		"message": "Source"
-	},
-	"Source_Text": {
-		"message": "Source Text"
-	},
-	"Translated_Text": {
-		"message": "Translated Text"
-	},
-	"Source_n_Translated": {
-		"message": "Source n Translated"
-	},
-	"Translated_n_Source": {
-		"message": "Translated n Source"
-	},
-	"Dual_Subtitle": {
-		"message": "Dual Subtitle"
-	},
-	"Target_Single_Subtitle": {
-		"message": "Target Single Subtitle"
-	},
-	"Source_Single_Subtitle": {
-		"message": "Source Single Subtitle"
+		"message": "የተፈቀደላቸው ዝርዝር"
 	},
 	"Always": {
-		"message": "Always"
+		"message": "ሁሌም"
 	},
 	"Center": {
-		"message": "Center"
+		"message": "መሃል"
 	},
 	"Left": {
-		"message": "Left"
+		"message": "ግራ"
 	},
 	"Right": {
-		"message": "Right"
+		"message": "ትክክል"
 	},
 	"Justify": {
-		"message": "Justify"
+		"message": "አረጋግጡ"
 	},
 	"Light": {
-		"message": "Light"
+		"message": "ብርሃን"
 	},
 	"Dark": {
-		"message": "Dark"
+		"message": "ጨለማ"
 	},
 	"Default": {
-		"message": "Default"
+		"message": "ነባሪ"
 	},
 	"Ctrl_Left": {
-		"message": "Ctrl Left"
+		"message": "Ctrl ግራ"
 	},
 	"Ctrl_Right": {
-		"message": "Ctrl Right"
+		"message": "Ctrl ትክክል"
 	},
 	"Alt_Left": {
-		"message": "Alt Left"
+		"message": "Alt ግራ"
 	},
 	"Alt_Right": {
-		"message": "Alt Right"
+		"message": "አልት ቀኝ"
 	},
 	"Shift_Left": {
-		"message": "Shift Left"
+		"message": "ወደ ግራ ቀይር"
 	},
 	"Shift_Right": {
-		"message": "Shift Right"
+		"message": "ወደ ቀኝ ቀይር"
 	},
 	"Meta_Left": {
-		"message": "Meta Left"
+		"message": "ሜታ ግራ"
 	},
 	"Meta_Right": {
-		"message": "Meta Right"
+		"message": "ሜታ ትክክል"
 	},
 	"Click_Left": {
-		"message": "Click Left"
+		"message": "በግራ ጠቅ ያድርጉ"
 	},
 	"Click_Middle": {
-		"message": "Click Middle"
+		"message": "መሃል ላይ ጠቅ ያድርጉ"
 	},
 	"Click_Right": {
-		"message": "Click Right"
+		"message": "በቀኝ ጠቅ ያድርጉ"
 	},
 	"google": {
 		"message": "google"
@@ -548,286 +356,148 @@
 	"bing": {
 		"message": "bing"
 	},
-	"Saved_Words": {
-		"message": "Saved Words"
-	},
-	"Group": {
-		"message": "Group"
-	},
-	"All": {
-		"message": "All"
-	},
-	"Move_to_group": {
-		"message": "Move to group"
-	},
-	"Delete": {
-		"message": "Delete"
-	},
-	"Clear": {
-		"message": "Clear"
-	},
-	"selected": {
-		"message": "selected"
-	},
-	"Date": {
-		"message": "Date"
-	},
-	"Translation": {
-		"message": "Translation"
-	},
-	"No_saved_words_yet": {
-		"message": "No saved words yet"
-	},
-	"Manage_Groups": {
-		"message": "Manage Groups"
-	},
-	"Remove_all": {
-		"message": "Remove all"
-	},
-	"Import_CSV": {
-		"message": "Import CSV"
-	},
-	"Download_CSV": {
-		"message": "Download CSV"
-	},
-	"Save_key": {
-		"message": "Save key"
-	},
-	"Highlight_on_page": {
-		"message": "Highlight on page"
-	},
-	"Right_click_menu": {
-		"message": "Right click menu"
-	},
-	"Add_right_click_context_menu": {
-		"message": "Add right click context menu"
-	},
-	"Done": {
-		"message": "Done"
-	},
-	"On_Select": {
-		"message": "On Select"
-	},
-	"On_Hover": {
-		"message": "On Hover"
-	},
-	"On_Select_n_Hover": {
-		"message": "On Select n Hover"
-	},
-	"Select_group_to_play": {
-		"message": "Select group to play"
-	},
-	"No_Group_Selected": {
-		"message": "No Group Selected"
-	},
-	"Check_groups_to_play": {
-		"message": "Check groups to play"
-	},
-	"Flashcard_makes_cards_from_your_saved_words": {
-		"message": "Flashcard makes cards from your saved words"
-	},
-	"Flashcard": {
-		"message": "Flashcard"
-	},
-	"Play_Flashcard": {
-		"message": "Play Flashcard"
-	},
-	"Reset_progress": {
-		"message": "Reset progress"
-	},
-	"No_History_Data": {
-		"message": "No History Data"
-	},
-	"Today_play_is_completed": {
-		"message": "Today play is completed"
-	},
-	"Try_on_next_day": {
-		"message": "Try on next day"
-	},
-	"No_more_card_to_learn_today": {
-		"message": "No more card to learn today"
-	},
-	"Add_more_history_data_to_play_with": {
-		"message": "Add more history data to play with"
-	},
-	"Finish": {
-		"message": "Finish"
-	},
-	"Today_Flashcards_are_Completed": {
-		"message": "Today Flashcards are Completed"
-	},
-	"No_More_Card_Data": {
-		"message": "No More Card Data"
-	},
-	"Show_Answer": {
-		"message": "Show Answer"
-	},
-	"Again": {
-		"message": "Again"
-	},
-	"Hard": {
-		"message": "Hard"
-	},
-	"Good": {
-		"message": "Good"
-	},
-	"Easy": {
-		"message": "Easy"
-	},
-	"New": {
-		"message": "New"
-	},
-	"Review": {
-		"message": "Review"
-	},
-	"Learning": {
-		"message": "Learning"
-	},
 	"About": {
-		"message": "About"
+		"message": "ስለ"
 	},
 	"Translator": {
-		"message": "Translator"
+		"message": "ተርጓሚ"
 	},
 	"Wiktionary": {
-		"message": "Wiktionary"
-	},
-	"Translated": {
-		"message": "Translated"
+		"message": "ዊክሽነሪ"
 	},
 	"Custom": {
-		"message": "Custom"
+		"message": "ብጁ"
 	},
 	"Back": {
-		"message": "Back"
+		"message": "ተመለስ"
 	},
 	"Cancel": {
-		"message": "Cancel"
+		"message": "ሰርዝ"
 	},
 	"Remove": {
-		"message": "Remove"
+		"message": "አስወግድ"
 	},
 	"Alpha": {
-		"message": "Alpha"
+		"message": "አልፋ"
 	},
 	"Fetch_models_from_endpoint": {
-		"message": "Fetch models from endpoint"
+		"message": "ሞዴሎችን ከመጨረሻ ነጥብ ያውጡ"
 	},
 	"No_models_returned_by_endpoint": {
-		"message": "No models returned by endpoint"
+		"message": "በመጨረሻ ነጥብ የተመለሱ ምንም ሞዴሎች የሉም"
 	},
 	"API_endpoint_is_empty": {
-		"message": "API endpoint is empty"
+		"message": "የኤፒአይ መጨረሻ ነጥብ ባዶ ነው።"
 	},
 	"Failed_to_fetch_LLM_models": {
-		"message": "Failed to fetch LLM models"
+		"message": "LLM ሞዴሎችን ማምጣት አልተሳካም።"
 	},
 	"Open_this_popup_on_a_website_to_use_this_button": {
-		"message": "Open this popup on a website to use this button"
+		"message": "ይህንን ቁልፍ ለመጠቀም ይህንን ብቅ ባይ በድር ጣቢያ ላይ ይክፈቱ"
 	},
 	"Import_failed": {
-		"message": "Import failed"
+		"message": "ማስመጣት አልተሳካም።"
 	},
 	"Copy_PDF_URL": {
-		"message": "Copy PDF URL"
+		"message": "ፒዲኤፍ URL ቅዳ"
 	},
 	"Copied": {
-		"message": "Copied"
+		"message": "ተገልብጧል"
 	},
 	"Copy_failed": {
-		"message": "Copy failed"
+		"message": "መቅዳት አልተሳካም።"
 	},
 	"Allow_access_to_file_URLs_to_open_local_PDF_files": {
-		"message": "Allow access to file URLs to open local PDF files"
+		"message": "የአካባቢ ፒዲኤፍ ፋይሎችን ለመክፈት የፋይል ዩአርኤሎችን መዳረሻ ፍቀድ"
 	},
 	"Open_File": {
-		"message": "Open File"
+		"message": "ፋይል ክፈት"
 	},
 	"Previous_Page": {
-		"message": "Previous Page"
+		"message": "የቀድሞ ገጽ"
 	},
 	"Next_Page": {
-		"message": "Next Page"
+		"message": "ቀጣይ ገጽ"
 	},
 	"Table_of_Contents": {
-		"message": "Table of Contents"
+		"message": "ማውጫ"
 	},
 	"Drop_an_ebook_file_here_or_open_one": {
-		"message": "Drop an ebook file here or open one"
+		"message": "የኢመጽሐፍ ፋይል እዚህ ጣል ያድርጉ ወይም አንዱን ይክፈቱ"
 	},
 	"Could_not_open_this_file": {
-		"message": "Could not open this file"
+		"message": "ይህን ፋይል መክፈት አልተቻለም"
 	},
 	"Untitled": {
-		"message": "Untitled"
+		"message": "ርዕስ አልባ"
 	},
 	"Page": {
-		"message": "Page"
+		"message": "ገጽ"
 	},
 	"Zoom_out": {
-		"message": "Zoom out"
+		"message": "አሳንስ"
 	},
 	"Zoom": {
-		"message": "Zoom"
+		"message": "አጉላ"
 	},
 	"Zoom_in": {
-		"message": "Zoom in"
+		"message": "አሳንስ"
 	},
 	"Automatic_zoom": {
-		"message": "Automatic zoom"
+		"message": "ራስ-ሰር ማጉላት"
 	},
 	"Page_fit": {
-		"message": "Page fit"
+		"message": "ገጽ ተስማሚ"
 	},
 	"Page_width": {
-		"message": "Page width"
+		"message": "የገጽ ስፋት"
 	},
 	"Find": {
-		"message": "Find"
+		"message": "አግኝ"
 	},
 	"Dark_mode": {
-		"message": "Dark mode"
+		"message": "ጨለማ ሁነታ"
 	},
 	"Download": {
-		"message": "Download"
+		"message": "አውርድ"
 	},
 	"Find_in_document": {
-		"message": "Find in document"
+		"message": "በሰነድ ውስጥ ይፈልጉ"
 	},
 	"Previous_match": {
-		"message": "Previous match"
+		"message": "የቀድሞ ግጥሚያ"
 	},
 	"Next_match": {
-		"message": "Next match"
+		"message": "ቀጣይ ግጥሚያ"
 	},
 	"Highlight_all": {
-		"message": "Highlight all"
+		"message": "ሁሉንም አድምቅ"
 	},
 	"Match_case": {
-		"message": "Match case"
+		"message": "የማዛመጃ መያዣ"
 	},
 	"Phrase_not_found": {
-		"message": "Phrase not found"
+		"message": "ሐረግ አልተገኘም።"
 	},
 	"Close": {
-		"message": "Close"
+		"message": "ዝጋ"
 	},
 	"Failed_to_load_the_PDF_file": {
-		"message": "Failed to load the PDF file"
+		"message": "ፒዲኤፍ ፋይሉን መጫን አልተሳካም።"
 	},
 	"Drop_a_PDF_file_here": {
-		"message": "Drop a PDF file here"
+		"message": "የፒዲኤፍ ፋይል እዚህ ጣል ያድርጉ"
 	},
 	"Enter_the_password_to_open_this_PDF_file": {
-		"message": "Enter the password to open this PDF file"
+		"message": "ይህንን ፒዲኤፍ ፋይል ለመክፈት የይለፍ ቃሉን ያስገቡ"
 	},
 	"Invalid_password_try_again": {
-		"message": "Invalid password try again"
+		"message": "ልክ ያልሆነ የይለፍ ቃል እንደገና ይሞክሩ"
 	},
 	"appName": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Mouse Tooltip Translator Refined"
 	},
 	"appDesc": {
-		"message": "Hover or select text to translate it in a tooltip. Also works in PDF and ebook files."
+		"message": "ጽሑፍ ላይ ያንዣብቡ ወይም ይምረጡ እና በመሳሪያ ምክር ውስጥ ይተርጉሙት። በፒዲኤፍ እና በኢመጽሐፍ ፋይሎች ውስጥም ይሰራል።"
 	}
 }

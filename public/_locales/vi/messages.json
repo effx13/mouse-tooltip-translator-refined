@@ -1,12 +1,9 @@
 {
-	"MAIN______________________________________": {
-		"message": "MAIN                                      "
-	},
 	"MAIN": {
-		"message": "MAIN"
+		"message": "CHÍNH"
 	},
 	"Mouse_Tooltip_Translator": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Dịch bằng chú thích chuột"
 	},
 	"Translate_When": {
 		"message": "Dịch chỉ khi"
@@ -21,22 +18,22 @@
 		"message": "Phương thức Dịch"
 	},
 	"LLM_Provider": {
-		"message": "LLM Provider"
+		"message": "Nhà cung cấp LLM"
 	},
 	"LLM_Api_Endpoint": {
-		"message": "LLM API Endpoint URL"
+		"message": "URL điểm cuối LLM API"
 	},
 	"LLM_Api_Key": {
-		"message": "LLM API Key"
+		"message": "Khóa API LLM (tùy chọn)"
 	},
 	"LLM_Model": {
-		"message": "LLM Model"
+		"message": "Mô hình LLM"
 	},
 	"Mouseover_Text_Type": {
 		"message": "Văn bản khi di chuột qua"
 	},
 	"Translate_Into_2": {
-		"message": "Secondary Translate Into"
+		"message": "Ngôn ngữ dịch thứ hai"
 	},
 	"Writing_Language": {
 		"message": "Ngôn ngữ viết"
@@ -44,77 +41,41 @@
 	"Reverse_Translate_Language": {
 		"message": "Ngôn ngữ dịch ngược"
 	},
-	"OCR_Language": {
-		"message": "Ngôn ngữ OCR"
-	},
-	"Detect_Subtitle": {
-		"message": "Nhận diện phụ đề"
-	},
-	"KEYBOARD______________________________________": {
-		"message": "KEYBOARD                                      "
-	},
 	"KEYBOARD": {
-		"message": "KEYBOARD"
+		"message": "BÀN PHÍM"
 	},
 	"Show_Tooltip_When": {
 		"message": "Hiện chú thích khi"
-	},
-	"Voice_When": {
-		"message": "Nói chỉ khi"
 	},
 	"Translate_Writing_When": {
 		"message": "Dịch viết khi"
 	},
 	"Ignore_AltGr_Modifier": {
-		"message": "Ignore AltGr Modifier"
-	},
-	"Auto_Reader_When": {
-		"message": "Auto Reader When"
+		"message": "Bỏ qua phím bổ trợ AltGr"
 	},
 	"Translate_Page_When": {
-		"message": "Translate Page When"
-	},
-	"OCR_When": {
-		"message": "OCR Khi"
-	},
-	"Mouseover_Text_Type_Swap_Key": {
-		"message": "Phím hoán đổi văn bản khi di chuột qua"
-	},
-	"Speech_Recognition_When": {
-		"message": "Nhận dạng giọng nói khi"
-	},
-	"Toggle_Mouseover_Text_Type_When": {
-		"message": "Toggle Mouseover Text Type When"
+		"message": "Dịch trang khi"
 	},
 	"Mouseover_Text_Type_Key_Hold": {
-		"message": "Mouseover Text Type Key Hold"
+		"message": "Phím đổi loại văn bản khi di chuột"
 	},
 	"Secondary_Language_When": {
-		"message": "Secondary Language When"
+		"message": "Dùng ngôn ngữ thứ hai khi"
 	},
 	"Swap_Key_Toggle_Mode": {
-		"message": "Swap Key Toggle Mode"
+		"message": "Phím chuyển đổi hoạt động dạng bật/tắt"
 	},
 	"Toggle_Extension_When": {
-		"message": "Toggle Extension When"
-	},
-	"TTS_Pause_Resume_When": {
-		"message": "TTS Pause Resume When"
-	},
-	"GRAPHIC______________________________________": {
-		"message": "GRAPHIC                                      "
+		"message": "Bật/tắt tiện ích khi"
 	},
 	"GRAPHIC": {
-		"message": "GRAPHIC"
+		"message": "GIAO DIỆN"
 	},
 	"Tooltip_Font_Size": {
 		"message": "Kích thước phông chữ"
 	},
 	"Tooltip_Font_Family": {
-		"message": "Tooltip Font Family"
-	},
-	"Subtitle_Background": {
-		"message": "Subtitle Background"
+		"message": "Phông chữ chú thích"
 	},
 	"Tooltip_Width": {
 		"message": "Chiều rộng công cụ"
@@ -126,19 +87,19 @@
 		"message": "Hoạt ảnh công cụ"
 	},
 	"Tooltip_Disappear_Duration": {
-		"message": "Tooltip Disappear Duration"
+		"message": "Thời gian ẩn chú thích"
 	},
 	"Tooltip_Position": {
 		"message": "Vị trí công cụ"
 	},
 	"Tooltip_Placement": {
-		"message": "Tooltip Placement"
+		"message": "Vị trí đặt chú thích"
 	},
 	"Above": {
-		"message": "Above"
+		"message": "Phía trên"
 	},
 	"Below": {
-		"message": "Below"
+		"message": "Phía dưới"
 	},
 	"Tooltip_Text_Align": {
 		"message": "Căn chỉnh công cụ"
@@ -162,88 +123,55 @@
 		"message": "Màu của văn bản nổi bật"
 	},
 	"Ebook_Theme": {
-		"message": "Ebook Theme"
+		"message": "Giao diện sách điện tử"
 	},
 	"Setting_Compact_mode": {
-		"message": "Setting Compact mode"
-	},
-	"VOICE______________________________________": {
-		"message": "VOICE                                      "
-	},
-	"VOICE": {
-		"message": "VOICE"
-	},
-	"Voice_Volume": {
-		"message": "Âm lượng thoại"
-	},
-	"Voice_Speed": {
-		"message": "Tốc độ giọng nói"
-	},
-	"Voice_Target": {
-		"message": "Mục tiêu giọng nói"
-	},
-	"Voice_Repeat": {
-		"message": "Lặp lại thoại"
-	},
-	"Voice_for_": {
-		"message": "Giọng nói cho "
-	},
-	"Voice_speed_for_": {
-		"message": "Voice speed for "
-	},
-	"EXCLUDE______________________________________": {
-		"message": "EXCLUDE                                      "
+		"message": "Chế độ cài đặt thu gọn"
 	},
 	"EXCLUDE": {
-		"message": "EXCLUDE"
+		"message": "LOẠI TRỪ"
 	},
 	"Exclude_Language": {
-		"message": "Exclude Language"
+		"message": "Ngôn ngữ loại trừ"
 	},
 	"Website_Filter_Mode": {
-		"message": "Website Filter Mode"
+		"message": "Chế độ lọc trang web"
 	},
 	"Exclude_Website": {
-		"message": "Exclude Website"
+		"message": "Trang web loại trừ"
 	},
 	"Whitelist_Website": {
-		"message": "Whitelist Website"
+		"message": "Trang web được phép"
 	},
 	"Website_Target_Language": {
-		"message": "Website Target Language"
+		"message": "Ngôn ngữ đích theo trang web (vd. github.com=ko)"
 	},
 	"Block_Current_Site": {
-		"message": "Block Current Site"
+		"message": "Chặn trang này"
 	},
 	"Allow_Current_Site": {
-		"message": "Allow Current Site"
-	},
-	"ADVANCED______________________________________": {
-		"message": "ADVANCED                                      "
+		"message": "Cho phép trang này"
 	},
 	"ADVANCED": {
-		"message": "ADVANCED"
+		"message": "NÂNG CAO"
 	},
 	"UI_Language": {
-		"message": "UI Language"
+		"message": "Ngôn ngữ giao diện"
 	},
 	"Detect_PDF": {
 		"message": "Nhận diện PDF"
 	},
 	"Mouseover_Text_Type_2": {
-		"message": "Secondary Mouseover Text Type"
-	},
-	"Mouseover_Pause_Subtitle": {
-		"message": "Chuột di vào phụ đề sẽ Tạm Dừng"
+		"message": "Loại văn bản khi di chuột thứ hai"
 	},
 	"Show_Tooltip_While_Typing": {
-		"message": "Show Tooltip While Typing"
+		"message": "Hiện chú thích khi đang gõ"
 	},
 	"Tooltip_Info_Source_Text": {
 		"message": "Thông tin nguồn văn bản"
 	},
 	"Translate_Exclude_Regex": {
-		"message": "Translate Exclude Regex"
+		"message": "Biểu thức chính quy loại trừ khi dịch"
 	},
 	"Tooltip_Info_Source_Language": {
 		"message": "Thông tin nguồn về ngôn ngữ"
@@ -251,296 +179,176 @@
 	"Tooltip_Info_Transliteration": {
 		"message": "Thông tin về dịch thuật"
 	},
-	"Tooltip_Interval_Time": {
-		"message": "Thời gian của công cụ"
-	},
 	"Tooltip_Show_Delay": {
-		"message": "Tooltip Show Delay"
+		"message": "Độ trễ hiện chú thích"
 	},
 	"Tooltip_Word_Dictionary": {
 		"message": "Từ điển giải thích của công cụ"
 	},
 	"Tooltip_Word_Dictionary_Source": {
-		"message": "Tooltip Word Dictionary Source"
+		"message": "Nguồn từ điển trong chú thích"
 	},
 	"Fallback_Translator_Engine": {
-		"message": "Fallback Translator Engine"
-	},
-	"SPEECH": {
-		"message": "SPEECH"
-	},
-	"Speech_Recognition_Language": {
-		"message": "Ngôn ngữ nhận dạng giọng nói"
-	},
-	"Voice_Panel_Translate_Language": {
-		"message": "Bảng ngôn ngữ cần dịch bằng giọng nói"
-	},
-	"Voice_Panel_Text_Target": {
-		"message": "Bảng mục tiêu giọng nói văn bản"
-	},
-	"Voice_Panel_Padding": {
-		"message": "Bảng đệm của giọng nói"
-	},
-	"Voice_Panel_Text_Align": {
-		"message": "Bảng căn chỉnh của giọng nói"
-	},
-	"Voice_Panel_Source_Font_Size": {
-		"message": "Kích thước phông chữ Nguồn của bản điều khiển giọng nói"
-	},
-	"Voice_Panel_Target_Font_Size": {
-		"message": "Kích thước phông chữ Mục Tiêu của bản điều khiển giọng nói"
-	},
-	"Voice_Panel_Source_Font_Color": {
-		"message": "Màu NGUỒN của bản điều khiển giọng nói"
-	},
-	"Voice_Panel_Target_Font_Color": {
-		"message": "Màu MỤC TIÊU của bản điều khiển giọng nói"
-	},
-	"Voice_Panel_Source_Border_Color": {
-		"message": "Viền NGUỒN của bản điều khiển giọng nói"
-	},
-	"Voice_Panel_Target_Border_Color": {
-		"message": "Viền MỤC TIÊU của bản điều khiển giọng nói"
-	},
-	"Voice_Panel_Background_Color": {
-		"message": "Bảng màu nền của giọng nói"
-	},
-	"BACKUP______________________________________": {
-		"message": "BACKUP                                      "
+		"message": "Công cụ dịch dự phòng"
 	},
 	"BACKUP": {
-		"message": "BACKUP"
+		"message": "SAO LƯU"
 	},
 	"Sync_Setting": {
-		"message": "Sync Setting"
+		"message": "Đồng bộ cài đặt giữa các thiết bị"
 	},
 	"Import_Setting": {
-		"message": "Import Setting"
+		"message": "Nhập cài đặt"
 	},
 	"Export_Setting": {
-		"message": "Export Setting"
+		"message": "Xuất cài đặt"
 	},
 	"Reset_Setting": {
-		"message": "Reset Setting"
-	},
-	"About______________________________________": {
-		"message": "About                                      "
+		"message": "Đặt lại cài đặt"
 	},
 	"How_to_use": {
 		"message": "Cách sử dụng"
 	},
 	"Check_how_to_use_this_extension": {
-		"message": "Check how to use this extension"
+		"message": "Xem cách sử dụng tiện ích này"
 	},
 	"PDF_Viewer": {
-		"message": "PDF Viewer"
+		"message": "Trình xem PDF"
 	},
 	"Translate_local_PDF_file": {
-		"message": "Translate local PDF file"
+		"message": "Dịch tệp PDF trên máy"
 	},
 	"Ebook_Reader": {
-		"message": "Ebook Reader"
+		"message": "Trình đọc sách điện tử"
 	},
 	"Translate_local_ebook_file": {
-		"message": "Translate local ebook file"
-	},
-	"Twitter": {
-		"message": "Twitter"
-	},
-	"Retweet_twitter_post": {
-		"message": "Retweet twitter post"
-	},
-	"Review_Page": {
-		"message": "Review Page"
-	},
-	"Comment_on_this_extension": {
-		"message": "Comment on this extension"
+		"message": "Dịch tệp sách điện tử trên máy"
 	},
 	"Source_code": {
-		"message": "Source code"
+		"message": "Mã nguồn"
 	},
 	"Check_source_code_in_github": {
-		"message": "Check source code in github"
+		"message": "Xem mã nguồn trên GitHub"
 	},
 	"Privacy_Policy": {
-		"message": "Privacy Policy"
+		"message": "Chính sách quyền riêng tư"
 	},
 	"User_privacy_policy": {
-		"message": "User privacy policy"
-	},
-	"Voice_Panel": {
-		"message": "Voice Panel"
-	},
-	"Translate_Voice": {
-		"message": "Translate Voice"
-	},
-	"Review______________________________________": {
-		"message": "Review                                      "
-	},
-	"Review_this": {
-		"message": "Review this"
-	},
-	"Developer_love_criticism": {
-		"message": "Người phát triển rất thích những để lại lời bình luận của bạn"
-	},
-	"Coffee______________________________________": {
-		"message": "Coffee                                      "
-	},
-	"Support_this_extension": {
-		"message": "Support this extension"
-	},
-	"Feed_a_coffee_to_the_extension_devs": {
-		"message": "Feed a coffee to the extension devs"
-	},
-	"Title______________________________________": {
-		"message": "Tiêu đề                                      "
-	},
-	"SELECT_OPTION______________________________": {
-		"message": "SELECT OPTION                              "
-	},
-	"On": {
-		"message": "On"
-	},
-	"Off": {
-		"message": "Off"
+		"message": "Chính sách quyền riêng tư của người dùng"
 	},
 	"Auto": {
-		"message": "Auto"
+		"message": "Tự động"
 	},
 	"None": {
-		"message": "None"
+		"message": "Không"
 	},
 	"Select": {
-		"message": "Select"
+		"message": "Chọn"
 	},
 	"Mouseover": {
-		"message": "Mouseover"
+		"message": "Di chuột"
 	},
 	"Mouseover_n_Select": {
-		"message": "Mouseover n Select"
+		"message": "Di chuột và chọn"
 	},
 	"Follow": {
-		"message": "Follow"
+		"message": "Theo con trỏ"
 	},
 	"Fixed": {
-		"message": "Fixed"
+		"message": "Cố định"
 	},
 	"Top_Right": {
-		"message": "Top Right"
+		"message": "Góc trên bên phải"
 	},
 	"Fade": {
-		"message": "Fade"
+		"message": "Mờ dần"
 	},
 	"Scale": {
-		"message": "Scale"
+		"message": "Co giãn"
 	},
 	"Shift_away": {
-		"message": "Shift away"
+		"message": "Trượt ra"
 	},
 	"Shift_toward": {
-		"message": "Shift toward"
+		"message": "Trượt vào"
 	},
 	"Perspective": {
-		"message": "Perspective"
+		"message": "Phối cảnh"
 	},
 	"Word": {
-		"message": "Word"
+		"message": "Từ"
 	},
 	"Sentence": {
-		"message": "Sentence"
+		"message": "Câu"
 	},
 	"Container": {
-		"message": "Container"
+		"message": "Đoạn"
 	},
 	"Both": {
-		"message": "Both"
+		"message": "Cả hai"
 	},
 	"Blacklist": {
-		"message": "Blacklist"
+		"message": "Danh sách chặn"
 	},
 	"Whitelist": {
-		"message": "Whitelist"
-	},
-	"Source": {
-		"message": "Source"
-	},
-	"Source_Text": {
-		"message": "Source Text"
-	},
-	"Translated_Text": {
-		"message": "Translated Text"
-	},
-	"Source_n_Translated": {
-		"message": "Source n Translated"
-	},
-	"Translated_n_Source": {
-		"message": "Translated n Source"
-	},
-	"Dual_Subtitle": {
-		"message": "Dual Subtitle"
-	},
-	"Target_Single_Subtitle": {
-		"message": "Target Single Subtitle"
-	},
-	"Source_Single_Subtitle": {
-		"message": "Source Single Subtitle"
+		"message": "Danh sách cho phép"
 	},
 	"Always": {
-		"message": "Always"
+		"message": "Luôn luôn"
 	},
 	"Center": {
-		"message": "Center"
+		"message": "Giữa"
 	},
 	"Left": {
-		"message": "Left"
+		"message": "Trái"
 	},
 	"Right": {
-		"message": "Right"
+		"message": "Phải"
 	},
 	"Justify": {
-		"message": "Justify"
+		"message": "Căn đều"
 	},
 	"Light": {
-		"message": "Light"
+		"message": "Sáng"
 	},
 	"Dark": {
-		"message": "Dark"
+		"message": "Tối"
 	},
 	"Default": {
-		"message": "Default"
+		"message": "Mặc định"
 	},
 	"Ctrl_Left": {
-		"message": "Ctrl Left"
+		"message": "Ctrl trái"
 	},
 	"Ctrl_Right": {
-		"message": "Ctrl Right"
+		"message": "Ctrl phải"
 	},
 	"Alt_Left": {
-		"message": "Alt Left"
+		"message": "Alt trái"
 	},
 	"Alt_Right": {
-		"message": "Alt Right"
+		"message": "Alt phải"
 	},
 	"Shift_Left": {
-		"message": "Shift Left"
+		"message": "Shift trái"
 	},
 	"Shift_Right": {
-		"message": "Shift Right"
+		"message": "Shift phải"
 	},
 	"Meta_Left": {
-		"message": "Meta Left"
+		"message": "Meta trái"
 	},
 	"Meta_Right": {
-		"message": "Meta Right"
+		"message": "Meta phải"
 	},
 	"Click_Left": {
-		"message": "Click Left"
+		"message": "Nhấp chuột trái"
 	},
 	"Click_Middle": {
-		"message": "Click Middle"
+		"message": "Nhấp chuột giữa"
 	},
 	"Click_Right": {
-		"message": "Click Right"
+		"message": "Nhấp chuột phải"
 	},
 	"google": {
 		"message": "google"
@@ -548,286 +356,148 @@
 	"bing": {
 		"message": "bing"
 	},
-	"Saved_Words": {
-		"message": "Saved Words"
-	},
-	"Group": {
-		"message": "Group"
-	},
-	"All": {
-		"message": "All"
-	},
-	"Move_to_group": {
-		"message": "Move to group"
-	},
-	"Delete": {
-		"message": "Delete"
-	},
-	"Clear": {
-		"message": "Clear"
-	},
-	"selected": {
-		"message": "selected"
-	},
-	"Date": {
-		"message": "Date"
-	},
-	"Translation": {
-		"message": "Translation"
-	},
-	"No_saved_words_yet": {
-		"message": "No saved words yet"
-	},
-	"Manage_Groups": {
-		"message": "Manage Groups"
-	},
-	"Remove_all": {
-		"message": "Remove all"
-	},
-	"Import_CSV": {
-		"message": "Import CSV"
-	},
-	"Download_CSV": {
-		"message": "Download CSV"
-	},
-	"Save_key": {
-		"message": "Save key"
-	},
-	"Highlight_on_page": {
-		"message": "Highlight on page"
-	},
-	"Right_click_menu": {
-		"message": "Right click menu"
-	},
-	"Add_right_click_context_menu": {
-		"message": "Add right click context menu"
-	},
-	"Done": {
-		"message": "Done"
-	},
-	"On_Select": {
-		"message": "On Select"
-	},
-	"On_Hover": {
-		"message": "On Hover"
-	},
-	"On_Select_n_Hover": {
-		"message": "On Select n Hover"
-	},
-	"Select_group_to_play": {
-		"message": "Select group to play"
-	},
-	"No_Group_Selected": {
-		"message": "No Group Selected"
-	},
-	"Check_groups_to_play": {
-		"message": "Check groups to play"
-	},
-	"Flashcard_makes_cards_from_your_saved_words": {
-		"message": "Flashcard makes cards from your saved words"
-	},
-	"Flashcard": {
-		"message": "Flashcard"
-	},
-	"Play_Flashcard": {
-		"message": "Play Flashcard"
-	},
-	"Reset_progress": {
-		"message": "Reset progress"
-	},
-	"No_History_Data": {
-		"message": "No History Data"
-	},
-	"Today_play_is_completed": {
-		"message": "Today play is completed"
-	},
-	"Try_on_next_day": {
-		"message": "Try on next day"
-	},
-	"No_more_card_to_learn_today": {
-		"message": "No more card to learn today"
-	},
-	"Add_more_history_data_to_play_with": {
-		"message": "Add more history data to play with"
-	},
-	"Finish": {
-		"message": "Finish"
-	},
-	"Today_Flashcards_are_Completed": {
-		"message": "Today Flashcards are Completed"
-	},
-	"No_More_Card_Data": {
-		"message": "No More Card Data"
-	},
-	"Show_Answer": {
-		"message": "Show Answer"
-	},
-	"Again": {
-		"message": "Again"
-	},
-	"Hard": {
-		"message": "Hard"
-	},
-	"Good": {
-		"message": "Good"
-	},
-	"Easy": {
-		"message": "Easy"
-	},
-	"New": {
-		"message": "New"
-	},
-	"Review": {
-		"message": "Review"
-	},
-	"Learning": {
-		"message": "Learning"
-	},
 	"About": {
-		"message": "About"
+		"message": "Giới thiệu"
 	},
 	"Translator": {
-		"message": "Translator"
+		"message": "Trình dịch"
 	},
 	"Wiktionary": {
 		"message": "Wiktionary"
 	},
-	"Translated": {
-		"message": "Translated"
-	},
 	"Custom": {
-		"message": "Custom"
+		"message": "Tùy chỉnh"
 	},
 	"Back": {
-		"message": "Back"
+		"message": "Quay lại"
 	},
 	"Cancel": {
-		"message": "Cancel"
+		"message": "Hủy"
 	},
 	"Remove": {
-		"message": "Remove"
+		"message": "Xóa"
 	},
 	"Alpha": {
-		"message": "Alpha"
+		"message": "Độ trong suốt"
 	},
 	"Fetch_models_from_endpoint": {
-		"message": "Fetch models from endpoint"
+		"message": "Lấy danh sách mô hình từ điểm cuối"
 	},
 	"No_models_returned_by_endpoint": {
-		"message": "No models returned by endpoint"
+		"message": "Điểm cuối không trả về mô hình nào"
 	},
 	"API_endpoint_is_empty": {
-		"message": "API endpoint is empty"
+		"message": "Chưa nhập điểm cuối API"
 	},
 	"Failed_to_fetch_LLM_models": {
-		"message": "Failed to fetch LLM models"
+		"message": "Không lấy được danh sách mô hình LLM"
 	},
 	"Open_this_popup_on_a_website_to_use_this_button": {
-		"message": "Open this popup on a website to use this button"
+		"message": "Mở cửa sổ này trên một trang web để dùng nút này"
 	},
 	"Import_failed": {
-		"message": "Import failed"
+		"message": "Nhập thất bại"
 	},
 	"Copy_PDF_URL": {
-		"message": "Copy PDF URL"
+		"message": "Sao chép URL PDF"
 	},
 	"Copied": {
-		"message": "Copied"
+		"message": "Đã sao chép"
 	},
 	"Copy_failed": {
-		"message": "Copy failed"
+		"message": "Sao chép thất bại"
 	},
 	"Allow_access_to_file_URLs_to_open_local_PDF_files": {
-		"message": "Allow access to file URLs to open local PDF files"
+		"message": "Cho phép truy cập URL tệp để mở tệp PDF trên máy"
 	},
 	"Open_File": {
-		"message": "Open File"
+		"message": "Mở tệp"
 	},
 	"Previous_Page": {
-		"message": "Previous Page"
+		"message": "Trang trước"
 	},
 	"Next_Page": {
-		"message": "Next Page"
+		"message": "Trang sau"
 	},
 	"Table_of_Contents": {
-		"message": "Table of Contents"
+		"message": "Mục lục"
 	},
 	"Drop_an_ebook_file_here_or_open_one": {
-		"message": "Drop an ebook file here or open one"
+		"message": "Thả tệp sách điện tử vào đây hoặc mở một tệp"
 	},
 	"Could_not_open_this_file": {
-		"message": "Could not open this file"
+		"message": "Không thể mở tệp này"
 	},
 	"Untitled": {
-		"message": "Untitled"
+		"message": "Không có tiêu đề"
 	},
 	"Page": {
-		"message": "Page"
+		"message": "Trang"
 	},
 	"Zoom_out": {
-		"message": "Zoom out"
+		"message": "Thu nhỏ"
 	},
 	"Zoom": {
-		"message": "Zoom"
+		"message": "Thu phóng"
 	},
 	"Zoom_in": {
-		"message": "Zoom in"
+		"message": "Phóng to"
 	},
 	"Automatic_zoom": {
-		"message": "Automatic zoom"
+		"message": "Tự động thu phóng"
 	},
 	"Page_fit": {
-		"message": "Page fit"
+		"message": "Vừa trang"
 	},
 	"Page_width": {
-		"message": "Page width"
+		"message": "Vừa chiều rộng trang"
 	},
 	"Find": {
-		"message": "Find"
+		"message": "Tìm"
 	},
 	"Dark_mode": {
-		"message": "Dark mode"
+		"message": "Chế độ tối"
 	},
 	"Download": {
-		"message": "Download"
+		"message": "Tải xuống"
 	},
 	"Find_in_document": {
-		"message": "Find in document"
+		"message": "Tìm trong tài liệu"
 	},
 	"Previous_match": {
-		"message": "Previous match"
+		"message": "Kết quả trước"
 	},
 	"Next_match": {
-		"message": "Next match"
+		"message": "Kết quả sau"
 	},
 	"Highlight_all": {
-		"message": "Highlight all"
+		"message": "Tô sáng tất cả"
 	},
 	"Match_case": {
-		"message": "Match case"
+		"message": "Phân biệt hoa thường"
 	},
 	"Phrase_not_found": {
-		"message": "Phrase not found"
+		"message": "Không tìm thấy cụm từ"
 	},
 	"Close": {
-		"message": "Close"
+		"message": "Đóng"
 	},
 	"Failed_to_load_the_PDF_file": {
-		"message": "Failed to load the PDF file"
+		"message": "Không tải được tệp PDF"
 	},
 	"Drop_a_PDF_file_here": {
-		"message": "Drop a PDF file here"
+		"message": "Thả tệp PDF vào đây"
 	},
 	"Enter_the_password_to_open_this_PDF_file": {
-		"message": "Enter the password to open this PDF file"
+		"message": "Nhập mật khẩu để mở tệp PDF này"
 	},
 	"Invalid_password_try_again": {
-		"message": "Invalid password try again"
+		"message": "Mật khẩu không đúng, hãy thử lại"
 	},
 	"appName": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Mouse Tooltip Translator Refined"
 	},
 	"appDesc": {
-		"message": "Hover or select text to translate it in a tooltip. Also works in PDF and ebook files."
+		"message": "Di chuột hoặc chọn văn bản để xem bản dịch trong chú thích. Cũng hoạt động với tệp PDF và sách điện tử."
 	}
 }

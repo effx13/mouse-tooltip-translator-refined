@@ -1,546 +1,354 @@
 {
-	"MAIN______________________________________": {
-		"message": "MAIN                                      "
-	},
 	"MAIN": {
-		"message": "MAIN"
+		"message": "PAGRINDINIAI"
 	},
 	"Mouse_Tooltip_Translator": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Mouse Tooltip Translator Refined"
 	},
 	"Translate_When": {
-		"message": "Translate When"
+		"message": "Versti, kai"
 	},
 	"Translate_From": {
-		"message": "Translate From"
+		"message": "Versti iš"
 	},
 	"Translate_Into": {
-		"message": "Translate Into"
+		"message": "Versti į"
 	},
 	"Translator_Engine": {
-		"message": "Translator Engine"
+		"message": "Vertimo variklis"
 	},
 	"LLM_Provider": {
-		"message": "LLM Provider"
+		"message": "LLM teikėjas"
 	},
 	"LLM_Api_Endpoint": {
-		"message": "LLM API Endpoint URL"
+		"message": "LLM API galinio taško URL"
 	},
 	"LLM_Api_Key": {
-		"message": "LLM API Key"
+		"message": "LLM API raktas (neprivaloma)"
 	},
 	"LLM_Model": {
-		"message": "LLM Model"
+		"message": "LLM modelis"
 	},
 	"Mouseover_Text_Type": {
-		"message": "Mouseover Text Type"
+		"message": "Teksto tipas užvedus pelę"
 	},
 	"Translate_Into_2": {
-		"message": "Secondary Translate Into"
+		"message": "Antra tikslinė kalba"
 	},
 	"Writing_Language": {
-		"message": "Writing Language"
+		"message": "Rašymo kalba"
 	},
 	"Reverse_Translate_Language": {
-		"message": "Reverse Translate Language"
-	},
-	"OCR_Language": {
-		"message": "OCR Language"
-	},
-	"Detect_Subtitle": {
-		"message": "Detect Subtitle"
-	},
-	"KEYBOARD______________________________________": {
-		"message": "KEYBOARD                                      "
+		"message": "Atvirkštinio vertimo kalba"
 	},
 	"KEYBOARD": {
-		"message": "KEYBOARD"
+		"message": "KLAVIATŪRA"
 	},
 	"Show_Tooltip_When": {
-		"message": "Show Tooltip When"
-	},
-	"Voice_When": {
-		"message": "Voice When"
+		"message": "Rodyti patarimą, kai"
 	},
 	"Translate_Writing_When": {
-		"message": "Translate Writing When"
+		"message": "Versti rašomą tekstą, kai"
 	},
 	"Ignore_AltGr_Modifier": {
-		"message": "Ignore AltGr Modifier"
-	},
-	"Auto_Reader_When": {
-		"message": "Auto Reader When"
+		"message": "Nepaisyti AltGr klavišo"
 	},
 	"Translate_Page_When": {
-		"message": "Translate Page When"
-	},
-	"OCR_When": {
-		"message": "OCR When"
-	},
-	"Mouseover_Text_Type_Swap_Key": {
-		"message": "Mouseover Text Type Swap Key"
-	},
-	"Speech_Recognition_When": {
-		"message": "Speech Recognition When"
-	},
-	"Toggle_Mouseover_Text_Type_When": {
-		"message": "Toggle Mouseover Text Type When"
+		"message": "Versti puslapį, kai"
 	},
 	"Mouseover_Text_Type_Key_Hold": {
-		"message": "Mouseover Text Type Key Hold"
+		"message": "Teksto tipas užvedus pelę (laikant klavišą)"
 	},
 	"Secondary_Language_When": {
-		"message": "Secondary Language When"
+		"message": "Antra kalba, kai"
 	},
 	"Swap_Key_Toggle_Mode": {
-		"message": "Swap Key Toggle Mode"
+		"message": "Klavišų perjungimo režimas"
 	},
 	"Toggle_Extension_When": {
-		"message": "Toggle Extension When"
-	},
-	"TTS_Pause_Resume_When": {
-		"message": "TTS Pause Resume When"
-	},
-	"GRAPHIC______________________________________": {
-		"message": "GRAPHIC                                      "
+		"message": "Įjungti / išjungti plėtinį, kai"
 	},
 	"GRAPHIC": {
-		"message": "GRAPHIC"
+		"message": "IŠVAIZDA"
 	},
 	"Tooltip_Font_Size": {
-		"message": "Tooltip Font Size"
+		"message": "Patarimo šrifto dydis"
 	},
 	"Tooltip_Font_Family": {
-		"message": "Tooltip Font Family"
-	},
-	"Subtitle_Background": {
-		"message": "Subtitle Background"
+		"message": "Patarimo šriftas"
 	},
 	"Tooltip_Width": {
-		"message": "Tooltip Width"
+		"message": "Patarimo plotis"
 	},
 	"Tooltip_Distance": {
-		"message": "Tooltip Distance"
+		"message": "Patarimo atstumas"
 	},
 	"Tooltip_Animation": {
-		"message": "Tooltip Animation"
+		"message": "Patarimo animacija"
 	},
 	"Tooltip_Disappear_Duration": {
-		"message": "Tooltip Disappear Duration"
+		"message": "Patarimo išnykimo trukmė"
 	},
 	"Tooltip_Position": {
-		"message": "Tooltip Position"
+		"message": "Patarimo padėtis"
 	},
 	"Tooltip_Placement": {
-		"message": "Tooltip Placement"
+		"message": "Patarimo išdėstymas"
 	},
 	"Above": {
-		"message": "Above"
+		"message": "Viršuje"
 	},
 	"Below": {
-		"message": "Below"
+		"message": "Apačioje"
 	},
 	"Tooltip_Text_Align": {
-		"message": "Tooltip Text Align"
+		"message": "Patarimo teksto lygiuotė"
 	},
 	"Tooltip_Background_Blur": {
-		"message": "Tooltip Background Blur"
+		"message": "Patarimo fono suliejimas"
 	},
 	"Mouseover_Highlight_Text": {
-		"message": "Mouseover Highlight Text"
+		"message": "Paryškinti tekstą užvedus pelę"
 	},
 	"Tooltip_Font_Color": {
-		"message": "Tooltip Font Color"
+		"message": "Patarimo teksto spalva"
 	},
 	"Tooltip_Background_Color": {
-		"message": "Tooltip Background Color"
+		"message": "Patarimo fono spalva"
 	},
 	"Tooltip_Border_Color": {
-		"message": "Tooltip Border Color"
+		"message": "Patarimo rėmelio spalva"
 	},
 	"Mouseover_Text_Highlight_Color": {
-		"message": "Mouseover Text Highlight Color"
+		"message": "Paryškinimo spalva užvedus pelę"
 	},
 	"Ebook_Theme": {
-		"message": "Ebook Theme"
+		"message": "El. knygos tema"
 	},
 	"Setting_Compact_mode": {
-		"message": "Setting Compact mode"
-	},
-	"VOICE______________________________________": {
-		"message": "VOICE                                      "
-	},
-	"VOICE": {
-		"message": "VOICE"
-	},
-	"Voice_Volume": {
-		"message": "Voice Volume"
-	},
-	"Voice_Speed": {
-		"message": "Voice Speed"
-	},
-	"Voice_Target": {
-		"message": "Voice Target"
-	},
-	"Voice_Repeat": {
-		"message": "Voice Repeat"
-	},
-	"Voice_for_": {
-		"message": "Voice for "
-	},
-	"Voice_speed_for_": {
-		"message": "Voice speed for "
-	},
-	"EXCLUDE______________________________________": {
-		"message": "EXCLUDE                                      "
+		"message": "Kompaktiškas nustatymų režimas"
 	},
 	"EXCLUDE": {
-		"message": "EXCLUDE"
+		"message": "IŠIMTYS"
 	},
 	"Exclude_Language": {
-		"message": "Exclude Language"
+		"message": "Neįtraukti kalbų"
 	},
 	"Website_Filter_Mode": {
-		"message": "Website Filter Mode"
+		"message": "Svetainių filtravimo režimas"
 	},
 	"Exclude_Website": {
-		"message": "Exclude Website"
+		"message": "Neįtraukti svetainių"
 	},
 	"Whitelist_Website": {
-		"message": "Whitelist Website"
+		"message": "Leidžiamos svetainės"
 	},
 	"Website_Target_Language": {
-		"message": "Website Target Language"
+		"message": "Tikslinė kalba pagal svetainę (pvz., github.com=ko)"
 	},
 	"Block_Current_Site": {
-		"message": "Block Current Site"
+		"message": "Blokuoti šią svetainę"
 	},
 	"Allow_Current_Site": {
-		"message": "Allow Current Site"
-	},
-	"ADVANCED______________________________________": {
-		"message": "ADVANCED                                      "
+		"message": "Leisti šią svetainę"
 	},
 	"ADVANCED": {
-		"message": "ADVANCED"
+		"message": "IŠPLĖSTINIAI"
 	},
 	"UI_Language": {
-		"message": "UI Language"
+		"message": "Sąsajos kalba"
 	},
 	"Detect_PDF": {
-		"message": "Detect PDF"
+		"message": "Atverti PDF žiūryklėje"
 	},
 	"Mouseover_Text_Type_2": {
-		"message": "Secondary Mouseover Text Type"
-	},
-	"Mouseover_Pause_Subtitle": {
-		"message": "Mouseover Pause Subtitle"
+		"message": "Antras teksto tipas užvedus pelę"
 	},
 	"Show_Tooltip_While_Typing": {
-		"message": "Show Tooltip While Typing"
+		"message": "Rodyti patarimą rašant"
 	},
 	"Tooltip_Info_Source_Text": {
-		"message": "Tooltip Info Source Text"
+		"message": "Patarimo informacija: pradinis tekstas"
 	},
 	"Translate_Exclude_Regex": {
-		"message": "Translate Exclude Regex"
+		"message": "Išimčių reguliarusis reiškinys"
 	},
 	"Tooltip_Info_Source_Language": {
-		"message": "Tooltip Info Source Language"
+		"message": "Patarimo informacija: pradinė kalba"
 	},
 	"Tooltip_Info_Transliteration": {
-		"message": "Tooltip Info Transliteration"
-	},
-	"Tooltip_Interval_Time": {
-		"message": "Tooltip Interval Time"
+		"message": "Patarimo informacija: transliteracija"
 	},
 	"Tooltip_Show_Delay": {
-		"message": "Tooltip Show Delay"
+		"message": "Patarimo rodymo delsa"
 	},
 	"Tooltip_Word_Dictionary": {
-		"message": "Tooltip Word Dictionary"
+		"message": "Patarimo žodynas"
 	},
 	"Tooltip_Word_Dictionary_Source": {
-		"message": "Tooltip Word Dictionary Source"
+		"message": "Patarimo žodyno šaltinis"
 	},
 	"Fallback_Translator_Engine": {
-		"message": "Fallback Translator Engine"
-	},
-	"SPEECH": {
-		"message": "SPEECH"
-	},
-	"Speech_Recognition_Language": {
-		"message": "Speech Recognition Language"
-	},
-	"Voice_Panel_Translate_Language": {
-		"message": "Voice Panel Translate Language"
-	},
-	"Voice_Panel_Text_Target": {
-		"message": "Voice Panel Text Target"
-	},
-	"Voice_Panel_Padding": {
-		"message": "Voice Panel Padding"
-	},
-	"Voice_Panel_Text_Align": {
-		"message": "Voice Panel Text Align"
-	},
-	"Voice_Panel_Source_Font_Size": {
-		"message": "Voice Panel Source Font Size"
-	},
-	"Voice_Panel_Target_Font_Size": {
-		"message": "Voice Panel Target Font Size"
-	},
-	"Voice_Panel_Source_Font_Color": {
-		"message": "Voice Panel Source Font Color"
-	},
-	"Voice_Panel_Target_Font_Color": {
-		"message": "Voice Panel Target Font Color"
-	},
-	"Voice_Panel_Source_Border_Color": {
-		"message": "Voice Panel Source Border Color"
-	},
-	"Voice_Panel_Target_Border_Color": {
-		"message": "Voice Panel Target Border Color"
-	},
-	"Voice_Panel_Background_Color": {
-		"message": "Voice Panel Background Color"
-	},
-	"BACKUP______________________________________": {
-		"message": "BACKUP                                      "
+		"message": "Atsarginis vertimo variklis"
 	},
 	"BACKUP": {
-		"message": "BACKUP"
+		"message": "ATSARGINĖ KOPIJA"
 	},
 	"Sync_Setting": {
-		"message": "Sync Setting"
+		"message": "Sinchronizuoti nustatymus tarp įrenginių"
 	},
 	"Import_Setting": {
-		"message": "Import Setting"
+		"message": "Importuoti nustatymus"
 	},
 	"Export_Setting": {
-		"message": "Export Setting"
+		"message": "Eksportuoti nustatymus"
 	},
 	"Reset_Setting": {
-		"message": "Reset Setting"
-	},
-	"About______________________________________": {
-		"message": "About                                      "
+		"message": "Atkurti nustatymus"
 	},
 	"How_to_use": {
-		"message": "How to use"
+		"message": "Kaip naudoti"
 	},
 	"Check_how_to_use_this_extension": {
-		"message": "Check how to use this extension"
+		"message": "Sužinokite, kaip naudoti šį plėtinį"
 	},
 	"PDF_Viewer": {
-		"message": "PDF Viewer"
+		"message": "PDF žiūryklė"
 	},
 	"Translate_local_PDF_file": {
-		"message": "Translate local PDF file"
+		"message": "Versti vietinį PDF failą"
 	},
 	"Ebook_Reader": {
-		"message": "Ebook Reader"
+		"message": "El. knygų skaityklė"
 	},
 	"Translate_local_ebook_file": {
-		"message": "Translate local ebook file"
-	},
-	"Twitter": {
-		"message": "Twitter"
-	},
-	"Retweet_twitter_post": {
-		"message": "Retweet twitter post"
-	},
-	"Review_Page": {
-		"message": "Review Page"
-	},
-	"Comment_on_this_extension": {
-		"message": "Comment on this extension"
+		"message": "Versti vietinį el. knygos failą"
 	},
 	"Source_code": {
-		"message": "Source code"
+		"message": "Pirminis kodas"
 	},
 	"Check_source_code_in_github": {
-		"message": "Check source code in github"
+		"message": "Peržiūrėti pirminį kodą „GitHub“"
 	},
 	"Privacy_Policy": {
-		"message": "Privacy Policy"
+		"message": "Privatumo politika"
 	},
 	"User_privacy_policy": {
-		"message": "User privacy policy"
-	},
-	"Voice_Panel": {
-		"message": "Voice Panel"
-	},
-	"Translate_Voice": {
-		"message": "Translate Voice"
-	},
-	"Review______________________________________": {
-		"message": "Review                                      "
-	},
-	"Review_this": {
-		"message": "Review this"
-	},
-	"Developer_love_criticism": {
-		"message": "Developer love criticism"
-	},
-	"Coffee______________________________________": {
-		"message": "Coffee                                      "
-	},
-	"Support_this_extension": {
-		"message": "Support this extension"
-	},
-	"Feed_a_coffee_to_the_extension_devs": {
-		"message": "Feed a coffee to the extension devs"
-	},
-	"Title______________________________________": {
-		"message": "Title                                      "
-	},
-	"SELECT_OPTION______________________________": {
-		"message": "SELECT OPTION                              "
-	},
-	"On": {
-		"message": "On"
-	},
-	"Off": {
-		"message": "Off"
+		"message": "Naudotojo privatumo politika"
 	},
 	"Auto": {
-		"message": "Auto"
+		"message": "Automatiškai"
 	},
 	"None": {
-		"message": "None"
+		"message": "Nėra"
 	},
 	"Select": {
-		"message": "Select"
+		"message": "Pažymėjus"
 	},
 	"Mouseover": {
-		"message": "Mouseover"
+		"message": "Užvedus pelę"
 	},
 	"Mouseover_n_Select": {
-		"message": "Mouseover n Select"
+		"message": "Užvedus pelę ir pažymėjus"
 	},
 	"Follow": {
-		"message": "Follow"
+		"message": "Sekti"
 	},
 	"Fixed": {
-		"message": "Fixed"
+		"message": "Fiksuota"
 	},
 	"Top_Right": {
-		"message": "Top Right"
+		"message": "Viršuje dešinėje"
 	},
 	"Fade": {
-		"message": "Fade"
+		"message": "Išblukimas"
 	},
 	"Scale": {
-		"message": "Scale"
+		"message": "Mastelis"
 	},
 	"Shift_away": {
-		"message": "Shift away"
+		"message": "Atitolimas"
 	},
 	"Shift_toward": {
-		"message": "Shift toward"
+		"message": "Priartėjimas"
 	},
 	"Perspective": {
-		"message": "Perspective"
+		"message": "Perspektyva"
 	},
 	"Word": {
-		"message": "Word"
+		"message": "Žodis"
 	},
 	"Sentence": {
-		"message": "Sentence"
+		"message": "Sakinys"
 	},
 	"Container": {
-		"message": "Container"
+		"message": "Pastraipa"
 	},
 	"Both": {
-		"message": "Both"
+		"message": "Abu"
 	},
 	"Blacklist": {
-		"message": "Blacklist"
+		"message": "Blokuojamųjų sąrašas"
 	},
 	"Whitelist": {
-		"message": "Whitelist"
-	},
-	"Source": {
-		"message": "Source"
-	},
-	"Source_Text": {
-		"message": "Source Text"
-	},
-	"Translated_Text": {
-		"message": "Translated Text"
-	},
-	"Source_n_Translated": {
-		"message": "Source n Translated"
-	},
-	"Translated_n_Source": {
-		"message": "Translated n Source"
-	},
-	"Dual_Subtitle": {
-		"message": "Dual Subtitle"
-	},
-	"Target_Single_Subtitle": {
-		"message": "Target Single Subtitle"
-	},
-	"Source_Single_Subtitle": {
-		"message": "Source Single Subtitle"
+		"message": "Leidžiamųjų sąrašas"
 	},
 	"Always": {
-		"message": "Always"
+		"message": "Visada"
 	},
 	"Center": {
-		"message": "Center"
+		"message": "Centre"
 	},
 	"Left": {
-		"message": "Left"
+		"message": "Kairėje"
 	},
 	"Right": {
-		"message": "Right"
+		"message": "Dešinėje"
 	},
 	"Justify": {
-		"message": "Justify"
+		"message": "Abipusė lygiuotė"
 	},
 	"Light": {
-		"message": "Light"
+		"message": "Šviesi"
 	},
 	"Dark": {
-		"message": "Dark"
+		"message": "Tamsi"
 	},
 	"Default": {
-		"message": "Default"
+		"message": "Numatytoji"
 	},
 	"Ctrl_Left": {
-		"message": "Ctrl Left"
+		"message": "Kairysis Ctrl"
 	},
 	"Ctrl_Right": {
-		"message": "Ctrl Right"
+		"message": "Dešinysis Ctrl"
 	},
 	"Alt_Left": {
-		"message": "Alt Left"
+		"message": "Kairysis Alt"
 	},
 	"Alt_Right": {
-		"message": "Alt Right"
+		"message": "Dešinysis Alt"
 	},
 	"Shift_Left": {
-		"message": "Shift Left"
+		"message": "Kairysis Shift"
 	},
 	"Shift_Right": {
-		"message": "Shift Right"
+		"message": "Dešinysis Shift"
 	},
 	"Meta_Left": {
-		"message": "Meta Left"
+		"message": "Kairysis Meta"
 	},
 	"Meta_Right": {
-		"message": "Meta Right"
+		"message": "Dešinysis Meta"
 	},
 	"Click_Left": {
-		"message": "Click Left"
+		"message": "Kairysis spustelėjimas"
 	},
 	"Click_Middle": {
-		"message": "Click Middle"
+		"message": "Vidurinis spustelėjimas"
 	},
 	"Click_Right": {
-		"message": "Click Right"
+		"message": "Dešinysis spustelėjimas"
 	},
 	"google": {
 		"message": "google"
@@ -548,286 +356,148 @@
 	"bing": {
 		"message": "bing"
 	},
-	"Saved_Words": {
-		"message": "Saved Words"
-	},
-	"Group": {
-		"message": "Group"
-	},
-	"All": {
-		"message": "All"
-	},
-	"Move_to_group": {
-		"message": "Move to group"
-	},
-	"Delete": {
-		"message": "Delete"
-	},
-	"Clear": {
-		"message": "Clear"
-	},
-	"selected": {
-		"message": "selected"
-	},
-	"Date": {
-		"message": "Date"
-	},
-	"Translation": {
-		"message": "Translation"
-	},
-	"No_saved_words_yet": {
-		"message": "No saved words yet"
-	},
-	"Manage_Groups": {
-		"message": "Manage Groups"
-	},
-	"Remove_all": {
-		"message": "Remove all"
-	},
-	"Import_CSV": {
-		"message": "Import CSV"
-	},
-	"Download_CSV": {
-		"message": "Download CSV"
-	},
-	"Save_key": {
-		"message": "Save key"
-	},
-	"Highlight_on_page": {
-		"message": "Highlight on page"
-	},
-	"Right_click_menu": {
-		"message": "Right click menu"
-	},
-	"Add_right_click_context_menu": {
-		"message": "Add right click context menu"
-	},
-	"Done": {
-		"message": "Done"
-	},
-	"On_Select": {
-		"message": "On Select"
-	},
-	"On_Hover": {
-		"message": "On Hover"
-	},
-	"On_Select_n_Hover": {
-		"message": "On Select n Hover"
-	},
-	"Select_group_to_play": {
-		"message": "Select group to play"
-	},
-	"No_Group_Selected": {
-		"message": "No Group Selected"
-	},
-	"Check_groups_to_play": {
-		"message": "Check groups to play"
-	},
-	"Flashcard_makes_cards_from_your_saved_words": {
-		"message": "Flashcard makes cards from your saved words"
-	},
-	"Flashcard": {
-		"message": "Flashcard"
-	},
-	"Play_Flashcard": {
-		"message": "Play Flashcard"
-	},
-	"Reset_progress": {
-		"message": "Reset progress"
-	},
-	"No_History_Data": {
-		"message": "No History Data"
-	},
-	"Today_play_is_completed": {
-		"message": "Today play is completed"
-	},
-	"Try_on_next_day": {
-		"message": "Try on next day"
-	},
-	"No_more_card_to_learn_today": {
-		"message": "No more card to learn today"
-	},
-	"Add_more_history_data_to_play_with": {
-		"message": "Add more history data to play with"
-	},
-	"Finish": {
-		"message": "Finish"
-	},
-	"Today_Flashcards_are_Completed": {
-		"message": "Today Flashcards are Completed"
-	},
-	"No_More_Card_Data": {
-		"message": "No More Card Data"
-	},
-	"Show_Answer": {
-		"message": "Show Answer"
-	},
-	"Again": {
-		"message": "Again"
-	},
-	"Hard": {
-		"message": "Hard"
-	},
-	"Good": {
-		"message": "Good"
-	},
-	"Easy": {
-		"message": "Easy"
-	},
-	"New": {
-		"message": "New"
-	},
-	"Review": {
-		"message": "Review"
-	},
-	"Learning": {
-		"message": "Learning"
-	},
 	"About": {
-		"message": "About"
+		"message": "Apie"
 	},
 	"Translator": {
-		"message": "Translator"
+		"message": "Vertėjas"
 	},
 	"Wiktionary": {
 		"message": "Wiktionary"
 	},
-	"Translated": {
-		"message": "Translated"
-	},
 	"Custom": {
-		"message": "Custom"
+		"message": "Tinkinta"
 	},
 	"Back": {
-		"message": "Back"
+		"message": "Atgal"
 	},
 	"Cancel": {
-		"message": "Cancel"
+		"message": "Atšaukti"
 	},
 	"Remove": {
-		"message": "Remove"
+		"message": "Pašalinti"
 	},
 	"Alpha": {
-		"message": "Alpha"
+		"message": "Alfa"
 	},
 	"Fetch_models_from_endpoint": {
-		"message": "Fetch models from endpoint"
+		"message": "Gauti modelius iš galinio taško"
 	},
 	"No_models_returned_by_endpoint": {
-		"message": "No models returned by endpoint"
+		"message": "Galinis taškas negrąžino jokių modelių"
 	},
 	"API_endpoint_is_empty": {
-		"message": "API endpoint is empty"
+		"message": "API galinis taškas tuščias"
 	},
 	"Failed_to_fetch_LLM_models": {
-		"message": "Failed to fetch LLM models"
+		"message": "Nepavyko gauti LLM modelių"
 	},
 	"Open_this_popup_on_a_website_to_use_this_button": {
-		"message": "Open this popup on a website to use this button"
+		"message": "Atverkite šį langą svetainėje, kad galėtumėte naudoti šį mygtuką"
 	},
 	"Import_failed": {
-		"message": "Import failed"
+		"message": "Importuoti nepavyko"
 	},
 	"Copy_PDF_URL": {
-		"message": "Copy PDF URL"
+		"message": "Kopijuoti PDF URL"
 	},
 	"Copied": {
-		"message": "Copied"
+		"message": "Nukopijuota"
 	},
 	"Copy_failed": {
-		"message": "Copy failed"
+		"message": "Kopijuoti nepavyko"
 	},
 	"Allow_access_to_file_URLs_to_open_local_PDF_files": {
-		"message": "Allow access to file URLs to open local PDF files"
+		"message": "Leiskite prieigą prie failų URL, kad būtų galima atverti vietinius PDF failus"
 	},
 	"Open_File": {
-		"message": "Open File"
+		"message": "Atverti failą"
 	},
 	"Previous_Page": {
-		"message": "Previous Page"
+		"message": "Ankstesnis puslapis"
 	},
 	"Next_Page": {
-		"message": "Next Page"
+		"message": "Kitas puslapis"
 	},
 	"Table_of_Contents": {
-		"message": "Table of Contents"
+		"message": "Turinys"
 	},
 	"Drop_an_ebook_file_here_or_open_one": {
-		"message": "Drop an ebook file here or open one"
+		"message": "Nutempkite el. knygos failą čia arba atverkite"
 	},
 	"Could_not_open_this_file": {
-		"message": "Could not open this file"
+		"message": "Nepavyko atverti šio failo"
 	},
 	"Untitled": {
-		"message": "Untitled"
+		"message": "Be pavadinimo"
 	},
 	"Page": {
-		"message": "Page"
+		"message": "Puslapis"
 	},
 	"Zoom_out": {
-		"message": "Zoom out"
+		"message": "Sumažinti"
 	},
 	"Zoom": {
-		"message": "Zoom"
+		"message": "Mastelis"
 	},
 	"Zoom_in": {
-		"message": "Zoom in"
+		"message": "Padidinti"
 	},
 	"Automatic_zoom": {
-		"message": "Automatic zoom"
+		"message": "Automatinis mastelis"
 	},
 	"Page_fit": {
-		"message": "Page fit"
+		"message": "Visas puslapis"
 	},
 	"Page_width": {
-		"message": "Page width"
+		"message": "Puslapio plotis"
 	},
 	"Find": {
-		"message": "Find"
+		"message": "Ieškoti"
 	},
 	"Dark_mode": {
-		"message": "Dark mode"
+		"message": "Tamsus režimas"
 	},
 	"Download": {
-		"message": "Download"
+		"message": "Atsisiųsti"
 	},
 	"Find_in_document": {
-		"message": "Find in document"
+		"message": "Ieškoti dokumente"
 	},
 	"Previous_match": {
-		"message": "Previous match"
+		"message": "Ankstesnis atitikmuo"
 	},
 	"Next_match": {
-		"message": "Next match"
+		"message": "Kitas atitikmuo"
 	},
 	"Highlight_all": {
-		"message": "Highlight all"
+		"message": "Viską paryškinti"
 	},
 	"Match_case": {
-		"message": "Match case"
+		"message": "Skirti didžiąsias ir mažąsias raides"
 	},
 	"Phrase_not_found": {
-		"message": "Phrase not found"
+		"message": "Ieškoma frazė nerasta"
 	},
 	"Close": {
-		"message": "Close"
+		"message": "Užverti"
 	},
 	"Failed_to_load_the_PDF_file": {
-		"message": "Failed to load the PDF file"
+		"message": "Nepavyko įkelti PDF failo"
 	},
 	"Drop_a_PDF_file_here": {
-		"message": "Drop a PDF file here"
+		"message": "Nutempkite PDF failą čia"
 	},
 	"Enter_the_password_to_open_this_PDF_file": {
-		"message": "Enter the password to open this PDF file"
+		"message": "Įveskite slaptažodį, kad atvertumėte šį PDF failą"
 	},
 	"Invalid_password_try_again": {
-		"message": "Invalid password try again"
+		"message": "Neteisingas slaptažodis, bandykite dar kartą"
 	},
 	"appName": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Mouse Tooltip Translator Refined"
 	},
 	"appDesc": {
-		"message": "Hover or select text to translate it in a tooltip. Also works in PDF and ebook files."
+		"message": "Užveskite pelę ant teksto arba jį pažymėkite ir gaukite vertimą patarime. Veikia ir PDF bei el. knygų failuose."
 	}
 }

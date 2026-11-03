@@ -1,4 +1,4 @@
-# CLAUDE.md — MouseTooltipTranslator 개발 가이드
+# CLAUDE.md — Mouse Tooltip Translator Refined 개발 가이드
 
 브라우저 확장(Chrome/Edge MV3, Firefox MV2). 마우스오버/드래그 번역 툴팁, 입력창 번역, 페이지 번역, 내장 PDF/EPUB 뷰어를 제공한다. **WXT + Svelte 5 + TypeScript**, 패키지 매니저는 **pnpm**이다.
 

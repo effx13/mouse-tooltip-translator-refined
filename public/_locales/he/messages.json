@@ -1,12 +1,9 @@
 {
-	"MAIN______________________________________": {
-		"message": "MAIN                                      "
-	},
 	"MAIN": {
-		"message": "MAIN"
+		"message": "ראשי"
 	},
 	"Mouse_Tooltip_Translator": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Mouse Tooltip Translator Refined"
 	},
 	"Translate_When": {
 		"message": "מתי לתרגם?"
@@ -21,100 +18,64 @@
 		"message": "מנוע תרגום"
 	},
 	"LLM_Provider": {
-		"message": "LLM Provider"
+		"message": "ספק LLM"
 	},
 	"LLM_Api_Endpoint": {
-		"message": "LLM API Endpoint URL"
+		"message": "כתובת URL של נקודת קצה ל-API של LLM"
 	},
 	"LLM_Api_Key": {
-		"message": "LLM API Key"
+		"message": "מפתח API של LLM (אופציונלי)"
 	},
 	"LLM_Model": {
-		"message": "LLM Model"
+		"message": "מודל LLM"
 	},
 	"Mouseover_Text_Type": {
-		"message": "Mouseover Text Type"
+		"message": "סוג טקסט בריחוף"
 	},
 	"Translate_Into_2": {
-		"message": "Secondary Translate Into"
+		"message": "שפת יעד משנית"
 	},
 	"Writing_Language": {
-		"message": "Writing Language"
+		"message": "שפת כתיבה"
 	},
 	"Reverse_Translate_Language": {
-		"message": "Reverse Translate Language"
-	},
-	"OCR_Language": {
-		"message": "OCR Language"
-	},
-	"Detect_Subtitle": {
-		"message": "Detect Subtitle"
-	},
-	"KEYBOARD______________________________________": {
-		"message": "KEYBOARD                                      "
+		"message": "שפת תרגום הפוך"
 	},
 	"KEYBOARD": {
-		"message": "KEYBOARD"
+		"message": "מקלדת"
 	},
 	"Show_Tooltip_When": {
 		"message": "מתי להראות את התרגום?"
 	},
-	"Voice_When": {
-		"message": "מתי להשמיע את התרגום?"
-	},
 	"Translate_Writing_When": {
-		"message": "Translate Writing When"
+		"message": "מתי לתרגם טקסט מוקלד"
 	},
 	"Ignore_AltGr_Modifier": {
-		"message": "Ignore AltGr Modifier"
-	},
-	"Auto_Reader_When": {
-		"message": "Auto Reader When"
+		"message": "התעלמות ממקש AltGr"
 	},
 	"Translate_Page_When": {
-		"message": "Translate Page When"
-	},
-	"OCR_When": {
-		"message": "מתי לעשות ocr?"
-	},
-	"Mouseover_Text_Type_Swap_Key": {
-		"message": "Mouseover Text Type Swap Key"
-	},
-	"Speech_Recognition_When": {
-		"message": "Speech Recognition When"
-	},
-	"Toggle_Mouseover_Text_Type_When": {
-		"message": "Toggle Mouseover Text Type When"
+		"message": "מתי לתרגם את הדף"
 	},
 	"Mouseover_Text_Type_Key_Hold": {
-		"message": "Mouseover Text Type Key Hold"
+		"message": "מקש להחזקה לשינוי סוג הטקסט"
 	},
 	"Secondary_Language_When": {
-		"message": "Secondary Language When"
+		"message": "מתי להשתמש בשפה המשנית"
 	},
 	"Swap_Key_Toggle_Mode": {
-		"message": "Swap Key Toggle Mode"
+		"message": "מקשים במצב הפעלה/כיבוי"
 	},
 	"Toggle_Extension_When": {
-		"message": "Toggle Extension When"
-	},
-	"TTS_Pause_Resume_When": {
-		"message": "TTS Pause Resume When"
-	},
-	"GRAPHIC______________________________________": {
-		"message": "GRAPHIC                                      "
+		"message": "מתי להפעיל/לכבות את התוסף"
 	},
 	"GRAPHIC": {
-		"message": "GRAPHIC"
+		"message": "מראה"
 	},
 	"Tooltip_Font_Size": {
 		"message": "גודל פונט"
 	},
 	"Tooltip_Font_Family": {
-		"message": "Tooltip Font Family"
-	},
-	"Subtitle_Background": {
-		"message": "Subtitle Background"
+		"message": "גופן חלונית התרגום"
 	},
 	"Tooltip_Width": {
 		"message": "רוחב טולטיפ"
@@ -123,22 +84,22 @@
 		"message": "מרחק טולטיפ"
 	},
 	"Tooltip_Animation": {
-		"message": "Tooltip Animation"
+		"message": "הנפשת חלונית התרגום"
 	},
 	"Tooltip_Disappear_Duration": {
-		"message": "Tooltip Disappear Duration"
+		"message": "זמן עד היעלמות החלונית"
 	},
 	"Tooltip_Position": {
 		"message": "מיקום טולטיפ"
 	},
 	"Tooltip_Placement": {
-		"message": "Tooltip Placement"
+		"message": "מיקום החלונית ביחס לטקסט"
 	},
 	"Above": {
-		"message": "Above"
+		"message": "מעל"
 	},
 	"Below": {
-		"message": "Below"
+		"message": "מתחת"
 	},
 	"Tooltip_Text_Align": {
 		"message": "יישור טקסט"
@@ -147,7 +108,7 @@
 		"message": "טשטוש רקע"
 	},
 	"Mouseover_Highlight_Text": {
-		"message": "Mouseover Highlight Text"
+		"message": "הדגשת טקסט בריחוף"
 	},
 	"Tooltip_Font_Color": {
 		"message": "צבע טקסט"
@@ -156,181 +117,100 @@
 		"message": "צבע טולטיפ"
 	},
 	"Tooltip_Border_Color": {
-		"message": "Tooltip Border Color"
+		"message": "צבע מסגרת החלונית"
 	},
 	"Mouseover_Text_Highlight_Color": {
-		"message": "Mouseover Text Highlight Color"
+		"message": "צבע הדגשה בריחוף"
 	},
 	"Ebook_Theme": {
-		"message": "Ebook Theme"
+		"message": "ערכת נושא לספר אלקטרוני"
 	},
 	"Setting_Compact_mode": {
-		"message": "Setting Compact mode"
-	},
-	"VOICE______________________________________": {
-		"message": "VOICE                                      "
-	},
-	"VOICE": {
-		"message": "VOICE"
-	},
-	"Voice_Volume": {
-		"message": "Voice Volume"
-	},
-	"Voice_Speed": {
-		"message": "Voice Speed"
-	},
-	"Voice_Target": {
-		"message": "Voice Target"
-	},
-	"Voice_Repeat": {
-		"message": "Voice Repeat"
-	},
-	"Voice_for_": {
-		"message": "Voice for "
-	},
-	"Voice_speed_for_": {
-		"message": "Voice speed for "
-	},
-	"EXCLUDE______________________________________": {
-		"message": "EXCLUDE                                      "
+		"message": "תצוגת הגדרות מצומצמת"
 	},
 	"EXCLUDE": {
-		"message": "EXCLUDE"
+		"message": "החרגה"
 	},
 	"Exclude_Language": {
 		"message": "אל תתרגם את השפות"
 	},
 	"Website_Filter_Mode": {
-		"message": "Website Filter Mode"
+		"message": "מצב סינון אתרים"
 	},
 	"Exclude_Website": {
 		"message": "אל תתרגם את האתרים"
 	},
 	"Whitelist_Website": {
-		"message": "Whitelist Website"
+		"message": "אתרים מורשים"
 	},
 	"Website_Target_Language": {
-		"message": "Website Target Language"
+		"message": "שפת יעד לכל אתר (לדוגמה github.com=ko)"
 	},
 	"Block_Current_Site": {
-		"message": "Block Current Site"
+		"message": "חסימת האתר הנוכחי"
 	},
 	"Allow_Current_Site": {
-		"message": "Allow Current Site"
-	},
-	"ADVANCED______________________________________": {
-		"message": "ADVANCED                                      "
+		"message": "אישור האתר הנוכחי"
 	},
 	"ADVANCED": {
-		"message": "ADVANCED"
+		"message": "מתקדם"
 	},
 	"UI_Language": {
-		"message": "UI Language"
+		"message": "שפת הממשק"
 	},
 	"Detect_PDF": {
 		"message": "זהה pdf"
 	},
 	"Mouseover_Text_Type_2": {
-		"message": "Secondary Mouseover Text Type"
-	},
-	"Mouseover_Pause_Subtitle": {
-		"message": "Mouseover Pause Subtitle"
+		"message": "סוג טקסט משני בריחוף"
 	},
 	"Show_Tooltip_While_Typing": {
-		"message": "Show Tooltip While Typing"
+		"message": "הצגת החלונית בזמן הקלדה"
 	},
 	"Tooltip_Info_Source_Text": {
-		"message": "Tooltip Info Source Text"
+		"message": "הצגת טקסט המקור בחלונית"
 	},
 	"Translate_Exclude_Regex": {
-		"message": "Translate Exclude Regex"
+		"message": "ביטוי רגולרי להחרגה מתרגום"
 	},
 	"Tooltip_Info_Source_Language": {
-		"message": "Tooltip Info Source Language"
+		"message": "הצגת שפת המקור בחלונית"
 	},
 	"Tooltip_Info_Transliteration": {
-		"message": "Tooltip Info Transliteration"
-	},
-	"Tooltip_Interval_Time": {
-		"message": "Tooltip Interval Time"
+		"message": "הצגת תעתיק בחלונית"
 	},
 	"Tooltip_Show_Delay": {
-		"message": "Tooltip Show Delay"
+		"message": "השהיה לפני הצגת החלונית"
 	},
 	"Tooltip_Word_Dictionary": {
-		"message": "Tooltip Word Dictionary"
+		"message": "מילון מילים בחלונית"
 	},
 	"Tooltip_Word_Dictionary_Source": {
-		"message": "Tooltip Word Dictionary Source"
+		"message": "מקור מילון המילים"
 	},
 	"Fallback_Translator_Engine": {
-		"message": "Fallback Translator Engine"
-	},
-	"SPEECH": {
-		"message": "SPEECH"
-	},
-	"Speech_Recognition_Language": {
-		"message": "Speech Recognition Language"
-	},
-	"Voice_Panel_Translate_Language": {
-		"message": "Voice Panel Translate Language"
-	},
-	"Voice_Panel_Text_Target": {
-		"message": "Voice Panel Text Target"
-	},
-	"Voice_Panel_Padding": {
-		"message": "Voice Panel Padding"
-	},
-	"Voice_Panel_Text_Align": {
-		"message": "Voice Panel Text Align"
-	},
-	"Voice_Panel_Source_Font_Size": {
-		"message": "Voice Panel Source Font Size"
-	},
-	"Voice_Panel_Target_Font_Size": {
-		"message": "Voice Panel Target Font Size"
-	},
-	"Voice_Panel_Source_Font_Color": {
-		"message": "Voice Panel Source Font Color"
-	},
-	"Voice_Panel_Target_Font_Color": {
-		"message": "Voice Panel Target Font Color"
-	},
-	"Voice_Panel_Source_Border_Color": {
-		"message": "Voice Panel Source Border Color"
-	},
-	"Voice_Panel_Target_Border_Color": {
-		"message": "Voice Panel Target Border Color"
-	},
-	"Voice_Panel_Background_Color": {
-		"message": "Voice Panel Background Color"
-	},
-	"BACKUP______________________________________": {
-		"message": "BACKUP                                      "
+		"message": "מנוע תרגום חלופי"
 	},
 	"BACKUP": {
-		"message": "BACKUP"
+		"message": "גיבוי"
 	},
 	"Sync_Setting": {
-		"message": "Sync Setting"
+		"message": "סנכרון הגדרות בין מכשירים"
 	},
 	"Import_Setting": {
-		"message": "Import Setting"
+		"message": "ייבוא הגדרות"
 	},
 	"Export_Setting": {
-		"message": "Export Setting"
+		"message": "ייצוא הגדרות"
 	},
 	"Reset_Setting": {
-		"message": "Reset Setting"
-	},
-	"About______________________________________": {
-		"message": "אודות                                      "
+		"message": "איפוס הגדרות"
 	},
 	"How_to_use": {
-		"message": "How to use"
+		"message": "אופן השימוש"
 	},
 	"Check_how_to_use_this_extension": {
-		"message": "Check how to use this extension"
+		"message": "איך להשתמש בתוסף הזה"
 	},
 	"PDF_Viewer": {
 		"message": "מציג pdf"
@@ -339,22 +219,10 @@
 		"message": "תרגום pdf מקומי"
 	},
 	"Ebook_Reader": {
-		"message": "Ebook Reader"
+		"message": "קורא ספרים אלקטרוניים"
 	},
 	"Translate_local_ebook_file": {
-		"message": "Translate local ebook file"
-	},
-	"Twitter": {
-		"message": "Twitter"
-	},
-	"Retweet_twitter_post": {
-		"message": "Retweet twitter post"
-	},
-	"Review_Page": {
-		"message": "Review Page"
-	},
-	"Comment_on_this_extension": {
-		"message": "Comment on this extension"
+		"message": "תרגום קובץ ספר אלקטרוני מקומי"
 	},
 	"Source_code": {
 		"message": "קוד מקור"
@@ -368,179 +236,119 @@
 	"User_privacy_policy": {
 		"message": "מדיניות פרטיות למשתמש"
 	},
-	"Voice_Panel": {
-		"message": "Voice Panel"
-	},
-	"Translate_Voice": {
-		"message": "Translate Voice"
-	},
-	"Review______________________________________": {
-		"message": "Review                                      "
-	},
-	"Review_this": {
-		"message": "Review this"
-	},
-	"Developer_love_criticism": {
-		"message": "Developer love criticism"
-	},
-	"Coffee______________________________________": {
-		"message": "Coffee                                      "
-	},
-	"Support_this_extension": {
-		"message": "Support this extension"
-	},
-	"Feed_a_coffee_to_the_extension_devs": {
-		"message": "Feed a coffee to the extension devs"
-	},
-	"Title______________________________________": {
-		"message": "כותרת                                      "
-	},
-	"SELECT_OPTION______________________________": {
-		"message": "SELECT OPTION                              "
-	},
-	"On": {
-		"message": "On"
-	},
-	"Off": {
-		"message": "Off"
-	},
 	"Auto": {
-		"message": "Auto"
+		"message": "אוטומטי"
 	},
 	"None": {
-		"message": "None"
+		"message": "ללא"
 	},
 	"Select": {
-		"message": "Select"
+		"message": "בחירה"
 	},
 	"Mouseover": {
-		"message": "Mouseover"
+		"message": "ריחוף"
 	},
 	"Mouseover_n_Select": {
-		"message": "Mouseover n Select"
+		"message": "ריחוף ובחירה"
 	},
 	"Follow": {
-		"message": "Follow"
+		"message": "עוקב אחרי הסמן"
 	},
 	"Fixed": {
-		"message": "Fixed"
+		"message": "קבוע"
 	},
 	"Top_Right": {
-		"message": "Top Right"
+		"message": "פינה ימנית עליונה"
 	},
 	"Fade": {
-		"message": "Fade"
+		"message": "דהייה"
 	},
 	"Scale": {
-		"message": "Scale"
+		"message": "שינוי גודל"
 	},
 	"Shift_away": {
-		"message": "Shift away"
+		"message": "התרחקות"
 	},
 	"Shift_toward": {
-		"message": "Shift toward"
+		"message": "התקרבות"
 	},
 	"Perspective": {
-		"message": "Perspective"
+		"message": "פרספקטיבה"
 	},
 	"Word": {
-		"message": "Word"
+		"message": "מילה"
 	},
 	"Sentence": {
-		"message": "Sentence"
+		"message": "משפט"
 	},
 	"Container": {
-		"message": "Container"
+		"message": "פסקה"
 	},
 	"Both": {
-		"message": "Both"
+		"message": "שניהם"
 	},
 	"Blacklist": {
-		"message": "Blacklist"
+		"message": "רשימת חסימה"
 	},
 	"Whitelist": {
-		"message": "Whitelist"
-	},
-	"Source": {
-		"message": "Source"
-	},
-	"Source_Text": {
-		"message": "Source Text"
-	},
-	"Translated_Text": {
-		"message": "Translated Text"
-	},
-	"Source_n_Translated": {
-		"message": "Source n Translated"
-	},
-	"Translated_n_Source": {
-		"message": "Translated n Source"
-	},
-	"Dual_Subtitle": {
-		"message": "Dual Subtitle"
-	},
-	"Target_Single_Subtitle": {
-		"message": "Target Single Subtitle"
-	},
-	"Source_Single_Subtitle": {
-		"message": "Source Single Subtitle"
+		"message": "רשימת היתרים"
 	},
 	"Always": {
-		"message": "Always"
+		"message": "תמיד"
 	},
 	"Center": {
-		"message": "Center"
+		"message": "מרכז"
 	},
 	"Left": {
-		"message": "Left"
+		"message": "שמאל"
 	},
 	"Right": {
-		"message": "Right"
+		"message": "ימין"
 	},
 	"Justify": {
-		"message": "Justify"
+		"message": "יישור לשני הצדדים"
 	},
 	"Light": {
-		"message": "Light"
+		"message": "בהיר"
 	},
 	"Dark": {
-		"message": "Dark"
+		"message": "כהה"
 	},
 	"Default": {
-		"message": "Default"
+		"message": "ברירת מחדל"
 	},
 	"Ctrl_Left": {
-		"message": "Ctrl Left"
+		"message": "Ctrl שמאלי"
 	},
 	"Ctrl_Right": {
-		"message": "Ctrl Right"
+		"message": "Ctrl ימני"
 	},
 	"Alt_Left": {
-		"message": "Alt Left"
+		"message": "Alt שמאלי"
 	},
 	"Alt_Right": {
-		"message": "Alt Right"
+		"message": "Alt ימני"
 	},
 	"Shift_Left": {
-		"message": "Shift Left"
+		"message": "Shift שמאלי"
 	},
 	"Shift_Right": {
-		"message": "Shift Right"
+		"message": "Shift ימני"
 	},
 	"Meta_Left": {
-		"message": "Meta Left"
+		"message": "Meta שמאלי"
 	},
 	"Meta_Right": {
-		"message": "Meta Right"
+		"message": "Meta ימני"
 	},
 	"Click_Left": {
-		"message": "Click Left"
+		"message": "לחיצה שמאלית"
 	},
 	"Click_Middle": {
-		"message": "Click Middle"
+		"message": "לחיצה אמצעית"
 	},
 	"Click_Right": {
-		"message": "Click Right"
+		"message": "לחיצה ימנית"
 	},
 	"google": {
 		"message": "google"
@@ -548,286 +356,148 @@
 	"bing": {
 		"message": "bing"
 	},
-	"Saved_Words": {
-		"message": "Saved Words"
-	},
-	"Group": {
-		"message": "Group"
-	},
-	"All": {
-		"message": "All"
-	},
-	"Move_to_group": {
-		"message": "Move to group"
-	},
-	"Delete": {
-		"message": "Delete"
-	},
-	"Clear": {
-		"message": "Clear"
-	},
-	"selected": {
-		"message": "selected"
-	},
-	"Date": {
-		"message": "Date"
-	},
-	"Translation": {
-		"message": "Translation"
-	},
-	"No_saved_words_yet": {
-		"message": "No saved words yet"
-	},
-	"Manage_Groups": {
-		"message": "Manage Groups"
-	},
-	"Remove_all": {
-		"message": "Remove all"
-	},
-	"Import_CSV": {
-		"message": "Import CSV"
-	},
-	"Download_CSV": {
-		"message": "Download CSV"
-	},
-	"Save_key": {
-		"message": "Save key"
-	},
-	"Highlight_on_page": {
-		"message": "Highlight on page"
-	},
-	"Right_click_menu": {
-		"message": "Right click menu"
-	},
-	"Add_right_click_context_menu": {
-		"message": "Add right click context menu"
-	},
-	"Done": {
-		"message": "Done"
-	},
-	"On_Select": {
-		"message": "On Select"
-	},
-	"On_Hover": {
-		"message": "On Hover"
-	},
-	"On_Select_n_Hover": {
-		"message": "On Select n Hover"
-	},
-	"Select_group_to_play": {
-		"message": "Select group to play"
-	},
-	"No_Group_Selected": {
-		"message": "No Group Selected"
-	},
-	"Check_groups_to_play": {
-		"message": "Check groups to play"
-	},
-	"Flashcard_makes_cards_from_your_saved_words": {
-		"message": "Flashcard makes cards from your saved words"
-	},
-	"Flashcard": {
-		"message": "Flashcard"
-	},
-	"Play_Flashcard": {
-		"message": "Play Flashcard"
-	},
-	"Reset_progress": {
-		"message": "Reset progress"
-	},
-	"No_History_Data": {
-		"message": "No History Data"
-	},
-	"Today_play_is_completed": {
-		"message": "Today play is completed"
-	},
-	"Try_on_next_day": {
-		"message": "Try on next day"
-	},
-	"No_more_card_to_learn_today": {
-		"message": "No more card to learn today"
-	},
-	"Add_more_history_data_to_play_with": {
-		"message": "Add more history data to play with"
-	},
-	"Finish": {
-		"message": "Finish"
-	},
-	"Today_Flashcards_are_Completed": {
-		"message": "Today Flashcards are Completed"
-	},
-	"No_More_Card_Data": {
-		"message": "No More Card Data"
-	},
-	"Show_Answer": {
-		"message": "Show Answer"
-	},
-	"Again": {
-		"message": "Again"
-	},
-	"Hard": {
-		"message": "Hard"
-	},
-	"Good": {
-		"message": "Good"
-	},
-	"Easy": {
-		"message": "Easy"
-	},
-	"New": {
-		"message": "New"
-	},
-	"Review": {
-		"message": "Review"
-	},
-	"Learning": {
-		"message": "Learning"
-	},
 	"About": {
-		"message": "About"
+		"message": "אודות"
 	},
 	"Translator": {
-		"message": "Translator"
+		"message": "מתרגם"
 	},
 	"Wiktionary": {
 		"message": "Wiktionary"
 	},
-	"Translated": {
-		"message": "Translated"
-	},
 	"Custom": {
-		"message": "Custom"
+		"message": "מותאם אישית"
 	},
 	"Back": {
-		"message": "Back"
+		"message": "חזרה"
 	},
 	"Cancel": {
-		"message": "Cancel"
+		"message": "ביטול"
 	},
 	"Remove": {
-		"message": "Remove"
+		"message": "הסרה"
 	},
 	"Alpha": {
-		"message": "Alpha"
+		"message": "אטימות"
 	},
 	"Fetch_models_from_endpoint": {
-		"message": "Fetch models from endpoint"
+		"message": "טעינת מודלים מנקודת הקצה"
 	},
 	"No_models_returned_by_endpoint": {
-		"message": "No models returned by endpoint"
+		"message": "נקודת הקצה לא החזירה מודלים"
 	},
 	"API_endpoint_is_empty": {
-		"message": "API endpoint is empty"
+		"message": "נקודת הקצה של ה-API ריקה"
 	},
 	"Failed_to_fetch_LLM_models": {
-		"message": "Failed to fetch LLM models"
+		"message": "טעינת מודלי LLM נכשלה"
 	},
 	"Open_this_popup_on_a_website_to_use_this_button": {
-		"message": "Open this popup on a website to use this button"
+		"message": "יש לפתוח חלון זה באתר כדי להשתמש בכפתור"
 	},
 	"Import_failed": {
-		"message": "Import failed"
+		"message": "הייבוא נכשל"
 	},
 	"Copy_PDF_URL": {
-		"message": "Copy PDF URL"
+		"message": "העתקת כתובת ה-PDF"
 	},
 	"Copied": {
-		"message": "Copied"
+		"message": "הועתק"
 	},
 	"Copy_failed": {
-		"message": "Copy failed"
+		"message": "ההעתקה נכשלה"
 	},
 	"Allow_access_to_file_URLs_to_open_local_PDF_files": {
-		"message": "Allow access to file URLs to open local PDF files"
+		"message": "יש לאפשר גישה לכתובות URL של קבצים כדי לפתוח קובצי PDF מקומיים"
 	},
 	"Open_File": {
-		"message": "Open File"
+		"message": "פתיחת קובץ"
 	},
 	"Previous_Page": {
-		"message": "Previous Page"
+		"message": "העמוד הקודם"
 	},
 	"Next_Page": {
-		"message": "Next Page"
+		"message": "העמוד הבא"
 	},
 	"Table_of_Contents": {
-		"message": "Table of Contents"
+		"message": "תוכן העניינים"
 	},
 	"Drop_an_ebook_file_here_or_open_one": {
-		"message": "Drop an ebook file here or open one"
+		"message": "יש לגרור לכאן קובץ ספר אלקטרוני או לפתוח קובץ"
 	},
 	"Could_not_open_this_file": {
-		"message": "Could not open this file"
+		"message": "לא ניתן לפתוח את הקובץ"
 	},
 	"Untitled": {
-		"message": "Untitled"
+		"message": "ללא שם"
 	},
 	"Page": {
-		"message": "Page"
+		"message": "עמוד"
 	},
 	"Zoom_out": {
-		"message": "Zoom out"
+		"message": "התרחקות"
 	},
 	"Zoom": {
-		"message": "Zoom"
+		"message": "מרחק מתצוגה"
 	},
 	"Zoom_in": {
-		"message": "Zoom in"
+		"message": "התקרבות"
 	},
 	"Automatic_zoom": {
-		"message": "Automatic zoom"
+		"message": "מרחק מתצוגה אוטומטי"
 	},
 	"Page_fit": {
-		"message": "Page fit"
+		"message": "התאמה לעמוד"
 	},
 	"Page_width": {
-		"message": "Page width"
+		"message": "רוחב העמוד"
 	},
 	"Find": {
-		"message": "Find"
+		"message": "חיפוש"
 	},
 	"Dark_mode": {
-		"message": "Dark mode"
+		"message": "מצב כהה"
 	},
 	"Download": {
-		"message": "Download"
+		"message": "הורדה"
 	},
 	"Find_in_document": {
-		"message": "Find in document"
+		"message": "חיפוש במסמך"
 	},
 	"Previous_match": {
-		"message": "Previous match"
+		"message": "ההופעה הקודמת"
 	},
 	"Next_match": {
-		"message": "Next match"
+		"message": "ההופעה הבאה"
 	},
 	"Highlight_all": {
-		"message": "Highlight all"
+		"message": "הדגשת הכול"
 	},
 	"Match_case": {
-		"message": "Match case"
+		"message": "התאמת אותיות"
 	},
 	"Phrase_not_found": {
-		"message": "Phrase not found"
+		"message": "הביטוי לא נמצא"
 	},
 	"Close": {
-		"message": "Close"
+		"message": "סגירה"
 	},
 	"Failed_to_load_the_PDF_file": {
-		"message": "Failed to load the PDF file"
+		"message": "טעינת קובץ ה-PDF נכשלה"
 	},
 	"Drop_a_PDF_file_here": {
-		"message": "Drop a PDF file here"
+		"message": "יש לגרור לכאן קובץ PDF"
 	},
 	"Enter_the_password_to_open_this_PDF_file": {
-		"message": "Enter the password to open this PDF file"
+		"message": "יש להזין את הססמה כדי לפתוח את קובץ ה-PDF"
 	},
 	"Invalid_password_try_again": {
-		"message": "Invalid password try again"
+		"message": "ססמה שגויה, נא לנסות שוב"
 	},
 	"appName": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Mouse Tooltip Translator Refined"
 	},
 	"appDesc": {
-		"message": "Hover or select text to translate it in a tooltip. Also works in PDF and ebook files."
+		"message": "ריחוף מעל טקסט או בחירתו מציגים את תרגומו בחלונית. עובד גם בקובצי PDF ובספרים אלקטרוניים."
 	}
 }

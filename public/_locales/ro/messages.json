@@ -1,546 +1,354 @@
 {
-	"MAIN______________________________________": {
-		"message": "MAIN                                      "
-	},
 	"MAIN": {
-		"message": "MAIN"
+		"message": "PRINCIPAL"
 	},
 	"Mouse_Tooltip_Translator": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Mouse Tooltip Translator Refined"
 	},
 	"Translate_When": {
-		"message": "Translate When"
+		"message": "Tradu când"
 	},
 	"Translate_From": {
-		"message": "Translate From"
+		"message": "Tradu din"
 	},
 	"Translate_Into": {
-		"message": "Translate Into"
+		"message": "Tradu în"
 	},
 	"Translator_Engine": {
-		"message": "Translator Engine"
+		"message": "Motor de traducere"
 	},
 	"LLM_Provider": {
-		"message": "LLM Provider"
+		"message": "Furnizor LLM"
 	},
 	"LLM_Api_Endpoint": {
-		"message": "LLM API Endpoint URL"
+		"message": "URL endpoint API LLM"
 	},
 	"LLM_Api_Key": {
-		"message": "LLM API Key"
+		"message": "Cheie API LLM (opțional)"
 	},
 	"LLM_Model": {
-		"message": "LLM Model"
+		"message": "Model LLM"
 	},
 	"Mouseover_Text_Type": {
-		"message": "Mouseover Text Type"
+		"message": "Tip de text la trecerea mouse-ului"
 	},
 	"Translate_Into_2": {
-		"message": "Secondary Translate Into"
+		"message": "A doua limbă țintă"
 	},
 	"Writing_Language": {
-		"message": "Writing Language"
+		"message": "Limba de scriere"
 	},
 	"Reverse_Translate_Language": {
-		"message": "Reverse Translate Language"
-	},
-	"OCR_Language": {
-		"message": "OCR Language"
-	},
-	"Detect_Subtitle": {
-		"message": "Detect Subtitle"
-	},
-	"KEYBOARD______________________________________": {
-		"message": "KEYBOARD                                      "
+		"message": "Limba pentru traducerea inversă"
 	},
 	"KEYBOARD": {
-		"message": "KEYBOARD"
+		"message": "TASTATURĂ"
 	},
 	"Show_Tooltip_When": {
-		"message": "Show Tooltip When"
-	},
-	"Voice_When": {
-		"message": "Voice When"
+		"message": "Afișează sugestia când"
 	},
 	"Translate_Writing_When": {
-		"message": "Translate Writing When"
+		"message": "Tradu textul scris când"
 	},
 	"Ignore_AltGr_Modifier": {
-		"message": "Ignore AltGr Modifier"
-	},
-	"Auto_Reader_When": {
-		"message": "Auto Reader When"
+		"message": "Ignoră modificatorul AltGr"
 	},
 	"Translate_Page_When": {
-		"message": "Translate Page When"
-	},
-	"OCR_When": {
-		"message": "OCR When"
-	},
-	"Mouseover_Text_Type_Swap_Key": {
-		"message": "Mouseover Text Type Swap Key"
-	},
-	"Speech_Recognition_When": {
-		"message": "Speech Recognition When"
-	},
-	"Toggle_Mouseover_Text_Type_When": {
-		"message": "Toggle Mouseover Text Type When"
+		"message": "Tradu pagina când"
 	},
 	"Mouseover_Text_Type_Key_Hold": {
-		"message": "Mouseover Text Type Key Hold"
+		"message": "Tastă (ținută apăsată) pentru tipul de text"
 	},
 	"Secondary_Language_When": {
-		"message": "Secondary Language When"
+		"message": "Limba secundară când"
 	},
 	"Swap_Key_Toggle_Mode": {
-		"message": "Swap Key Toggle Mode"
+		"message": "Mod de comutare a tastei"
 	},
 	"Toggle_Extension_When": {
-		"message": "Toggle Extension When"
-	},
-	"TTS_Pause_Resume_When": {
-		"message": "TTS Pause Resume When"
-	},
-	"GRAPHIC______________________________________": {
-		"message": "GRAPHIC                                      "
+		"message": "Activează/dezactivează extensia când"
 	},
 	"GRAPHIC": {
-		"message": "GRAPHIC"
+		"message": "ASPECT"
 	},
 	"Tooltip_Font_Size": {
-		"message": "Tooltip Font Size"
+		"message": "Dimensiunea fontului sugestiei"
 	},
 	"Tooltip_Font_Family": {
-		"message": "Tooltip Font Family"
-	},
-	"Subtitle_Background": {
-		"message": "Subtitle Background"
+		"message": "Fontul sugestiei"
 	},
 	"Tooltip_Width": {
-		"message": "Tooltip Width"
+		"message": "Lățimea sugestiei"
 	},
 	"Tooltip_Distance": {
-		"message": "Tooltip Distance"
+		"message": "Distanța sugestiei"
 	},
 	"Tooltip_Animation": {
-		"message": "Tooltip Animation"
+		"message": "Animația sugestiei"
 	},
 	"Tooltip_Disappear_Duration": {
-		"message": "Tooltip Disappear Duration"
+		"message": "Durata până la dispariția sugestiei"
 	},
 	"Tooltip_Position": {
-		"message": "Tooltip Position"
+		"message": "Poziția sugestiei"
 	},
 	"Tooltip_Placement": {
-		"message": "Tooltip Placement"
+		"message": "Amplasarea sugestiei"
 	},
 	"Above": {
-		"message": "Above"
+		"message": "Deasupra"
 	},
 	"Below": {
-		"message": "Below"
+		"message": "Dedesubt"
 	},
 	"Tooltip_Text_Align": {
-		"message": "Tooltip Text Align"
+		"message": "Alinierea textului sugestiei"
 	},
 	"Tooltip_Background_Blur": {
-		"message": "Tooltip Background Blur"
+		"message": "Estompare fundal sugestie"
 	},
 	"Mouseover_Highlight_Text": {
-		"message": "Mouseover Highlight Text"
+		"message": "Evidențiază textul la trecerea mouse-ului"
 	},
 	"Tooltip_Font_Color": {
-		"message": "Tooltip Font Color"
+		"message": "Culoarea textului sugestiei"
 	},
 	"Tooltip_Background_Color": {
-		"message": "Tooltip Background Color"
+		"message": "Culoarea fundalului sugestiei"
 	},
 	"Tooltip_Border_Color": {
-		"message": "Tooltip Border Color"
+		"message": "Culoarea chenarului sugestiei"
 	},
 	"Mouseover_Text_Highlight_Color": {
-		"message": "Mouseover Text Highlight Color"
+		"message": "Culoarea evidențierii la trecerea mouse-ului"
 	},
 	"Ebook_Theme": {
-		"message": "Ebook Theme"
+		"message": "Tema cărții electronice"
 	},
 	"Setting_Compact_mode": {
-		"message": "Setting Compact mode"
-	},
-	"VOICE______________________________________": {
-		"message": "VOICE                                      "
-	},
-	"VOICE": {
-		"message": "VOICE"
-	},
-	"Voice_Volume": {
-		"message": "Voice Volume"
-	},
-	"Voice_Speed": {
-		"message": "Voice Speed"
-	},
-	"Voice_Target": {
-		"message": "Voice Target"
-	},
-	"Voice_Repeat": {
-		"message": "Voice Repeat"
-	},
-	"Voice_for_": {
-		"message": "Voice for "
-	},
-	"Voice_speed_for_": {
-		"message": "Voice speed for "
-	},
-	"EXCLUDE______________________________________": {
-		"message": "EXCLUDE                                      "
+		"message": "Mod compact pentru setări"
 	},
 	"EXCLUDE": {
-		"message": "EXCLUDE"
+		"message": "EXCLUDERE"
 	},
 	"Exclude_Language": {
-		"message": "Exclude Language"
+		"message": "Exclude limba"
 	},
 	"Website_Filter_Mode": {
-		"message": "Website Filter Mode"
+		"message": "Mod de filtrare a site-urilor"
 	},
 	"Exclude_Website": {
-		"message": "Exclude Website"
+		"message": "Exclude site-ul"
 	},
 	"Whitelist_Website": {
-		"message": "Whitelist Website"
+		"message": "Site-uri permise"
 	},
 	"Website_Target_Language": {
-		"message": "Website Target Language"
+		"message": "Limba țintă per site (ex. github.com=ko)"
 	},
 	"Block_Current_Site": {
-		"message": "Block Current Site"
+		"message": "Blochează site-ul curent"
 	},
 	"Allow_Current_Site": {
-		"message": "Allow Current Site"
-	},
-	"ADVANCED______________________________________": {
-		"message": "ADVANCED                                      "
+		"message": "Permite site-ul curent"
 	},
 	"ADVANCED": {
-		"message": "ADVANCED"
+		"message": "AVANSAT"
 	},
 	"UI_Language": {
-		"message": "UI Language"
+		"message": "Limba interfeței"
 	},
 	"Detect_PDF": {
-		"message": "Detect PDF"
+		"message": "Detectează PDF"
 	},
 	"Mouseover_Text_Type_2": {
-		"message": "Secondary Mouseover Text Type"
-	},
-	"Mouseover_Pause_Subtitle": {
-		"message": "Mouseover Pause Subtitle"
+		"message": "Tip de text secundar la trecerea mouse-ului"
 	},
 	"Show_Tooltip_While_Typing": {
-		"message": "Show Tooltip While Typing"
+		"message": "Afișează sugestia în timpul tastării"
 	},
 	"Tooltip_Info_Source_Text": {
-		"message": "Tooltip Info Source Text"
+		"message": "Textul sursă în sugestie"
 	},
 	"Translate_Exclude_Regex": {
-		"message": "Translate Exclude Regex"
+		"message": "Regex de excludere de la traducere"
 	},
 	"Tooltip_Info_Source_Language": {
-		"message": "Tooltip Info Source Language"
+		"message": "Limba sursă în sugestie"
 	},
 	"Tooltip_Info_Transliteration": {
-		"message": "Tooltip Info Transliteration"
-	},
-	"Tooltip_Interval_Time": {
-		"message": "Tooltip Interval Time"
+		"message": "Transliterare în sugestie"
 	},
 	"Tooltip_Show_Delay": {
-		"message": "Tooltip Show Delay"
+		"message": "Întârziere afișare sugestie"
 	},
 	"Tooltip_Word_Dictionary": {
-		"message": "Tooltip Word Dictionary"
+		"message": "Dicționar de cuvinte în sugestie"
 	},
 	"Tooltip_Word_Dictionary_Source": {
-		"message": "Tooltip Word Dictionary Source"
+		"message": "Sursa dicționarului de cuvinte"
 	},
 	"Fallback_Translator_Engine": {
-		"message": "Fallback Translator Engine"
-	},
-	"SPEECH": {
-		"message": "SPEECH"
-	},
-	"Speech_Recognition_Language": {
-		"message": "Speech Recognition Language"
-	},
-	"Voice_Panel_Translate_Language": {
-		"message": "Voice Panel Translate Language"
-	},
-	"Voice_Panel_Text_Target": {
-		"message": "Voice Panel Text Target"
-	},
-	"Voice_Panel_Padding": {
-		"message": "Voice Panel Padding"
-	},
-	"Voice_Panel_Text_Align": {
-		"message": "Voice Panel Text Align"
-	},
-	"Voice_Panel_Source_Font_Size": {
-		"message": "Voice Panel Source Font Size"
-	},
-	"Voice_Panel_Target_Font_Size": {
-		"message": "Voice Panel Target Font Size"
-	},
-	"Voice_Panel_Source_Font_Color": {
-		"message": "Voice Panel Source Font Color"
-	},
-	"Voice_Panel_Target_Font_Color": {
-		"message": "Voice Panel Target Font Color"
-	},
-	"Voice_Panel_Source_Border_Color": {
-		"message": "Voice Panel Source Border Color"
-	},
-	"Voice_Panel_Target_Border_Color": {
-		"message": "Voice Panel Target Border Color"
-	},
-	"Voice_Panel_Background_Color": {
-		"message": "Voice Panel Background Color"
-	},
-	"BACKUP______________________________________": {
-		"message": "BACKUP                                      "
+		"message": "Motor de traducere de rezervă"
 	},
 	"BACKUP": {
-		"message": "BACKUP"
+		"message": "COPIE DE REZERVĂ"
 	},
 	"Sync_Setting": {
-		"message": "Sync Setting"
+		"message": "Sincronizează setările între dispozitive"
 	},
 	"Import_Setting": {
-		"message": "Import Setting"
+		"message": "Importă setările"
 	},
 	"Export_Setting": {
-		"message": "Export Setting"
+		"message": "Exportă setările"
 	},
 	"Reset_Setting": {
-		"message": "Reset Setting"
-	},
-	"About______________________________________": {
-		"message": "About                                      "
+		"message": "Resetează setările"
 	},
 	"How_to_use": {
-		"message": "How to use"
+		"message": "Mod de utilizare"
 	},
 	"Check_how_to_use_this_extension": {
-		"message": "Check how to use this extension"
+		"message": "Află cum să folosești această extensie"
 	},
 	"PDF_Viewer": {
-		"message": "PDF Viewer"
+		"message": "Vizualizator PDF"
 	},
 	"Translate_local_PDF_file": {
-		"message": "Translate local PDF file"
+		"message": "Tradu un fișier PDF local"
 	},
 	"Ebook_Reader": {
-		"message": "Ebook Reader"
+		"message": "Cititor de cărți electronice"
 	},
 	"Translate_local_ebook_file": {
-		"message": "Translate local ebook file"
-	},
-	"Twitter": {
-		"message": "Twitter"
-	},
-	"Retweet_twitter_post": {
-		"message": "Retweet twitter post"
-	},
-	"Review_Page": {
-		"message": "Review Page"
-	},
-	"Comment_on_this_extension": {
-		"message": "Comment on this extension"
+		"message": "Tradu o carte electronică locală"
 	},
 	"Source_code": {
-		"message": "Source code"
+		"message": "Cod sursă"
 	},
 	"Check_source_code_in_github": {
-		"message": "Check source code in github"
+		"message": "Vezi codul sursă pe GitHub"
 	},
 	"Privacy_Policy": {
-		"message": "Privacy Policy"
+		"message": "Politica de confidențialitate"
 	},
 	"User_privacy_policy": {
-		"message": "User privacy policy"
-	},
-	"Voice_Panel": {
-		"message": "Voice Panel"
-	},
-	"Translate_Voice": {
-		"message": "Translate Voice"
-	},
-	"Review______________________________________": {
-		"message": "Review                                      "
-	},
-	"Review_this": {
-		"message": "Review this"
-	},
-	"Developer_love_criticism": {
-		"message": "Developer love criticism"
-	},
-	"Coffee______________________________________": {
-		"message": "Coffee                                      "
-	},
-	"Support_this_extension": {
-		"message": "Support this extension"
-	},
-	"Feed_a_coffee_to_the_extension_devs": {
-		"message": "Feed a coffee to the extension devs"
-	},
-	"Title______________________________________": {
-		"message": "Title                                      "
-	},
-	"SELECT_OPTION______________________________": {
-		"message": "SELECT OPTION                              "
-	},
-	"On": {
-		"message": "On"
-	},
-	"Off": {
-		"message": "Off"
+		"message": "Politica de confidențialitate a utilizatorilor"
 	},
 	"Auto": {
-		"message": "Auto"
+		"message": "Automat"
 	},
 	"None": {
-		"message": "None"
+		"message": "Niciunul"
 	},
 	"Select": {
-		"message": "Select"
+		"message": "Selectare"
 	},
 	"Mouseover": {
-		"message": "Mouseover"
+		"message": "Trecere cu mouse-ul"
 	},
 	"Mouseover_n_Select": {
-		"message": "Mouseover n Select"
+		"message": "Trecere cu mouse-ul și selectare"
 	},
 	"Follow": {
-		"message": "Follow"
+		"message": "Urmărește cursorul"
 	},
 	"Fixed": {
-		"message": "Fixed"
+		"message": "Fix"
 	},
 	"Top_Right": {
-		"message": "Top Right"
+		"message": "Dreapta sus"
 	},
 	"Fade": {
-		"message": "Fade"
+		"message": "Estompare"
 	},
 	"Scale": {
-		"message": "Scale"
+		"message": "Scalare"
 	},
 	"Shift_away": {
-		"message": "Shift away"
+		"message": "Depărtare"
 	},
 	"Shift_toward": {
-		"message": "Shift toward"
+		"message": "Apropiere"
 	},
 	"Perspective": {
-		"message": "Perspective"
+		"message": "Perspectivă"
 	},
 	"Word": {
-		"message": "Word"
+		"message": "Cuvânt"
 	},
 	"Sentence": {
-		"message": "Sentence"
+		"message": "Propoziție"
 	},
 	"Container": {
-		"message": "Container"
+		"message": "Paragraf"
 	},
 	"Both": {
-		"message": "Both"
+		"message": "Ambele"
 	},
 	"Blacklist": {
-		"message": "Blacklist"
+		"message": "Listă de blocare"
 	},
 	"Whitelist": {
-		"message": "Whitelist"
-	},
-	"Source": {
-		"message": "Source"
-	},
-	"Source_Text": {
-		"message": "Source Text"
-	},
-	"Translated_Text": {
-		"message": "Translated Text"
-	},
-	"Source_n_Translated": {
-		"message": "Source n Translated"
-	},
-	"Translated_n_Source": {
-		"message": "Translated n Source"
-	},
-	"Dual_Subtitle": {
-		"message": "Dual Subtitle"
-	},
-	"Target_Single_Subtitle": {
-		"message": "Target Single Subtitle"
-	},
-	"Source_Single_Subtitle": {
-		"message": "Source Single Subtitle"
+		"message": "Listă de permisiuni"
 	},
 	"Always": {
-		"message": "Always"
+		"message": "Întotdeauna"
 	},
 	"Center": {
-		"message": "Center"
+		"message": "Centru"
 	},
 	"Left": {
-		"message": "Left"
+		"message": "Stânga"
 	},
 	"Right": {
-		"message": "Right"
+		"message": "Dreapta"
 	},
 	"Justify": {
-		"message": "Justify"
+		"message": "Aliniere stânga-dreapta"
 	},
 	"Light": {
-		"message": "Light"
+		"message": "Luminos"
 	},
 	"Dark": {
-		"message": "Dark"
+		"message": "Întunecat"
 	},
 	"Default": {
-		"message": "Default"
+		"message": "Implicit"
 	},
 	"Ctrl_Left": {
-		"message": "Ctrl Left"
+		"message": "Ctrl stânga"
 	},
 	"Ctrl_Right": {
-		"message": "Ctrl Right"
+		"message": "Ctrl dreapta"
 	},
 	"Alt_Left": {
-		"message": "Alt Left"
+		"message": "Alt stânga"
 	},
 	"Alt_Right": {
-		"message": "Alt Right"
+		"message": "Alt dreapta"
 	},
 	"Shift_Left": {
-		"message": "Shift Left"
+		"message": "Shift stânga"
 	},
 	"Shift_Right": {
-		"message": "Shift Right"
+		"message": "Shift dreapta"
 	},
 	"Meta_Left": {
-		"message": "Meta Left"
+		"message": "Meta stânga"
 	},
 	"Meta_Right": {
-		"message": "Meta Right"
+		"message": "Meta dreapta"
 	},
 	"Click_Left": {
-		"message": "Click Left"
+		"message": "Clic stânga"
 	},
 	"Click_Middle": {
-		"message": "Click Middle"
+		"message": "Clic mijloc"
 	},
 	"Click_Right": {
-		"message": "Click Right"
+		"message": "Clic dreapta"
 	},
 	"google": {
 		"message": "google"
@@ -548,286 +356,148 @@
 	"bing": {
 		"message": "bing"
 	},
-	"Saved_Words": {
-		"message": "Saved Words"
-	},
-	"Group": {
-		"message": "Group"
-	},
-	"All": {
-		"message": "All"
-	},
-	"Move_to_group": {
-		"message": "Move to group"
-	},
-	"Delete": {
-		"message": "Delete"
-	},
-	"Clear": {
-		"message": "Clear"
-	},
-	"selected": {
-		"message": "selected"
-	},
-	"Date": {
-		"message": "Date"
-	},
-	"Translation": {
-		"message": "Translation"
-	},
-	"No_saved_words_yet": {
-		"message": "No saved words yet"
-	},
-	"Manage_Groups": {
-		"message": "Manage Groups"
-	},
-	"Remove_all": {
-		"message": "Remove all"
-	},
-	"Import_CSV": {
-		"message": "Import CSV"
-	},
-	"Download_CSV": {
-		"message": "Download CSV"
-	},
-	"Save_key": {
-		"message": "Save key"
-	},
-	"Highlight_on_page": {
-		"message": "Highlight on page"
-	},
-	"Right_click_menu": {
-		"message": "Right click menu"
-	},
-	"Add_right_click_context_menu": {
-		"message": "Add right click context menu"
-	},
-	"Done": {
-		"message": "Done"
-	},
-	"On_Select": {
-		"message": "On Select"
-	},
-	"On_Hover": {
-		"message": "On Hover"
-	},
-	"On_Select_n_Hover": {
-		"message": "On Select n Hover"
-	},
-	"Select_group_to_play": {
-		"message": "Select group to play"
-	},
-	"No_Group_Selected": {
-		"message": "No Group Selected"
-	},
-	"Check_groups_to_play": {
-		"message": "Check groups to play"
-	},
-	"Flashcard_makes_cards_from_your_saved_words": {
-		"message": "Flashcard makes cards from your saved words"
-	},
-	"Flashcard": {
-		"message": "Flashcard"
-	},
-	"Play_Flashcard": {
-		"message": "Play Flashcard"
-	},
-	"Reset_progress": {
-		"message": "Reset progress"
-	},
-	"No_History_Data": {
-		"message": "No History Data"
-	},
-	"Today_play_is_completed": {
-		"message": "Today play is completed"
-	},
-	"Try_on_next_day": {
-		"message": "Try on next day"
-	},
-	"No_more_card_to_learn_today": {
-		"message": "No more card to learn today"
-	},
-	"Add_more_history_data_to_play_with": {
-		"message": "Add more history data to play with"
-	},
-	"Finish": {
-		"message": "Finish"
-	},
-	"Today_Flashcards_are_Completed": {
-		"message": "Today Flashcards are Completed"
-	},
-	"No_More_Card_Data": {
-		"message": "No More Card Data"
-	},
-	"Show_Answer": {
-		"message": "Show Answer"
-	},
-	"Again": {
-		"message": "Again"
-	},
-	"Hard": {
-		"message": "Hard"
-	},
-	"Good": {
-		"message": "Good"
-	},
-	"Easy": {
-		"message": "Easy"
-	},
-	"New": {
-		"message": "New"
-	},
-	"Review": {
-		"message": "Review"
-	},
-	"Learning": {
-		"message": "Learning"
-	},
 	"About": {
-		"message": "About"
+		"message": "Despre"
 	},
 	"Translator": {
-		"message": "Translator"
+		"message": "Traducător"
 	},
 	"Wiktionary": {
 		"message": "Wiktionary"
 	},
-	"Translated": {
-		"message": "Translated"
-	},
 	"Custom": {
-		"message": "Custom"
+		"message": "Personalizat"
 	},
 	"Back": {
-		"message": "Back"
+		"message": "Înapoi"
 	},
 	"Cancel": {
-		"message": "Cancel"
+		"message": "Anulează"
 	},
 	"Remove": {
-		"message": "Remove"
+		"message": "Elimină"
 	},
 	"Alpha": {
-		"message": "Alpha"
+		"message": "Alfa"
 	},
 	"Fetch_models_from_endpoint": {
-		"message": "Fetch models from endpoint"
+		"message": "Preia modelele de la endpoint"
 	},
 	"No_models_returned_by_endpoint": {
-		"message": "No models returned by endpoint"
+		"message": "Endpointul nu a returnat niciun model"
 	},
 	"API_endpoint_is_empty": {
-		"message": "API endpoint is empty"
+		"message": "Endpointul API este gol"
 	},
 	"Failed_to_fetch_LLM_models": {
-		"message": "Failed to fetch LLM models"
+		"message": "Nu s-au putut prelua modelele LLM"
 	},
 	"Open_this_popup_on_a_website_to_use_this_button": {
-		"message": "Open this popup on a website to use this button"
+		"message": "Deschide această fereastră pe un site pentru a folosi acest buton"
 	},
 	"Import_failed": {
-		"message": "Import failed"
+		"message": "Importul a eșuat"
 	},
 	"Copy_PDF_URL": {
-		"message": "Copy PDF URL"
+		"message": "Copiază URL-ul PDF"
 	},
 	"Copied": {
-		"message": "Copied"
+		"message": "Copiat"
 	},
 	"Copy_failed": {
-		"message": "Copy failed"
+		"message": "Copierea a eșuat"
 	},
 	"Allow_access_to_file_URLs_to_open_local_PDF_files": {
-		"message": "Allow access to file URLs to open local PDF files"
+		"message": "Permite accesul la URL-urile de fișiere pentru a deschide fișiere PDF locale"
 	},
 	"Open_File": {
-		"message": "Open File"
+		"message": "Deschide fișierul"
 	},
 	"Previous_Page": {
-		"message": "Previous Page"
+		"message": "Pagina anterioară"
 	},
 	"Next_Page": {
-		"message": "Next Page"
+		"message": "Pagina următoare"
 	},
 	"Table_of_Contents": {
-		"message": "Table of Contents"
+		"message": "Cuprins"
 	},
 	"Drop_an_ebook_file_here_or_open_one": {
-		"message": "Drop an ebook file here or open one"
+		"message": "Plasează aici o carte electronică sau deschide una"
 	},
 	"Could_not_open_this_file": {
-		"message": "Could not open this file"
+		"message": "Acest fișier nu a putut fi deschis"
 	},
 	"Untitled": {
-		"message": "Untitled"
+		"message": "Fără titlu"
 	},
 	"Page": {
-		"message": "Page"
+		"message": "Pagina"
 	},
 	"Zoom_out": {
-		"message": "Zoom out"
+		"message": "Micșorează"
 	},
 	"Zoom": {
 		"message": "Zoom"
 	},
 	"Zoom_in": {
-		"message": "Zoom in"
+		"message": "Mărește"
 	},
 	"Automatic_zoom": {
-		"message": "Automatic zoom"
+		"message": "Zoom automat"
 	},
 	"Page_fit": {
-		"message": "Page fit"
+		"message": "Potrivire la pagină"
 	},
 	"Page_width": {
-		"message": "Page width"
+		"message": "Lățimea paginii"
 	},
 	"Find": {
-		"message": "Find"
+		"message": "Caută"
 	},
 	"Dark_mode": {
-		"message": "Dark mode"
+		"message": "Mod întunecat"
 	},
 	"Download": {
-		"message": "Download"
+		"message": "Descarcă"
 	},
 	"Find_in_document": {
-		"message": "Find in document"
+		"message": "Caută în document"
 	},
 	"Previous_match": {
-		"message": "Previous match"
+		"message": "Rezultatul anterior"
 	},
 	"Next_match": {
-		"message": "Next match"
+		"message": "Rezultatul următor"
 	},
 	"Highlight_all": {
-		"message": "Highlight all"
+		"message": "Evidențiază tot"
 	},
 	"Match_case": {
-		"message": "Match case"
+		"message": "Potrivește majusculele"
 	},
 	"Phrase_not_found": {
-		"message": "Phrase not found"
+		"message": "Expresia nu a fost găsită"
 	},
 	"Close": {
-		"message": "Close"
+		"message": "Închide"
 	},
 	"Failed_to_load_the_PDF_file": {
-		"message": "Failed to load the PDF file"
+		"message": "Fișierul PDF nu a putut fi încărcat"
 	},
 	"Drop_a_PDF_file_here": {
-		"message": "Drop a PDF file here"
+		"message": "Plasează aici un fișier PDF"
 	},
 	"Enter_the_password_to_open_this_PDF_file": {
-		"message": "Enter the password to open this PDF file"
+		"message": "Introdu parola pentru a deschide acest fișier PDF"
 	},
 	"Invalid_password_try_again": {
-		"message": "Invalid password try again"
+		"message": "Parolă nevalidă, încearcă din nou"
 	},
 	"appName": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Mouse Tooltip Translator Refined"
 	},
 	"appDesc": {
-		"message": "Hover or select text to translate it in a tooltip. Also works in PDF and ebook files."
+		"message": "Treci cu mouse-ul peste text sau selectează-l pentru a-l traduce într-o sugestie. Funcționează și în PDF și cărți electronice."
 	}
 }

@@ -1,4 +1,4 @@
-# MouseTooltipTranslator
+# Mouse Tooltip Translator Refined
 
 Hover or select text to translate it in a tooltip. A lightweight rewrite (WXT + Svelte 5 + TypeScript) of [ttop32/MouseTooltipTranslator](https://github.com/ttop32/MouseTooltipTranslator).
 

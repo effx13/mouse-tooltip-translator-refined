@@ -1,546 +1,354 @@
 {
-	"MAIN______________________________________": {
-		"message": "MAIN                                      "
-	},
 	"MAIN": {
-		"message": "MAIN"
+		"message": "PRINCIPAL"
 	},
 	"Mouse_Tooltip_Translator": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Traductor d'informació d'eines del ratolí"
 	},
 	"Translate_When": {
-		"message": "Translate When"
+		"message": "Tradueix quan"
 	},
 	"Translate_From": {
-		"message": "Translate From"
+		"message": "Tradueix de"
 	},
 	"Translate_Into": {
-		"message": "Translate Into"
+		"message": "Traduir a"
 	},
 	"Translator_Engine": {
-		"message": "Translator Engine"
+		"message": "Motor de traducció"
 	},
 	"LLM_Provider": {
-		"message": "LLM Provider"
+		"message": "Proveïdor de LLM"
 	},
 	"LLM_Api_Endpoint": {
-		"message": "LLM API Endpoint URL"
+		"message": "URL del punt final de l'API LLM"
 	},
 	"LLM_Api_Key": {
-		"message": "LLM API Key"
+		"message": "Clau d'API de l'LLM (opcional)"
 	},
 	"LLM_Model": {
-		"message": "LLM Model"
+		"message": "Model LLM"
 	},
 	"Mouseover_Text_Type": {
-		"message": "Mouseover Text Type"
+		"message": "Tipus de text amb el ratolí"
 	},
 	"Translate_Into_2": {
-		"message": "Secondary Translate Into"
+		"message": "Secundària Traduir a"
 	},
 	"Writing_Language": {
-		"message": "Writing Language"
+		"message": "Llenguatge d'escriptura"
 	},
 	"Reverse_Translate_Language": {
-		"message": "Reverse Translate Language"
-	},
-	"OCR_Language": {
-		"message": "OCR Language"
-	},
-	"Detect_Subtitle": {
-		"message": "Detect Subtitle"
-	},
-	"KEYBOARD______________________________________": {
-		"message": "KEYBOARD                                      "
+		"message": "Idioma de traducció inversa"
 	},
 	"KEYBOARD": {
-		"message": "KEYBOARD"
+		"message": "TECLAT"
 	},
 	"Show_Tooltip_When": {
-		"message": "Show Tooltip When"
-	},
-	"Voice_When": {
-		"message": "Voice When"
+		"message": "Mostra la informació sobre eines quan"
 	},
 	"Translate_Writing_When": {
-		"message": "Translate Writing When"
+		"message": "Traduir Escriure Quan"
 	},
 	"Ignore_AltGr_Modifier": {
-		"message": "Ignore AltGr Modifier"
-	},
-	"Auto_Reader_When": {
-		"message": "Auto Reader When"
+		"message": "Ignora el modificador AltGr"
 	},
 	"Translate_Page_When": {
-		"message": "Translate Page When"
-	},
-	"OCR_When": {
-		"message": "OCR When"
-	},
-	"Mouseover_Text_Type_Swap_Key": {
-		"message": "Mouseover Text Type Swap Key"
-	},
-	"Speech_Recognition_When": {
-		"message": "Speech Recognition When"
-	},
-	"Toggle_Mouseover_Text_Type_When": {
-		"message": "Toggle Mouseover Text Type When"
+		"message": "Tradueix la pàgina Quan"
 	},
 	"Mouseover_Text_Type_Key_Hold": {
-		"message": "Mouseover Text Type Key Hold"
+		"message": "Passa el ratolí per mantenir la tecla de tipus de text"
 	},
 	"Secondary_Language_When": {
-		"message": "Secondary Language When"
+		"message": "Llengua Secundària Quan"
 	},
 	"Swap_Key_Toggle_Mode": {
-		"message": "Swap Key Toggle Mode"
+		"message": "Mode de canvi de claus"
 	},
 	"Toggle_Extension_When": {
-		"message": "Toggle Extension When"
-	},
-	"TTS_Pause_Resume_When": {
-		"message": "TTS Pause Resume When"
-	},
-	"GRAPHIC______________________________________": {
-		"message": "GRAPHIC                                      "
+		"message": "Commuta l'extensió quan"
 	},
 	"GRAPHIC": {
-		"message": "GRAPHIC"
+		"message": "GRÀFIC"
 	},
 	"Tooltip_Font_Size": {
-		"message": "Tooltip Font Size"
+		"message": "Mida del tipus de lletra de la informació sobre eines"
 	},
 	"Tooltip_Font_Family": {
-		"message": "Tooltip Font Family"
-	},
-	"Subtitle_Background": {
-		"message": "Subtitle Background"
+		"message": "Família de tipus de lletra Tooltip"
 	},
 	"Tooltip_Width": {
-		"message": "Tooltip Width"
+		"message": "Amplada de la informació d'eina"
 	},
 	"Tooltip_Distance": {
-		"message": "Tooltip Distance"
+		"message": "Distància d'informació d'eina"
 	},
 	"Tooltip_Animation": {
-		"message": "Tooltip Animation"
+		"message": "Tooltip Animació"
 	},
 	"Tooltip_Disappear_Duration": {
-		"message": "Tooltip Disappear Duration"
+		"message": "Durada de desaparèixer la informació sobre eines"
 	},
 	"Tooltip_Position": {
-		"message": "Tooltip Position"
+		"message": "Posició d'informació d'eines"
 	},
 	"Tooltip_Placement": {
-		"message": "Tooltip Placement"
+		"message": "Col·locació d'informació d'eines"
 	},
 	"Above": {
-		"message": "Above"
+		"message": "A dalt"
 	},
 	"Below": {
-		"message": "Below"
+		"message": "A sota"
 	},
 	"Tooltip_Text_Align": {
-		"message": "Tooltip Text Align"
+		"message": "Alineació de text de la informació sobre eines"
 	},
 	"Tooltip_Background_Blur": {
-		"message": "Tooltip Background Blur"
+		"message": "Desenfocament de fons de la informació sobre eines"
 	},
 	"Mouseover_Highlight_Text": {
-		"message": "Mouseover Highlight Text"
+		"message": "Passeu el ratolí per ressaltar el text"
 	},
 	"Tooltip_Font_Color": {
-		"message": "Tooltip Font Color"
+		"message": "Color de lletra d'informació d'eines"
 	},
 	"Tooltip_Background_Color": {
-		"message": "Tooltip Background Color"
+		"message": "Color de fons de la informació sobre eines"
 	},
 	"Tooltip_Border_Color": {
-		"message": "Tooltip Border Color"
+		"message": "Color de la vora d'informació d'eina"
 	},
 	"Mouseover_Text_Highlight_Color": {
-		"message": "Mouseover Text Highlight Color"
+		"message": "Color de ressaltat del text del ratolí"
 	},
 	"Ebook_Theme": {
-		"message": "Ebook Theme"
+		"message": "Tema del llibre electrònic"
 	},
 	"Setting_Compact_mode": {
-		"message": "Setting Compact mode"
-	},
-	"VOICE______________________________________": {
-		"message": "VOICE                                      "
-	},
-	"VOICE": {
-		"message": "VOICE"
-	},
-	"Voice_Volume": {
-		"message": "Voice Volume"
-	},
-	"Voice_Speed": {
-		"message": "Voice Speed"
-	},
-	"Voice_Target": {
-		"message": "Voice Target"
-	},
-	"Voice_Repeat": {
-		"message": "Voice Repeat"
-	},
-	"Voice_for_": {
-		"message": "Voice for "
-	},
-	"Voice_speed_for_": {
-		"message": "Voice speed for "
-	},
-	"EXCLUDE______________________________________": {
-		"message": "EXCLUDE                                      "
+		"message": "Configuració del mode compacte"
 	},
 	"EXCLUDE": {
-		"message": "EXCLUDE"
+		"message": "EXCLOU"
 	},
 	"Exclude_Language": {
-		"message": "Exclude Language"
+		"message": "Exclou l'idioma"
 	},
 	"Website_Filter_Mode": {
-		"message": "Website Filter Mode"
+		"message": "Mode de filtre de llocs web"
 	},
 	"Exclude_Website": {
-		"message": "Exclude Website"
+		"message": "Exclou el lloc web"
 	},
 	"Whitelist_Website": {
-		"message": "Whitelist Website"
+		"message": "Lloc web de llista blanca"
 	},
 	"Website_Target_Language": {
-		"message": "Website Target Language"
+		"message": "Idioma de destinació per lloc (p. ex. github.com=ko)"
 	},
 	"Block_Current_Site": {
-		"message": "Block Current Site"
+		"message": "Bloqueja el lloc actual"
 	},
 	"Allow_Current_Site": {
-		"message": "Allow Current Site"
-	},
-	"ADVANCED______________________________________": {
-		"message": "ADVANCED                                      "
+		"message": "Permet el lloc actual"
 	},
 	"ADVANCED": {
-		"message": "ADVANCED"
+		"message": "AVANÇAT"
 	},
 	"UI_Language": {
-		"message": "UI Language"
+		"message": "Idioma de la IU"
 	},
 	"Detect_PDF": {
-		"message": "Detect PDF"
+		"message": "Detecta PDF"
 	},
 	"Mouseover_Text_Type_2": {
-		"message": "Secondary Mouseover Text Type"
-	},
-	"Mouseover_Pause_Subtitle": {
-		"message": "Mouseover Pause Subtitle"
+		"message": "Tipus de text secundari al pas del ratolí"
 	},
 	"Show_Tooltip_While_Typing": {
-		"message": "Show Tooltip While Typing"
+		"message": "Mostra la informació sobre eines mentre escriviu"
 	},
 	"Tooltip_Info_Source_Text": {
-		"message": "Tooltip Info Source Text"
+		"message": "Text font d'informació de Tooltip"
 	},
 	"Translate_Exclude_Regex": {
-		"message": "Translate Exclude Regex"
+		"message": "Tradueix Exclou l'expressió regular"
 	},
 	"Tooltip_Info_Source_Language": {
-		"message": "Tooltip Info Source Language"
+		"message": "Tooltip Info Idioma font"
 	},
 	"Tooltip_Info_Transliteration": {
-		"message": "Tooltip Info Transliteration"
-	},
-	"Tooltip_Interval_Time": {
-		"message": "Tooltip Interval Time"
+		"message": "Informació sobre l'eina Transliteració"
 	},
 	"Tooltip_Show_Delay": {
-		"message": "Tooltip Show Delay"
+		"message": "Tooltip Mostra el retard"
 	},
 	"Tooltip_Word_Dictionary": {
-		"message": "Tooltip Word Dictionary"
+		"message": "Diccionari a la informació emergent"
 	},
 	"Tooltip_Word_Dictionary_Source": {
-		"message": "Tooltip Word Dictionary Source"
+		"message": "Tooltip Word Dictionary Font"
 	},
 	"Fallback_Translator_Engine": {
-		"message": "Fallback Translator Engine"
-	},
-	"SPEECH": {
-		"message": "SPEECH"
-	},
-	"Speech_Recognition_Language": {
-		"message": "Speech Recognition Language"
-	},
-	"Voice_Panel_Translate_Language": {
-		"message": "Voice Panel Translate Language"
-	},
-	"Voice_Panel_Text_Target": {
-		"message": "Voice Panel Text Target"
-	},
-	"Voice_Panel_Padding": {
-		"message": "Voice Panel Padding"
-	},
-	"Voice_Panel_Text_Align": {
-		"message": "Voice Panel Text Align"
-	},
-	"Voice_Panel_Source_Font_Size": {
-		"message": "Voice Panel Source Font Size"
-	},
-	"Voice_Panel_Target_Font_Size": {
-		"message": "Voice Panel Target Font Size"
-	},
-	"Voice_Panel_Source_Font_Color": {
-		"message": "Voice Panel Source Font Color"
-	},
-	"Voice_Panel_Target_Font_Color": {
-		"message": "Voice Panel Target Font Color"
-	},
-	"Voice_Panel_Source_Border_Color": {
-		"message": "Voice Panel Source Border Color"
-	},
-	"Voice_Panel_Target_Border_Color": {
-		"message": "Voice Panel Target Border Color"
-	},
-	"Voice_Panel_Background_Color": {
-		"message": "Voice Panel Background Color"
-	},
-	"BACKUP______________________________________": {
-		"message": "BACKUP                                      "
+		"message": "Motor de traducció alternativa"
 	},
 	"BACKUP": {
-		"message": "BACKUP"
+		"message": "Còpia de seguretat"
 	},
 	"Sync_Setting": {
-		"message": "Sync Setting"
+		"message": "Sincronitza la configuració entre dispositius"
 	},
 	"Import_Setting": {
-		"message": "Import Setting"
+		"message": "Configuració d'importació"
 	},
 	"Export_Setting": {
-		"message": "Export Setting"
+		"message": "Configuració d'exportació"
 	},
 	"Reset_Setting": {
-		"message": "Reset Setting"
-	},
-	"About______________________________________": {
-		"message": "About                                      "
+		"message": "Restableix la configuració"
 	},
 	"How_to_use": {
-		"message": "How to use"
+		"message": "Com utilitzar"
 	},
 	"Check_how_to_use_this_extension": {
-		"message": "Check how to use this extension"
+		"message": "Comproveu com utilitzar aquesta extensió"
 	},
 	"PDF_Viewer": {
-		"message": "PDF Viewer"
+		"message": "Visualitzador de PDF"
 	},
 	"Translate_local_PDF_file": {
-		"message": "Translate local PDF file"
+		"message": "Tradueix un fitxer PDF local"
 	},
 	"Ebook_Reader": {
-		"message": "Ebook Reader"
+		"message": "Lector de llibres electrònics"
 	},
 	"Translate_local_ebook_file": {
-		"message": "Translate local ebook file"
-	},
-	"Twitter": {
-		"message": "Twitter"
-	},
-	"Retweet_twitter_post": {
-		"message": "Retweet twitter post"
-	},
-	"Review_Page": {
-		"message": "Review Page"
-	},
-	"Comment_on_this_extension": {
-		"message": "Comment on this extension"
+		"message": "Tradueix el fitxer de llibre electrònic local"
 	},
 	"Source_code": {
-		"message": "Source code"
+		"message": "Codi font"
 	},
 	"Check_source_code_in_github": {
-		"message": "Check source code in github"
+		"message": "Comproveu el codi font a github"
 	},
 	"Privacy_Policy": {
-		"message": "Privacy Policy"
+		"message": "Política de privadesa"
 	},
 	"User_privacy_policy": {
-		"message": "User privacy policy"
-	},
-	"Voice_Panel": {
-		"message": "Voice Panel"
-	},
-	"Translate_Voice": {
-		"message": "Translate Voice"
-	},
-	"Review______________________________________": {
-		"message": "Review                                      "
-	},
-	"Review_this": {
-		"message": "Review this"
-	},
-	"Developer_love_criticism": {
-		"message": "Developer love criticism"
-	},
-	"Coffee______________________________________": {
-		"message": "Coffee                                      "
-	},
-	"Support_this_extension": {
-		"message": "Support this extension"
-	},
-	"Feed_a_coffee_to_the_extension_devs": {
-		"message": "Feed a coffee to the extension devs"
-	},
-	"Title______________________________________": {
-		"message": "Title                                      "
-	},
-	"SELECT_OPTION______________________________": {
-		"message": "SELECT OPTION                              "
-	},
-	"On": {
-		"message": "On"
-	},
-	"Off": {
-		"message": "Off"
+		"message": "Política de privadesa de l'usuari"
 	},
 	"Auto": {
-		"message": "Auto"
+		"message": "Automàtic"
 	},
 	"None": {
-		"message": "None"
+		"message": "Cap"
 	},
 	"Select": {
-		"message": "Select"
+		"message": "Seleccioneu"
 	},
 	"Mouseover": {
-		"message": "Mouseover"
+		"message": "Passar el ratolí"
 	},
 	"Mouseover_n_Select": {
-		"message": "Mouseover n Select"
+		"message": "Passeu el ratolí n Seleccioneu"
 	},
 	"Follow": {
-		"message": "Follow"
+		"message": "Seguiu"
 	},
 	"Fixed": {
-		"message": "Fixed"
+		"message": "Arreglat"
 	},
 	"Top_Right": {
-		"message": "Top Right"
+		"message": "A dalt a la dreta"
 	},
 	"Fade": {
-		"message": "Fade"
+		"message": "Esvair"
 	},
 	"Scale": {
-		"message": "Scale"
+		"message": "Escala"
 	},
 	"Shift_away": {
-		"message": "Shift away"
+		"message": "Allunya't"
 	},
 	"Shift_toward": {
-		"message": "Shift toward"
+		"message": "Canvia cap a"
 	},
 	"Perspective": {
-		"message": "Perspective"
+		"message": "Perspectiva"
 	},
 	"Word": {
-		"message": "Word"
+		"message": "Paraula"
 	},
 	"Sentence": {
-		"message": "Sentence"
+		"message": "Sentència"
 	},
 	"Container": {
-		"message": "Container"
+		"message": "Contenidor"
 	},
 	"Both": {
-		"message": "Both"
+		"message": "Tots dos"
 	},
 	"Blacklist": {
-		"message": "Blacklist"
+		"message": "Llista negra"
 	},
 	"Whitelist": {
-		"message": "Whitelist"
-	},
-	"Source": {
-		"message": "Source"
-	},
-	"Source_Text": {
-		"message": "Source Text"
-	},
-	"Translated_Text": {
-		"message": "Translated Text"
-	},
-	"Source_n_Translated": {
-		"message": "Source n Translated"
-	},
-	"Translated_n_Source": {
-		"message": "Translated n Source"
-	},
-	"Dual_Subtitle": {
-		"message": "Dual Subtitle"
-	},
-	"Target_Single_Subtitle": {
-		"message": "Target Single Subtitle"
-	},
-	"Source_Single_Subtitle": {
-		"message": "Source Single Subtitle"
+		"message": "Llista blanca"
 	},
 	"Always": {
-		"message": "Always"
+		"message": "Sempre"
 	},
 	"Center": {
-		"message": "Center"
+		"message": "Centre"
 	},
 	"Left": {
-		"message": "Left"
+		"message": "Esquerra"
 	},
 	"Right": {
-		"message": "Right"
+		"message": "D'acord"
 	},
 	"Justify": {
-		"message": "Justify"
+		"message": "Justificar"
 	},
 	"Light": {
-		"message": "Light"
+		"message": "Llum"
 	},
 	"Dark": {
-		"message": "Dark"
+		"message": "Fosc"
 	},
 	"Default": {
-		"message": "Default"
+		"message": "Per defecte"
 	},
 	"Ctrl_Left": {
-		"message": "Ctrl Left"
+		"message": "Ctrl esquerra"
 	},
 	"Ctrl_Right": {
-		"message": "Ctrl Right"
+		"message": "Ctrl dreta"
 	},
 	"Alt_Left": {
-		"message": "Alt Left"
+		"message": "Alt esquerra"
 	},
 	"Alt_Right": {
-		"message": "Alt Right"
+		"message": "Alt dreta"
 	},
 	"Shift_Left": {
-		"message": "Shift Left"
+		"message": "Canvi a l'esquerra"
 	},
 	"Shift_Right": {
-		"message": "Shift Right"
+		"message": "Canvia a la dreta"
 	},
 	"Meta_Left": {
-		"message": "Meta Left"
+		"message": "Meta Esquerra"
 	},
 	"Meta_Right": {
-		"message": "Meta Right"
+		"message": "Meta dret"
 	},
 	"Click_Left": {
-		"message": "Click Left"
+		"message": "Feu clic a Esquerra"
 	},
 	"Click_Middle": {
-		"message": "Click Middle"
+		"message": "Feu clic al mig"
 	},
 	"Click_Right": {
-		"message": "Click Right"
+		"message": "Feu clic a la dreta"
 	},
 	"google": {
 		"message": "google"
@@ -548,286 +356,148 @@
 	"bing": {
 		"message": "bing"
 	},
-	"Saved_Words": {
-		"message": "Saved Words"
-	},
-	"Group": {
-		"message": "Group"
-	},
-	"All": {
-		"message": "All"
-	},
-	"Move_to_group": {
-		"message": "Move to group"
-	},
-	"Delete": {
-		"message": "Delete"
-	},
-	"Clear": {
-		"message": "Clear"
-	},
-	"selected": {
-		"message": "selected"
-	},
-	"Date": {
-		"message": "Date"
-	},
-	"Translation": {
-		"message": "Translation"
-	},
-	"No_saved_words_yet": {
-		"message": "No saved words yet"
-	},
-	"Manage_Groups": {
-		"message": "Manage Groups"
-	},
-	"Remove_all": {
-		"message": "Remove all"
-	},
-	"Import_CSV": {
-		"message": "Import CSV"
-	},
-	"Download_CSV": {
-		"message": "Download CSV"
-	},
-	"Save_key": {
-		"message": "Save key"
-	},
-	"Highlight_on_page": {
-		"message": "Highlight on page"
-	},
-	"Right_click_menu": {
-		"message": "Right click menu"
-	},
-	"Add_right_click_context_menu": {
-		"message": "Add right click context menu"
-	},
-	"Done": {
-		"message": "Done"
-	},
-	"On_Select": {
-		"message": "On Select"
-	},
-	"On_Hover": {
-		"message": "On Hover"
-	},
-	"On_Select_n_Hover": {
-		"message": "On Select n Hover"
-	},
-	"Select_group_to_play": {
-		"message": "Select group to play"
-	},
-	"No_Group_Selected": {
-		"message": "No Group Selected"
-	},
-	"Check_groups_to_play": {
-		"message": "Check groups to play"
-	},
-	"Flashcard_makes_cards_from_your_saved_words": {
-		"message": "Flashcard makes cards from your saved words"
-	},
-	"Flashcard": {
-		"message": "Flashcard"
-	},
-	"Play_Flashcard": {
-		"message": "Play Flashcard"
-	},
-	"Reset_progress": {
-		"message": "Reset progress"
-	},
-	"No_History_Data": {
-		"message": "No History Data"
-	},
-	"Today_play_is_completed": {
-		"message": "Today play is completed"
-	},
-	"Try_on_next_day": {
-		"message": "Try on next day"
-	},
-	"No_more_card_to_learn_today": {
-		"message": "No more card to learn today"
-	},
-	"Add_more_history_data_to_play_with": {
-		"message": "Add more history data to play with"
-	},
-	"Finish": {
-		"message": "Finish"
-	},
-	"Today_Flashcards_are_Completed": {
-		"message": "Today Flashcards are Completed"
-	},
-	"No_More_Card_Data": {
-		"message": "No More Card Data"
-	},
-	"Show_Answer": {
-		"message": "Show Answer"
-	},
-	"Again": {
-		"message": "Again"
-	},
-	"Hard": {
-		"message": "Hard"
-	},
-	"Good": {
-		"message": "Good"
-	},
-	"Easy": {
-		"message": "Easy"
-	},
-	"New": {
-		"message": "New"
-	},
-	"Review": {
-		"message": "Review"
-	},
-	"Learning": {
-		"message": "Learning"
-	},
 	"About": {
-		"message": "About"
+		"message": "Sobre"
 	},
 	"Translator": {
-		"message": "Translator"
+		"message": "Traductor"
 	},
 	"Wiktionary": {
-		"message": "Wiktionary"
-	},
-	"Translated": {
-		"message": "Translated"
+		"message": "Wikcionari"
 	},
 	"Custom": {
-		"message": "Custom"
+		"message": "Personalitzat"
 	},
 	"Back": {
-		"message": "Back"
+		"message": "Enrere"
 	},
 	"Cancel": {
-		"message": "Cancel"
+		"message": "Cancel·la"
 	},
 	"Remove": {
-		"message": "Remove"
+		"message": "Eliminar"
 	},
 	"Alpha": {
-		"message": "Alpha"
+		"message": "Alfa"
 	},
 	"Fetch_models_from_endpoint": {
-		"message": "Fetch models from endpoint"
+		"message": "Obteniu models des del punt final"
 	},
 	"No_models_returned_by_endpoint": {
-		"message": "No models returned by endpoint"
+		"message": "No s'ha retornat cap model pel punt final"
 	},
 	"API_endpoint_is_empty": {
-		"message": "API endpoint is empty"
+		"message": "El punt final de l'API està buit"
 	},
 	"Failed_to_fetch_LLM_models": {
-		"message": "Failed to fetch LLM models"
+		"message": "No s'han pogut obtenir els models LLM"
 	},
 	"Open_this_popup_on_a_website_to_use_this_button": {
-		"message": "Open this popup on a website to use this button"
+		"message": "Obriu aquesta finestra emergent en un lloc web per utilitzar aquest botó"
 	},
 	"Import_failed": {
-		"message": "Import failed"
+		"message": "La importació ha fallat"
 	},
 	"Copy_PDF_URL": {
-		"message": "Copy PDF URL"
+		"message": "Copia l'URL del PDF"
 	},
 	"Copied": {
-		"message": "Copied"
+		"message": "Copiat"
 	},
 	"Copy_failed": {
-		"message": "Copy failed"
+		"message": "La còpia ha fallat"
 	},
 	"Allow_access_to_file_URLs_to_open_local_PDF_files": {
-		"message": "Allow access to file URLs to open local PDF files"
+		"message": "Permet l'accés als URL dels fitxers per obrir fitxers PDF locals"
 	},
 	"Open_File": {
-		"message": "Open File"
+		"message": "Obre Fitxer"
 	},
 	"Previous_Page": {
-		"message": "Previous Page"
+		"message": "Pàgina anterior"
 	},
 	"Next_Page": {
-		"message": "Next Page"
+		"message": "Pàgina següent"
 	},
 	"Table_of_Contents": {
-		"message": "Table of Contents"
+		"message": "Taula de continguts"
 	},
 	"Drop_an_ebook_file_here_or_open_one": {
-		"message": "Drop an ebook file here or open one"
+		"message": "Deixeu anar un fitxer de llibre electrònic aquí o obriu-ne un"
 	},
 	"Could_not_open_this_file": {
-		"message": "Could not open this file"
+		"message": "No s'ha pogut obrir aquest fitxer"
 	},
 	"Untitled": {
-		"message": "Untitled"
+		"message": "Sense títol"
 	},
 	"Page": {
-		"message": "Page"
+		"message": "Pàgina"
 	},
 	"Zoom_out": {
-		"message": "Zoom out"
+		"message": "Allunya el zoom"
 	},
 	"Zoom": {
 		"message": "Zoom"
 	},
 	"Zoom_in": {
-		"message": "Zoom in"
+		"message": "Apropa"
 	},
 	"Automatic_zoom": {
-		"message": "Automatic zoom"
+		"message": "Zoom automàtic"
 	},
 	"Page_fit": {
-		"message": "Page fit"
+		"message": "Ajust de pàgina"
 	},
 	"Page_width": {
-		"message": "Page width"
+		"message": "Amplada de la pàgina"
 	},
 	"Find": {
-		"message": "Find"
+		"message": "Troba"
 	},
 	"Dark_mode": {
-		"message": "Dark mode"
+		"message": "Mode fosc"
 	},
 	"Download": {
-		"message": "Download"
+		"message": "Descarregar"
 	},
 	"Find_in_document": {
-		"message": "Find in document"
+		"message": "Troba al document"
 	},
 	"Previous_match": {
-		"message": "Previous match"
+		"message": "Partit anterior"
 	},
 	"Next_match": {
-		"message": "Next match"
+		"message": "Proper partit"
 	},
 	"Highlight_all": {
-		"message": "Highlight all"
+		"message": "Ressaltar-ho tot"
 	},
 	"Match_case": {
-		"message": "Match case"
+		"message": "Cas de partit"
 	},
 	"Phrase_not_found": {
-		"message": "Phrase not found"
+		"message": "No s'ha trobat la frase"
 	},
 	"Close": {
-		"message": "Close"
+		"message": "Tancar"
 	},
 	"Failed_to_load_the_PDF_file": {
-		"message": "Failed to load the PDF file"
+		"message": "No s'ha pogut carregar el fitxer PDF"
 	},
 	"Drop_a_PDF_file_here": {
-		"message": "Drop a PDF file here"
+		"message": "Deixeu un fitxer PDF aquí"
 	},
 	"Enter_the_password_to_open_this_PDF_file": {
-		"message": "Enter the password to open this PDF file"
+		"message": "Introduïu la contrasenya per obrir aquest fitxer PDF"
 	},
 	"Invalid_password_try_again": {
-		"message": "Invalid password try again"
+		"message": "La contrasenya no és vàlida, torna-ho a provar"
 	},
 	"appName": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Mouse Tooltip Translator Refined"
 	},
 	"appDesc": {
-		"message": "Hover or select text to translate it in a tooltip. Also works in PDF and ebook files."
+		"message": "Passeu el ratolí o seleccioneu text per traduir-lo en una finestra emergent. També funciona amb PDF i llibres electrònics."
 	}
 }

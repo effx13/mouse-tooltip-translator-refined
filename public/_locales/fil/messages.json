@@ -1,546 +1,354 @@
 {
-	"MAIN______________________________________": {
-		"message": "MAIN                                      "
-	},
 	"MAIN": {
-		"message": "MAIN"
+		"message": "PANGUNAHING"
 	},
 	"Mouse_Tooltip_Translator": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Tagasalin ng Mouse Tooltip"
 	},
 	"Translate_When": {
-		"message": "Translate When"
+		"message": "Isalin Kailan"
 	},
 	"Translate_From": {
-		"message": "Translate From"
+		"message": "Isalin Mula sa"
 	},
 	"Translate_Into": {
-		"message": "Translate Into"
+		"message": "Isalin Sa"
 	},
 	"Translator_Engine": {
-		"message": "Translator Engine"
+		"message": "Makina ng Tagasalin"
 	},
 	"LLM_Provider": {
-		"message": "LLM Provider"
+		"message": "Provider ng LLM"
 	},
 	"LLM_Api_Endpoint": {
-		"message": "LLM API Endpoint URL"
+		"message": "URL ng Endpoint ng LLM API"
 	},
 	"LLM_Api_Key": {
-		"message": "LLM API Key"
+		"message": "LLM API Key (opsyonal)"
 	},
 	"LLM_Model": {
-		"message": "LLM Model"
+		"message": "Modelo ng LLM"
 	},
 	"Mouseover_Text_Type": {
-		"message": "Mouseover Text Type"
+		"message": "Uri ng Teksto ng Mouseover"
 	},
 	"Translate_Into_2": {
-		"message": "Secondary Translate Into"
+		"message": "Pangalawang Isalin Sa"
 	},
 	"Writing_Language": {
-		"message": "Writing Language"
+		"message": "Wika sa Pagsulat"
 	},
 	"Reverse_Translate_Language": {
-		"message": "Reverse Translate Language"
-	},
-	"OCR_Language": {
-		"message": "OCR Language"
-	},
-	"Detect_Subtitle": {
-		"message": "Detect Subtitle"
-	},
-	"KEYBOARD______________________________________": {
-		"message": "Teklado teklado                                      "
+		"message": "Baliktarin ang Isalin na Wika"
 	},
 	"KEYBOARD": {
 		"message": "TEKLADO"
 	},
 	"Show_Tooltip_When": {
-		"message": "Show Tooltip When"
-	},
-	"Voice_When": {
-		"message": "Voice When"
+		"message": "Ipakita ang Tooltip Kailan"
 	},
 	"Translate_Writing_When": {
-		"message": "Translate Writing When"
+		"message": "Isalin ang Pagsulat Kailan"
 	},
 	"Ignore_AltGr_Modifier": {
-		"message": "Ignore AltGr Modifier"
-	},
-	"Auto_Reader_When": {
-		"message": "Awtomatikong tagabasa kapag"
+		"message": "Huwag pansinin ang AltGr Modifier"
 	},
 	"Translate_Page_When": {
-		"message": "Translate Page When"
-	},
-	"OCR_When": {
-		"message": "OCR When"
-	},
-	"Mouseover_Text_Type_Swap_Key": {
-		"message": "Mouseover Text Type Swap Key"
-	},
-	"Speech_Recognition_When": {
-		"message": "Kapag Ginagamit ang Pagtukoy ng Pananalita"
-	},
-	"Toggle_Mouseover_Text_Type_When": {
-		"message": "Toggle Mouseover Text Type When"
+		"message": "Isalin ang Pahina Kailan"
 	},
 	"Mouseover_Text_Type_Key_Hold": {
-		"message": "Mouseover Text Type Key Hold"
+		"message": "Key para sa Uri ng Teksto ng Mouseover"
 	},
 	"Secondary_Language_When": {
-		"message": "Secondary Language When"
+		"message": "Pangalawang Wika Kailan"
 	},
 	"Swap_Key_Toggle_Mode": {
-		"message": "Swap Key Toggle Mode"
+		"message": "Magpalit ng Key Toggle Mode"
 	},
 	"Toggle_Extension_When": {
-		"message": "Toggle Extension When"
-	},
-	"TTS_Pause_Resume_When": {
-		"message": "TTS Pause Resume When"
-	},
-	"GRAPHIC______________________________________": {
-		"message": "GRAPHIC                                      "
+		"message": "I-toggle ang Extension Kailan"
 	},
 	"GRAPHIC": {
-		"message": "GRAPHIC"
+		"message": "HITSURA"
 	},
 	"Tooltip_Font_Size": {
-		"message": "Tooltip Font Size"
+		"message": "Laki ng Font ng Tooltip"
 	},
 	"Tooltip_Font_Family": {
-		"message": "Tooltip Font Family"
-	},
-	"Subtitle_Background": {
-		"message": "Subtitle Background"
+		"message": "Pamilya ng Font ng Tooltip"
 	},
 	"Tooltip_Width": {
-		"message": "Tooltip Width"
+		"message": "Lapad ng Tooltip"
 	},
 	"Tooltip_Distance": {
-		"message": "Tooltip Distance"
+		"message": "Distansya ng Tooltip"
 	},
 	"Tooltip_Animation": {
-		"message": "Tooltip Animation"
+		"message": "Animasyon ng Tooltip"
 	},
 	"Tooltip_Disappear_Duration": {
-		"message": "Tooltip Disappear Duration"
+		"message": "Tagal ng Pagkawala ng Tooltip"
 	},
 	"Tooltip_Position": {
-		"message": "Tooltip Position"
+		"message": "Posisyon ng Tooltip"
 	},
 	"Tooltip_Placement": {
-		"message": "Tooltip Placement"
+		"message": "Paglalagay ng Tooltip"
 	},
 	"Above": {
-		"message": "Above"
+		"message": "sa itaas"
 	},
 	"Below": {
-		"message": "Below"
+		"message": "sa ibaba"
 	},
 	"Tooltip_Text_Align": {
-		"message": "Tooltip Text Align"
+		"message": "Pagkakahanay ng Teksto ng Tooltip"
 	},
 	"Tooltip_Background_Blur": {
-		"message": "Tooltip Background Blur"
+		"message": "Blur ng Background ng Tooltip"
 	},
 	"Mouseover_Highlight_Text": {
-		"message": "Mouseover Highlight Text"
+		"message": "I-highlight ang Teksto sa Mouseover"
 	},
 	"Tooltip_Font_Color": {
-		"message": "Tooltip Font Color"
+		"message": "Kulay ng Font ng Tooltip"
 	},
 	"Tooltip_Background_Color": {
-		"message": "Tooltip Background Color"
+		"message": "Kulay ng Background ng Tooltip"
 	},
 	"Tooltip_Border_Color": {
-		"message": "Tooltip Border Color"
+		"message": "Kulay ng Border ng Tooltip"
 	},
 	"Mouseover_Text_Highlight_Color": {
-		"message": "Mouseover Text Highlight Color"
+		"message": "Kulay ng Highlight ng Teksto ng Mouseover"
 	},
 	"Ebook_Theme": {
-		"message": "Ebook Theme"
+		"message": "Tema ng Ebook"
 	},
 	"Setting_Compact_mode": {
-		"message": "Setting Compact mode"
-	},
-	"VOICE______________________________________": {
-		"message": "VOICE                                      "
-	},
-	"VOICE": {
-		"message": "VOICE"
-	},
-	"Voice_Volume": {
-		"message": "Voice Volume"
-	},
-	"Voice_Speed": {
-		"message": "Voice Speed"
-	},
-	"Voice_Target": {
-		"message": "Voice Target"
-	},
-	"Voice_Repeat": {
-		"message": "Voice Repeat"
-	},
-	"Voice_for_": {
-		"message": "Voice for "
-	},
-	"Voice_speed_for_": {
-		"message": "Voice speed for "
-	},
-	"EXCLUDE______________________________________": {
-		"message": "EXCLUDE                                      "
+		"message": "Pagtatakda ng Compact mode"
 	},
 	"EXCLUDE": {
-		"message": "EXCLUDE"
+		"message": "IBUKOD"
 	},
 	"Exclude_Language": {
-		"message": "Exclude Language"
+		"message": "Ibukod ang Wika"
 	},
 	"Website_Filter_Mode": {
-		"message": "Website Filter Mode"
+		"message": "Filter Mode ng Website"
 	},
 	"Exclude_Website": {
-		"message": "Exclude Website"
+		"message": "Ibukod ang Website"
 	},
 	"Whitelist_Website": {
-		"message": "Whitelist Website"
+		"message": "I-whitelist ang Website"
 	},
 	"Website_Target_Language": {
-		"message": "Website Target Language"
+		"message": "Target na wika bawat site (hal. github.com=ko)"
 	},
 	"Block_Current_Site": {
-		"message": "Block Current Site"
+		"message": "I-block ang Kasalukuyang Site"
 	},
 	"Allow_Current_Site": {
-		"message": "Allow Current Site"
-	},
-	"ADVANCED______________________________________": {
-		"message": "ADVANCED                                      "
+		"message": "Payagan ang Kasalukuyang Site"
 	},
 	"ADVANCED": {
-		"message": "ADVANCED"
+		"message": "MASUSING SETTING"
 	},
 	"UI_Language": {
-		"message": "UI Language"
+		"message": "Wika ng UI"
 	},
 	"Detect_PDF": {
-		"message": "Detect PDF"
+		"message": "I-detect ang PDF"
 	},
 	"Mouseover_Text_Type_2": {
-		"message": "Secondary Mouseover Text Type"
-	},
-	"Mouseover_Pause_Subtitle": {
-		"message": "Mouseover Pause Subtitle"
+		"message": "Pangalawang Uri ng Teksto ng Mouseover"
 	},
 	"Show_Tooltip_While_Typing": {
-		"message": "Show Tooltip While Typing"
+		"message": "Ipakita ang Tooltip Habang Nagta-type"
 	},
 	"Tooltip_Info_Source_Text": {
-		"message": "Tooltip Info Source Text"
+		"message": "Text ng Pinagmulan ng Impormasyon ng Tooltip"
 	},
 	"Translate_Exclude_Regex": {
-		"message": "Translate Exclude Regex"
+		"message": "Isalin ang Ibukod ang Regex"
 	},
 	"Tooltip_Info_Source_Language": {
-		"message": "Tooltip Info Source Language"
+		"message": "Wika ng Pinagmulan ng Impormasyon ng Tooltip"
 	},
 	"Tooltip_Info_Transliteration": {
-		"message": "Tooltip Info Transliteration"
-	},
-	"Tooltip_Interval_Time": {
-		"message": "Tooltip Interval Time"
+		"message": "Pagsasalin ng Impormasyon ng Tooltip"
 	},
 	"Tooltip_Show_Delay": {
-		"message": "Tooltip Show Delay"
+		"message": "Pagkaantala ng Pagpapakita ng Tooltip"
 	},
 	"Tooltip_Word_Dictionary": {
 		"message": "Diksyunaryo ng mga Salita sa Tooltip"
 	},
 	"Tooltip_Word_Dictionary_Source": {
-		"message": "Tooltip Word Dictionary Source"
+		"message": "Pinagmulan ng Diksyunaryo ng Salita ng Tooltip"
 	},
 	"Fallback_Translator_Engine": {
 		"message": "Pampalit na Tagasalin na Makina"
 	},
-	"SPEECH": {
-		"message": "SPEECH"
-	},
-	"Speech_Recognition_Language": {
-		"message": "Speech Recognition Language"
-	},
-	"Voice_Panel_Translate_Language": {
-		"message": "Voice Panel Translate Language"
-	},
-	"Voice_Panel_Text_Target": {
-		"message": "Voice Panel Text Target"
-	},
-	"Voice_Panel_Padding": {
-		"message": "Voice Panel Padding"
-	},
-	"Voice_Panel_Text_Align": {
-		"message": "Voice Panel Text Align"
-	},
-	"Voice_Panel_Source_Font_Size": {
-		"message": "Voice Panel Source Font Size"
-	},
-	"Voice_Panel_Target_Font_Size": {
-		"message": "Voice Panel Target Font Size"
-	},
-	"Voice_Panel_Source_Font_Color": {
-		"message": "Voice Panel Source Font Color"
-	},
-	"Voice_Panel_Target_Font_Color": {
-		"message": "Voice Panel Target Font Color"
-	},
-	"Voice_Panel_Source_Border_Color": {
-		"message": "Voice Panel Source Border Color"
-	},
-	"Voice_Panel_Target_Border_Color": {
-		"message": "Voice Panel Target Border Color"
-	},
-	"Voice_Panel_Background_Color": {
-		"message": "Voice Panel Background Color"
-	},
-	"BACKUP______________________________________": {
-		"message": "BACKUP                                      "
-	},
 	"BACKUP": {
-		"message": "BACKUP"
+		"message": "PAG-BACKUP"
 	},
 	"Sync_Setting": {
-		"message": "Sync Setting"
+		"message": "I-sync ang mga setting sa mga device"
 	},
 	"Import_Setting": {
-		"message": "Import Setting"
+		"message": "Setting ng Pag-import"
 	},
 	"Export_Setting": {
-		"message": "Export Setting"
+		"message": "I-export ang Setting"
 	},
 	"Reset_Setting": {
-		"message": "Reset Setting"
-	},
-	"About______________________________________": {
-		"message": "About                                      "
+		"message": "I-reset ang Setting"
 	},
 	"How_to_use": {
-		"message": "How to use"
+		"message": "Paano gamitin"
 	},
 	"Check_how_to_use_this_extension": {
-		"message": "Check how to use this extension"
+		"message": "Tingnan kung paano gamitin ang extension na ito"
 	},
 	"PDF_Viewer": {
-		"message": "PDF Viewer"
+		"message": "Viewer ng PDF"
 	},
 	"Translate_local_PDF_file": {
-		"message": "Translate local PDF file"
+		"message": "Isalin ang lokal na PDF file"
 	},
 	"Ebook_Reader": {
-		"message": "Ebook Reader"
+		"message": "Pambasa ng Ebook"
 	},
 	"Translate_local_ebook_file": {
-		"message": "Translate local ebook file"
-	},
-	"Twitter": {
-		"message": "Twitter"
-	},
-	"Retweet_twitter_post": {
-		"message": "Retweet twitter post"
-	},
-	"Review_Page": {
-		"message": "Review Page"
-	},
-	"Comment_on_this_extension": {
-		"message": "Comment on this extension"
+		"message": "Isalin ang lokal na ebook file"
 	},
 	"Source_code": {
-		"message": "Source code"
+		"message": "Source code ng app"
 	},
 	"Check_source_code_in_github": {
-		"message": "Check source code in github"
+		"message": "Suriin ang source code sa github"
 	},
 	"Privacy_Policy": {
-		"message": "Privacy Policy"
+		"message": "Patakaran sa Privacy"
 	},
 	"User_privacy_policy": {
-		"message": "User privacy policy"
-	},
-	"Voice_Panel": {
-		"message": "Voice Panel"
-	},
-	"Translate_Voice": {
-		"message": "Translate Voice"
-	},
-	"Review______________________________________": {
-		"message": "Review                                      "
-	},
-	"Review_this": {
-		"message": "Review this"
-	},
-	"Developer_love_criticism": {
-		"message": "Developer love criticism"
-	},
-	"Coffee______________________________________": {
-		"message": "Coffee                                      "
-	},
-	"Support_this_extension": {
-		"message": "Support this extension"
-	},
-	"Feed_a_coffee_to_the_extension_devs": {
-		"message": "Feed a coffee to the extension devs"
-	},
-	"Title______________________________________": {
-		"message": "Title                                      "
-	},
-	"SELECT_OPTION______________________________": {
-		"message": "SELECT OPTION                              "
-	},
-	"On": {
-		"message": "On"
-	},
-	"Off": {
-		"message": "Off"
+		"message": "Patakaran sa privacy ng user"
 	},
 	"Auto": {
-		"message": "Auto"
+		"message": "Awtomatiko"
 	},
 	"None": {
-		"message": "None"
+		"message": "wala"
 	},
 	"Select": {
-		"message": "Select"
+		"message": "Pumili"
 	},
 	"Mouseover": {
-		"message": "Mouseover"
+		"message": "Pag-hover"
 	},
 	"Mouseover_n_Select": {
-		"message": "Mouseover n Select"
+		"message": "Mouseover n Piliin"
 	},
 	"Follow": {
-		"message": "Follow"
+		"message": "Sundin"
 	},
 	"Fixed": {
-		"message": "Fixed"
+		"message": "Naayos na"
 	},
 	"Top_Right": {
-		"message": "Top Right"
+		"message": "Kanan sa itaas"
 	},
 	"Fade": {
-		"message": "Fade"
+		"message": "Paglaho"
 	},
 	"Scale": {
-		"message": "Scale"
+		"message": "Iskala"
 	},
 	"Shift_away": {
-		"message": "Shift away"
+		"message": "Lumipat palayo"
 	},
 	"Shift_toward": {
-		"message": "Shift toward"
+		"message": "Lumipat patungo"
 	},
 	"Perspective": {
-		"message": "Perspective"
+		"message": "Pananaw"
 	},
 	"Word": {
-		"message": "Word"
+		"message": "salita"
 	},
 	"Sentence": {
-		"message": "Sentence"
+		"message": "Pangungusap"
 	},
 	"Container": {
-		"message": "Container"
+		"message": "Lalagyan"
 	},
 	"Both": {
-		"message": "Both"
+		"message": "pareho"
 	},
 	"Blacklist": {
-		"message": "Blacklist"
+		"message": "Listahan ng bina-block"
 	},
 	"Whitelist": {
-		"message": "Whitelist"
-	},
-	"Source": {
-		"message": "Source"
-	},
-	"Source_Text": {
-		"message": "Source Text"
-	},
-	"Translated_Text": {
-		"message": "Translated Text"
-	},
-	"Source_n_Translated": {
-		"message": "Source n Translated"
-	},
-	"Translated_n_Source": {
-		"message": "Translated n Source"
-	},
-	"Dual_Subtitle": {
-		"message": "Dual Subtitle"
-	},
-	"Target_Single_Subtitle": {
-		"message": "Target Single Subtitle"
-	},
-	"Source_Single_Subtitle": {
-		"message": "Source Single Subtitle"
+		"message": "Listahan ng pinapayagan"
 	},
 	"Always": {
-		"message": "Always"
+		"message": "Laging"
 	},
 	"Center": {
-		"message": "Center"
+		"message": "Gitna"
 	},
 	"Left": {
-		"message": "Left"
+		"message": "Kaliwa"
 	},
 	"Right": {
-		"message": "Right"
+		"message": "Tama"
 	},
 	"Justify": {
-		"message": "Justify"
+		"message": "Pangatwiranan"
 	},
 	"Light": {
-		"message": "Light"
+		"message": "Liwanag"
 	},
 	"Dark": {
-		"message": "Dark"
+		"message": "Madilim"
 	},
 	"Default": {
-		"message": "Default"
+		"message": "Nakatakda"
 	},
 	"Ctrl_Left": {
-		"message": "Ctrl Left"
+		"message": "Ctrl Kaliwa"
 	},
 	"Ctrl_Right": {
-		"message": "Ctrl Right"
+		"message": "Ctrl Kanan"
 	},
 	"Alt_Left": {
-		"message": "Alt Left"
+		"message": "Alt Kaliwa"
 	},
 	"Alt_Right": {
-		"message": "Alt Right"
+		"message": "Alt Tama"
 	},
 	"Shift_Left": {
-		"message": "Shift Left"
+		"message": "Lumipat Pakaliwa"
 	},
 	"Shift_Right": {
-		"message": "Shift Right"
+		"message": "Lumipat Pakanan"
 	},
 	"Meta_Left": {
-		"message": "Meta Left"
+		"message": "Meta Kaliwa"
 	},
 	"Meta_Right": {
-		"message": "Meta Right"
+		"message": "Meta Kanan"
 	},
 	"Click_Left": {
-		"message": "Click Left"
+		"message": "I-click ang Kaliwa"
 	},
 	"Click_Middle": {
-		"message": "Click Middle"
+		"message": "I-click ang Gitna"
 	},
 	"Click_Right": {
-		"message": "Click Right"
+		"message": "I-click ang Kanan"
 	},
 	"google": {
 		"message": "google"
@@ -548,286 +356,148 @@
 	"bing": {
 		"message": "bing"
 	},
-	"Saved_Words": {
-		"message": "Saved Words"
-	},
-	"Group": {
-		"message": "Group"
-	},
-	"All": {
-		"message": "All"
-	},
-	"Move_to_group": {
-		"message": "Move to group"
-	},
-	"Delete": {
-		"message": "Delete"
-	},
-	"Clear": {
-		"message": "Clear"
-	},
-	"selected": {
-		"message": "selected"
-	},
-	"Date": {
-		"message": "Date"
-	},
-	"Translation": {
-		"message": "Translation"
-	},
-	"No_saved_words_yet": {
-		"message": "No saved words yet"
-	},
-	"Manage_Groups": {
-		"message": "Manage Groups"
-	},
-	"Remove_all": {
-		"message": "Remove all"
-	},
-	"Import_CSV": {
-		"message": "Import CSV"
-	},
-	"Download_CSV": {
-		"message": "Download CSV"
-	},
-	"Save_key": {
-		"message": "Save key"
-	},
-	"Highlight_on_page": {
-		"message": "Highlight on page"
-	},
-	"Right_click_menu": {
-		"message": "Right click menu"
-	},
-	"Add_right_click_context_menu": {
-		"message": "Add right click context menu"
-	},
-	"Done": {
-		"message": "Done"
-	},
-	"On_Select": {
-		"message": "On Select"
-	},
-	"On_Hover": {
-		"message": "On Hover"
-	},
-	"On_Select_n_Hover": {
-		"message": "On Select n Hover"
-	},
-	"Select_group_to_play": {
-		"message": "Select group to play"
-	},
-	"No_Group_Selected": {
-		"message": "No Group Selected"
-	},
-	"Check_groups_to_play": {
-		"message": "Check groups to play"
-	},
-	"Flashcard_makes_cards_from_your_saved_words": {
-		"message": "Flashcard makes cards from your saved words"
-	},
-	"Flashcard": {
-		"message": "Flashcard"
-	},
-	"Play_Flashcard": {
-		"message": "Play Flashcard"
-	},
-	"Reset_progress": {
-		"message": "Reset progress"
-	},
-	"No_History_Data": {
-		"message": "No History Data"
-	},
-	"Today_play_is_completed": {
-		"message": "Today play is completed"
-	},
-	"Try_on_next_day": {
-		"message": "Try on next day"
-	},
-	"No_more_card_to_learn_today": {
-		"message": "No more card to learn today"
-	},
-	"Add_more_history_data_to_play_with": {
-		"message": "Add more history data to play with"
-	},
-	"Finish": {
-		"message": "Finish"
-	},
-	"Today_Flashcards_are_Completed": {
-		"message": "Today Flashcards are Completed"
-	},
-	"No_More_Card_Data": {
-		"message": "No More Card Data"
-	},
-	"Show_Answer": {
-		"message": "Show Answer"
-	},
-	"Again": {
-		"message": "Again"
-	},
-	"Hard": {
-		"message": "Hard"
-	},
-	"Good": {
-		"message": "Good"
-	},
-	"Easy": {
-		"message": "Easy"
-	},
-	"New": {
-		"message": "New"
-	},
-	"Review": {
-		"message": "Review"
-	},
-	"Learning": {
-		"message": "Learning"
-	},
 	"About": {
-		"message": "About"
+		"message": "Tungkol sa"
 	},
 	"Translator": {
-		"message": "Translator"
+		"message": "Tagasalin"
 	},
 	"Wiktionary": {
 		"message": "Wiktionary"
 	},
-	"Translated": {
-		"message": "Translated"
-	},
 	"Custom": {
-		"message": "Custom"
+		"message": "Pasadya"
 	},
 	"Back": {
-		"message": "Back"
+		"message": "Bumalik"
 	},
 	"Cancel": {
-		"message": "Cancel"
+		"message": "Kanselahin"
 	},
 	"Remove": {
-		"message": "Remove"
+		"message": "Alisin"
 	},
 	"Alpha": {
 		"message": "Alpha"
 	},
 	"Fetch_models_from_endpoint": {
-		"message": "Fetch models from endpoint"
+		"message": "Kunin ang mga modelo mula sa endpoint"
 	},
 	"No_models_returned_by_endpoint": {
-		"message": "No models returned by endpoint"
+		"message": "Walang mga modelong ibinalik sa pamamagitan ng endpoint"
 	},
 	"API_endpoint_is_empty": {
-		"message": "API endpoint is empty"
+		"message": "Walang laman ang endpoint ng API"
 	},
 	"Failed_to_fetch_LLM_models": {
-		"message": "Failed to fetch LLM models"
+		"message": "Nabigong makuha ang mga modelo ng LLM"
 	},
 	"Open_this_popup_on_a_website_to_use_this_button": {
-		"message": "Open this popup on a website to use this button"
+		"message": "Buksan ang popup na ito sa isang website para magamit ang button na ito"
 	},
 	"Import_failed": {
-		"message": "Import failed"
+		"message": "Nabigo ang pag-import"
 	},
 	"Copy_PDF_URL": {
-		"message": "Copy PDF URL"
+		"message": "Kopyahin ang PDF URL"
 	},
 	"Copied": {
-		"message": "Copied"
+		"message": "Kinopya"
 	},
 	"Copy_failed": {
-		"message": "Copy failed"
+		"message": "Nabigo ang pagkopya"
 	},
 	"Allow_access_to_file_URLs_to_open_local_PDF_files": {
-		"message": "Allow access to file URLs to open local PDF files"
+		"message": "Payagan ang pag-access sa mga URL ng file upang buksan ang mga lokal na PDF file"
 	},
 	"Open_File": {
-		"message": "Open File"
+		"message": "Buksan ang File"
 	},
 	"Previous_Page": {
-		"message": "Previous Page"
+		"message": "Nakaraang Pahina"
 	},
 	"Next_Page": {
-		"message": "Next Page"
+		"message": "Susunod na Pahina"
 	},
 	"Table_of_Contents": {
-		"message": "Table of Contents"
+		"message": "Talaan ng mga Nilalaman"
 	},
 	"Drop_an_ebook_file_here_or_open_one": {
-		"message": "Drop an ebook file here or open one"
+		"message": "Mag-drop ng isang ebook file dito o magbukas ng isa"
 	},
 	"Could_not_open_this_file": {
-		"message": "Could not open this file"
+		"message": "Hindi mabuksan ang file na ito"
 	},
 	"Untitled": {
-		"message": "Untitled"
+		"message": "Walang pamagat"
 	},
 	"Page": {
-		"message": "Page"
+		"message": "Pahina"
 	},
 	"Zoom_out": {
-		"message": "Zoom out"
+		"message": "Mag-zoom out"
 	},
 	"Zoom": {
-		"message": "Zoom"
+		"message": "Mag-zoom"
 	},
 	"Zoom_in": {
-		"message": "Zoom in"
+		"message": "Mag-zoom in"
 	},
 	"Automatic_zoom": {
-		"message": "Automatic zoom"
+		"message": "Awtomatikong pag-zoom"
 	},
 	"Page_fit": {
-		"message": "Page fit"
+		"message": "Angkop ng pahina"
 	},
 	"Page_width": {
-		"message": "Page width"
+		"message": "Lapad ng pahina"
 	},
 	"Find": {
-		"message": "Find"
+		"message": "Hanapin"
 	},
 	"Dark_mode": {
-		"message": "Dark mode"
+		"message": "Madilim na mode"
 	},
 	"Download": {
-		"message": "Download"
+		"message": "I-download"
 	},
 	"Find_in_document": {
-		"message": "Find in document"
+		"message": "Hanapin sa dokumento"
 	},
 	"Previous_match": {
-		"message": "Previous match"
+		"message": "Nakaraang laban"
 	},
 	"Next_match": {
-		"message": "Next match"
+		"message": "Susunod na laban"
 	},
 	"Highlight_all": {
-		"message": "Highlight all"
+		"message": "I-highlight ang lahat"
 	},
 	"Match_case": {
-		"message": "Match case"
+		"message": "Kaso ng tugma"
 	},
 	"Phrase_not_found": {
-		"message": "Phrase not found"
+		"message": "Hindi nahanap ang parirala"
 	},
 	"Close": {
-		"message": "Close"
+		"message": "Isara"
 	},
 	"Failed_to_load_the_PDF_file": {
-		"message": "Failed to load the PDF file"
+		"message": "Nabigong i-load ang PDF file"
 	},
 	"Drop_a_PDF_file_here": {
-		"message": "Drop a PDF file here"
+		"message": "Mag-drop ng PDF file dito"
 	},
 	"Enter_the_password_to_open_this_PDF_file": {
-		"message": "Enter the password to open this PDF file"
+		"message": "Ilagay ang password para buksan ang PDF file na ito"
 	},
 	"Invalid_password_try_again": {
-		"message": "Invalid password try again"
+		"message": "Subukang muli ang di-wastong password"
 	},
 	"appName": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Mouse Tooltip Translator Refined"
 	},
 	"appDesc": {
-		"message": "Hover or select text to translate it in a tooltip. Also works in PDF and ebook files."
+		"message": "Mag-hover o pumili ng teksto para isalin ito sa isang tooltip. Gumagana rin sa mga PDF at ebook file."
 	}
 }

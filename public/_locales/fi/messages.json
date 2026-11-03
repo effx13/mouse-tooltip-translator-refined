@@ -1,546 +1,354 @@
 {
-	"MAIN______________________________________": {
-		"message": "MAIN                                      "
-	},
 	"MAIN": {
-		"message": "MAIN"
+		"message": "YLEISET"
 	},
 	"Mouse_Tooltip_Translator": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Hiiren työkaluvihjeiden kääntäjä"
 	},
 	"Translate_When": {
-		"message": "Translate When"
+		"message": "Käännä Milloin"
 	},
 	"Translate_From": {
-		"message": "Translate From"
+		"message": "Käännä alkaen"
 	},
 	"Translate_Into": {
-		"message": "Translate Into"
+		"message": "Käännä kielelle"
 	},
 	"Translator_Engine": {
-		"message": "Translator Engine"
+		"message": "Kääntäjä moottori"
 	},
 	"LLM_Provider": {
-		"message": "LLM Provider"
+		"message": "LLM-palveluntarjoaja"
 	},
 	"LLM_Api_Endpoint": {
-		"message": "LLM API Endpoint URL"
+		"message": "LLM API -päätepisteen URL-osoite"
 	},
 	"LLM_Api_Key": {
-		"message": "LLM API Key"
+		"message": "LLM:n API-avain (valinnainen)"
 	},
 	"LLM_Model": {
-		"message": "LLM Model"
+		"message": "LLM malli"
 	},
 	"Mouseover_Text_Type": {
-		"message": "Mouseover Text Type"
+		"message": "Vie hiiri Tekstityyppi"
 	},
 	"Translate_Into_2": {
-		"message": "Secondary Translate Into"
+		"message": "Toissijainen Käännä kielelle"
 	},
 	"Writing_Language": {
-		"message": "Writing Language"
+		"message": "Kirjoituskieli"
 	},
 	"Reverse_Translate_Language": {
-		"message": "Reverse Translate Language"
-	},
-	"OCR_Language": {
-		"message": "OCR Language"
-	},
-	"Detect_Subtitle": {
-		"message": "Detect Subtitle"
-	},
-	"KEYBOARD______________________________________": {
-		"message": "KEYBOARD                                      "
+		"message": "Käänteinen käännöskieli"
 	},
 	"KEYBOARD": {
-		"message": "KEYBOARD"
+		"message": "NÄPPÄIMISTÖ"
 	},
 	"Show_Tooltip_When": {
-		"message": "Show Tooltip When"
-	},
-	"Voice_When": {
-		"message": "Voice When"
+		"message": "Näytä työkaluvinkki Milloin"
 	},
 	"Translate_Writing_When": {
-		"message": "Translate Writing When"
+		"message": "Käännä kirjoittaminen Milloin"
 	},
 	"Ignore_AltGr_Modifier": {
-		"message": "Ignore AltGr Modifier"
-	},
-	"Auto_Reader_When": {
-		"message": "Auto Reader When"
+		"message": "Ohita AltGr Modifier"
 	},
 	"Translate_Page_When": {
-		"message": "Translate Page When"
-	},
-	"OCR_When": {
-		"message": "OCR When"
-	},
-	"Mouseover_Text_Type_Swap_Key": {
-		"message": "Mouseover Text Type Swap Key"
-	},
-	"Speech_Recognition_When": {
-		"message": "Speech Recognition When"
-	},
-	"Toggle_Mouseover_Text_Type_When": {
-		"message": "Toggle Mouseover Text Type When"
+		"message": "Käännä sivu Milloin"
 	},
 	"Mouseover_Text_Type_Key_Hold": {
-		"message": "Mouseover Text Type Key Hold"
+		"message": "Vie hiiren osoitin tekstityypin näppäimen päälle"
 	},
 	"Secondary_Language_When": {
-		"message": "Secondary Language When"
+		"message": "Toissijainen kieli Milloin"
 	},
 	"Swap_Key_Toggle_Mode": {
-		"message": "Swap Key Toggle Mode"
+		"message": "Vaihda näppäinvaihtotilaa"
 	},
 	"Toggle_Extension_When": {
-		"message": "Toggle Extension When"
-	},
-	"TTS_Pause_Resume_When": {
-		"message": "TTS Pause Resume When"
-	},
-	"GRAPHIC______________________________________": {
-		"message": "GRAPHIC                                      "
+		"message": "Vaihda laajennus Milloin"
 	},
 	"GRAPHIC": {
-		"message": "GRAPHIC"
+		"message": "GRAFIIKKA"
 	},
 	"Tooltip_Font_Size": {
-		"message": "Tooltip Font Size"
+		"message": "Työkaluvihjeen kirjasinkoko"
 	},
 	"Tooltip_Font_Family": {
-		"message": "Tooltip Font Family"
-	},
-	"Subtitle_Background": {
-		"message": "Subtitle Background"
+		"message": "Työkaluvihjeen kirjasinperhe"
 	},
 	"Tooltip_Width": {
-		"message": "Tooltip Width"
+		"message": "Työkaluvihjeen leveys"
 	},
 	"Tooltip_Distance": {
-		"message": "Tooltip Distance"
+		"message": "Työkaluvihjeiden etäisyys"
 	},
 	"Tooltip_Animation": {
-		"message": "Tooltip Animation"
+		"message": "Työkaluvihjeen animaatio"
 	},
 	"Tooltip_Disappear_Duration": {
-		"message": "Tooltip Disappear Duration"
+		"message": "Työkaluvihjeiden katoamisen kesto"
 	},
 	"Tooltip_Position": {
-		"message": "Tooltip Position"
+		"message": "Työkaluvihjeen sijainti"
 	},
 	"Tooltip_Placement": {
-		"message": "Tooltip Placement"
+		"message": "Työkaluvihjeiden sijoitus"
 	},
 	"Above": {
-		"message": "Above"
+		"message": "Yllä"
 	},
 	"Below": {
-		"message": "Below"
+		"message": "Alla"
 	},
 	"Tooltip_Text_Align": {
-		"message": "Tooltip Text Align"
+		"message": "Työkaluvihjeen teksti Tasaa"
 	},
 	"Tooltip_Background_Blur": {
-		"message": "Tooltip Background Blur"
+		"message": "Työkaluvihjeen taustan sumennus"
 	},
 	"Mouseover_Highlight_Text": {
-		"message": "Mouseover Highlight Text"
+		"message": "Vie hiiren osoitin Korosta teksti"
 	},
 	"Tooltip_Font_Color": {
-		"message": "Tooltip Font Color"
+		"message": "Työkaluvihjeen fontin väri"
 	},
 	"Tooltip_Background_Color": {
-		"message": "Tooltip Background Color"
+		"message": "Työkaluvihjeen taustaväri"
 	},
 	"Tooltip_Border_Color": {
-		"message": "Tooltip Border Color"
+		"message": "Työkaluvihjeen reunaväri"
 	},
 	"Mouseover_Text_Highlight_Color": {
-		"message": "Mouseover Text Highlight Color"
+		"message": "Vie hiiren osoitin tekstin korostusväriin"
 	},
 	"Ebook_Theme": {
-		"message": "Ebook Theme"
+		"message": "E-kirjan teema"
 	},
 	"Setting_Compact_mode": {
-		"message": "Setting Compact mode"
-	},
-	"VOICE______________________________________": {
-		"message": "VOICE                                      "
-	},
-	"VOICE": {
-		"message": "VOICE"
-	},
-	"Voice_Volume": {
-		"message": "Voice Volume"
-	},
-	"Voice_Speed": {
-		"message": "Voice Speed"
-	},
-	"Voice_Target": {
-		"message": "Voice Target"
-	},
-	"Voice_Repeat": {
-		"message": "Voice Repeat"
-	},
-	"Voice_for_": {
-		"message": "Voice for "
-	},
-	"Voice_speed_for_": {
-		"message": "Voice speed for "
-	},
-	"EXCLUDE______________________________________": {
-		"message": "EXCLUDE                                      "
+		"message": "Kompaktitilan asettaminen"
 	},
 	"EXCLUDE": {
-		"message": "EXCLUDE"
+		"message": "POISSA POIS"
 	},
 	"Exclude_Language": {
-		"message": "Exclude Language"
+		"message": "Sulje kieli pois"
 	},
 	"Website_Filter_Mode": {
-		"message": "Website Filter Mode"
+		"message": "Verkkosivuston suodatustila"
 	},
 	"Exclude_Website": {
-		"message": "Exclude Website"
+		"message": "Sulje sivusto pois"
 	},
 	"Whitelist_Website": {
-		"message": "Whitelist Website"
+		"message": "Whitelist -sivusto"
 	},
 	"Website_Target_Language": {
-		"message": "Website Target Language"
+		"message": "Sivustokohtainen kohdekieli (esim. github.com=ko)"
 	},
 	"Block_Current_Site": {
-		"message": "Block Current Site"
+		"message": "Estä nykyinen sivusto"
 	},
 	"Allow_Current_Site": {
-		"message": "Allow Current Site"
-	},
-	"ADVANCED______________________________________": {
-		"message": "ADVANCED                                      "
+		"message": "Salli nykyinen sivusto"
 	},
 	"ADVANCED": {
-		"message": "ADVANCED"
+		"message": "EDISTYNYT"
 	},
 	"UI_Language": {
-		"message": "UI Language"
+		"message": "Käyttöliittymän kieli"
 	},
 	"Detect_PDF": {
-		"message": "Detect PDF"
+		"message": "Tunnista PDF"
 	},
 	"Mouseover_Text_Type_2": {
-		"message": "Secondary Mouseover Text Type"
-	},
-	"Mouseover_Pause_Subtitle": {
-		"message": "Mouseover Pause Subtitle"
+		"message": "Toissijainen hiiren osoitin tekstityyppi"
 	},
 	"Show_Tooltip_While_Typing": {
-		"message": "Show Tooltip While Typing"
+		"message": "Näytä työkaluvihje kirjoittaessasi"
 	},
 	"Tooltip_Info_Source_Text": {
-		"message": "Tooltip Info Source Text"
+		"message": "Työkaluvihjeiden tietojen lähdeteksti"
 	},
 	"Translate_Exclude_Regex": {
-		"message": "Translate Exclude Regex"
+		"message": "Käännä Sulje pois Regex"
 	},
 	"Tooltip_Info_Source_Language": {
-		"message": "Tooltip Info Source Language"
+		"message": "Työkaluvinkkitietojen lähdekieli"
 	},
 	"Tooltip_Info_Transliteration": {
-		"message": "Tooltip Info Transliteration"
-	},
-	"Tooltip_Interval_Time": {
-		"message": "Tooltip Interval Time"
+		"message": "Työkaluvihjeiden tietojen transliterointi"
 	},
 	"Tooltip_Show_Delay": {
-		"message": "Tooltip Show Delay"
+		"message": "Työkaluvihjeiden näyttöviive"
 	},
 	"Tooltip_Word_Dictionary": {
-		"message": "Tooltip Word Dictionary"
+		"message": "Työkaluvihje Sanakirja"
 	},
 	"Tooltip_Word_Dictionary_Source": {
-		"message": "Tooltip Word Dictionary Source"
+		"message": "Tooltip Word Dictionary lähde"
 	},
 	"Fallback_Translator_Engine": {
-		"message": "Fallback Translator Engine"
-	},
-	"SPEECH": {
-		"message": "SPEECH"
-	},
-	"Speech_Recognition_Language": {
-		"message": "Speech Recognition Language"
-	},
-	"Voice_Panel_Translate_Language": {
-		"message": "Voice Panel Translate Language"
-	},
-	"Voice_Panel_Text_Target": {
-		"message": "Voice Panel Text Target"
-	},
-	"Voice_Panel_Padding": {
-		"message": "Voice Panel Padding"
-	},
-	"Voice_Panel_Text_Align": {
-		"message": "Voice Panel Text Align"
-	},
-	"Voice_Panel_Source_Font_Size": {
-		"message": "Voice Panel Source Font Size"
-	},
-	"Voice_Panel_Target_Font_Size": {
-		"message": "Voice Panel Target Font Size"
-	},
-	"Voice_Panel_Source_Font_Color": {
-		"message": "Voice Panel Source Font Color"
-	},
-	"Voice_Panel_Target_Font_Color": {
-		"message": "Voice Panel Target Font Color"
-	},
-	"Voice_Panel_Source_Border_Color": {
-		"message": "Voice Panel Source Border Color"
-	},
-	"Voice_Panel_Target_Border_Color": {
-		"message": "Voice Panel Target Border Color"
-	},
-	"Voice_Panel_Background_Color": {
-		"message": "Voice Panel Background Color"
-	},
-	"BACKUP______________________________________": {
-		"message": "BACKUP                                      "
+		"message": "Varakääntäjämoottori"
 	},
 	"BACKUP": {
-		"message": "BACKUP"
+		"message": "VARMUUSKOPI"
 	},
 	"Sync_Setting": {
-		"message": "Sync Setting"
+		"message": "Synkronoi asetukset laitteiden välillä"
 	},
 	"Import_Setting": {
-		"message": "Import Setting"
+		"message": "Tuo asetus"
 	},
 	"Export_Setting": {
-		"message": "Export Setting"
+		"message": "Vientiasetus"
 	},
 	"Reset_Setting": {
-		"message": "Reset Setting"
-	},
-	"About______________________________________": {
-		"message": "About                                      "
+		"message": "Nollaa asetus"
 	},
 	"How_to_use": {
-		"message": "How to use"
+		"message": "Kuinka käyttää"
 	},
 	"Check_how_to_use_this_extension": {
-		"message": "Check how to use this extension"
+		"message": "Tarkista, kuinka tätä laajennusta käytetään"
 	},
 	"PDF_Viewer": {
-		"message": "PDF Viewer"
+		"message": "PDF-katseluohjelma"
 	},
 	"Translate_local_PDF_file": {
-		"message": "Translate local PDF file"
+		"message": "Käännä paikallinen PDF-tiedosto"
 	},
 	"Ebook_Reader": {
-		"message": "Ebook Reader"
+		"message": "E-kirjan lukija"
 	},
 	"Translate_local_ebook_file": {
-		"message": "Translate local ebook file"
-	},
-	"Twitter": {
-		"message": "Twitter"
-	},
-	"Retweet_twitter_post": {
-		"message": "Retweet twitter post"
-	},
-	"Review_Page": {
-		"message": "Review Page"
-	},
-	"Comment_on_this_extension": {
-		"message": "Comment on this extension"
+		"message": "Käännä paikallinen e-kirjatiedosto"
 	},
 	"Source_code": {
-		"message": "Source code"
+		"message": "Lähdekoodi"
 	},
 	"Check_source_code_in_github": {
-		"message": "Check source code in github"
+		"message": "Tarkista lähdekoodi githubista"
 	},
 	"Privacy_Policy": {
-		"message": "Privacy Policy"
+		"message": "Tietosuojakäytäntö"
 	},
 	"User_privacy_policy": {
-		"message": "User privacy policy"
-	},
-	"Voice_Panel": {
-		"message": "Voice Panel"
-	},
-	"Translate_Voice": {
-		"message": "Translate Voice"
-	},
-	"Review______________________________________": {
-		"message": "Review                                      "
-	},
-	"Review_this": {
-		"message": "Review this"
-	},
-	"Developer_love_criticism": {
-		"message": "Developer love criticism"
-	},
-	"Coffee______________________________________": {
-		"message": "Coffee                                      "
-	},
-	"Support_this_extension": {
-		"message": "Support this extension"
-	},
-	"Feed_a_coffee_to_the_extension_devs": {
-		"message": "Feed a coffee to the extension devs"
-	},
-	"Title______________________________________": {
-		"message": "Title                                      "
-	},
-	"SELECT_OPTION______________________________": {
-		"message": "SELECT OPTION                              "
-	},
-	"On": {
-		"message": "On"
-	},
-	"Off": {
-		"message": "Off"
+		"message": "Käyttäjien tietosuojakäytäntö"
 	},
 	"Auto": {
-		"message": "Auto"
+		"message": "Automaattinen"
 	},
 	"None": {
-		"message": "None"
+		"message": "Ei mitään"
 	},
 	"Select": {
-		"message": "Select"
+		"message": "Valitse"
 	},
 	"Mouseover": {
-		"message": "Mouseover"
+		"message": "Vie hiiren osoitin"
 	},
 	"Mouseover_n_Select": {
-		"message": "Mouseover n Select"
+		"message": "Vie hiiri n Valitse"
 	},
 	"Follow": {
-		"message": "Follow"
+		"message": "Seuraa"
 	},
 	"Fixed": {
-		"message": "Fixed"
+		"message": "Korjattu"
 	},
 	"Top_Right": {
-		"message": "Top Right"
+		"message": "Ylhäällä oikea"
 	},
 	"Fade": {
-		"message": "Fade"
+		"message": "Häivyttää"
 	},
 	"Scale": {
-		"message": "Scale"
+		"message": "Mittakaava"
 	},
 	"Shift_away": {
-		"message": "Shift away"
+		"message": "Vaihda pois"
 	},
 	"Shift_toward": {
-		"message": "Shift toward"
+		"message": "Siirrä kohti"
 	},
 	"Perspective": {
-		"message": "Perspective"
+		"message": "Perspektiivi"
 	},
 	"Word": {
-		"message": "Word"
+		"message": "sana"
 	},
 	"Sentence": {
-		"message": "Sentence"
+		"message": "Lause"
 	},
 	"Container": {
-		"message": "Container"
+		"message": "Säiliö"
 	},
 	"Both": {
-		"message": "Both"
+		"message": "Molemmat"
 	},
 	"Blacklist": {
-		"message": "Blacklist"
+		"message": "Musta lista"
 	},
 	"Whitelist": {
-		"message": "Whitelist"
-	},
-	"Source": {
-		"message": "Source"
-	},
-	"Source_Text": {
-		"message": "Source Text"
-	},
-	"Translated_Text": {
-		"message": "Translated Text"
-	},
-	"Source_n_Translated": {
-		"message": "Source n Translated"
-	},
-	"Translated_n_Source": {
-		"message": "Translated n Source"
-	},
-	"Dual_Subtitle": {
-		"message": "Dual Subtitle"
-	},
-	"Target_Single_Subtitle": {
-		"message": "Target Single Subtitle"
-	},
-	"Source_Single_Subtitle": {
-		"message": "Source Single Subtitle"
+		"message": "Valkoinen lista"
 	},
 	"Always": {
-		"message": "Always"
+		"message": "Aina"
 	},
 	"Center": {
-		"message": "Center"
+		"message": "Keskusta"
 	},
 	"Left": {
-		"message": "Left"
+		"message": "Vasen"
 	},
 	"Right": {
-		"message": "Right"
+		"message": "Oikein"
 	},
 	"Justify": {
-		"message": "Justify"
+		"message": "Perustele"
 	},
 	"Light": {
-		"message": "Light"
+		"message": "Kevyt"
 	},
 	"Dark": {
-		"message": "Dark"
+		"message": "Tumma"
 	},
 	"Default": {
-		"message": "Default"
+		"message": "Oletus"
 	},
 	"Ctrl_Left": {
-		"message": "Ctrl Left"
+		"message": "Ctrl Vasen"
 	},
 	"Ctrl_Right": {
-		"message": "Ctrl Right"
+		"message": "Ctrl Oikea"
 	},
 	"Alt_Left": {
-		"message": "Alt Left"
+		"message": "Alt Vasen"
 	},
 	"Alt_Right": {
-		"message": "Alt Right"
+		"message": "Alt Oikea"
 	},
 	"Shift_Left": {
-		"message": "Shift Left"
+		"message": "Vaihto vasemmalle"
 	},
 	"Shift_Right": {
-		"message": "Shift Right"
+		"message": "Vaihto oikealle"
 	},
 	"Meta_Left": {
-		"message": "Meta Left"
+		"message": "Meta vasen"
 	},
 	"Meta_Right": {
-		"message": "Meta Right"
+		"message": "Meta oikea"
 	},
 	"Click_Left": {
-		"message": "Click Left"
+		"message": "Napsauta Vasen"
 	},
 	"Click_Middle": {
-		"message": "Click Middle"
+		"message": "Napsauta Keskimmäistä"
 	},
 	"Click_Right": {
-		"message": "Click Right"
+		"message": "Napsauta Oikea"
 	},
 	"google": {
 		"message": "google"
@@ -548,286 +356,148 @@
 	"bing": {
 		"message": "bing"
 	},
-	"Saved_Words": {
-		"message": "Saved Words"
-	},
-	"Group": {
-		"message": "Group"
-	},
-	"All": {
-		"message": "All"
-	},
-	"Move_to_group": {
-		"message": "Move to group"
-	},
-	"Delete": {
-		"message": "Delete"
-	},
-	"Clear": {
-		"message": "Clear"
-	},
-	"selected": {
-		"message": "selected"
-	},
-	"Date": {
-		"message": "Date"
-	},
-	"Translation": {
-		"message": "Translation"
-	},
-	"No_saved_words_yet": {
-		"message": "No saved words yet"
-	},
-	"Manage_Groups": {
-		"message": "Manage Groups"
-	},
-	"Remove_all": {
-		"message": "Remove all"
-	},
-	"Import_CSV": {
-		"message": "Import CSV"
-	},
-	"Download_CSV": {
-		"message": "Download CSV"
-	},
-	"Save_key": {
-		"message": "Save key"
-	},
-	"Highlight_on_page": {
-		"message": "Highlight on page"
-	},
-	"Right_click_menu": {
-		"message": "Right click menu"
-	},
-	"Add_right_click_context_menu": {
-		"message": "Add right click context menu"
-	},
-	"Done": {
-		"message": "Done"
-	},
-	"On_Select": {
-		"message": "On Select"
-	},
-	"On_Hover": {
-		"message": "On Hover"
-	},
-	"On_Select_n_Hover": {
-		"message": "On Select n Hover"
-	},
-	"Select_group_to_play": {
-		"message": "Select group to play"
-	},
-	"No_Group_Selected": {
-		"message": "No Group Selected"
-	},
-	"Check_groups_to_play": {
-		"message": "Check groups to play"
-	},
-	"Flashcard_makes_cards_from_your_saved_words": {
-		"message": "Flashcard makes cards from your saved words"
-	},
-	"Flashcard": {
-		"message": "Flashcard"
-	},
-	"Play_Flashcard": {
-		"message": "Play Flashcard"
-	},
-	"Reset_progress": {
-		"message": "Reset progress"
-	},
-	"No_History_Data": {
-		"message": "No History Data"
-	},
-	"Today_play_is_completed": {
-		"message": "Today play is completed"
-	},
-	"Try_on_next_day": {
-		"message": "Try on next day"
-	},
-	"No_more_card_to_learn_today": {
-		"message": "No more card to learn today"
-	},
-	"Add_more_history_data_to_play_with": {
-		"message": "Add more history data to play with"
-	},
-	"Finish": {
-		"message": "Finish"
-	},
-	"Today_Flashcards_are_Completed": {
-		"message": "Today Flashcards are Completed"
-	},
-	"No_More_Card_Data": {
-		"message": "No More Card Data"
-	},
-	"Show_Answer": {
-		"message": "Show Answer"
-	},
-	"Again": {
-		"message": "Again"
-	},
-	"Hard": {
-		"message": "Hard"
-	},
-	"Good": {
-		"message": "Good"
-	},
-	"Easy": {
-		"message": "Easy"
-	},
-	"New": {
-		"message": "New"
-	},
-	"Review": {
-		"message": "Review"
-	},
-	"Learning": {
-		"message": "Learning"
-	},
 	"About": {
-		"message": "About"
+		"message": "Tietoja"
 	},
 	"Translator": {
-		"message": "Translator"
+		"message": "Kääntäjä"
 	},
 	"Wiktionary": {
-		"message": "Wiktionary"
-	},
-	"Translated": {
-		"message": "Translated"
+		"message": "Wikisanakirja"
 	},
 	"Custom": {
-		"message": "Custom"
+		"message": "Mukautettu"
 	},
 	"Back": {
-		"message": "Back"
+		"message": "Takaisin"
 	},
 	"Cancel": {
-		"message": "Cancel"
+		"message": "Peruuta"
 	},
 	"Remove": {
-		"message": "Remove"
+		"message": "Poista"
 	},
 	"Alpha": {
-		"message": "Alpha"
+		"message": "Alfa"
 	},
 	"Fetch_models_from_endpoint": {
-		"message": "Fetch models from endpoint"
+		"message": "Hae mallit päätepisteestä"
 	},
 	"No_models_returned_by_endpoint": {
-		"message": "No models returned by endpoint"
+		"message": "Ei malleja päätepisteen mukaan"
 	},
 	"API_endpoint_is_empty": {
-		"message": "API endpoint is empty"
+		"message": "API-päätepiste on tyhjä"
 	},
 	"Failed_to_fetch_LLM_models": {
-		"message": "Failed to fetch LLM models"
+		"message": "LLM-mallien nouto epäonnistui"
 	},
 	"Open_this_popup_on_a_website_to_use_this_button": {
-		"message": "Open this popup on a website to use this button"
+		"message": "Avaa tämä ponnahdusikkuna verkkosivustolla käyttääksesi tätä painiketta"
 	},
 	"Import_failed": {
-		"message": "Import failed"
+		"message": "Tuonti epäonnistui"
 	},
 	"Copy_PDF_URL": {
-		"message": "Copy PDF URL"
+		"message": "Kopioi PDF-URL-osoite"
 	},
 	"Copied": {
-		"message": "Copied"
+		"message": "Kopioitu"
 	},
 	"Copy_failed": {
-		"message": "Copy failed"
+		"message": "Kopiointi epäonnistui"
 	},
 	"Allow_access_to_file_URLs_to_open_local_PDF_files": {
-		"message": "Allow access to file URLs to open local PDF files"
+		"message": "Salli pääsy tiedostojen URL-osoitteisiin paikallisten PDF-tiedostojen avaamiseksi"
 	},
 	"Open_File": {
-		"message": "Open File"
+		"message": "Avaa Tiedosto"
 	},
 	"Previous_Page": {
-		"message": "Previous Page"
+		"message": "Edellinen sivu"
 	},
 	"Next_Page": {
-		"message": "Next Page"
+		"message": "Seuraava sivu"
 	},
 	"Table_of_Contents": {
-		"message": "Table of Contents"
+		"message": "Sisällysluettelo"
 	},
 	"Drop_an_ebook_file_here_or_open_one": {
-		"message": "Drop an ebook file here or open one"
+		"message": "Pudota e-kirjatiedosto tähän tai avaa sellainen"
 	},
 	"Could_not_open_this_file": {
-		"message": "Could not open this file"
+		"message": "Tätä tiedostoa ei voitu avata"
 	},
 	"Untitled": {
-		"message": "Untitled"
+		"message": "Nimetön"
 	},
 	"Page": {
-		"message": "Page"
+		"message": "Sivu"
 	},
 	"Zoom_out": {
-		"message": "Zoom out"
+		"message": "Loitonna"
 	},
 	"Zoom": {
-		"message": "Zoom"
+		"message": "Zoomaa"
 	},
 	"Zoom_in": {
-		"message": "Zoom in"
+		"message": "Lähennä"
 	},
 	"Automatic_zoom": {
-		"message": "Automatic zoom"
+		"message": "Automaattinen zoom"
 	},
 	"Page_fit": {
-		"message": "Page fit"
+		"message": "Sivun sovitus"
 	},
 	"Page_width": {
-		"message": "Page width"
+		"message": "Sivun leveys"
 	},
 	"Find": {
-		"message": "Find"
+		"message": "Etsi"
 	},
 	"Dark_mode": {
-		"message": "Dark mode"
+		"message": "Tumma tila"
 	},
 	"Download": {
-		"message": "Download"
+		"message": "Lataa"
 	},
 	"Find_in_document": {
-		"message": "Find in document"
+		"message": "Etsi asiakirjasta"
 	},
 	"Previous_match": {
-		"message": "Previous match"
+		"message": "Edellinen ottelu"
 	},
 	"Next_match": {
-		"message": "Next match"
+		"message": "Seuraava ottelu"
 	},
 	"Highlight_all": {
-		"message": "Highlight all"
+		"message": "Korosta kaikki"
 	},
 	"Match_case": {
-		"message": "Match case"
+		"message": "Match tapaus"
 	},
 	"Phrase_not_found": {
-		"message": "Phrase not found"
+		"message": "Lausetta ei löydy"
 	},
 	"Close": {
-		"message": "Close"
+		"message": "Sulje"
 	},
 	"Failed_to_load_the_PDF_file": {
-		"message": "Failed to load the PDF file"
+		"message": "PDF-tiedoston lataaminen epäonnistui"
 	},
 	"Drop_a_PDF_file_here": {
-		"message": "Drop a PDF file here"
+		"message": "Pudota PDF-tiedosto tähän"
 	},
 	"Enter_the_password_to_open_this_PDF_file": {
-		"message": "Enter the password to open this PDF file"
+		"message": "Kirjoita salasana avataksesi tämän PDF-tiedoston"
 	},
 	"Invalid_password_try_again": {
-		"message": "Invalid password try again"
+		"message": "Virheellinen salasana yritä uudelleen"
 	},
 	"appName": {
-		"message": "Mouse Tooltip Translator"
+		"message": "Mouse Tooltip Translator Refined"
 	},
 	"appDesc": {
-		"message": "Hover or select text to translate it in a tooltip. Also works in PDF and ebook files."
+		"message": "Vie hiiri tekstin päälle tai valitse se, niin käännös näkyy työkaluvihjeessä. Toimii myös PDF- ja e-kirjatiedostoissa."
 	}
 }
