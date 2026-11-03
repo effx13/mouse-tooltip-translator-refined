@@ -2,6 +2,8 @@
 
 Hover or select text on any page to see its translation in a tooltip.
 
+> An independent fork of [Mouse Tooltip Translator](https://github.com/ttop32/MouseTooltipTranslator) by ttop32, rewritten from scratch with WXT, Svelte 5 and TypeScript. It is not affiliated with or endorsed by the original project.
+
 ![Tooltip over an article](docs/screenshots/tooltip-hover.png)
 
 ## Features
@@ -48,7 +50,7 @@ Load `.output/chrome-mv3` from `chrome://extensions` with Developer mode on.
 
 ## Credits
 
-Based on [MouseTooltipTranslator](https://github.com/ttop32/MouseTooltipTranslator) by ttop32 and its contributors.
+Forked from [Mouse Tooltip Translator](https://github.com/ttop32/MouseTooltipTranslator) by ttop32 and its contributors, under the MIT license. Thanks to them for the original extension and its translations.
 
 ## License
 
