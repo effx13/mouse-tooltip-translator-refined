@@ -4,7 +4,6 @@
 // 3. expand range for char -> string
 // 4. range to text
 
-import { detect } from "tesseract.js";
 import * as util from "/src/util";
 import { debounce } from "lodash";
 

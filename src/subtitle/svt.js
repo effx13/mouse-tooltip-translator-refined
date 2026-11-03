@@ -1,6 +1,6 @@
 import $ from "jquery";
 import BaseVideo from "./baseVideo";
-import { translate } from "/src/translator/translateCaller.js";
+import * as util from "/src/util";
 
 // SVT Play (svtplay.se) subtitle translation.
 // Uses DOM observation instead of XHR interception because SVT does not
@@ -99,9 +99,13 @@ export default class SVT extends BaseVideo {
     const sourceLang = this.setting["translateSource"];
     const targetLang = this.setting["translateTarget"];
     try {
-      const result = await translate(
-        { text, sourceLang, targetLang, reverseLang: this.setting["translateReverse"] },
-        this.setting
+      // through the background like every other content-side translation, so
+      // the engines (and their deps) are not bundled into the content script
+      const result = await util.requestTranslate(
+        text,
+        sourceLang,
+        targetLang,
+        this.setting["translateReverse"]
       );
       if (this.lastText !== text) return;
       const translated = result?.targetText || text;
