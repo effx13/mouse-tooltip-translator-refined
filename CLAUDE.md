@@ -22,6 +22,7 @@ pnpm typecheck
 - **코드 변경 후 `pnpm build`가 통과하는지 반드시 확인**한다.
 - **매니페스트는 `wxt.config.ts`의 `manifest`에서 생성**된다(`public/manifest*.json` 없음). 브라우저별 차이(권한, MV2/MV3)는 거기서 분기한다. 버전은 `package.json`에서 온다.
 - 진입점은 `src/entrypoints/`(파일명 = 출력명). `background.ts`, `content.ts`(→`content-scripts/content.js|css`), `popup.html`, unlisted 페이지(`ocr.html`, `offscreen.html`), sandbox(`opencvHandler.sandbox.html`→`opencvHandler.html`), unlisted 스크립트(`subtitle.ts`, `googleDocInject.ts`, `pdfInject.ts`, `ebookEventInject.ts` → 루트 `<name>.js`). 이 출력명은 `getURL()`/`executeScript()`/pdfjs·foliate HTML이 하드코딩하므로 바꾸지 말 것.
+- **선택 기능은 지연 로딩**한다: 무겁고 옵션에 따라 안 쓰는 기능은 `src/entrypoints/<name>Feature.ts`(unlisted script)로 분리하고 `src/util/feature.js`의 `FEATURE_FILES`에 등록, content script에서 `loadFeature(name)`으로 필요한 순간에만 주입한다(OCR, 자막). content script에 무거운 모듈을 직접 import하지 말 것 — 모든 페이지·모든 프레임에 실린다.
 - WXT는 빌드 중 엔트리포인트 파일을 Node에서 import해 옵션을 읽는다 → **엔트리포인트 최상위에서 런타임 코드를 실행하지 말고** `main()` 안에 둘 것(부작용 import는 옵션 로드 시 제거되므로 허용).
 - content script/background/unlisted 스크립트는 IIFE 단일 파일(코드 스플리팅 없음). 확장 페이지(popup 등)는 ESM 청크.
 - `public/`은 그대로 복사된다(`.md`/`.map`/PDF.js 데모 PDF는 `build:publicAssets` 훅에서 제외). `public/_locales`는 위치 고정(insertLocale.py/crowdin).

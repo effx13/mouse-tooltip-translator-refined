@@ -29,8 +29,7 @@ import {
 } from "/src/event/savedHighlight.js";
 import { togglePageTranslate } from "/src/event/pageTranslate.js";
 
-import * as ocrView from "/src/ocr/ocrView.js";
-import subtitle from "/src/subtitle/subtitle.js";
+import { loadFeature, getLoadedFeature } from "/src/util/feature.js";
 import {
   langListOpposite,
   getLocalizedLangName,
@@ -724,7 +723,18 @@ function handleMousemove(e) {
   }
   setMouseStatus(e);
   setTooltipPosition(e.clientX, e.clientY);
-  ocrView.checkImage(e.clientX, e.clientY, setting, keyDownList);
+  checkOcrImage(e.clientX, e.clientY);
+}
+
+// OCR code is only injected once the OCR key is actually held (keyDownOCR is
+// "null" when OCR is off, so it never loads then)
+function checkOcrImage(x, y) {
+  if (!keyDownList[setting["keyDownOCR"]]) {
+    return;
+  }
+  loadFeature("ocr")
+    .then((ocrView) => ocrView.checkImage(x, y, setting, keyDownList))
+    .catch((error) => console.log(error));
 }
 
 function handleTouchstart(e) {
@@ -1191,7 +1201,7 @@ function resetTooltipStatus(keyReset=true, mouseReset=true) {
   selectedText = "";
   stagedText = null;
   hideTooltip();
-  ocrView.removeAllOcrEnv();
+  getLoadedFeature("ocr")?.removeAllOcrEnv();
   listenText = "";
   speech.stopSpeechRecognition();
 }
@@ -1781,10 +1791,28 @@ function bindBookFusionIframe() {
 }
 
 // youtube================================
+// same sites as the sitePattern of each class in src/subtitle/*; kept here so
+// the subtitle code is only injected on those sites
+const SUBTITLE_SITE_PATTERN =
+  /^https:\/\/(www\.youtube\.com|www\.youtube-nocookie\.com|www\.netflix\.com|www\.svtplay\.se)/;
+
 function checkVideo() {
-  for (var key in subtitle) {
-    subtitle[key].handleVideo(setting);
+  const loaded = getLoadedFeature("subtitle");
+  // once loaded, always forward (handleVideo itself handles detectSubtitle "null")
+  if (
+    !loaded &&
+    (!SUBTITLE_SITE_PATTERN.test(window.location.href) ||
+      setting["detectSubtitle"] == "null")
+  ) {
+    return;
   }
+  loadFeature("subtitle")
+    .then((subtitle) => {
+      for (var key in subtitle) {
+        subtitle[key].handleVideo(setting);
+      }
+    })
+    .catch((error) => console.log(error));
 }
 
 //destruction ===================================

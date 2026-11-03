@@ -10,6 +10,7 @@ import { translate } from "/src/translator/translateCaller.js";
 import * as util from "/src/util";
 import SettingUtil from "/src/util/setting_util.js";
 import _util from "/src/util/lodash_util.js";
+import { FEATURE_FILES } from "/src/util/feature.js";
 
 var setting;
 var recentTranslated = "";
@@ -86,6 +87,23 @@ function addMessageListener() {
       } else if (request.type === "importSetting") {
         setting = await SettingUtil.importSetting(request.data);
         sendResponse({ success: true });
+      } else if (request.type === "injectFeature") {
+        // content script asks for an on-demand feature bundle in its own frame
+        const file = FEATURE_FILES[request?.data?.name];
+        if (!file || sender?.tab?.id == null) {
+          sendResponse({ ok: false });
+          return;
+        }
+        try {
+          await browser.scripting.executeScript({
+            target: { tabId: sender.tab.id, frameIds: [sender.frameId ?? 0] },
+            files: [file],
+          });
+          sendResponse({ ok: true });
+        } catch (error) {
+          console.log(error);
+          sendResponse({ ok: false });
+        }
       } else if (request.type === "exportSetting") {
         const settingData = await SettingUtil.exportSetting();
         sendResponse({ settingData });

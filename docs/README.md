@@ -49,6 +49,8 @@
 | `googleDocInject.js` | `entrypoints/googleDocInject.ts` | content script가 `<script src>`로 주입 (web_accessible) | IIFE, 확장 API 없음 |
 | `pdfInject.js` | `entrypoints/pdfInject.ts` | `pdfjs/web/viewer.html`의 `<script src="../../pdfInject.js">` | IIFE |
 | `ebookEventInject.js` | `entrypoints/ebookEventInject.ts` | `foliate-js/reader.html`의 `<script src="/ebookEventInject.js">` | IIFE |
+| `ocrFeature.js` | `entrypoints/ocrFeature.ts` → `src/ocr/ocrView.js` | **필요 시 주입**: OCR 키를 누른 채 이미지 위에 있을 때 `src/util/feature.js`가 background(`injectFeature` → `scripting.executeScript`, 해당 frame)에 요청. 확장 페이지(PDF 뷰어 등)에선 `<script>` 태그 | IIFE, content script와 같은 isolated world |
+| `subtitleFeature.js` | `entrypoints/subtitleFeature.ts` → `src/subtitle/subtitle.js` | **필요 시 주입**: 영상 사이트(YouTube/nocookie/Netflix/SVT)이고 `detectSubtitle != "null"`일 때 | IIFE, content script와 같은 isolated world |
 | `ocr.html` | `entrypoints/ocr.html` → `src/ocr/ocrIframe.js` | content script의 iframe (web_accessible) | ESM |
 | `offscreen.html` | `entrypoints/offscreen.html` → `src/tts/offscreen.js` | offscreen document(FF은 iframe) | ESM |
 | `opencvHandler.html` | `entrypoints/opencvHandler.sandbox.html` → `src/ocr/opencvHandler.js` | manifest `sandbox` 페이지, content script의 iframe | ESM + 클래식 `/opencv/opencv.js` |
