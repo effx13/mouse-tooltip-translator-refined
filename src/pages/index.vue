@@ -647,7 +647,7 @@ export default {
       const out = [];
       let versionCount = 0;
       for (const line of section.split("\n")) {
-        if (/^- /.test(line)) {
+        if (line.startsWith('- ')) {
           versionCount += 1;
           if (versionCount > 4) break;
         }
@@ -823,7 +823,7 @@ export default {
       if (provider === oldSetting.llmProvider) return;
 
       const prevProvider = oldSetting.llmProvider;
-      const savedMap = { ...(this.setting.llmProviderSettings || {}) };
+      const savedMap = { ...this.setting.llmProviderSettings };
       savedMap[prevProvider] = {
         apiEndpoint: oldSetting.llmApiEndpoint || "",
         apiKey: oldSetting.llmApiKey || "",

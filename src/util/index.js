@@ -359,7 +359,7 @@ export function isLoadedFromIframe() {
 }
 
 export function isLocalFileUrl(url) {
-  return /^file:\/\//.test(url);
+  return String(url).startsWith("file://");
 }
 
 export function isCharKey(key) {

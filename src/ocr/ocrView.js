@@ -495,7 +495,7 @@ function calculateImgSegBoxSize(img, bbox) {
 
 function filterOcrText(text) {
   return text.replace(
-    /[`・〉«¢~「」〃ゝゞヽヾ●▲♩ヽ÷①↓®▽■◆『£〆∴∞▼™↑←~@#$%^&“*()_|+\-=;…【】:'"<>\{\}\[\]\\\/]/gi,
+    /[`・〉«¢~「」〃ゝゞヽヾ●▲♩ヽ÷①↓®▽■◆『£〆∴∞▼™↑←~@#$%^&“*()_|+\-=;…【】:'"<>{}[\]\\/]/gi,
     ""
   ); //remove special char
 }

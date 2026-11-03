@@ -70,7 +70,7 @@ async function initPdf() {
 async function checkLocalFileUrl() {
   const url = getFileParam();
 
-  if (/^file:\/\//.test(url)) {
+  if (String(url).startsWith("file://")) {
     //check current url is file url
     var isAllowedAccess = await util.hasFilePermission();
 

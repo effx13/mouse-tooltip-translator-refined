@@ -1,0 +1,65 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": [
+    "typescript",
+    "unicorn",
+    "oxc",
+    "import",
+    "promise",
+    "vitest"
+  ],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn"
+  },
+  "env": {
+    "browser": true,
+    "webextensions": true,
+    "es2024": true
+  },
+  "ignorePatterns": [
+    "build/**",
+    "public/**"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "scripts/**",
+        "*.config.ts"
+      ],
+      "env": {
+        "node": true
+      }
+    },
+    {
+      "files": [
+        "__tests__/**"
+      ],
+      "rules": {
+        "vitest/no-standalone-expect": "off"
+      }
+    }
+  ],
+  "rules": {
+    "no-unused-vars": [
+      "warn",
+      {
+        "caughtErrors": "none",
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "no-underscore-dangle": "off",
+    "block-scoped-var": "off",
+    "typescript/no-extraneous-class": "off",
+    "import/no-unassigned-import": "off",
+    "unicorn/prefer-add-event-listener": "off",
+    "unicorn/consistent-function-scoping": "off",
+    "no-async-promise-executor": "warn",
+    "no-unused-expressions": "warn",
+    "no-unassigned-vars": "warn",
+    "no-dupe-else-if": "warn",
+    "no-unused-private-class-members": "warn",
+    "promise/no-callback-in-promise": "warn"
+  }
+}

@@ -385,7 +385,7 @@ export default class Netflix extends BaseVideo {
       const wmAttr = Array.from(region.attributes).find(
         (a) => a.localName === "writingMode" || a.name.endsWith(":writingMode")
       );
-      return wmAttr ? /^tb/.test(wmAttr.value) : false;
+      return wmAttr ? wmAttr.value.startsWith('tb') : false;
     };
 
     // 두 자막을 같은 p에 br로 합쳐서 region 충돌 방지 (한 region에 stacked 표시)

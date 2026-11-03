@@ -36,7 +36,7 @@ export default class TextUtil {
     if (
       word.length > 1000 || //filter out text that has over 1000length
       isUrl(word) || //if it is url
-      !/[^\s\d»«…~`!@#$%^&*()「」‑_+\-=\[\]{};、':"\\|,.<>\/?\$\xA2-\xA5\u058F\u060B\u09F2\u09F3\u09FB\u0AF1\u0BF9\u0E3F\u17DB\u20A0-\u20BD\uA838\uFDFC\uFE69\uFF04\uFFE0\uFFE1\uFFE5\uFFE6\p{Extended_Pictographic}]/gu.test(
+      !/[^\s\d»«…~`!@#$%^&*()「」‑_+\-=[\]{};、':"\\|,.<>/?$\xA2-\xA5\u058F\u060B\u09F2\u09F3\u09FB\u0AF1\u0BF9\u0E3F\u17DB\u20A0-\u20BD\uA838\uFDFC\uFE69\uFF04\uFFE0\uFFE1\uFFE5\uFFE6\p{Extended_Pictographic}]/gu.test(
         word
       )
     ) {
@@ -79,7 +79,7 @@ export default class TextUtil {
   }
 
   static filterParenthesis(text){
-    return text.replace(/\([^\)]*\)/g, "");
+    return text.replace(/\([^)]*\)/g, "");
   }
 
   static truncate(str, n) {

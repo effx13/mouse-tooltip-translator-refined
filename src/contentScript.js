@@ -1287,7 +1287,7 @@ function matchSite(url, list) {
   return list.some((entry) => {
     var host = String(entry)
       .replace(/^\w+:\/\//, "") // strip protocol
-      .replace(/[\/?#].*$/, "") // strip path/query/hash
+      .replace(/[/?#].*$/, "") // strip path/query/hash
       .replace(/:\d+$/, ""); // strip port
     return host && matchUrl(url, "*." + host);
   });
