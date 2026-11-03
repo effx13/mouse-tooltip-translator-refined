@@ -21,11 +21,11 @@ export function emitSelectionEnd(text: string, target: Document = document) {
 }
 
 export const readSelectionEnd = (e: Event) => {
-  const evt = e as SelectionEndEvent;
-  return evt.detail ?? evt.selectedText ?? "";
+  const { detail, selectedText }: Partial<SelectionEndEvent> = e;
+  return detail ?? selectedText ?? "";
 };
 
-export function getWindowSelectionText(win: Window = window): string {
+function getWindowSelectionText(win: Window = window): string {
   const sel = win.getSelection();
   if (!sel) return "";
   const container = win.document.createElement("div");

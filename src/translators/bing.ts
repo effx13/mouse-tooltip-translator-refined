@@ -1,5 +1,6 @@
 import ky from "ky";
 import { defineEngine } from "./engine";
+import { matchOrThrow, required } from "./parse";
 
 const bingLangCode: Record<string, string> = {
   auto: "auto-detect",
@@ -165,11 +166,11 @@ async function fetchBingToken(tokenUrl: string): Promise<BingToken> {
   const setCookie = response.headers.get("set-cookie");
   const setCookies = response.headers.getSetCookie?.() ?? (setCookie ? [setCookie] : []);
   const cookie = setCookies.map((c) => c.split(";")[0]).join("; ");
-  const IG = data.match(/IG:"([^"]+)"/)![1]!;
-  const IID = data.match(/data-iid="([^"]+)"/)![1]!;
-  const [key, token, interval] = JSON.parse(
-    data.match(/params_AbusePreventionHelper\s?=\s?([^\]]+\])/)![1]!,
-  ) as [number, string, number];
+  const IG = matchOrThrow(data, /IG:"([^"]+)"/);
+  const IID = matchOrThrow(data, /data-iid="([^"]+)"/);
+  const [key, token, interval]: [number, string, number] = JSON.parse(
+    matchOrThrow(data, /params_AbusePreventionHelper\s?=\s?([^\]]+\])/),
+  );
   return {
     IG,
     IID,
@@ -228,7 +229,7 @@ export default defineEngine(async (text, sourceLang, targetLang) => {
 
   if (!res?.[0]) return undefined;
   return {
-    targetText: res[0].translations[0]!.text,
+    targetText: required(res[0].translations[0], "bing translation").text,
     detectedLang: res[0].detectedLanguage.language,
     transliteration: res[1]?.inputTransliteration ?? "",
   };

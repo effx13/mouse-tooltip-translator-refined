@@ -1,7 +1,4 @@
-import { browser } from "wxt/browser";
-
-const viewerUrl = (file: string) =>
-  `${browser.runtime.getURL("/pdf.html")}?file=${encodeURIComponent(file)}`;
+import { pdfViewerUrl } from "@/utils/pdfViewer";
 
 // Rewriting the document tears down Chrome's internal PDF guest view; the address bar keeps the
 // original .pdf URL while our viewer runs in a full-page iframe.
@@ -16,7 +13,7 @@ function mountViewer(file: string) {
   document.close();
   // set after write so the url needs no HTML escaping
   const iframe = document.querySelector<HTMLIFrameElement>("#mttPdfIframe");
-  if (iframe) iframe.src = viewerUrl(file);
+  if (iframe) iframe.src = pdfViewerUrl(file);
 }
 
 // the viewer posts pdfErrorLoadDocument when it cannot fetch the file (CORS/auth);

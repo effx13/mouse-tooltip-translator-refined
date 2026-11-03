@@ -5,27 +5,27 @@
   import { Button } from "@/components/ui/button";
   import * as Tabs from "@/components/ui/tabs";
   import { cn } from "@/utils/cn";
-  import { getMessage, t } from "@/utils/i18n";
-  import { SETTING_TABS, settingSchema, type SettingItem, type SettingTab } from "@/utils/settings";
-  import { getFontOptions, type Option } from "./options";
+  import { t } from "@/utils/i18n";
+  import { SETTING_TABS, settingSchema, type Option, type SettingItem } from "@/utils/settings";
+  import { getFontOptions } from "./options";
   import SettingRow from "./SettingRow.svelte";
   import { save, store } from "./state.svelte";
 
   let { onabout }: { onabout: () => void } = $props();
 
   type Tab = (typeof SETTING_TABS)[number];
-  const isTab = (value: unknown): value is Tab => SETTING_TABS.includes(value as Tab);
+  const isTab = (value: unknown): value is Tab => SETTING_TABS.some((id) => id === value);
 
-  const entries = Object.entries(settingSchema) as [string, SettingItem][];
+  const entries: [string, SettingItem][] = Object.entries(settingSchema);
   const rowsByTab = Object.groupBy(
     entries.filter(([, item]) => item.optionType !== "hidden"),
     ([, item]) => item.settingTab,
-  ) as Partial<Record<SettingTab, [string, SettingItem][]>>;
+  );
 
   let tab = $state<Tab>(
     isTab(store.settings.lastSettingTab) ? store.settings.lastSettingTab : "main",
   );
-  let fontOptions = $state<Option[]>([{ label: getMessage("Default") || "Default", value: "" }]);
+  let fontOptions = $state<Option[]>([{ label: t("Default"), value: "" }]);
   let scroller: HTMLElement | undefined = $state();
 
   void getFontOptions().then((list) => (fontOptions = list));
@@ -40,8 +40,8 @@
   const notify = (message: string) => toast(message);
 
   // vertical wheel scrolls the tab strip sideways when it overflows
-  function onTabWheel(e: WheelEvent) {
-    const strip = e.currentTarget as HTMLElement;
+  function onTabWheel(e: WheelEvent & { currentTarget: HTMLElement }) {
+    const strip = e.currentTarget;
     if (strip.scrollWidth <= strip.clientWidth) return;
     e.preventDefault();
     strip.scrollLeft += Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
@@ -73,7 +73,7 @@
         value={id}
         class="flex-none px-3 text-xs font-semibold tracking-wide uppercase group-data-[variant=line]/tabs-list:data-active:after:bg-primary"
       >
-        {getMessage(id.toUpperCase()) || id.toUpperCase()}
+        {t(id.toUpperCase())}
       </Tabs.Trigger>
     {/each}
   </Tabs.List>

@@ -1,6 +1,6 @@
 <script lang="ts">
   import * as Select from "@/components/ui/select";
-  import type { Option } from "@/entrypoints/popup/options";
+  import type { Option } from "@/utils/settings";
   import type { OptionValue } from "@/utils/settings";
   import FieldLabel from "./FieldLabel.svelte";
 

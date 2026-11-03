@@ -1,5 +1,6 @@
 import ky from "ky";
 import { defineEngine } from "./engine";
+import { required } from "./parse";
 
 const baseUrl = "https://fanyi.baidu.com/transapi";
 const baiduLangCode: Record<string, string> = {
@@ -56,7 +57,8 @@ export default defineEngine(async (text, sourceLang, targetLang) => {
       }),
     })
     .json<BaiduResponse>();
-  const targetText = res.data[0]!.result.map((item) => item?.[1])
+  const targetText = required(res.data[0], "baidu result")
+    .result.map((item) => item?.[1])
     .filter(Boolean)
     .join(" ");
   return { targetText, detectedLang: res.from, transliteration: "" };

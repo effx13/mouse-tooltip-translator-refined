@@ -27,8 +27,8 @@ export const engines = {
   localLlm,
 } satisfies Record<string, Engine>;
 
-export type EngineName = keyof typeof engines;
+const engineByName: ReadonlyMap<string, Engine> = new Map(Object.entries(engines));
 
 export function getEngine(name: string): Engine | undefined {
-  return Object.hasOwn(engines, name) ? (engines as Record<string, Engine>)[name] : undefined;
+  return engineByName.get(name);
 }

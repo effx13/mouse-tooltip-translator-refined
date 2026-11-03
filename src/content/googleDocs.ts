@@ -27,8 +27,8 @@ export async function forwardGoogleDocKeys(
   );
   const win = found instanceof HTMLIFrameElement ? found.contentWindow : null;
   if (!win || ctx.isInvalid) return;
-  ctx.addEventListener(win, "keydown", onKeydown as EventListener);
-  ctx.addEventListener(win, "keyup", onKeyup as EventListener);
+  ctx.addEventListener(win, "keydown", onKeydown);
+  ctx.addEventListener(win, "keyup", onKeyup);
 }
 
 function getRectAt(x: number, y: number): Element | null {

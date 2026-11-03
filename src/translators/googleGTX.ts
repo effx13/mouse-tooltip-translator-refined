@@ -81,11 +81,15 @@ export default defineEngine(async (text, sourceLang, targetLang) => {
     },
   }).json<unknown[]>();
 
-  const first = res?.[0] as string | [string, string] | undefined;
-  if (!first?.[0]) return undefined;
-  const isAuto = sourceLang === "auto";
-  const targetText = isAuto ? (first as [string, string])[0] : (first as string);
-  const detectedLang = isAuto ? (first as [string, string])[1] : sourceLang;
+  // detection answers [text, lang], a fixed source just the text
+  const first = res?.[0];
+  const [targetText, detectedLang] =
+    sourceLang !== "auto"
+      ? [typeof first === "string" ? first : "", sourceLang]
+      : Array.isArray(first)
+        ? [String(first[0] ?? ""), String(first[1] ?? "")]
+        : ["", ""];
+  if (!targetText) return undefined;
   // drop the <i> source wrappers and <b> tags of the html format
   const cleaned = decodeHTML(targetText)
     .replace(/(<i>).+?(<\/i>)/gi, " ")

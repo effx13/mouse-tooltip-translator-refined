@@ -15,7 +15,7 @@ const syncedSettings = storage.defineItem<StoredSettings>("sync:settings", { fal
 const SYNC_EXCLUDE = ["syncSetting", "lastSettingTab", "llmApiKey", "llmProviderSettings"] as const;
 
 // browser locale -> translate target code (zh -> zh-CN, he -> iw, fil -> tl)
-export function parseLocaleLang(localeLang: string): string {
+function parseLocaleLang(localeLang: string): string {
   if (localeLang === "zh-TW") return "zh-TW";
   let lang: string;
   try {
@@ -84,10 +84,10 @@ export async function importSettings(data: unknown) {
   if (!data || typeof data !== "object" || Array.isArray(data)) {
     throw new Error("invalid settings file");
   }
-  const known = getDefaults();
+  const known: Readonly<Record<string, unknown>> = getDefaults();
   const patch: Record<string, unknown> = {};
   for (const [key, value] of Object.entries(data)) {
-    if (key in known && typeof value === typeof known[key as keyof Settings]) patch[key] = value;
+    if (key in known && typeof value === typeof known[key]) patch[key] = value;
   }
   await updateSettings(patch as Partial<Settings>);
 }

@@ -77,12 +77,12 @@ async function translateWithFallbackEngine(
   const isFallbackEnabled = settings.fallbackTranslatorEngine && fallbackEngineActList.has(engine);
   const swapEngine = [...engineCrashTime.keys()]
     .filter((e) => fallbackEngineSwapList.includes(e) && e !== engine)
-    .toSorted((a, b) => engineCrashTime.get(a)! - engineCrashTime.get(b)!)
+    .toSorted((a, b) => (engineCrashTime.get(a) ?? 0) - (engineCrashTime.get(b) ?? 0))
     .at(0);
 
   const pairKey = `${engine}|${sourceLang}|${targetLang}`;
   const isCoolingDown =
-    engineCrashTime.get(engine)! > now || (pairCrashTime.get(pairKey) ?? 0) > now;
+    (engineCrashTime.get(engine) ?? 0) > now || (pairCrashTime.get(pairKey) ?? 0) > now;
 
   let result: EngineResult | null =
     !isCoolingDown || !isFallbackEnabled
@@ -97,7 +97,7 @@ async function translateWithFallbackEngine(
     const failedPairs = engineFailedPairs.get(engine) ?? new Set<string>();
     engineFailedPairs.set(engine, failedPairs.add(pairKey));
     if (failedPairs.size > 1) {
-      const engineCount = engineCrashCount.get(engine)! + 1;
+      const engineCount = (engineCrashCount.get(engine) ?? 0) + 1;
       engineCrashCount.set(engine, engineCount);
       engineCrashTime.set(engine, Date.now() + fallbackWaitTime * engineCount);
     }

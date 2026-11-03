@@ -8,9 +8,12 @@
   import { Label } from "@/components/ui/label";
   import { cn } from "@/utils/cn";
   import { t } from "@/utils/i18n";
-  import type { FindType, PdfController } from "@/viewers/pdf/controller.svelte";
+  import type { FindType, PdfController } from "./controller.svelte";
 
   let { pdf, open, onclose }: { pdf: PdfController; open: boolean; onclose: () => void } = $props();
+
+  // longer selections are rarely meant as a search phrase
+  const MAX_SELECTION_QUERY = 100;
 
   let query = $state("");
   let highlightAll = $state(true);
@@ -29,7 +32,8 @@
 
   // called on Ctrl/Cmd+F; a short single-line selection becomes the query
   export function focus(selection = "") {
-    if (selection && !selection.includes("\n") && selection.length <= 100) query = selection;
+    if (selection && !selection.includes("\n") && selection.length <= MAX_SELECTION_QUERY)
+      query = selection;
     if (query) find("");
     input?.focus();
     input?.select();

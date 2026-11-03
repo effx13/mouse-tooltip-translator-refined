@@ -1,20 +1,15 @@
 import { browser } from "wxt/browser";
-import { getMessage, getUiLangCode } from "@/utils/i18n";
+import { getMessage, getUiLangCode, t } from "@/utils/i18n";
 import { getLocalizedLangName } from "@/utils/lang";
-import type { OptionList, OptionValue } from "@/utils/settings";
+import type { Option, OptionList } from "@/utils/settings";
 import { LANG_PRIORITY_KEYS } from "./state.svelte";
-
-export interface Option {
-  label: string;
-  value: OptionValue;
-}
 
 // computed lazily so labels use the UI language loaded at boot
 const localizedCache = new Map<string, Option[]>();
 
 function localize(list: OptionList, isLang: boolean): Option[] {
   const entries = Object.entries(list);
-  if (!isLang) return entries.map(([key, value]) => ({ label: getMessage(key) || key, value }));
+  if (!isLang) return entries.map(([key, value]) => ({ label: t(key), value }));
   const uiLang = getUiLangCode();
   const specials: Option[] = [];
   const langs: Option[] = [];
@@ -128,14 +123,13 @@ const COMMON_FONTS = [
   "PT Serif",
 ];
 
-type FontApi = { getFontList?: () => Promise<{ fontId: string; displayName?: string }[]> };
-
 export async function getFontOptions(): Promise<Option[]> {
-  const fonts = new Map<string, string>([[getMessage("Default") || "Default", ""]]);
+  const fonts = new Map<string, string>([[t("Default"), ""]]);
   for (const name of [...GENERIC_FONTS, ...COMMON_FONTS]) fonts.set(name, name);
   try {
-    const api = (browser as unknown as { fontSettings?: FontApi }).fontSettings;
-    for (const font of (await api?.getFontList?.()) ?? [])
+    // typed as always present, but Firefox has no fontSettings
+    const fontSettings: typeof browser.fontSettings | undefined = browser.fontSettings;
+    for (const font of (await fontSettings?.getFontList()) ?? [])
       fonts.set(font.displayName || font.fontId, font.fontId);
   } catch (error) {
     console.log(error);

@@ -23,21 +23,21 @@ pnpm typecheck        # svelte-check (TS 포함)
 ## 저장소 구조
 
 - `wxt.config.ts`: 매니페스트(브라우저별 분기), 빌드 설정. `public/manifest*.json`은 없다.
-- `src/entrypoints/`: WXT 진입점. 파일명이 출력명이다.
-  - `background.ts` → `src/background/`
+- `src/entrypoints/`: WXT 진입점. 파일명(폴더면 폴더명)이 출력명이다. 페이지 전용 모듈은 해당 진입점 폴더에 둔다.
+  - `background/`: `index.ts`가 진입점(`defineBackground`)이다. 번역 메시지를 받고, 나머지 모듈의 리스너를 `main()`에서 등록한다. `copy.ts`(컨텍스트 메뉴/단축키 복사), `install.ts`(설치 처리, 열린 탭 주입), `omnibox.ts`, `pdfRedirect.ts`(로컬 PDF·Firefox 웹 PDF 리다이렉트), `settings.ts`(설정 캐시, `main()` 첫 줄의 `trackSettings()`로 시작)
   - `content/index.ts` → `src/content/` (`content-scripts/content.js`)
-  - `popup/`: Svelte 설정 화면. 툴바 팝업 겸 options 페이지(`popup.html`, `#/about`)
-  - `pdf/`: PDF 뷰어(`pdf.html`, `pdfjs-dist`). 웹 PDF 가로채기와 로컬 PDF 리다이렉트가 `pdf.html?file=`로 연다.
-  - `reader/`: EPUB/MOBI/FB2/CBZ 리더(`reader.html`, `foliate-js`)
+  - `popup/`: Svelte 설정 화면. 툴바 팝업 겸 options 페이지(`popup.html`, `#/about`). `state.svelte.ts`(설정 store), `options.ts`(옵션 목록 현지화), `actions.ts`(버튼 동작)
+  - `pdf/`: PDF 뷰어(`pdf.html`, `pdfjs-dist`). 웹 PDF 가로채기와 로컬 PDF 리다이렉트가 `pdf.html?file=`로 연다. `controller.svelte.ts`(pdf.js 뷰어 상태), `pdfjs.ts`(pdf.js 설정), `source.ts`(파일 파라미터·로컬 파일 권한), `rightPan.ts`(우클릭 드래그 이동), `textSpacing.ts`(줄바꿈 보정)
+  - `reader/`: EPUB/MOBI/FB2/CBZ 리더(`reader.html`, `foliate-js`). `bridge.ts`는 이북 iframe 이벤트를 content script로 넘기고, `theme.ts`는 책 본문 CSS다.
   - `googleDocInject.ts`: content script가 `injectScript`로 page world에 주입하는 unlisted 스크립트
   - 출력명(`pdf.html`, `reader.html`, `googleDocInject.js`)은 content script가 경로로 판별하거나 `getURL()`로 참조하니 바꾸지 말 것.
-- `src/background/`: 번역 요청 처리, 복사(컨텍스트 메뉴/단축키), 옴니박스, 설치 처리, PDF 리다이렉트.
-- `src/content/`: 툴팁(Shadow DOM), 텍스트 감지(`detect/`), 키 처리, 입력창/페이지 번역, 사이트 필터, Google Docs, 웹 PDF 가로채기.
-- `src/translators/`: 번역 엔진(`engine.ts`의 `defineEngine`), `registry.ts`, `index.ts`의 `translate()`(캐시, 역번역, 사전, 폴백 엔진과 언어쌍별 쿨다운 #363). background에서만 실행된다(DOM 없음).
-- `src/viewers/`: PDF 뷰어 로직(`pdf/`: pdf.js 설정, 우클릭 드래그 이동, 줄바꿈 보정), 이북 iframe → content script 이벤트 브리지(`ebook.ts`).
+  - 진입점 폴더의 하위 모듈 이름을 `index.ts`로 짓지 않는다. WXT가 `entrypoints/*/index.*`를 진입점으로 읽는다. `entrypoints/` 바로 아래에 새 `.ts`를 두어도 unlisted 스크립트가 된다.
+- `src/content/`: 툴팁(Shadow DOM), 텍스트 감지(`detect/`), 키 처리, 입력창/페이지 번역, 사이트 필터, Google Docs, 웹 PDF 가로채기. 뷰어 페이지도 `startContentScript`/`watchSelection`을 가져다 쓴다.
+- `src/translators/`: 번역 엔진(`engine.ts`의 `defineEngine`), `registry.ts`, `parse.ts`(`matchOrThrow`/`required`: 응답 형식이 바뀌면 throw해서 실패로 처리), `index.ts`의 `translate()`(캐시, 역번역, 사전, 폴백 엔진과 언어쌍별 쿨다운 #363). background에서만 실행된다(DOM 없음).
 - `modules/pdfjs-assets.ts`: 로컬 WXT 모듈. pdf.js worker·cmaps·폰트·wasm을 빌드 결과 `pdfjs/`로 복사한다.
-- `src/components/`: 공용 Svelte 컴포넌트.
-- `src/utils/`: `settings/`(스키마 + 저장소), `messaging.ts`, `i18n.ts`, `lang.ts`, `text.ts`, `async.ts`.
+- `src/components/`: 공용 Svelte 컴포넌트. `ui/`는 shadcn-svelte가 생성한 파일이다.
+- `src/utils/`: `settings/`(스키마 + 저장소), `messaging.ts`, `i18n.ts`, `lang.ts`, `text.ts`, `async.ts`, `page.ts`(확장 페이지 공통 부팅 `bootPage`), `colorScheme.svelte.ts`, `pdfViewer.ts`(`pdf.html?file=` URL), `download.ts`, `cn.ts`(shadcn 별칭).
+- `src/assets/app.css`: Tailwind 진입점. `@source`가 `components/`와 `entrypoints/**/*.svelte`만 스캔하니, Tailwind 클래스를 다른 곳(TS 파일 등)에 쓰면 `@source`를 추가해야 한다.
 - `public/`: `_locales`만 있다. 서드파티 코드는 저장소에 복사하지 않고 npm 패키지로 쓴다.
 - `src/assets/icon.svg`: 확장 아이콘 원본. `@wxt-dev/auto-icons`가 빌드 때 `icons/<size>.png`를 만든다.
 - `doc/`: `intro.md`(설치 시 열리는 사용법), `privacy_policy.md`, `insertLocale.py`(로케일 생성, 확장 이름/설명 `appName`/`appDesc` 포함).

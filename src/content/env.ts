@@ -1,4 +1,4 @@
-export const writingField =
+const writingField =
   'input[type="text"], input[type="search"], input:not([type]), textarea, [contenteditable], [contenteditable="true"], [role=textbox], [spellcheck]';
 
 export const isPdfViewer = () =>
@@ -19,9 +19,9 @@ export const hasRangeExpand = () => "expand" in Range.prototype;
 // Chrome used to show a web PDF as <embed type="application/pdf">; newer Chrome leaves body empty
 export const isPdfDocument = () =>
   document.contentType === "application/pdf" ||
-  (document.body?.children[0] as HTMLEmbedElement | undefined)?.type === "application/pdf";
+  document.body?.children[0]?.getAttribute("type") === "application/pdf";
 
-export function isInIframe(): boolean {
+function isInIframe(): boolean {
   try {
     return window.self !== window.top;
   } catch {

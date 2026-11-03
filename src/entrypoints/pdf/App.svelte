@@ -4,19 +4,15 @@
   import { storage } from "wxt/utils/storage";
   import { Toaster } from "@/components/ui/sonner";
   import { t } from "@/utils/i18n";
-  import { PdfController } from "@/viewers/pdf/controller.svelte";
-  import {
-    checkLocalFileAccess,
-    fileParam,
-    isPdfFile,
-    isWebUrl,
-    reportLoadError,
-  } from "@/viewers/pdf/source";
+  import { PdfController } from "./controller.svelte";
+  import { checkLocalFileAccess, fileParam, isPdfFile, isWebUrl, reportLoadError } from "./source";
+  import DropOverlay from "./DropOverlay.svelte";
   import EmptyState from "./EmptyState.svelte";
   import FindBar from "./FindBar.svelte";
   import Toolbar from "./Toolbar.svelte";
 
   const darkModeItem = storage.defineItem<boolean>("local:pdfDarkMode", { fallback: false });
+  const TOAST_DURATION_MS = 1200;
 
   let container: HTMLDivElement;
   let viewer: HTMLDivElement;
@@ -25,7 +21,6 @@
   let pdf = $state<PdfController>();
   let findOpen = $state(false);
   let dark = $state(false);
-  let dragDepth = $state(0);
 
   onMount(() => {
     const controller = new PdfController(container, viewer, reportLoadError);
@@ -61,9 +56,9 @@
     if (!pdf) return;
     try {
       await navigator.clipboard.writeText(pdf.url);
-      toast(t("Copied"), { duration: 1200 });
+      toast(t("Copied"), { duration: TOAST_DURATION_MS });
     } catch {
-      toast.error(t("Copy_failed"), { duration: 1200 });
+      toast.error(t("Copy_failed"), { duration: TOAST_DURATION_MS });
     }
   }
 
@@ -105,32 +100,9 @@
     e.preventDefault();
     action();
   }
-
-  const hasFiles = (e: DragEvent) => e.dataTransfer?.types.includes("Files") ?? false;
-
-  function ondragenter(e: DragEvent) {
-    if (hasFiles(e)) dragDepth++;
-  }
-
-  function ondragleave(e: DragEvent) {
-    if (hasFiles(e)) dragDepth = Math.max(0, dragDepth - 1);
-  }
-
-  function ondragover(e: DragEvent) {
-    if (!hasFiles(e)) return;
-    e.preventDefault();
-    if (e.dataTransfer) e.dataTransfer.dropEffect = "copy";
-  }
-
-  function ondrop(e: DragEvent) {
-    if (!hasFiles(e)) return;
-    e.preventDefault();
-    dragDepth = 0;
-    void openFile([...(e.dataTransfer?.files ?? [])].find(isPdfFile));
-  }
 </script>
 
-<svelte:window {onkeydown} {ondragenter} {ondragleave} {ondragover} {ondrop} />
+<svelte:window {onkeydown} />
 
 {#if pdf}
   <Toolbar
@@ -170,12 +142,6 @@
   }}
 />
 
-{#if dragDepth > 0}
-  <div
-    class="pointer-events-none fixed inset-2 z-20 grid place-items-center rounded-xl border-2 border-dashed border-primary bg-background/85 text-lg font-semibold text-primary"
-  >
-    {t("Drop_a_PDF_file_here")}
-  </div>
-{/if}
+<DropOverlay ondrop={(file) => void openFile(file)} />
 
 <Toaster position="bottom-center" />

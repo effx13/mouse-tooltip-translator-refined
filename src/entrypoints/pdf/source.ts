@@ -26,7 +26,7 @@ export async function checkLocalFileAccess(url: string): Promise<boolean> {
   return false;
 }
 
-// the page embedding the viewer (src/content/pdf.ts) retries with a blob url
+// the page embedding the viewer (src/content/pdfTakeover.ts) retries with a blob url
 export function reportLoadError() {
   const message = { type: "pdfErrorLoadDocument" };
   window.postMessage(message, "*");

@@ -1,17 +1,15 @@
 import { browser } from "wxt/browser";
+import { pdfViewerUrl } from "@/utils/pdfViewer";
 import { currentSettings, peekSettings } from "./settings";
 
-export const pdfViewerUrl = (url: string) =>
-  `${browser.runtime.getURL("/pdf.html")}?file=${encodeURIComponent(url)}`;
-
-const isLocalPdf = (url = "") => /^file:\/\/.*\.pdf$/i.test(url);
+const isLocalPdf = (url: string) => /^file:\/\/.*\.pdf$/i.test(url);
 
 export function registerPdfRedirects() {
   // local pdfs opened from disk / dropped into a tab
-  browser.tabs.onUpdated.addListener(async (tabId, changeInfo) => {
-    if (changeInfo.status !== "loading" || !isLocalPdf(changeInfo.url)) return;
+  browser.tabs.onUpdated.addListener(async (tabId, { status, url }) => {
+    if (status !== "loading" || !url || !isLocalPdf(url)) return;
     if (!(await currentSettings()).detectPDF) return;
-    await browser.tabs.update(tabId, { url: pdfViewerUrl(changeInfo.url!) });
+    await browser.tabs.update(tabId, { url: pdfViewerUrl(url) });
   });
 
   // Firefox's built-in pdf.js is a privileged page we can't inject into

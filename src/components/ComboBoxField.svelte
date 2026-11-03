@@ -9,7 +9,9 @@
     onchange,
   }: { id: string; label: string; value: unknown; onchange: (value: string[]) => void } = $props();
 
-  const items = $derived(Array.isArray(value) ? (value as string[]) : []);
+  const items = $derived(
+    Array.isArray(value) ? value.filter((item) => typeof item === "string") : [],
+  );
   let draft = $state("");
 
   function commit() {

@@ -2,6 +2,11 @@ import { browser } from "wxt/browser";
 
 type Messages = Record<string, { message: string }>;
 
+// the generated typings only accept known message keys and public paths; language names and
+// the chosen locale are looked up too
+type UntypedI18n = { getMessage(messageName: string): string };
+type UntypedRuntime = { getURL(path: string): string };
+
 let customMessages: Messages | null = null;
 let customLang: string | null = null;
 
@@ -10,8 +15,11 @@ export async function loadUiLanguage(lang: string | undefined) {
   customLang = null;
   if (!lang || lang === "auto") return;
   try {
-    const url = browser.runtime.getURL(`/_locales/${lang}/messages.json` as "/");
-    customMessages = (await (await fetch(url)).json()) as Messages;
+    const runtime: UntypedRuntime = browser.runtime;
+    const messages: Messages = await (
+      await fetch(runtime.getURL(`/_locales/${lang}/messages.json`))
+    ).json();
+    customMessages = messages;
     customLang = lang;
   } catch (error) {
     console.log(error);
@@ -30,7 +38,8 @@ export function getMessage(key: string): string {
   if (custom) return custom;
   // browser.i18n throws for names outside [a-zA-Z0-9_@] (e.g. "Chinese (Simplified)")
   try {
-    return browser.i18n.getMessage(key as never) || "";
+    const i18n: UntypedI18n = browser.i18n;
+    return i18n.getMessage(key) || "";
   } catch {
     return "";
   }

@@ -34,10 +34,10 @@ export function defineEngine(
   request: EngineRequest,
   langCodes: Record<string, string> = {},
 ): Engine {
-  const decodeMap = Object.fromEntries(Object.entries(langCodes).map(([app, code]) => [code, app]));
-  const encode = (lang: string) => (Object.hasOwn(langCodes, lang) ? langCodes[lang]! : lang);
-  const decode = (lang: string | undefined) =>
-    lang && Object.hasOwn(decodeMap, lang) ? decodeMap[lang]! : (lang ?? "");
+  const encodeMap = new Map(Object.entries(langCodes));
+  const decodeMap = new Map(Object.entries(langCodes).map(([app, code]) => [code, app]));
+  const encode = (lang: string) => encodeMap.get(lang) ?? lang;
+  const decode = (lang: string | undefined) => (lang ? (decodeMap.get(lang) ?? lang) : "");
 
   return {
     async translate(text, sourceLang, targetLang, settings) {
@@ -47,7 +47,7 @@ export function defineEngine(
         const res = await request(text, sl, tl, settings);
         if (!res) return undefined;
         return {
-          targetText: res.targetText as string,
+          targetText: res.targetText ?? "",
           transliteration: res.transliteration,
           dict: res.dict,
           imageUrl: res.imageUrl,

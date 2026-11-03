@@ -33,7 +33,7 @@ function matchRule(url: ParsedUrl | null, ruleText: string): boolean {
 }
 
 // a bare "example.com" entry also matches its subdomains
-export function matchSite(url: string, list: readonly string[] | undefined): boolean {
+function matchSite(url: string, list: readonly string[] | undefined): boolean {
   if (!list?.length) return false;
   const parsed = parseUrl(url);
   return list.some((entry) => {
@@ -57,7 +57,7 @@ export function isUrlExcluded(settings: Settings, url: string): boolean {
 }
 
 // "site=lang" entries, first match wins
-export function matchTargetLang(url: string, list: readonly string[] | undefined): string | null {
+function matchTargetLang(url: string, list: readonly string[] | undefined): string | null {
   for (const entry of list ?? []) {
     const raw = String(entry);
     const sep = raw.indexOf("=");
@@ -73,4 +73,22 @@ export function matchTargetLang(url: string, list: readonly string[] | undefined
 export function getEffectiveSettings(settings: Settings, url: string): Settings {
   const target = matchTargetLang(url, settings.websiteTargetLangList);
   return target ? { ...settings, translateTarget: target } : settings;
+}
+
+// compiles the user's pattern once per change; an invalid pattern never matches
+export function createRegexTester() {
+  let cached: { source: string; re: RegExp | null } = { source: "", re: null };
+  return (source: string, text: string): boolean => {
+    if (!source) return false;
+    if (cached.source !== source) {
+      let re: RegExp | null = null;
+      try {
+        re = new RegExp(source);
+      } catch {
+        re = null;
+      }
+      cached = { source, re };
+    }
+    return cached.re?.test(text) ?? false;
+  };
 }

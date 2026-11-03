@@ -2,27 +2,22 @@
   import { type LanguageMap, type TocItem, View } from "foliate-js/view.js";
   import { onMount } from "svelte";
   import type { ContentScriptContext } from "wxt/utils/content-script-context";
-  import BookOpenIcon from "@lucide/svelte/icons/book-open";
-  import ChevronLeftIcon from "@lucide/svelte/icons/chevron-left";
-  import ChevronRightIcon from "@lucide/svelte/icons/chevron-right";
   import FolderOpenIcon from "@lucide/svelte/icons/folder-open";
   import ListTreeIcon from "@lucide/svelte/icons/list-tree";
   import { Button } from "@/components/ui/button";
   import * as Sheet from "@/components/ui/sheet";
   import { cn } from "@/utils/cn";
-  import { getUiLangCode, t } from "@/utils/i18n";
+  import { t } from "@/utils/i18n";
   import { getSettings, type Settings, watchSettings } from "@/utils/settings";
-  import { bridgeEbookView } from "@/viewers/ebook";
+  import { bridgeEbookView } from "./bridge";
+  import EmptyState from "./EmptyState.svelte";
+  import Footer from "./Footer.svelte";
   import { bookCss, type EbookTheme, isEbookTheme } from "./theme";
   import Toc from "./Toc.svelte";
 
   let { ctx }: { ctx: ContentScriptContext } = $props();
 
   const ACCEPT = ".epub,.mobi,.azw,.azw3,.fb2,.fbz,.cbz,.zip";
-  const percent = new Intl.NumberFormat(getUiLangCode(), {
-    style: "percent",
-    maximumFractionDigits: 1,
-  });
 
   let host: HTMLDivElement;
   let fileInput: HTMLInputElement;
@@ -38,8 +33,6 @@
   let loading = $state(false);
   let error = $state("");
   let dragging = $state(false);
-
-  const canSeek = $derived(sectionFractions.length > 0);
 
   const formatLanguageMap = (value?: LanguageMap) =>
     typeof value === "string" ? value : (Object.values(value ?? {})[0] ?? "");
@@ -114,13 +107,8 @@
     void view?.goTo(href);
   }
 
-  function seek(e: Event & { currentTarget: HTMLInputElement }) {
-    void view?.goToFraction(Number(e.currentTarget.value));
-  }
-
   // handles keys on this page and the ones the bridge forwards from the book iframe
-  function onKeydown(e: Event) {
-    const { key, target } = e as KeyboardEvent;
+  function onKeydown({ key, target }: KeyboardEvent) {
     if (key === "Escape") tocOpen = false;
     if (!view || target instanceof HTMLInputElement) return;
     if (key === "ArrowLeft") void view.goLeft();
@@ -207,64 +195,12 @@
   <main class="relative min-h-0 overflow-hidden">
     <div class="h-full" bind:this={host}></div>
     {#if !view}
-      <div class="absolute inset-0 flex flex-col items-center justify-center gap-4 p-6 text-center">
-        <span class="grid size-16 place-items-center rounded-2xl bg-primary/10 text-primary">
-          <BookOpenIcon class="size-8" />
-        </span>
-        <p class="text-muted-foreground">{t("Drop_an_ebook_file_here_or_open_one")}</p>
-        {#if error}
-          <p class="text-destructive" role="alert">{error}</p>
-        {/if}
-        <Button disabled={loading} onclick={() => fileInput.click()}>
-          <FolderOpenIcon />
-          {t("Open_File")}
-        </Button>
-      </div>
+      <EmptyState {error} {loading} onopen={() => fileInput.click()} />
     {/if}
   </main>
 
   {#if view}
-    <footer class="flex items-center gap-2 border-t bg-background px-2 py-1.5">
-      <Button
-        variant="ghost"
-        size="icon"
-        title={t("Previous_Page")}
-        aria-label={t("Previous_Page")}
-        onclick={() => void view?.goLeft()}
-      >
-        <ChevronLeftIcon />
-      </Button>
-      <input
-        class="min-w-0 flex-1 accent-primary"
-        type="range"
-        min="0"
-        max="1"
-        step="any"
-        list="section-ticks"
-        aria-label={t("Page")}
-        dir={view.book?.dir === "rtl" ? "rtl" : "ltr"}
-        value={fraction}
-        disabled={!canSeek}
-        oninput={seek}
-      />
-      <datalist id="section-ticks">
-        {#each sectionFractions as tick, i (i)}
-          <option value={tick}></option>
-        {/each}
-      </datalist>
-      <span class="min-w-[4.5em] text-center text-sm text-muted-foreground tabular-nums">
-        {percent.format(fraction)}
-      </span>
-      <Button
-        variant="ghost"
-        size="icon"
-        title={t("Next_Page")}
-        aria-label={t("Next_Page")}
-        onclick={() => void view?.goRight()}
-      >
-        <ChevronRightIcon />
-      </Button>
-    </footer>
+    <Footer {view} {fraction} {sectionFractions} />
   {/if}
 </div>
 

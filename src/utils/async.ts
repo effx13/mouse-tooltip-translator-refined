@@ -24,11 +24,11 @@ export async function waitUntil<T>(
   const deadline = timeout === WAIT_FOREVER ? WAIT_FOREVER : Date.now() + timeout;
   for (;;) {
     const value = await predicate();
-    if (value) return value as NonNullable<T>;
+    if (value) return value;
     if (Date.now() + interval > deadline) {
       await sleep(Math.max(0, deadline - Date.now()));
       const last = await predicate();
-      if (last) return last as NonNullable<T>;
+      if (last) return last;
       throw new TimeoutError(timeout);
     }
     await sleep(interval);

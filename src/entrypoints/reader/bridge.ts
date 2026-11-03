@@ -2,26 +2,16 @@ import type { View } from "foliate-js/view.js";
 import type { ContentScriptContext } from "wxt/utils/content-script-context";
 import { watchSelection } from "@/content";
 
-type BridgedEvent = CustomEvent & {
-  ebookWindow: Window;
-  key?: string;
-  code?: string;
-  ctrlKey?: boolean;
-  clientX: number | "";
-  clientY: number | "";
-  iframeX?: number;
-  iframeY?: number;
-};
-
 const FORWARDED = ["mousemove", "keydown", "keyup"] as const;
 
 // fixed-layout books CSS-scale the iframe, so map its coordinates onto this page
-function toPage(iframe: Element, x: unknown, y: unknown) {
-  if (typeof x !== "number" || typeof y !== "number") return { clientX: "", clientY: "" } as const;
+function toPage(iframe: Element, x: number | undefined, y: number | undefined) {
+  if (x === undefined || y === undefined) return { clientX: "", clientY: "" } as const;
   const rect = iframe.getBoundingClientRect();
-  const el = iframe as HTMLElement;
-  const scaleX = el.offsetWidth ? rect.width / el.offsetWidth : 1;
-  const scaleY = el.offsetHeight ? rect.height / el.offsetHeight : 1;
+  const width = iframe instanceof HTMLElement ? iframe.offsetWidth : 0;
+  const height = iframe instanceof HTMLElement ? iframe.offsetHeight : 0;
+  const scaleX = width ? rect.width / width : 1;
+  const scaleY = height ? rect.height / height : 1;
   return { clientX: x * scaleX + rect.left, clientY: y * scaleY + rect.top };
 }
 
@@ -38,17 +28,18 @@ function bindSection(doc: Document, ctx: ContentScriptContext, viewSignal: Abort
   for (const type of FORWARDED) {
     win.addEventListener(
       type,
-      (e: Event) => {
-        const source = e as MouseEvent & KeyboardEvent;
-        const evt = new CustomEvent(type, { bubbles: true }) as BridgedEvent;
-        Object.assign(evt, {
+      (e) => {
+        // the iframe's events come from another realm, so tell them apart by shape, not instanceof
+        const key = "key" in e ? e : undefined;
+        const mouse = "clientX" in e ? e : undefined;
+        const evt = Object.assign(new CustomEvent(type, { bubbles: true }), {
           ebookWindow: win,
-          key: source.key,
-          code: source.code,
-          ctrlKey: source.ctrlKey,
-          ...toPage(iframe, source.clientX, source.clientY),
-          iframeX: source.clientX,
-          iframeY: source.clientY,
+          key: key?.key,
+          code: key?.code,
+          ctrlKey: e.ctrlKey,
+          ...toPage(iframe, mouse?.clientX, mouse?.clientY),
+          iframeX: mouse?.clientX,
+          iframeY: mouse?.clientY,
         });
         // dispatching once on document also reaches window listeners; twice would flip toggle keys back
         document.dispatchEvent(evt);

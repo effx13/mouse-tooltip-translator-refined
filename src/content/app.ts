@@ -11,9 +11,11 @@ import {
   watchSelection,
 } from "./detect/selection";
 import { getFocusedWritingBox, isBookFusion, isGoogleDoc, isPdfViewer } from "./env";
+import { createRegexTester } from "./filter";
 import { forwardGoogleDocKeys } from "./googleDocs";
 import { clearHighlight, removeHighlightStyles, showHighlight } from "./highlight";
 import { type KeyAction, KeyState, mouseKey } from "./keys";
+import { MouseMotion } from "./motion";
 import { createPageTranslator } from "./pageTranslate";
 import { Tooltip } from "./tooltip";
 import { buildTooltipContent } from "./tooltipContent";
@@ -22,13 +24,9 @@ import { createWritingTranslator } from "./writing";
 
 type ActionType = "mouseover" | "select";
 
-const DETECT_TYPES = new Set<string>(["word", "sentence", "container"]);
+const DETECT_TYPES = ["word", "sentence", "container"] as const satisfies readonly DetectType[];
 const asDetectType = (value: string): DetectType =>
-  DETECT_TYPES.has(value) ? (value as DetectType) : "sentence";
-
-// mouse counts as "moved" after three moves of more than 3px
-const MOVE_THRESHOLD_PX = 3;
-const MOVE_COUNT = 3;
+  DETECT_TYPES.find((type) => type === value) ?? "sentence";
 
 export interface AppState {
   settings: Settings;
@@ -39,10 +37,7 @@ export interface AppState {
 export function createApp(ctx: ContentScriptContext, state: AppState) {
   const getSettings = () => state.settings;
 
-  let mouseMoved = false;
-  let movedCount = 0;
-  let lastX = 0;
-  let lastY = 0;
+  const motion = new MouseMotion();
   let mouseTarget: EventTarget | null = null;
   let selectedText = "";
   let prevSelected = "";
@@ -50,7 +45,7 @@ export function createApp(ctx: ContentScriptContext, state: AppState) {
   let hovered: HoverResult | null = null;
   // session on/off from keyToggleEnable, per frame and not saved
   let disabled = false;
-  let excludeRegex: { src: string; re: RegExp | null } = { src: "", re: null };
+  const matchesExcludeRegex = createRegexTester();
 
   const tooltip = new Tooltip(ctx, getSettings);
   const translateWriting = createWritingTranslator(getSettings);
@@ -80,7 +75,7 @@ export function createApp(ctx: ContentScriptContext, state: AppState) {
     onKeydown: (e) => {
       // Ctrl+A / Ctrl+F: hide until the mouse moves again
       if (e.ctrlKey && /KeyA|KeyF/.test(e.code ?? "")) {
-        mouseMoved = false;
+        motion.moved = false;
         hideTooltip();
       }
     },
@@ -90,22 +85,6 @@ export function createApp(ctx: ContentScriptContext, state: AppState) {
   function hideTooltip() {
     tooltip.hide();
     clearHighlight();
-  }
-
-  // an invalid pattern never excludes
-  function isExcludedByRegex(text: string) {
-    const src = state.settings.translateExcludeRegex;
-    if (!src) return false;
-    if (excludeRegex.src !== src) {
-      let re: RegExp | null = null;
-      try {
-        re = new RegExp(src);
-      } catch {
-        re = null;
-      }
-      excludeRegex = { src, re };
-    }
-    return excludeRegex.re?.test(text) ?? false;
   }
 
   // by default no hover tooltip while typing; Google Docs is always a "writing field"
@@ -126,26 +105,28 @@ export function createApp(ctx: ContentScriptContext, state: AppState) {
     if (text !== undefined) selectedText = text;
     // a sentence dragged over several lines (PDF especially) is translated as one
     const selectText = selectedText.replace(/\s+/g, " ").trim();
-    // a stationary double-click never moves the mouse, and its mousedown reset mouseMoved
-    if (selectText) mouseMoved = true;
+    // a stationary double-click never moves the mouse, and its mousedown reset the motion
+    if (selectText) motion.moved = true;
     void stageText(selectText, "select", null);
   }
 
-  async function stageText(text: string, action: ActionType, range: Range | null) {
-    const secondary = useSecondary();
-    const tooltipOn = keys.isActive("showTooltipWhen") || secondary;
-    if (
+  function isIgnored(text: string, action: ActionType) {
+    return (
       disabled ||
       ctx.isInvalid ||
-      !mouseMoved ||
+      !motion.moved ||
       document.visibilityState !== "visible" ||
       tooltip.contains(mouseTarget) ||
       stagedText === text ||
       // a select event that changes nothing would make the tooltip flicker
       (action === "select" && !text && selectedText === prevSelected)
-    ) {
-      return;
-    }
+    );
+  }
+
+  async function stageText(text: string, action: ActionType, range: Range | null) {
+    const secondary = useSecondary();
+    const tooltipOn = keys.isActive("showTooltipWhen") || secondary;
+    if (isIgnored(text, action)) return;
     if (!text) {
       stagedText = text;
       hideTooltip();
@@ -155,7 +136,7 @@ export function createApp(ctx: ContentScriptContext, state: AppState) {
       hideTooltip();
       return;
     }
-    if (isExcludedByRegex(text)) {
+    if (matchesExcludeRegex(state.settings.translateExcludeRegex, text)) {
       stagedText = text;
       hideTooltip();
       return;
@@ -244,33 +225,15 @@ export function createApp(ctx: ContentScriptContext, state: AppState) {
 
   function resetStatus({ keys: resetKeys = true, mouse = true } = {}) {
     if (resetKeys) keys.reset();
-    if (mouse) {
-      mouseMoved = false;
-      movedCount = 0;
-    }
+    if (mouse) motion.reset();
     selectedText = "";
     stagedText = null;
     hideTooltip();
   }
 
-  function checkMouseMoved(x: number, y: number) {
-    if (
-      !mouseMoved &&
-      Math.abs(x - lastX) + Math.abs(y - lastY) > MOVE_THRESHOLD_PX &&
-      movedCount < MOVE_COUNT
-    ) {
-      movedCount++;
-    } else if (movedCount >= MOVE_COUNT) {
-      mouseMoved = true;
-    }
-    return mouseMoved;
-  }
-
   function handleMousemove(e: BridgedMouseEvent) {
     if (!state.active) return;
-    const moved = checkMouseMoved(e.clientX, e.clientY);
-    lastX = e.clientX;
-    lastY = e.clientY;
+    const moved = motion.track(e.clientX, e.clientY);
     mouseTarget = e.target;
     if (moved) tooltip.moveTo(e.clientX, e.clientY);
     detector.track(e);
@@ -280,14 +243,14 @@ export function createApp(ctx: ContentScriptContext, state: AppState) {
   function dismissOnClick(e: MouseEvent) {
     const key = mouseKey(e.button);
     if (key !== "ClickLeft" || keys.isBoundToTooltip(key)) return;
-    mouseMoved = false;
+    motion.moved = false;
     hideTooltip();
   }
 
   function listen() {
     const capture = { capture: true };
     ctx.addEventListener(window, "mousemove", handleMousemove, capture);
-    ctx.addEventListener(window, "touchstart", () => (mouseMoved = true), capture);
+    ctx.addEventListener(window, "touchstart", () => (motion.moved = true), capture);
     ctx.addEventListener(window, "scroll", () => clearHighlight(), capture);
     // the text under the cursor changed: document scroll only, except in the pdf viewer whose
     // pages scroll inside their own container

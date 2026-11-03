@@ -1,4 +1,5 @@
 import { browser } from "wxt/browser";
+import type { ScriptPublicPath } from "wxt/utils/inject-script";
 
 const INTRO_URL =
   "https://github.com/effx13/MouseTooltipTranslator/blob/main/doc/intro.md#how-to-use";
@@ -17,8 +18,9 @@ async function injectIntoOpenTabs() {
         browser.scripting.insertCSS({ target, files: cs.css }).catch(() => {});
       }
       if (cs.js?.length) {
-        // manifest paths are not typed as WXT public paths
-        browser.scripting.executeScript({ target, files: cs.js as never }).catch(() => {});
+        // the manifest lists the content script's own output paths, typed as plain strings
+        const files = cs.js as ScriptPublicPath[];
+        browser.scripting.executeScript({ target, files }).catch(() => {});
       }
     }
   }

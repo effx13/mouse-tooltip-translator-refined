@@ -15,8 +15,9 @@ export const LANG_PRIORITY_KEYS: ReadonlySet<string> = new Set([
   "translateReverseTarget",
 ]);
 
-export const store = $state({ settings: {} as Settings });
 export const defaults: Settings = getDefaults();
+// replaced by the stored settings in initSettings() before the app mounts
+export const store = $state({ settings: getDefaults() });
 
 let queue: Promise<unknown> = Promise.resolve();
 let pending = 0;
@@ -33,7 +34,7 @@ export async function initSettings(): Promise<Settings> {
 // optimistic local apply, then serialized persist (updateSettings is read-modify-write)
 export function save(patch: Partial<Settings>): Promise<void> {
   Object.assign(store.settings, patch);
-  const plain = $state.snapshot(patch) as Partial<Settings>;
+  const plain: Partial<Settings> = $state.snapshot(patch);
   pending++;
   const previous = queue;
   const run = (async () => {

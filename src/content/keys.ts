@@ -2,7 +2,7 @@ import type { ContentScriptContext } from "wxt/utils/content-script-context";
 import type { Settings } from "@/utils/settings";
 import { isCharKey } from "./env";
 
-export const KEY_ACTIONS = [
+const KEY_ACTIONS = [
   "showTooltipWhen",
   "keySecondaryLang",
   "keyHoldMouseoverTextType",

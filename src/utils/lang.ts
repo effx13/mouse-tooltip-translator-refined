@@ -354,7 +354,7 @@ export function isLangExcluded(langExcludeList: readonly string[] | null | undef
   );
 }
 
-export const rtlLangList: readonly string[] = [
+const rtlLangList: readonly string[] = [
   "ar", ///Arabic
   "az", ///Azerbaijani
   "bm", ///Bambara
@@ -416,6 +416,6 @@ export function getLocalizedLangName(code: string, englishName: string, uiLang: 
   return name.charAt(0).toUpperCase() + name.slice(1);
 }
 
-export const isRtl = (lang: Lang) => rtlLangList.includes(lang ?? "");
+const isRtl = (lang: Lang) => rtlLangList.includes(lang ?? "");
 
 export const getRtlDir = (lang: Lang): "rtl" | "ltr" => (isRtl(lang) ? "rtl" : "ltr");

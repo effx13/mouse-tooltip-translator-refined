@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Badge } from "@/components/ui/badge";
   import * as Select from "@/components/ui/select";
-  import type { Option } from "@/entrypoints/popup/options";
+  import type { Option } from "@/utils/settings";
   import FieldLabel from "./FieldLabel.svelte";
 
   let {
@@ -18,7 +18,9 @@
     onchange: (value: string[]) => void;
   } = $props();
 
-  const selected = $derived(Array.isArray(value) ? (value as string[]) : []);
+  const selected = $derived(
+    Array.isArray(value) ? value.filter((item) => typeof item === "string") : [],
+  );
   const labelOf = $derived(new Map(options.map((option) => [String(option.value), option.label])));
 </script>
 

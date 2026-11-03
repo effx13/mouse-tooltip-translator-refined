@@ -1,5 +1,6 @@
 import ky from "ky";
 import { defineEngine } from "./engine";
+import { matchOrThrow } from "./parse";
 
 const tokenUrl = "https://translate.google.com";
 const batchUrl = "https://translate.google.com/_/TranslateWebserverUi/data/batchexecute";
@@ -12,8 +13,8 @@ async function getTokenV2() {
     return token;
   }
   const res = await ky(tokenUrl).text();
-  const sid = res.match(/"FdrFJe":"(.*?)"/)![1]!;
-  const bl = res.match(/"cfb2h":"(.*?)"/)![1]!;
+  const sid = matchOrThrow(res, /"FdrFJe":"(.*?)"/);
+  const bl = matchOrThrow(res, /"cfb2h":"(.*?)"/);
   const at = res.match(/"SNlM0e":"(.*?)"/)?.[1] ?? "";
   token = { sid, bl, at, time: Date.now() };
   return token;
@@ -43,7 +44,7 @@ export default defineEngine(async (text, sourceLang, targetLang) => {
     })
     .text();
 
-  const json = JSON.parse(JSON.parse(/\[.*\]/.exec(res)![0])[0][2]);
+  const json = JSON.parse(JSON.parse(matchOrThrow(res, /\[.*\]/, 0))[0][2]);
   // chunks carry their own trailing space, so join with ""
   const targetText = (json[1][0][0][5] as ([string] | null)[])
     .map((chunk) => chunk?.[0])

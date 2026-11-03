@@ -15,7 +15,7 @@
   import { Separator } from "@/components/ui/separator";
   import { Toggle } from "@/components/ui/toggle";
   import { t } from "@/utils/i18n";
-  import type { PdfController } from "@/viewers/pdf/controller.svelte";
+  import type { PdfController } from "./controller.svelte";
 
   interface Props {
     pdf: PdfController;

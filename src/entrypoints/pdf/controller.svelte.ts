@@ -1,3 +1,4 @@
+import { downloadBlob } from "@/utils/download";
 import { t } from "@/utils/i18n";
 import {
   AnnotationEditorType,
@@ -25,6 +26,9 @@ export interface FindQuery {
   caseSensitive: boolean;
 }
 type MatchesCount = { current: number; total: number };
+
+// a large PDF can take a while to hand over to the download manager
+const DOWNLOAD_URL_LIFETIME_MS = 60_000;
 
 export class PdfController {
   status = $state<"empty" | "loading" | "ready" | "error">("empty");
@@ -173,7 +177,7 @@ export class PdfController {
   async #loadTitle(doc: PDFDocumentProxy) {
     try {
       const { info } = await doc.getMetadata();
-      const title = (info as { Title?: unknown }).Title;
+      const title = "Title" in info ? info.Title : undefined;
       document.title = typeof title === "string" && title.trim() ? title : this.#filename;
     } catch {
       document.title = this.#filename;
@@ -252,13 +256,8 @@ export class PdfController {
     const doc = this.#doc;
     if (!doc) return;
     const data = doc.annotationStorage.size > 0 ? await doc.saveDocument() : await doc.getData();
-    const href = URL.createObjectURL(
-      new Blob([data as Uint8Array<ArrayBuffer>], { type: "application/pdf" }),
-    );
-    const link = document.createElement("a");
-    link.href = href;
-    link.download = this.#filename;
-    link.click();
-    setTimeout(() => URL.revokeObjectURL(href), 60_000);
+    // pdf.js never hands out SharedArrayBuffer-backed data
+    const blob = new Blob([data as Uint8Array<ArrayBuffer>], { type: "application/pdf" });
+    downloadBlob(blob, this.#filename, DOWNLOAD_URL_LIFETIME_MS);
   }
 }

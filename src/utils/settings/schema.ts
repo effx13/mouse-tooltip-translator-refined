@@ -23,6 +23,12 @@ export type OptionValue = string | number | boolean;
 // label -> stored value. Labels are i18n keys when a message exists, else shown as-is.
 export type OptionList = Record<string, OptionValue>;
 
+// a localized entry as the select fields show it
+export interface Option {
+  label: string;
+  value: OptionValue;
+}
+
 export type ButtonAction =
   | "excludeCurrentWebsite"
   | "whitelistCurrentWebsite"
@@ -83,7 +89,7 @@ const keyList: OptionList = {
 };
 const keyListWithAlways: OptionList = { ...keyList, Always: "always" };
 
-export const translatorList: OptionList = {
+const translatorList: OptionList = {
   google: "google",
   bing: "bing",
   "LLM - OpenAI / Claude / Gemini / Local (Experimental)": "localLlm",

@@ -1,5 +1,6 @@
-import { t } from "@/utils/i18n";
 import { browser } from "wxt/browser";
+import { downloadBlob } from "@/utils/download";
+import { t } from "@/utils/i18n";
 import { exportSettings, importSettings, resetSettings, type ButtonAction } from "@/utils/settings";
 import { save, store } from "./state.svelte";
 
@@ -34,14 +35,8 @@ function pickJsonFile(): Promise<File | null> {
   });
 }
 
-function download(filename: string, text: string) {
-  const url = URL.createObjectURL(new Blob([text], { type: "application/json" }));
-  const anchor = document.createElement("a");
-  anchor.href = url;
-  anchor.download = filename;
-  anchor.click();
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
-}
+const EXPORT_FILENAME = "mouse-tooltip-translator-refined-settings.json";
+const EXPORT_URL_LIFETIME_MS = 1000;
 
 // returns a status message to show, or null
 export async function runAction(action: ButtonAction): Promise<string | null> {
@@ -62,9 +57,10 @@ export async function runAction(action: ButtonAction): Promise<string | null> {
       return null;
     }
     case "exportSetting":
-      download(
-        "mouse-tooltip-translator-refined-settings.json",
-        JSON.stringify(await exportSettings(), null, 2),
+      downloadBlob(
+        new Blob([JSON.stringify(await exportSettings(), null, 2)], { type: "application/json" }),
+        EXPORT_FILENAME,
+        EXPORT_URL_LIFETIME_MS,
       );
       return null;
     case "resetSetting":

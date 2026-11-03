@@ -16,11 +16,11 @@
   import * as AlertDialog from "@/components/ui/alert-dialog";
   import { Button, type ButtonVariant } from "@/components/ui/button";
   import { cn } from "@/utils/cn";
-  import { getMessage, t } from "@/utils/i18n";
-  import type { ButtonAction, SettingItem, Settings } from "@/utils/settings";
+  import { t } from "@/utils/i18n";
+  import type { ButtonAction, Option, SettingItem, Settings } from "@/utils/settings";
   import { runAction } from "./actions";
   import LlmModelField from "./LlmModelField.svelte";
-  import { getOptions, type Option } from "./options";
+  import { getOptions } from "./options";
   import { defaults, setValue, store } from "./state.svelte";
 
   let {
@@ -48,7 +48,7 @@
   const settingKey = $derived(key as keyof Settings);
   const id = $derived(`setting-${key}`);
   const label = $derived(t(item.i18nKey));
-  const defaultLabel = getMessage("Default") || "Default";
+  const defaultLabel = t("Default");
   const value = $derived(store.settings[settingKey] as unknown);
   const visible = $derived(item.visibleWhen?.(store.settings) ?? true);
   const isButton = $derived(item.optionType === "button");

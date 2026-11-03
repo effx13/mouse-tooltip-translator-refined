@@ -10,7 +10,8 @@ const hasSelection = () => window.getSelection()?.type !== "Caret";
 // blur + refocus commits a pending IME composition so the last character is not lost
 async function finishImeComposition() {
   await sleep(10);
-  const el = getActiveElement() as HTMLElement | null;
+  const active = getActiveElement();
+  const el = active instanceof HTMLElement || active instanceof SVGElement ? active : null;
   window.getSelection()?.removeAllRanges();
   el?.blur();
   await sleep(10);

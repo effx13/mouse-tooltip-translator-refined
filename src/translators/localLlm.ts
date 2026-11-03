@@ -27,9 +27,10 @@ let lastWarnConfigKey: string | null = null;
 
 // expected reply "<iso code>\t<translation>"; a reply ignoring the format is taken whole as the translation
 export function parseLlmReply(raw: string): { targetText: string; detectedLang: string } {
-  const match = raw.match(/^([a-zA-Z]{2,3}(?:-[a-zA-Z]{2,4})?)[\t\n]+([\s\S]+)$/);
-  if (!match) return { targetText: raw, detectedLang: "" };
-  return { targetText: match[2]!.trim(), detectedLang: match[1]!.toLowerCase() };
+  const { lang, text } =
+    /^(?<lang>[a-zA-Z]{2,3}(?:-[a-zA-Z]{2,4})?)[\t\n]+(?<text>[\s\S]+)$/.exec(raw)?.groups ?? {};
+  if (lang === undefined || text === undefined) return { targetText: raw, detectedLang: "" };
+  return { targetText: text.trim(), detectedLang: lang.toLowerCase() };
 }
 
 export default defineEngine(async (text, sourceLang, targetLang, settings) => {

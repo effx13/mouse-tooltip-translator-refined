@@ -1,14 +1,11 @@
 const HIGHLIGHT_NAME = "mtt-mouseover-text";
 const STYLE_ATTR = "data-mtt-highlight";
 
-type HighlightWindow = Window & typeof globalThis;
-
 // document -> color its ::highlight rule currently uses
 const styledDocs = new Map<Document, string>();
 let highlightedDoc: Document | null = null;
 
-const registryOf = (doc: Document | null) =>
-  (doc?.defaultView as HighlightWindow | null)?.CSS?.highlights;
+const registryOf = (doc: Document | null) => doc?.defaultView?.CSS?.highlights;
 
 function ensureStyle(doc: Document, color: string) {
   let style = doc.querySelector<HTMLStyleElement>(`style[${STYLE_ATTR}]`);
@@ -26,7 +23,7 @@ function ensureStyle(doc: Document, color: string) {
 export function showHighlight(range: Range, color: string) {
   clearHighlight();
   const doc = range.startContainer.ownerDocument;
-  const win = doc?.defaultView as HighlightWindow | null;
+  const win = doc?.defaultView;
   const registry = registryOf(doc);
   if (!doc || !win?.Highlight || !registry) return;
   if (styledDocs.get(doc) !== color) ensureStyle(doc, color);

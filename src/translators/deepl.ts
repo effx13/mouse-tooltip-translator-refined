@@ -1,5 +1,6 @@
 import ky from "ky";
 import { defineEngine } from "./engine";
+import { required } from "./parse";
 
 // https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate/blob/fc8460a8e24776e4e95961fc4607f77994f6b2ab/src/main.js#L8
 // pt-BR / pt-PT / zh-TW have no entry and are rejected by deepl (the pair cooldown case)
@@ -81,7 +82,7 @@ export default defineEngine(async (text, sourceLang, targetLang) => {
     .json<DeeplResponse>();
   if (!res.result) return undefined;
   return {
-    targetText: res.result.texts[0]!.text,
+    targetText: required(res.result.texts[0], "deepl text").text,
     detectedLang: res.result.lang,
     transliteration: "",
   };

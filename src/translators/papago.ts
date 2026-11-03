@@ -2,6 +2,7 @@ import { hmac } from "@noble/hashes/hmac.js";
 import { md5 } from "@noble/hashes/legacy.js";
 import ky from "ky";
 import { defineEngine } from "./engine";
+import { matchOrThrow } from "./parse";
 
 // https://github.com/PinMIlk/nodepapago
 const papagoLangCode: Record<string, string> = {
@@ -32,8 +33,8 @@ let version = "";
 
 async function getVersion(): Promise<string> {
   const page = await ky(mainUrl).text();
-  const script = await ky(`${mainUrl}main.${page.match(/"\/main.([^"]+)"/)![1]}`).text();
-  return `v1.${script.match(/"v1.([^"]+)"/)![1]}`;
+  const script = await ky(`${mainUrl}main.${matchOrThrow(page, /"\/main.([^"]+)"/)}`).text();
+  return `v1.${matchOrThrow(script, /"v1.([^"]+)"/)}`;
 }
 
 const toBase64 = (bytes: Uint8Array) => btoa(String.fromCharCode(...bytes));

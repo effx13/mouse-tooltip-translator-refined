@@ -11,7 +11,7 @@ const EXCLUDED_PARENTS = new Set(["STYLE", "SCRIPT", "TITLE"]);
 
 let prevSegIndex = 0;
 
-export function isPointInRect(rect: DOMRect, x: number, y: number) {
+function isPointInRect(rect: DOMRect, x: number, y: number) {
   return rect.left <= x && x <= rect.right && rect.top <= y && y <= rect.bottom;
 }
 
@@ -27,7 +27,7 @@ export function isPointInElement(target: Range | Element | null | undefined, x: 
 const isPointInRange = (range: Range, x: number, y: number) =>
   Array.from(range.getClientRects()).some((rect) => isPointInRect(rect, x, y));
 
-export function caretRangeFromPoint(x: number, y: number, doc: Document): Range | null {
+function caretRangeFromPoint(x: number, y: number, doc: Document): Range | null {
   let range: Range | null = null;
   // Chromium has caretRangeFromPoint, Firefox only caretPositionFromPoint
   if (typeof doc.caretRangeFromPoint === "function") {

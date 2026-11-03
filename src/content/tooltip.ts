@@ -37,11 +37,50 @@ const SHOW_DURATION = 300;
 // the host leaves the DOM this long after hiding
 const REMOVE_DELAY = 3000;
 const TOPRIGHT_MARGIN = 12;
+const VIEWPORT_PADDING = 5;
+const ARROW_PADDING = 6;
 
 // user font goes first; named fonts are quoted, generic families are not
 function fontFamily(custom: string) {
   if (!custom) return FONT_STACK;
   return `${GENERIC_FONTS.has(custom) ? custom : `"${custom.replaceAll('"', "")}"`}, ${FONT_STACK}`;
+}
+
+function createElements(): TooltipElements {
+  const root = document.createElement("div");
+  root.className = "mtt-root";
+  root.dataset.state = "hidden";
+  root.setAttribute("role", "mtttooltip");
+  const box = document.createElement("div");
+  box.className = "mtt-box";
+  const content = document.createElement("div");
+  const arrowEl = document.createElement("div");
+  arrowEl.className = "mtt-arrow";
+  box.append(content, arrowEl);
+  root.append(box);
+  return { root, box, content, arrow: arrowEl };
+}
+
+function styleVars(s: Settings): Record<string, string> {
+  return {
+    "--mtt-width": `${s.tooltipWidth}px`,
+    "--mtt-font-size": `${s.tooltipFontSize}px`,
+    "--mtt-font-family": fontFamily(s.tooltipFontFamily),
+    "--mtt-color": s.tooltipFontColor,
+    "--mtt-bg-color": s.tooltipBackgroundColor,
+    "--mtt-border-color": s.tooltipBorderColor,
+    "--mtt-blur": `${s.tooltipBackgroundBlur}px`,
+    "--mtt-text-align": s.tooltipTextAlign,
+    "--mtt-show-duration": `${SHOW_DURATION}ms`,
+    "--mtt-hide-duration": `${s.tooltipDisappearDuration}ms`,
+    // a following tooltip would sit under the cursor; fixed ones can be hovered and selected
+    "--mtt-pointer-events": s.tooltipPosition === "follow" ? "none" : "auto",
+  };
+}
+
+function animationName(animation: string) {
+  if (animation === "") return "none";
+  return ANIMATIONS.has(animation) ? animation : "fade";
 }
 
 function pointElement(x: number, y: number): VirtualElement {
@@ -94,20 +133,9 @@ export class Tooltip {
         // keep the node out of rich-text editors / page builders
         host.setAttribute("contenteditable", "false");
         host.dataset.mtt = "1";
-        const root = document.createElement("div");
-        root.className = "mtt-root";
-        root.dataset.state = "hidden";
-        root.setAttribute("role", "mtttooltip");
-        const box = document.createElement("div");
-        box.className = "mtt-box";
-        const content = document.createElement("div");
-        const arrowEl = document.createElement("div");
-        arrowEl.className = "mtt-arrow";
-        box.append(content, arrowEl);
-        root.append(box);
+        const elements = createElements();
         // the page may have dropped the host; never stack a second root
-        container.replaceChildren(root);
-        const elements = { root, box, content, arrow: arrowEl };
+        container.replaceChildren(elements.root);
         this.elements = elements;
         this.applyStyle();
         return elements;
@@ -133,27 +161,8 @@ export class Tooltip {
     const root = this.elements?.root;
     if (!root) return;
     const s = this.getSettings();
-    const vars: Record<string, string> = {
-      "--mtt-width": `${s.tooltipWidth}px`,
-      "--mtt-font-size": `${s.tooltipFontSize}px`,
-      "--mtt-font-family": fontFamily(s.tooltipFontFamily),
-      "--mtt-color": s.tooltipFontColor,
-      "--mtt-bg-color": s.tooltipBackgroundColor,
-      "--mtt-border-color": s.tooltipBorderColor,
-      "--mtt-blur": `${s.tooltipBackgroundBlur}px`,
-      "--mtt-text-align": s.tooltipTextAlign,
-      "--mtt-show-duration": `${SHOW_DURATION}ms`,
-      "--mtt-hide-duration": `${s.tooltipDisappearDuration}ms`,
-      // a following tooltip would sit under the cursor; fixed ones can be hovered and selected
-      "--mtt-pointer-events": s.tooltipPosition === "follow" ? "none" : "auto",
-    };
-    for (const [name, value] of Object.entries(vars)) root.style.setProperty(name, value);
-    root.dataset.animation =
-      s.tooltipAnimation === ""
-        ? "none"
-        : ANIMATIONS.has(s.tooltipAnimation)
-          ? s.tooltipAnimation
-          : "fade";
+    for (const [name, value] of Object.entries(styleVars(s))) root.style.setProperty(name, value);
+    root.dataset.animation = animationName(s.tooltipAnimation);
     if (this.visible) void this.position();
   }
 
@@ -236,8 +245,8 @@ export class Tooltip {
       middleware: [
         offset(s.tooltipDistance),
         flip(),
-        shift({ padding: 5 }),
-        arrow({ element: elements.arrow, padding: 6 }),
+        shift({ padding: VIEWPORT_PADDING }),
+        arrow({ element: elements.arrow, padding: ARROW_PADDING }),
       ],
     });
     elements.root.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)`;

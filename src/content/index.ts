@@ -1,6 +1,6 @@
 import type { ContentScriptContext } from "wxt/utils/content-script-context";
 import { onMessage } from "@/utils/messaging";
-import { getSettings, type Settings, watchSettings } from "@/utils/settings";
+import { getSettings, watchSettings } from "@/utils/settings";
 import { createApp } from "./app";
 import { bridgeBookFusion } from "./bookFusion";
 import {
@@ -14,19 +14,20 @@ import {
 } from "./env";
 import { getEffectiveSettings, isUrlExcluded } from "./filter";
 import { injectGoogleDocAnnotation } from "./googleDocs";
-import { takeOverPdf } from "./pdf";
+import { takeOverPdf } from "./pdfTakeover";
 
 export { watchSelection } from "./detect/selection";
 
 // popup bookkeeping that should not reset every tooltip on the page
 const IGNORED_CHANGES = new Set<string>(["lastSettingTab", "langPriority"]);
 
-function hasRelevantChange(prev: Settings, next: Settings) {
+function hasRelevantChange(
+  prev: Readonly<Record<string, unknown>>,
+  next: Readonly<Record<string, unknown>>,
+) {
   const keys = new Set([...Object.keys(prev), ...Object.keys(next)]);
   return [...keys].some(
-    (key) =>
-      !IGNORED_CHANGES.has(key) &&
-      JSON.stringify(prev[key as keyof Settings]) !== JSON.stringify(next[key as keyof Settings]),
+    (key) => !IGNORED_CHANGES.has(key) && JSON.stringify(prev[key]) !== JSON.stringify(next[key]),
   );
 }
 

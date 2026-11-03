@@ -22,7 +22,7 @@ function stripHtml(html = ""): string {
   return html
     .replace(/<(style|script)[^>]*>[\s\S]*?<\/\1>/gi, "")
     .replace(/<[^>]*>/g, "")
-    .replace(/&(?:amp|lt|gt|quot|#39|nbsp);/g, (entity) => htmlEntities[entity]!)
+    .replace(/&(?:amp|lt|gt|quot|#39|nbsp);/g, (entity) => htmlEntities[entity] ?? entity)
     .replace(/\s+/g, " ")
     .trim();
 }

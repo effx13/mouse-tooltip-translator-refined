@@ -64,6 +64,29 @@ function splitLongText(text: string, maxBytes: number) {
   return pieces;
 }
 
+// text nodes go out joined in batches up to MAX_BATCH_BYTES; a node over the limit goes alone, in pieces
+type Job = { kind: "batch"; nodes: Text[] } | { kind: "long"; node: Text };
+
+function* planJobs(nodes: Text[]): Generator<Job> {
+  let batch: Text[] = [];
+  let size = 0;
+  for (const node of nodes) {
+    const nodeSize = byteLength(node.nodeValue ?? "");
+    if (size + nodeSize > MAX_BATCH_BYTES && batch.length) {
+      yield { kind: "batch", nodes: batch };
+      batch = [];
+      size = 0;
+    }
+    if (nodeSize > MAX_BATCH_BYTES) {
+      yield { kind: "long", node };
+      continue;
+    }
+    batch.push(node);
+    size += nodeSize;
+  }
+  if (batch.length) yield { kind: "batch", nodes: batch };
+}
+
 // full-page in-place translation, toggled by keyDownTranslatePage
 export function createPageTranslator() {
   let originals: { node: Text; text: string }[] = [];
@@ -165,8 +188,7 @@ export function createPageTranslator() {
     await runWindowed(group, targetLang);
   }
 
-  async function translatePage(targetLang: string) {
-    const nodes = collectTextNodes();
+  function startRun() {
     isTranslated = true;
     originals = [];
     requestCount = 0;
@@ -175,33 +197,32 @@ export function createPageTranslator() {
     cancelled = false;
     batchingUseless = false;
     startedAt = Date.now();
+  }
 
-    let batch: Text[] = [];
-    let size = 0;
+  async function runJob(job: Job, targetLang: string) {
+    switch (job.kind) {
+      case "batch":
+        return translateBatch(job.nodes, targetLang);
+      case "long":
+        return translateLongNode(job.node, targetLang);
+      default:
+        return job satisfies never;
+    }
+  }
+
+  async function translatePage(targetLang: string) {
+    const nodes = collectTextNodes();
+    startRun();
     let stoppedEarly = false;
-    for (const node of nodes) {
+    let first = true;
+    for (const job of planJobs(nodes)) {
       if (!canRequest()) {
         stoppedEarly = true;
         break;
       }
-      const nodeSize = byteLength(node.nodeValue ?? "");
-      if (size + nodeSize > MAX_BATCH_BYTES && batch.length) {
-        await translateBatch(batch, targetLang);
-        await sleep(BATCH_PAUSE_MS);
-        batch = [];
-        size = 0;
-      }
-      if (nodeSize > MAX_BATCH_BYTES) {
-        await translateLongNode(node, targetLang);
-        await sleep(BATCH_PAUSE_MS);
-        continue;
-      }
-      batch.push(node);
-      size += nodeSize;
-    }
-    if (batch.length) {
-      if (canRequest()) await translateBatch(batch, targetLang);
-      else stoppedEarly = true;
+      if (!first) await sleep(BATCH_PAUSE_MS);
+      first = false;
+      await runJob(job, targetLang);
     }
     if (stoppedEarly && !aborted && !cancelled) {
       console.log(
