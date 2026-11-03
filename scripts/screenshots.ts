@@ -91,7 +91,7 @@ async function enginesShot(server: FixtureServer) {
     await page.getByRole("tab", { name: "ENGINES" }).click();
     // one open config panel shows the API key field next to the list
     await page.locator("li[data-engine='deepl']").locator("button[aria-expanded]").click();
-    await page.getByLabel("API Key *").waitFor();
+    await page.getByLabel("API Key", { exact: true }).waitFor();
     await page.mouse.move(0, 0);
     await page.waitForTimeout(300);
     const png = await page.screenshot();
