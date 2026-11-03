@@ -21,7 +21,7 @@ pnpm typecheck        # svelte-check (TS 포함)
 - 확장 로드는 **빌드 결과 폴더**(`.output/chrome-mv3`, `.output/firefox-mv2`)를 "Load unpacked"로 한다.
 - 코드 변경 후 `pnpm build`, `pnpm lint`, `pnpm typecheck`, `pnpm test`가 통과하는지 확인한다.
 - 처음 한 번 `pnpm exec playwright install chromium`이 필요하다.
-- 버전은 배포 시점에 release 워크플로가 `package.json`에 태그 버전을 기록한다. repo 값은 stale하니 직접 올리지 말 것(#209).
+- 버전은 `package.json`의 `version`이다(매니페스트에 그대로 들어감). release 워크플로는 태그 버전으로 덮어써서 빌드한다.
 
 ## 저장소 구조
 

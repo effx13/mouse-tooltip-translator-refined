@@ -1,6 +1,6 @@
 {
   "name": "mouse-tooltip-translator-refined",
-  "version": "0.1.89",
+  "version": "1.0.0",
   "private": true,
   "description": "Hover or select text to translate it in a tooltip",
   "type": "module",
