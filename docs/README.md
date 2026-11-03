@@ -38,35 +38,33 @@
 
 ### 진입점과 파일명 계약
 
-빌드 결과는 `build/<name>.js`이고, 아래 이름은 **바꾸면 안 된다**. 매니페스트, `public/*.html`, 번들된 pdfjs/foliate HTML, 런타임 `getURL()`/`executeScript()`가 이 이름을 그대로 참조한다.
+빌드 도구는 **WXT**다. 진입점은 `src/entrypoints/`에 있다. 아래 출력 이름은 **바꾸면 안 된다**. 런타임 `getURL()`/`executeScript()`, 번들된 pdfjs/foliate HTML이 이 이름을 그대로 참조한다.
 
-| 출력 | 소스 | 로드 방식 | 형식 제약 |
+| 출력 | 진입점 → 실제 모듈 | 로드 방식 | 형식 제약 |
 |---|---|---|---|
-| `background.js` | `src/background.js` | manifest `background.service_worker`(MV3) / `background.scripts`(FF MV2) | classic script(`type: module` 아님) |
-| `contentScript.js` | `src/contentScript.js` | manifest `content_scripts`(all_frames, document_start), 설치 시 `scripting.executeScript`로 재주입 | classic script |
-| `popup.js` + `popup.css` | `src/popup.js` | `popup.html` (`<link href="popup.css">`, `<script type=module>`) | CSS 파일명이 `popup.css`여야 함 |
-| `subtitle.js` | `src/subtitle/subtitle.js` | content script가 `<script src>`로 page world에 주입 (web_accessible) | classic script, 확장 API 없음 |
-| `googleDocInject.js` | `src/googleDoc/googleDocInject.js` | content script가 `<script src>`로 주입 (web_accessible) | classic script, 확장 API 없음 |
-| `pdfInject.js` | `src/pdf/pdfInject.js` | `pdfjs/web/viewer.html`의 `<script src="../../pdfInject.js">` | classic script |
-| `ebookEventInject.js` | `src/ebook/ebookEventInject.js` | `foliate-js/reader.html`의 `<script src="/ebookEventInject.js">` | classic script |
-| `ocrIframe.js` | `src/ocr/ocrIframe.js` | `ocr.html` | |
-| `offscreen.js` | `src/tts/offscreen.js` | `offscreen.html` (offscreen document, FF은 iframe) | |
-| `opencvHandler.js` | `src/ocr/opencvHandler.js` | `opencvHandler.html` (manifest `sandbox` 페이지) | |
+| `background.js` | `entrypoints/background.ts` → `src/background.js` | MV3 `background.service_worker` / FF MV2 `background.scripts` | IIFE |
+| `content-scripts/content.js` + `.css` | `entrypoints/content.ts` → `src/contentScript.js` + `src/styles/tippy.css` | manifest `content_scripts`(all_frames, document_start, match_about_blank). 설치 시 background가 manifest를 읽어 `scripting.executeScript`/`insertCSS`로 재주입 | IIFE |
+| `popup.html` | `entrypoints/popup.html` → `src/popup.js` | action popup + options_ui(`open_in_tab`) | ESM 청크 |
+| `subtitle.js` | `entrypoints/subtitle.ts` → `src/subtitle/subtitle.js` | content script가 `<script src>`로 page world에 주입 (web_accessible) | IIFE, 확장 API 없음 |
+| `googleDocInject.js` | `entrypoints/googleDocInject.ts` | content script가 `<script src>`로 주입 (web_accessible) | IIFE, 확장 API 없음 |
+| `pdfInject.js` | `entrypoints/pdfInject.ts` | `pdfjs/web/viewer.html`의 `<script src="../../pdfInject.js">` | IIFE |
+| `ebookEventInject.js` | `entrypoints/ebookEventInject.ts` | `foliate-js/reader.html`의 `<script src="/ebookEventInject.js">` | IIFE |
+| `ocr.html` | `entrypoints/ocr.html` → `src/ocr/ocrIframe.js` | content script의 iframe (web_accessible) | ESM |
+| `offscreen.html` | `entrypoints/offscreen.html` → `src/tts/offscreen.js` | offscreen document(FF은 iframe) | ESM |
+| `opencvHandler.html` | `entrypoints/opencvHandler.sandbox.html` → `src/ocr/opencvHandler.js` | manifest `sandbox` 페이지, content script의 iframe | ESM + 클래식 `/opencv/opencv.js` |
 
-이외 `public/`의 정적 리소스(`tippy.css`, `_locales`, `icons`, `pdfjs`, `foliate-js`, `doq`, `tesseract`, `opencv`, `injectRightPan.js`, html들)는 그대로 `build/`로 복사된다(`.md`, `.map`, PDF.js 데모 PDF는 제외).
+매니페스트는 `wxt.config.ts`에서 브라우저별로 생성된다. `public/`의 정적 리소스(`_locales`, `icons`, `pdfjs`, `foliate-js`, `doq`, `tesseract`, `opencv`, `injectRightPan.js`)는 그대로 복사된다(`.md`, `.map`, PDF.js 데모 PDF는 제외).
 
 ### 빌드 도구 (현행)
 
 - 패키지 매니저: **pnpm** (`packageManager` 고정, `pnpm-workspace.yaml`의 `allowBuilds`로 install script 차단)
-- 번들러: **Vite 8 (rolldown)**. `scripts/build.ts`가 위 10개 엔트리를 각각 독립 빌드한다(IIFE, 코드 스플리팅 없음). `public/`은 한 번만 필터 복사한다. `--firefox`이면 `manifest.firefox.json`을 `manifest.json`으로 교체한다. 엔트리 목록은 `vite.config.ts`의 `ENTRIES`에 있다.
-- 테스트: **Vitest** (`__tests__/`). 네트워크 엔진 테스트는 CI에서 skip한다.
-- 린트/포맷: **oxlint** (`.oxlintrc.json`), **oxfmt** (`.oxfmtrc.json`)
-- 타입: `tsconfig.json` (`allowJs`, 점진 전환)
+- 프레임워크: **WXT 0.21** (Vite 8 / rolldown). 출력은 `.output/chrome-mv3`, `.output/firefox-mv2`
+- 테스트: **Vitest** (`__tests__/`, `WxtVitest`). 네트워크 엔진 테스트는 CI에서 skip한다.
+- 린트/포맷: **oxlint** (`.oxlintrc.json`, `no-undef` 포함), **oxfmt** (`.oxfmtrc.json`)
+- 타입: `tsconfig.json` (`.wxt/tsconfig.json` 상속, `allowJs`, 점진 전환)
 
 ```bash
-pnpm build          # build/ (Chrome/Edge MV3)
-pnpm build-firefox  # build/ (Firefox MV2 manifest)
-pnpm watch          # 개발 watch 빌드 (sourcemap, console 유지)
+pnpm dev | pnpm build | pnpm build:firefox | pnpm zip | pnpm zip:firefox
 pnpm test | pnpm lint | pnpm typecheck | pnpm format
 ```
 

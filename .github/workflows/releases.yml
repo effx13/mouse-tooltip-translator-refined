@@ -28,10 +28,7 @@ jobs:
 
       - name: Write package version json
         run: cat <<< $(jq '.version="${{github.ref_name}}"' package.json ) > package.json
-      - name: Write manifest version json
-        run: cat <<< $(jq '.version="${{github.ref_name}}"' public/manifest.json ) > public/manifest.json
-      - name: Write firefox manifest version json
-        run: cat <<< $(jq '.version="${{github.ref_name}}"' public/manifest.firefox.json) > public/manifest.firefox.json
+      # WXT writes the manifest version from package.json
 
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
@@ -40,10 +37,10 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
 
-      - run: pnpm build-zip
-      - run: pnpm build-firefox-zip
+      - run: pnpm zip
+      - run: pnpm zip:firefox
 
       - uses: ncipollo/release-action@v1
         with:
-          artifacts: "*.zip"
+          artifacts: ".output/*.zip"
           body: "[Change Log](https://github.com/ttop32/MouseTooltipTranslator/blob/main/doc/description.md#change-log)"
