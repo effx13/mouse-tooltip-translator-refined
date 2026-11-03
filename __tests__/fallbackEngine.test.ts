@@ -2,7 +2,7 @@ import { vi } from "vitest";
 import type { Engine } from "@/translators/engine";
 import type { Settings } from "@/utils/settings";
 
-// no network: the engine registry is mocked so only the fallback bookkeeping is exercised (#363 follow-up)
+// no network: the engine registry is mocked so only the fallback bookkeeping is exercised
 const { calls, record } = vi.hoisted(() => {
   const log: string[] = [];
   const fakeEngine =

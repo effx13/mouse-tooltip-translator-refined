@@ -38,7 +38,7 @@ const SHOW_DURATION = 300;
 const REMOVE_DELAY = 3000;
 const TOPRIGHT_MARGIN = 12;
 
-// user font goes first; named fonts are quoted, generic families are not (#86)
+// user font goes first; named fonts are quoted, generic families are not
 function fontFamily(custom: string) {
   if (!custom) return FONT_STACK;
   return `${GENERIC_FONTS.has(custom) ? custom : `"${custom.replaceAll('"', "")}"`}, ${FONT_STACK}`;
@@ -91,7 +91,7 @@ export class Tooltip {
         host.id = "mttContainer";
         host.className = "notranslate";
         host.setAttribute("translate", "no");
-        // keep the node out of rich-text editors / page builders (#102, #115)
+        // keep the node out of rich-text editors / page builders
         host.setAttribute("contenteditable", "false");
         host.dataset.mtt = "1";
         const root = document.createElement("div");
@@ -188,7 +188,7 @@ export class Tooltip {
     this.removeTimer = window.setTimeout(() => this.remove(), REMOVE_DELAY);
   }
 
-  // drop the host from the DOM right away (writing fields, #102 #115)
+  // drop the host from the DOM right away (writing fields)
   remove() {
     clearTimeout(this.removeTimer);
     this.generation++;
@@ -216,7 +216,7 @@ export class Tooltip {
     if (!elements) return;
     const s = this.getSettings();
     const topRight = s.tooltipPosition === "topright";
-    // top-right ignores the cursor and the placement option (#43)
+    // top-right ignores the cursor and the placement option
     const reference = topRight
       ? pointElement(document.documentElement.clientWidth - TOPRIGHT_MARGIN, TOPRIGHT_MARGIN)
       : pointElement(this.cursor.x, this.cursor.y);

@@ -108,7 +108,7 @@ export function expandRange(
   useSegmentation = false,
 ): Range | null {
   try {
-    // detached nodes make expand()/setEndAfter() throw (#104)
+    // detached nodes make expand()/setEndAfter() throw
     if (!range?.startContainer.isConnected) return null;
     if (type === "container") return getContainerRange(range);
     if (useSegmentation || shouldUseSegmentation()) return expandRangeWithSegmenter(range, type);
@@ -130,7 +130,7 @@ function isInline(el: Element) {
   }
 }
 
-// climb inline wrappers to the nearest block, for sites that put every line in its own span (#254)
+// climb inline wrappers to the nearest block, for sites that put every line in its own span
 function getBlockAncestor(node: Node): Element | null {
   let el = node.nodeType === Node.TEXT_NODE ? node.parentElement : (node as Element);
   const doc = node.ownerDocument;
@@ -238,7 +238,7 @@ function expandRangeWithSegmenter(original: Range, type: "word" | "sentence"): R
   return null;
 }
 
-// drop furigana (ruby>rt) so readings are not translated twice (#120)
+// drop furigana (ruby>rt) so readings are not translated twice
 export function extractTextFromFragment(fragment: ParentNode & Node): string {
   for (const rt of fragment.querySelectorAll("ruby>rt")) rt.remove();
   return filterWord(fragment.textContent);

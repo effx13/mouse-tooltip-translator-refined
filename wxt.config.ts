@@ -4,10 +4,11 @@ const PUBLIC_EXCLUDE = [".md", ".map", "compressed.tracemonkey-pldi-09.pdf"];
 
 export default defineConfig({
   srcDir: "src",
-  // doc/insertLocale.py and crowdin.yml write public/_locales
+  // doc/insertLocale.py writes public/_locales
   publicDir: "public",
   imports: false,
-  modules: ["@wxt-dev/module-svelte"],
+  modules: ["@wxt-dev/module-svelte", "@wxt-dev/auto-icons"],
+  autoIcons: { baseIconPath: "assets/icon.svg" },
 
   manifest: ({ browser, manifestVersion }) => {
     const firefox = browser === "firefox";
@@ -16,12 +17,6 @@ export default defineConfig({
       name: "__MSG_appName__",
       description: "__MSG_appDesc__",
       default_locale: "en",
-      icons: {
-        16: "icons/icon_16.png",
-        32: "icons/icon_32.png",
-        48: "icons/icon_48.png",
-        128: "icons/icon_128.png",
-      },
       content_security_policy: manifestVersion === 3 ? { extension_pages: csp } : (csp as never),
       permissions: firefox
         ? [

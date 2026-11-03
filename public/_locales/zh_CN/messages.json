@@ -741,9 +741,9 @@
 		"message": "Allow access to file URLs to open local PDF files"
 	},
 	"appName": {
-		"message": "鼠标工具提示翻译器 - PDF 和 Netflix Youtube 双字幕"
+		"message": "Mouse Tooltip Translator"
 	},
 	"appDesc": {
-		"message": "鼠标工具提示翻译器使用谷歌翻译对鼠标悬停文本进行翻译。支持OCR、TTS、漫画翻译和PDF翻译。"
+		"message": "Hover or select text to translate it in a tooltip. Also works in PDF and ebook files."
 	}
 }

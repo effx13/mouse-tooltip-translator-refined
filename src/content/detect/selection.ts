@@ -30,7 +30,7 @@ export function getWindowSelectionText(win: Window = window): string {
   if (!sel) return "";
   const container = win.document.createElement("div");
   for (let i = 0; i < sel.rangeCount; i++) container.append(sel.getRangeAt(i).cloneContents());
-  // ruby readings get duplicated into toString(), prefer the furigana-free text then (#120)
+  // ruby readings get duplicated into toString(), prefer the furigana-free text then
   const hasRuby = Boolean(container.querySelector("ruby>rt"));
   const filtered = extractTextFromFragment(container);
   const raw = sel.toString();

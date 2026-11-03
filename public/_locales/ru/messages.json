@@ -741,9 +741,9 @@
 		"message": "Allow access to file URLs to open local PDF files"
 	},
 	"appName": {
-		"message": "Переводчик мышью — PDF и двойные субтитры Netflix и YouTube"
+		"message": "Mouse Tooltip Translator"
 	},
 	"appDesc": {
-		"message": "Переводчик контекста мышью переводит текст при наведении, используя Google Переводчик. Поддерживает OCR, TTS, перевод манги и PDF."
+		"message": "Hover or select text to translate it in a tooltip. Also works in PDF and ebook files."
 	}
 }

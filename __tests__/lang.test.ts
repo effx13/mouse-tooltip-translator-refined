@@ -1,6 +1,6 @@
 import { isSameLanguage, isRedundantTranslation, isLangExcluded } from "@/utils/lang";
 
-// no network - pure language code handling (#363, #257)
+// no network - pure language code handling
 describe("isSameLanguage", () => {
   test("collapses a base code and its regional variant", () => {
     expect(isSameLanguage("pt", "pt-BR")).toBe(true);

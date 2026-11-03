@@ -30,6 +30,7 @@
   "devDependencies": {
     "@types/chrome": "^0.3.7",
     "@types/node": "^26.6.6",
+    "@wxt-dev/auto-icons": "^1.1.2",
     "@wxt-dev/module-svelte": "^2.0.5",
     "oxfmt": "^0.75.0",
     "oxlint": "^1.90.0",

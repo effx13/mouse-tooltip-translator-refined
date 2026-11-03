@@ -27,7 +27,7 @@ function stripHtml(html = ""): string {
     .trim();
 }
 
-// Wiktionary as the tooltip dictionary source (#149): "pos: def1; def2" lines like the translator dict, "" when nothing usable
+// Wiktionary as the tooltip dictionary source: "pos: def1; def2" lines like the translator dict, "" when nothing usable
 export async function getWiktionaryDict(word: string, sourceLang = "en"): Promise<string> {
   word = (word || "").trim();
   if (!word || /\s/.test(word)) return "";

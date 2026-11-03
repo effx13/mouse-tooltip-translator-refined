@@ -12,8 +12,8 @@ import time
 translator = Translator()
 
 
-appName = "Mouse Tooltip Translator - PDF & Youtube dual subs"
-appDesc = "Mouse Tooltip Translator translate mouseover text using google translate"
+appName = "Mouse Tooltip Translator"
+appDesc = "Hover or select text to translate it in a tooltip. Also works in PDF and ebook files."
 
 localeList = [
     "ar",
@@ -369,14 +369,9 @@ def translate(text, lang):
 
 
 def addBasicDescription(jsonDict, locale):
-    # jsonDict["appName"] = {"message": appName}
-
-    # if "appDesc" not in jsonDict:
-    #     jsonDict["appDesc"] = {"message": translate(appDesc, locale)}
-
-    # if "appDesc" in jsonDict:
-    #     jsonDict["appDesc"] = {"message": jsonDict["appDesc"]["message"][:130]}
-    pass
+    # store name/description are kept in English for every locale
+    jsonDict["appName"] = {"message": appName}
+    jsonDict["appDesc"] = {"message": appDesc}
 
 
 def getI18IdList():

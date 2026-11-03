@@ -14,7 +14,7 @@ export const KEY_ACTIONS = [
 export type KeyAction = (typeof KEY_ACTIONS)[number];
 
 const MOUSE_KEYS = ["ClickLeft", "ClickMiddle", "ClickRight"] as const;
-// AltGr arrives as a phantom ControlLeft then AltRight; hold ControlLeft this long (#354)
+// AltGr arrives as a phantom ControlLeft then AltRight; hold ControlLeft this long
 const CTRL_VERIFICATION_DELAY = 20;
 const RELEASE_DELAY = 20;
 
@@ -65,7 +65,7 @@ export class KeyState {
     return this.isDown(this.getSettings()[action]);
   }
 
-  // the swap and secondary-language keys flip on each press instead of being held (#321)
+  // the swap and secondary-language keys flip on each press instead of being held
   private isToggleKey(key: string) {
     const s = this.getSettings();
     return (
@@ -76,12 +76,12 @@ export class KeyState {
   }
 
   handleKeydown(e: KeyboardEvent) {
-    // a real AltGr cancels its phantom ControlLeft; runs before the ignoreAltGr return (#354)
+    // a real AltGr cancels its phantom ControlLeft; runs before the ignoreAltGr return
     if (e.code === "AltRight" && this.pendingCtrl !== undefined && hasAltGraph(e)) {
       clearTimeout(this.pendingCtrl);
       this.pendingCtrl = undefined;
     }
-    // opt-in: AltGr typing (@, €, ...) must not fire AltRight shortcuts (#352, #353, #355)
+    // opt-in: AltGr typing (@, €, ...) must not fire AltRight shortcuts
     if (this.getSettings().ignoreAltGr && hasAltGraph(e)) return;
     // IME mode switches (Hangul/Process) are not shortcuts
     if (e.key === "HangulMode" || e.key === "Process") return;

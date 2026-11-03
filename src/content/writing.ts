@@ -57,7 +57,7 @@ async function insertText(text: string) {
 }
 
 export function createWritingTranslator(getSettings: () => Settings) {
-  // a second press while the async flow runs would duplicate or drop the result (#75)
+  // a second press while the async flow runs would duplicate or drop the result
   let busy = false;
 
   return async function translateWriting() {

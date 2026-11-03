@@ -32,7 +32,7 @@ function matchRule(url: ParsedUrl | null, ruleText: string): boolean {
   return protocolOk && portOk && new RegExp(re).test(url.host);
 }
 
-// a bare "example.com" entry also matches its subdomains (#197)
+// a bare "example.com" entry also matches its subdomains
 export function matchSite(url: string, list: readonly string[] | undefined): boolean {
   if (!list?.length) return false;
   const parsed = parseUrl(url);
@@ -50,13 +50,13 @@ export function isUrlExcluded(settings: Settings, url: string): boolean {
   const { websiteFilterMode: mode, websiteExcludeList, websiteWhiteList } = settings;
   const excluded = matchSite(url, websiteExcludeList);
   if (mode === "blacklist") return excluded;
-  // explicit whitelist mode: an empty list blocks everywhere (#344)
+  // explicit whitelist mode: an empty list blocks everywhere
   if (mode === "whitelist") return !matchSite(url, websiteWhiteList);
-  // "auto" (#297): both lists apply, an empty whitelist means no restriction
+  // "auto": both lists apply, an empty whitelist means no restriction
   return excluded || (websiteWhiteList.length > 0 && !matchSite(url, websiteWhiteList));
 }
 
-// "site=lang" entries, first match wins (#262)
+// "site=lang" entries, first match wins
 export function matchTargetLang(url: string, list: readonly string[] | undefined): string | null {
   for (const entry of list ?? []) {
     const raw = String(entry);

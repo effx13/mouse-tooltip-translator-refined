@@ -135,7 +135,7 @@ const withAuto: OptionList = { Auto: "auto", ...langList };
 const withNone: OptionList = { None: "null", ...langList };
 const detectTypeList: OptionList = { Word: "word", Sentence: "sentence", Container: "container" };
 
-// UI language picker (#76). Keys are endonyms (shown as-is); values are the
+// UI language picker. Keys are endonyms (shown as-is); values are the
 // _locales directory names. "auto" follows the browser language.
 const uiLanguageList: OptionList = {
   Auto: "auto",
@@ -303,7 +303,7 @@ export const settingSchema = {
     settingTab: "keyboard",
   },
   // On: AltGr (Ctrl+AltRight with getModifierState("AltGraph")) counts as typing,
-  // so it never fires an AltRight-bound shortcut (#352). Off: AltGr is a normal key (#355).
+  // so it never fires an AltRight-bound shortcut. Off: AltGr is a normal key.
   ignoreAltGr: {
     default: false,
     i18nKey: "Ignore_AltGr_Modifier",
@@ -328,14 +328,14 @@ export const settingSchema = {
     optionList: keyList,
     settingTab: "keyboard",
   },
-  // the two keys above act as press-to-toggle instead of hold (#321)
+  // the two keys above act as press-to-toggle instead of hold
   swapKeyToggleMode: {
     default: false,
     i18nKey: "Swap_Key_Toggle_Mode",
     optionType: "toggle",
     settingTab: "keyboard",
   },
-  // turn the tooltip on/off for the session (#126)
+  // turn the tooltip on/off for the session
   keyToggleEnable: {
     default: "null",
     i18nKey: "Toggle_Extension_When",
@@ -350,7 +350,7 @@ export const settingSchema = {
     optionList: rangeOption(6, 41, 2),
     settingTab: "graphic",
   },
-  // "" = default stack; options come from fontSettings.getFontList() (#86)
+  // "" = default stack; options come from fontSettings.getFontList()
   tooltipFontFamily: {
     default: "",
     i18nKey: "Tooltip_Font_Family",
@@ -443,14 +443,14 @@ export const settingSchema = {
     optionType: "colorPicker",
     settingTab: "graphic",
   },
-  // forces the ebook reader's page colors (#201)
+  // forces the ebook reader's page colors
   ebookTheme: {
     default: "auto",
     i18nKey: "Ebook_Theme",
     optionList: { Auto: "auto", Light: "light", Dark: "dark" },
     settingTab: "graphic",
   },
-  // compact settings screen (#220)
+  // compact settings screen
   compactMode: {
     default: false,
     i18nKey: "Setting_Compact_mode",
@@ -486,7 +486,7 @@ export const settingSchema = {
     optionType: "comboBox",
     settingTab: "exclude",
   },
-  // "site=lang" entries: matching pages translate into that language (#262)
+  // "site=lang" entries: matching pages translate into that language
   websiteTargetLangList: {
     default: [] as string[],
     i18nKey: "Website_Target_Language",
@@ -534,7 +534,7 @@ export const settingSchema = {
     optionType: "toggle",
     settingTab: "advanced",
   },
-  // detected text matching this regex is not translated (#36)
+  // detected text matching this regex is not translated
   translateExcludeRegex: {
     default: "",
     i18nKey: "Translate_Exclude_Regex",
@@ -572,7 +572,7 @@ export const settingSchema = {
     optionType: "toggle",
     settingTab: "advanced",
   },
-  // debounce (ms) before the mouseover tooltip appears (#235)
+  // debounce (ms) before the mouseover tooltip appears
   mouseoverEventInterval: {
     default: 300,
     i18nKey: "Tooltip_Show_Delay",
@@ -581,7 +581,7 @@ export const settingSchema = {
   },
 
   // backup
-  // mirror settings to storage.sync, per-device opt-in (#134)
+  // mirror settings to storage.sync, per-device opt-in
   syncSetting: {
     default: false,
     i18nKey: "Sync_Setting",
@@ -625,7 +625,7 @@ export const settingSchema = {
     optionType: "hidden",
     settingTab: "remains",
   },
-  // last viewed settings tab (#83)
+  // last viewed settings tab
   lastSettingTab: {
     default: "main",
     i18nKey: "Last_Setting_Tab",

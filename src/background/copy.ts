@@ -30,7 +30,7 @@ export function registerCopyListeners() {
   });
   browser.commands.onCommand.addListener((command) => {
     if (command === "copy-translated-text") void copyOnActiveTab(recentTarget);
-    // hotkey only (#204)
+    // hotkey only
     if (command === "copy-source-text") void copyOnActiveTab(recentSource);
   });
   // the menu shows the last tooltip of the tab that was active

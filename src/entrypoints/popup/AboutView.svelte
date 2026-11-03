@@ -28,7 +28,7 @@
       sub: "Translate_local_PDF_file",
       icon: "pdf",
       color: "#e53935",
-      url: `${browser.runtime.getURL("/pdfjs/web/viewer.html")}?file=/pdf_demo.pdf`,
+      url: browser.runtime.getURL("/pdfjs/web/viewer.html"),
     },
     {
       name: "Ebook_Reader",
@@ -56,7 +56,7 @@
   const version = browser.runtime.getManifest().version;
 </script>
 
-<header class="hero" style:--hero="url({browser.runtime.getURL('/floating-maple-leaf.jpg')})">
+<header class="hero">
   <button type="button" class="icon-btn" aria-label={t("Back")} onclick={onback}>
     <Icon name="back" size={24} />
   </button>
@@ -92,9 +92,7 @@
     justify-content: space-between;
     height: 160px;
     padding: 8px 16px 16px 8px;
-    background:
-      linear-gradient(rgb(0 0 0 / 0.15), rgb(0 0 0 / 0.55)),
-      var(--hero) center / cover;
+    background: linear-gradient(135deg, var(--primary), #0d47a1);
     color: #fff;
   }
   .hero .icon-btn {

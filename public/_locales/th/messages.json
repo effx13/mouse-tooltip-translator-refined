@@ -741,9 +741,9 @@
 		"message": "Allow access to file URLs to open local PDF files"
 	},
 	"appName": {
-		"message": "Mouse Tooltip Translator - PDF & Netflix Youtube dual subs"
+		"message": "Mouse Tooltip Translator"
 	},
 	"appDesc": {
-		"message": "น้องเมาส์นักแปลภาษา Mouse Tooltip Translator แปลข้อความ Mouse Over โดยใช้ Google Translate รองรับ OCR, TTS, โปรแกรมแปลมังงะ และโปร"
+		"message": "Hover or select text to translate it in a tooltip. Also works in PDF and ebook files."
 	}
 }

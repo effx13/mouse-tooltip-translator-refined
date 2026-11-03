@@ -741,9 +741,9 @@
 		"message": "Allow access to file URLs to open local PDF files"
 	},
 	"appName": {
-		"message": "Fare Araç İpucu Çevirmeni - PDF & Netflix Youtube çift alt yazı"
+		"message": "Mouse Tooltip Translator"
 	},
 	"appDesc": {
-		"message": "Fare araç ipucu çevirmen google çevirisini kullanarak mouseover metnini çevir. Support OCR, TTS, manga translator & pdf translator"
+		"message": "Hover or select text to translate it in a tooltip. Also works in PDF and ebook files."
 	}
 }

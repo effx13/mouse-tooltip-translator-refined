@@ -152,7 +152,7 @@ type BingResponse = [
 export const bingConfig = { customAgent: "" };
 
 let accessToken: BingToken | undefined;
-// switched on when only cn.bing.com is reachable (#50)
+// switched on when only cn.bing.com is reachable
 let useChina = false;
 
 const userAgent = () =>
@@ -186,7 +186,7 @@ async function getBingAccessToken(): Promise<BingToken | undefined> {
   if (accessToken && Date.now() - accessToken.tokenTs <= accessToken.tokenExpiryInterval) {
     return accessToken;
   }
-  // global host first, then the China mirror which stays reachable behind the GFW (#50)
+  // global host first, then the China mirror which stays reachable behind the GFW
   for (const china of [false, true]) {
     try {
       accessToken = await fetchBingToken(china ? urls.china.token : urls.global.token);

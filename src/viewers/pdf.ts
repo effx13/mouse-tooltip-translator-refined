@@ -28,7 +28,7 @@ function onViewerEvent(name: string, cb: () => void) {
   });
 }
 
-// localize the viewer toolbar to the chosen UI language (#153)
+// localize the viewer toolbar to the chosen UI language
 async function setViewerLocale() {
   let lang: string | undefined;
   const apply = () => {
@@ -63,7 +63,7 @@ function reportLoadError() {
   });
 }
 
-// one-click copy of the original web pdf url (#28)
+// one-click copy of the original web pdf url
 function addCopyUrlButton() {
   const url = fileParam();
   if (!/^https?:\/\//i.test(url)) return;

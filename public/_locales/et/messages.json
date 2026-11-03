@@ -741,9 +741,9 @@
 		"message": "Allow access to file URLs to open local PDF files"
 	},
 	"appName": {
-		"message": "Mouse Tooltip Translator - PDF & Netflix Youtube dual subs"
+		"message": "Mouse Tooltip Translator"
 	},
 	"appDesc": {
-		"message": "Hiire tööriistapeal tõlkija tõlkida hiireoveri teksti Google'i abil. Support OCR, TTS, manga translator & pdf translator."
+		"message": "Hover or select text to translate it in a tooltip. Also works in PDF and ebook files."
 	}
 }

@@ -14,7 +14,6 @@
       "PowerShell($env:Path = [Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); node -v; npm -v)",
       "PowerShell($env:Path = [Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); npm run watch)",
       "Read(//c/Users/TSOP/AppData/Local/Temp/claude/d--Administrator-Desktop-source-mouse-MouseTooltipTranslator/9467bcc6-f90c-4b05-9570-80c92a2feade/tasks/**)",
-      "PowerShell(gh pr view 311 --repo ttop32/MouseTooltipTranslator)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:patch-diff.githubusercontent.com)",
       "Bash(dir d:\\\\Administrator\\\\Desktop\\\\source\\\\mouse\\\\MouseTooltipTranslator\\\\src\\\\background)",

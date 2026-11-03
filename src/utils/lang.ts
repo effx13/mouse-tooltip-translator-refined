@@ -330,7 +330,7 @@ export function isSameLanguage(langA: Lang, langB: Lang): boolean {
 // reports a bare `pt` for Brazilian wording, yet still rewrites it into
 // European Portuguese when the target is pt-PT. So for regional-variant pairs,
 // only skip when the engine handed back the same text; an exact code match
-// keeps the unconditional skip (#257).
+// keeps the unconditional skip.
 export function isRedundantTranslation(
   sourceText: unknown,
   targetText: unknown,

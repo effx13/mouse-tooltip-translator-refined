@@ -1,8 +1,6 @@
 # CLAUDE.md — MouseTooltipTranslator 개발 가이드
 
-브라우저 확장(Chrome/Edge MV3, Firefox MV2). 마우스오버/드래그 번역 툴팁, 입력창 번역, 페이지 번역, 내장 PDF/EPUB 뷰어를 제공한다. [ttop32/MouseTooltipTranslator](https://github.com/ttop32/MouseTooltipTranslator)의 포크를 **WXT + Svelte 5 + TypeScript**로 다시 작성한 것이다. 패키지 매니저는 **pnpm**이다.
-
-`docs/`는 재작성 전 원본 확장의 동작 명세다. 이 재작성에서 뺀 기능(TTS/음성, 음성 인식, OCR, 이중 자막, 기록·단어장·플래시카드)도 그 문서에는 남아 있다.
+브라우저 확장(Chrome/Edge MV3, Firefox MV2). 마우스오버/드래그 번역 툴팁, 입력창 번역, 페이지 번역, 내장 PDF/EPUB 뷰어를 제공한다. **WXT + Svelte 5 + TypeScript**, 패키지 매니저는 **pnpm**이다.
 
 ## 빌드 · 실행
 
@@ -40,8 +38,9 @@ pnpm typecheck        # svelte-check (TS 포함)
 - `src/viewers/`: PDF.js 뷰어 개선, 이북 iframe 이벤트 브리지.
 - `src/components/`: 공용 Svelte 컴포넌트.
 - `src/utils/`: `settings/`(스키마 + 저장소), `messaging.ts`, `i18n.ts`, `lang.ts`, `text.ts`, `async.ts`.
-- `public/`: 그대로 복사된다(`_locales`, `icons`, `pdfjs`, `foliate-js`, `doq`, `injectRightPan.js`).
-- `doc/`: `intro.md`(설치 시 열리는 사용법), `privacy_policy.md`, `insertLocale.py`(로케일 생성).
+- `public/`: 그대로 복사된다(`_locales`, `pdfjs`, `foliate-js`, `doq`, `injectRightPan.js`).
+- `src/assets/icon.svg`: 확장 아이콘 원본. `@wxt-dev/auto-icons`가 빌드 때 `icons/<size>.png`를 만든다.
+- `doc/`: `intro.md`(설치 시 열리는 사용법), `privacy_policy.md`, `insertLocale.py`(로케일 생성, 확장 이름/설명 `appName`/`appDesc` 포함).
 
 ## 관례
 

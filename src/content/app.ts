@@ -48,7 +48,7 @@ export function createApp(ctx: ContentScriptContext, state: AppState) {
   let prevSelected = "";
   let stagedText: string | null = null;
   let hovered: HoverResult | null = null;
-  // session on/off from keyToggleEnable, per frame and not saved (#126)
+  // session on/off from keyToggleEnable, per frame and not saved
   let disabled = false;
   let excludeRegex: { src: string; re: RegExp | null } = { src: "", re: null };
 
@@ -92,7 +92,7 @@ export function createApp(ctx: ContentScriptContext, state: AppState) {
     clearHighlight();
   }
 
-  // #36: an invalid pattern never excludes
+  // an invalid pattern never excludes
   function isExcludedByRegex(text: string) {
     const src = state.settings.translateExcludeRegex;
     if (!src) return false;
@@ -108,7 +108,7 @@ export function createApp(ctx: ContentScriptContext, state: AppState) {
     return excludeRegex.re?.test(text) ?? false;
   }
 
-  // #186: by default no hover tooltip while typing; Google Docs is always a "writing field"
+  // by default no hover tooltip while typing; Google Docs is always a "writing field"
   const isSuppressedWhileWriting = () =>
     !state.settings.mouseoverWhileWriting && !isGoogleDoc() && Boolean(getFocusedWritingBox());
 
@@ -126,7 +126,7 @@ export function createApp(ctx: ContentScriptContext, state: AppState) {
     if (text !== undefined) selectedText = text;
     // a sentence dragged over several lines (PDF especially) is translated as one
     const selectText = selectedText.replace(/\s+/g, " ").trim();
-    // a stationary double-click never moves the mouse, and its mousedown reset mouseMoved (#114)
+    // a stationary double-click never moves the mouse, and its mousedown reset mouseMoved
     if (selectText) mouseMoved = true;
     void stageText(selectText, "select", null);
   }
@@ -276,7 +276,7 @@ export function createApp(ctx: ContentScriptContext, state: AppState) {
     detector.track(e);
   }
 
-  // #114: a left click hides the tooltip until the mouse moves, unless left click is the trigger
+  // a left click hides the tooltip until the mouse moves, unless left click is the trigger
   function dismissOnClick(e: MouseEvent) {
     const key = mouseKey(e.button);
     if (key !== "ClickLeft" || keys.isBoundToTooltip(key)) return;
@@ -306,7 +306,7 @@ export function createApp(ctx: ContentScriptContext, state: AppState) {
     ctx.addEventListener(window, "mouseup", (e) => state.active && keys.handleMouseUp(e), capture);
     // window blur only (tab/app switch); legacy also reset on every element blur
     ctx.addEventListener(window, "blur", () => resetStatus());
-    // drop our node as soon as an editor gets focus so it is never serialized (#102, #115)
+    // drop our node as soon as an editor gets focus so it is never serialized
     ctx.addEventListener(
       window,
       "focusin",

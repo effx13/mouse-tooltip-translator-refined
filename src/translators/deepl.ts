@@ -2,7 +2,7 @@ import ky from "ky";
 import { defineEngine } from "./engine";
 
 // https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate/blob/fc8460a8e24776e4e95961fc4607f77994f6b2ab/src/main.js#L8
-// pt-BR / pt-PT / zh-TW have no entry and are rejected by deepl (the #363 pair cooldown case)
+// pt-BR / pt-PT / zh-TW have no entry and are rejected by deepl (the pair cooldown case)
 const deeplLangCode: Record<string, string> = {
   auto: "auto",
   ar: "AR",

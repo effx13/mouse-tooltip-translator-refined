@@ -741,9 +741,9 @@
 		"message": "Allow access to file URLs to open local PDF files"
 	},
 	"appName": {
-		"message": "የመዳፊት መሣሪያ - PDF እና Netflix Youtube ሁለት ንዑስ ጽሑፎች"
+		"message": "Mouse Tooltip Translator"
 	},
 	"appDesc": {
-		"message": "የመዳፊት መሣሪያ መሣሪያ ተርጓሚ የጉግል ትርጉም በመጠቀም Moyyover ጽሑፍን ይተርጉሙ. Support OCR, TTS, manga translator & pdf translator."
+		"message": "Hover or select text to translate it in a tooltip. Also works in PDF and ebook files."
 	}
 }

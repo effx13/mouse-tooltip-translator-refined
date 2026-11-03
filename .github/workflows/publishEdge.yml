@@ -32,4 +32,4 @@ jobs:
         with:
           keys: ${{ secrets.EDGE_BPP_KEYS }}
           edge-file: "${{env.RELEASE_FILE}}"
-          edge-notes: "https://github.com/ttop32/MouseTooltipTranslator"
+          edge-notes: "https://github.com/${{ github.repository }}"

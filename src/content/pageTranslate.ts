@@ -64,7 +64,7 @@ function splitLongText(text: string, maxBytes: number) {
   return pieces;
 }
 
-// full-page in-place translation, toggled by keyDownTranslatePage (#177)
+// full-page in-place translation, toggled by keyDownTranslatePage
 export function createPageTranslator() {
   let originals: { node: Text; text: string }[] = [];
   let isTranslated = false;

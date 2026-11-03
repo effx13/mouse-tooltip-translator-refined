@@ -21,7 +21,7 @@ const fallbackMaxRetry = fallbackEngineSwapList.length;
 
 // A failure is usually about one language pair, not the whole engine (deepl rejects pt-BR/pt-PT,
 // yandex pt-PT), so the cooldown is kept per engine+pair and the engine itself is only benched
-// once it has failed on more than one pair (#363).
+// once it has failed on more than one pair.
 let engineCrashTime = new Map(fallbackEngineCrashTimeInit);
 const engineCrashCount = new Map<string, number>();
 const pairCrashTime = new Map<string, number>();
@@ -144,7 +144,7 @@ async function translateSameLangInReverse(
   return response;
 }
 
-// Wiktionary replaces the engine's dict for the hovered word (#149)
+// Wiktionary replaces the engine's dict for the hovered word
 async function applyWiktionaryDict(
   response: EngineResult | null,
   text: string,
