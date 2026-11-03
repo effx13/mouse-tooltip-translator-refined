@@ -70,7 +70,7 @@ async function waitOpencvLoad() {
 async function resizeImage(request) {
   var canvas1 = await loadImage(request.base64Url);
   var [canvas2, ratio] = preprocessImage(canvas1);
-  base64 = canvas2.toDataURL();
+  const base64 = canvas2.toDataURL();
 
   response({
     base64Url: base64,

@@ -10,10 +10,11 @@ export default class browserAPI extends BaseTranslator {
       throw new Error("Chrome Translator API not available. Requires Chrome 138+");
     }
 
+    // declared outside the try so the catch can still report it
+    let detectedLang = sourceLang;
     try {
       // Check if the new Chrome translation APIs are available
 
-      let detectedLang = sourceLang;
 
       // Always use language detector for better accuracy
       if (sourceLang === "auto") {
