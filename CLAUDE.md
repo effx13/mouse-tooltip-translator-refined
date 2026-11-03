@@ -1,21 +1,29 @@
 # CLAUDE.md — MouseTooltipTranslator 개발 가이드
 
-브라우저 확장(Manifest V3, Chrome/Edge/Firefox). 마우스오버/드래그 번역 툴팁, 이중 자막, PDF/EPUB 뷰어, OCR, TTS, 음성 인식 번역을 제공한다. 팝업/설정 UI는 **Vue 3 + Vuetify 3**, 번들러는 **webpack**.
+브라우저 확장(Manifest V3, Chrome/Edge/Firefox). 마우스오버/드래그 번역 툴팁, 이중 자막, PDF/EPUB 뷰어, OCR, TTS, 음성 인식 번역을 제공한다. 팝업/설정 UI는 **Vue 3 + Vuetify 3**(Svelte 5로 전환 예정), 번들러는 **Vite 8(rolldown)**, 패키지 매니저는 **pnpm**.
 
-이 문서는 "이 저장소에서 코드를 어떻게 작성해야 하는가"를 정리한다. 아래 관례는 대부분 코드로 강제되지 않으니(런타임/빌드에 드러나지 않고 조용히 깨질 수 있음) 반드시 지킬 것.
+이 문서는 "이 저장소에서 코드를 어떻게 작성해야 하는가"를 정리한다. 아래 관례는 대부분 코드로 강제되지 않으니(런타임/빌드에 드러나지 않고 조용히 깨질 수 있음) 반드시 지킬 것. 기존 기능/동작 명세는 `docs/`(재작성 기준 문서)에 있다.
 
 ## 빌드 · 실행
 
 ```bash
-npm run build           # 프로덕션 빌드 → build/  (devtool:false)
-npm run watch           # 개발 watch 빌드
-npm run build-firefox   # Firefox 빌드(config/webpack.firefox.config.js)
+pnpm install
+pnpm build           # 프로덕션 빌드 → build/  (sourcemap 없음, console 제거)
+pnpm watch           # 개발 watch 빌드
+pnpm build-firefox   # Firefox 빌드(manifest.firefox.json → manifest.json)
+pnpm test            # vitest
+pnpm lint            # oxlint
+pnpm format          # oxfmt
+pnpm typecheck
 ```
 
 - 확장 로드는 **항상 `build/` 폴더**를 "Load unpacked"로. `src/`를 직접 로드하면 안 됨(#25).
-- **코드 변경 후 `npm run build`가 통과하는지 반드시 확인**한다. 소스는 ESM+webpack이라 `node`로 직접 실행 불가.
-- 테스트는 `__tests__/translator.test.js`(번역기 네트워크 테스트)뿐. 대부분의 기능은 단위 테스트가 없으므로, 로직 변경은 빌드 통과 + 필요 시 합성 데이터/실제 브라우저로 검증한다.
+- **코드 변경 후 `pnpm build`가 통과하는지 반드시 확인**한다.
+- 빌드는 `scripts/build.ts`가 `vite.config.ts`의 `ENTRIES`(10개)를 **엔트리마다 독립 IIFE 빌드**한다. content script·서비스워커·page world 주입 스크립트는 ES module일 수 없기 때문. 새 진입점(페이지/주입 스크립트)이 생기면 `ENTRIES`에 추가해야 `build/<name>.js`로 나온다. 출력 파일명은 매니페스트/HTML/`getURL()`이 하드코딩하므로 바꾸지 말 것.
+- `public/`은 빌드 스크립트가 한 번 복사한다(`.md`/`.map`/PDF.js 데모 PDF 제외).
+- 테스트는 `__tests__/`(vitest). `translator.test.js`의 네트워크 엔진 테스트는 CI에서 skip되고, 오프라인 테스트(lang, fallbackEngine, async)가 CI 게이트다. 대부분의 기능은 단위 테스트가 없으므로, 로직 변경은 빌드 통과 + 필요 시 합성 데이터/실제 브라우저로 검증한다.
 - 버전(`manifest`)은 **배포 시점에 갱신**되며 repo 값은 stale하다(#209). 버전 파일을 직접 올리지 말 것.
+- page world 스크립트(subtitle/googleDoc)가 import하는 모듈은 확장 API가 없는 환경에서도 로드돼야 한다 → 모듈 최상위에서 `browser.*`를 호출하지 말 것.
 
 ## 저장소 구조
 
