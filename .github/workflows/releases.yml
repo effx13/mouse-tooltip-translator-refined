@@ -8,31 +8,23 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18.x]
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm ci
-
-      - name: Run Jest tests
-        run: npx jest
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
 
   build:
     runs-on: ubuntu-latest
     needs: test
-    strategy:
-      matrix:
-        node-version: [18.x]
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Write package version json
         run: cat <<< $(jq '.version="${{github.ref_name}}"' package.json ) > package.json
@@ -41,14 +33,15 @@ jobs:
       - name: Write firefox manifest version json
         run: cat <<< $(jq '.version="${{github.ref_name}}"' public/manifest.firefox.json) > public/manifest.firefox.json
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm ci
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
 
-      - run: npm run build-zip
-      - run: npm run build-firefox-zip
+      - run: pnpm build-zip
+      - run: pnpm build-firefox-zip
 
       - uses: ncipollo/release-action@v1
         with:
